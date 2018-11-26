@@ -1,0 +1,6 @@
+framework module Pods_BitouqWallet {
+  umbrella header "Pods-BitouqWallet-umbrella.h"
+
+  export *
+  module * { export * }
+}

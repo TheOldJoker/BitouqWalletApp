@@ -1,0 +1,6 @@
+framework module YHCategroy {
+  umbrella header "YHCategroy-umbrella.h"
+
+  export *
+  module * { export * }
+}

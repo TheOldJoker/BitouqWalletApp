@@ -1,0 +1,712 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7C45B8C0C70A8B0186E9204B /* Pods_BitouqWallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462D7C1154548EBCD8B3C45F /* Pods_BitouqWallet.framework */; };
+		AF09B6AE21AC3A7500B9E1E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF09B6AD21AC3A7500B9E1E4 /* AppDelegate.m */; };
+		AF09B6B421AC3A7500B9E1E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF09B6B221AC3A7500B9E1E4 /* Main.storyboard */; };
+		AF09B6B621AC3A7600B9E1E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF09B6B521AC3A7600B9E1E4 /* Assets.xcassets */; };
+		AF09B6B921AC3A7600B9E1E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF09B6B721AC3A7600B9E1E4 /* LaunchScreen.storyboard */; };
+		AF09B6BC21AC3A7600B9E1E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF09B6BB21AC3A7600B9E1E4 /* main.m */; };
+		AF09B6C621AC3A7700B9E1E4 /* BitouqWalletTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF09B6C521AC3A7700B9E1E4 /* BitouqWalletTests.m */; };
+		AF09B6D121AC3A7700B9E1E4 /* BitouqWalletUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF09B6D021AC3A7700B9E1E4 /* BitouqWalletUITests.m */; };
+		AF09B6E321AC3BFB00B9E1E4 /* BWRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF09B6E221AC3BFB00B9E1E4 /* BWRootViewController.m */; };
+		AF09B6E921AC421700B9E1E4 /* BWWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF09B6E821AC421700B9E1E4 /* BWWalletViewController.m */; };
+		AF09B6EB21AC42EB00B9E1E4 /* Wallet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF09B6EA21AC42EB00B9E1E4 /* Wallet.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF09B6C221AC3A7700B9E1E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF09B6A121AC3A7500B9E1E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF09B6A821AC3A7500B9E1E4;
+			remoteInfo = BitouqWallet;
+		};
+		AF09B6CD21AC3A7700B9E1E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF09B6A121AC3A7500B9E1E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF09B6A821AC3A7500B9E1E4;
+			remoteInfo = BitouqWallet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		462D7C1154548EBCD8B3C45F /* Pods_BitouqWallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitouqWallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B8C357939650B0EEBA7CA91 /* Pods-BitouqWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitouqWallet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitouqWallet/Pods-BitouqWallet.debug.xcconfig"; sourceTree = "<group>"; };
+		AF09B6A921AC3A7500B9E1E4 /* BitouqWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitouqWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF09B6AC21AC3A7500B9E1E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AF09B6AD21AC3A7500B9E1E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AF09B6B321AC3A7500B9E1E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF09B6B521AC3A7600B9E1E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF09B6B821AC3A7600B9E1E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AF09B6BA21AC3A7600B9E1E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF09B6BB21AC3A7600B9E1E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AF09B6C121AC3A7700B9E1E4 /* BitouqWalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitouqWalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF09B6C521AC3A7700B9E1E4 /* BitouqWalletTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BitouqWalletTests.m; sourceTree = "<group>"; };
+		AF09B6C721AC3A7700B9E1E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF09B6CC21AC3A7700B9E1E4 /* BitouqWalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitouqWalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF09B6D021AC3A7700B9E1E4 /* BitouqWalletUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BitouqWalletUITests.m; sourceTree = "<group>"; };
+		AF09B6D221AC3A7700B9E1E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF09B6E121AC3BFB00B9E1E4 /* BWRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWRootViewController.h; sourceTree = "<group>"; };
+		AF09B6E221AC3BFB00B9E1E4 /* BWRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWRootViewController.m; sourceTree = "<group>"; };
+		AF09B6E521AC3FA300B9E1E4 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../../../PrefixHeader.pch; sourceTree = "<group>"; };
+		AF09B6E721AC421600B9E1E4 /* BWWalletViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWWalletViewController.h; sourceTree = "<group>"; };
+		AF09B6E821AC421700B9E1E4 /* BWWalletViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWWalletViewController.m; sourceTree = "<group>"; };
+		AF09B6EA21AC42EB00B9E1E4 /* Wallet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Wallet.storyboard; sourceTree = "<group>"; };
+		E844192080C0AF3169FF626E /* Pods-BitouqWallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitouqWallet.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitouqWallet/Pods-BitouqWallet.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF09B6A621AC3A7500B9E1E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C45B8C0C70A8B0186E9204B /* Pods_BitouqWallet.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF09B6BE21AC3A7700B9E1E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF09B6C921AC3A7700B9E1E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC53EA4E3899E9A2E91274D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				462D7C1154548EBCD8B3C45F /* Pods_BitouqWallet.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF09B6A021AC3A7500B9E1E4 = {
+			isa = PBXGroup;
+			children = (
+				AF09B6DF21AC3B6000B9E1E4 /* BWUIKit */,
+				AF09B6DE21AC3B4F00B9E1E4 /* BWViewController */,
+				AF09B6AB21AC3A7500B9E1E4 /* BitouqWallet */,
+				AF09B6C421AC3A7700B9E1E4 /* BitouqWalletTests */,
+				AF09B6CF21AC3A7700B9E1E4 /* BitouqWalletUITests */,
+				AF09B6AA21AC3A7500B9E1E4 /* Products */,
+				CA675295300863F5FDDADE52 /* Pods */,
+				AC53EA4E3899E9A2E91274D5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AF09B6AA21AC3A7500B9E1E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF09B6A921AC3A7500B9E1E4 /* BitouqWallet.app */,
+				AF09B6C121AC3A7700B9E1E4 /* BitouqWalletTests.xctest */,
+				AF09B6CC21AC3A7700B9E1E4 /* BitouqWalletUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF09B6AB21AC3A7500B9E1E4 /* BitouqWallet */ = {
+			isa = PBXGroup;
+			children = (
+				AF09B6E521AC3FA300B9E1E4 /* PrefixHeader.pch */,
+				AF09B6AC21AC3A7500B9E1E4 /* AppDelegate.h */,
+				AF09B6AD21AC3A7500B9E1E4 /* AppDelegate.m */,
+				AF09B6B521AC3A7600B9E1E4 /* Assets.xcassets */,
+				AF09B6B721AC3A7600B9E1E4 /* LaunchScreen.storyboard */,
+				AF09B6BA21AC3A7600B9E1E4 /* Info.plist */,
+				AF09B6BB21AC3A7600B9E1E4 /* main.m */,
+			);
+			path = BitouqWallet;
+			sourceTree = "<group>";
+		};
+		AF09B6C421AC3A7700B9E1E4 /* BitouqWalletTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF09B6C521AC3A7700B9E1E4 /* BitouqWalletTests.m */,
+				AF09B6C721AC3A7700B9E1E4 /* Info.plist */,
+			);
+			path = BitouqWalletTests;
+			sourceTree = "<group>";
+		};
+		AF09B6CF21AC3A7700B9E1E4 /* BitouqWalletUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AF09B6D021AC3A7700B9E1E4 /* BitouqWalletUITests.m */,
+				AF09B6D221AC3A7700B9E1E4 /* Info.plist */,
+			);
+			path = BitouqWalletUITests;
+			sourceTree = "<group>";
+		};
+		AF09B6DE21AC3B4F00B9E1E4 /* BWViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AF09B6E621AC41A000B9E1E4 /* BWWalletViewController */,
+				AF09B6E021AC3BCC00B9E1E4 /* BWRootViewcontroller */,
+			);
+			path = BWViewController;
+			sourceTree = "<group>";
+		};
+		AF09B6DF21AC3B6000B9E1E4 /* BWUIKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BWUIKit;
+			sourceTree = "<group>";
+		};
+		AF09B6E021AC3BCC00B9E1E4 /* BWRootViewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				AF09B6B221AC3A7500B9E1E4 /* Main.storyboard */,
+				AF09B6E121AC3BFB00B9E1E4 /* BWRootViewController.h */,
+				AF09B6E221AC3BFB00B9E1E4 /* BWRootViewController.m */,
+			);
+			path = BWRootViewcontroller;
+			sourceTree = "<group>";
+		};
+		AF09B6E621AC41A000B9E1E4 /* BWWalletViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AF09B6EA21AC42EB00B9E1E4 /* Wallet.storyboard */,
+				AF09B6E721AC421600B9E1E4 /* BWWalletViewController.h */,
+				AF09B6E821AC421700B9E1E4 /* BWWalletViewController.m */,
+			);
+			path = BWWalletViewController;
+			sourceTree = "<group>";
+		};
+		CA675295300863F5FDDADE52 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7B8C357939650B0EEBA7CA91 /* Pods-BitouqWallet.debug.xcconfig */,
+				E844192080C0AF3169FF626E /* Pods-BitouqWallet.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF09B6A821AC3A7500B9E1E4 /* BitouqWallet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF09B6D521AC3A7700B9E1E4 /* Build configuration list for PBXNativeTarget "BitouqWallet" */;
+			buildPhases = (
+				507CEA3705D6388AEA79FB88 /* [CP] Check Pods Manifest.lock */,
+				AF09B6A521AC3A7500B9E1E4 /* Sources */,
+				AF09B6A621AC3A7500B9E1E4 /* Frameworks */,
+				AF09B6A721AC3A7500B9E1E4 /* Resources */,
+				5F6F4B07762229D61580A6A0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BitouqWallet;
+			productName = BitouqWallet;
+			productReference = AF09B6A921AC3A7500B9E1E4 /* BitouqWallet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF09B6C021AC3A7700B9E1E4 /* BitouqWalletTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF09B6D821AC3A7700B9E1E4 /* Build configuration list for PBXNativeTarget "BitouqWalletTests" */;
+			buildPhases = (
+				AF09B6BD21AC3A7700B9E1E4 /* Sources */,
+				AF09B6BE21AC3A7700B9E1E4 /* Frameworks */,
+				AF09B6BF21AC3A7700B9E1E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF09B6C321AC3A7700B9E1E4 /* PBXTargetDependency */,
+			);
+			name = BitouqWalletTests;
+			productName = BitouqWalletTests;
+			productReference = AF09B6C121AC3A7700B9E1E4 /* BitouqWalletTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AF09B6CB21AC3A7700B9E1E4 /* BitouqWalletUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF09B6DB21AC3A7700B9E1E4 /* Build configuration list for PBXNativeTarget "BitouqWalletUITests" */;
+			buildPhases = (
+				AF09B6C821AC3A7700B9E1E4 /* Sources */,
+				AF09B6C921AC3A7700B9E1E4 /* Frameworks */,
+				AF09B6CA21AC3A7700B9E1E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF09B6CE21AC3A7700B9E1E4 /* PBXTargetDependency */,
+			);
+			name = BitouqWalletUITests;
+			productName = BitouqWalletUITests;
+			productReference = AF09B6CC21AC3A7700B9E1E4 /* BitouqWalletUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF09B6A121AC3A7500B9E1E4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BW;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Joker;
+				TargetAttributes = {
+					AF09B6A821AC3A7500B9E1E4 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					AF09B6C021AC3A7700B9E1E4 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = AF09B6A821AC3A7500B9E1E4;
+					};
+					AF09B6CB21AC3A7700B9E1E4 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = AF09B6A821AC3A7500B9E1E4;
+					};
+				};
+			};
+			buildConfigurationList = AF09B6A421AC3A7500B9E1E4 /* Build configuration list for PBXProject "BitouqWallet" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF09B6A021AC3A7500B9E1E4;
+			productRefGroup = AF09B6AA21AC3A7500B9E1E4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF09B6A821AC3A7500B9E1E4 /* BitouqWallet */,
+				AF09B6C021AC3A7700B9E1E4 /* BitouqWalletTests */,
+				AF09B6CB21AC3A7700B9E1E4 /* BitouqWalletUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF09B6A721AC3A7500B9E1E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF09B6B921AC3A7600B9E1E4 /* LaunchScreen.storyboard in Resources */,
+				AF09B6EB21AC42EB00B9E1E4 /* Wallet.storyboard in Resources */,
+				AF09B6B621AC3A7600B9E1E4 /* Assets.xcassets in Resources */,
+				AF09B6B421AC3A7500B9E1E4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF09B6BF21AC3A7700B9E1E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF09B6CA21AC3A7700B9E1E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		507CEA3705D6388AEA79FB88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BitouqWallet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F6F4B07762229D61580A6A0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BitouqWallet/Pods-BitouqWallet-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/YHCategroy/YHCategroy.framework",
+				"${BUILT_PRODUCTS_DIR}/YHModaTransitonHelper/YHModaTransitonHelper.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YHCategroy.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YHModaTransitonHelper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitouqWallet/Pods-BitouqWallet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF09B6A521AC3A7500B9E1E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF09B6E921AC421700B9E1E4 /* BWWalletViewController.m in Sources */,
+				AF09B6BC21AC3A7600B9E1E4 /* main.m in Sources */,
+				AF09B6AE21AC3A7500B9E1E4 /* AppDelegate.m in Sources */,
+				AF09B6E321AC3BFB00B9E1E4 /* BWRootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF09B6BD21AC3A7700B9E1E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF09B6C621AC3A7700B9E1E4 /* BitouqWalletTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF09B6C821AC3A7700B9E1E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF09B6D121AC3A7700B9E1E4 /* BitouqWalletUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF09B6C321AC3A7700B9E1E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF09B6A821AC3A7500B9E1E4 /* BitouqWallet */;
+			targetProxy = AF09B6C221AC3A7700B9E1E4 /* PBXContainerItemProxy */;
+		};
+		AF09B6CE21AC3A7700B9E1E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF09B6A821AC3A7500B9E1E4 /* BitouqWallet */;
+			targetProxy = AF09B6CD21AC3A7700B9E1E4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AF09B6B221AC3A7500B9E1E4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF09B6B321AC3A7500B9E1E4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AF09B6B721AC3A7600B9E1E4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF09B6B821AC3A7600B9E1E4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF09B6D321AC3A7700B9E1E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AF09B6D421AC3A7700B9E1E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF09B6D621AC3A7700B9E1E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B8C357939650B0EEBA7CA91 /* Pods-BitouqWallet.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WH25XMTWX7;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BitouqWallet/PrefixHeader.pch";
+				INFOPLIST_FILE = BitouqWallet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Joker.BitouqWallet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF09B6D721AC3A7700B9E1E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E844192080C0AF3169FF626E /* Pods-BitouqWallet.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WH25XMTWX7;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BitouqWallet/PrefixHeader.pch";
+				INFOPLIST_FILE = BitouqWallet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Joker.BitouqWallet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AF09B6D921AC3A7700B9E1E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WH25XMTWX7;
+				INFOPLIST_FILE = BitouqWalletTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Joker.BitouqWalletTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BitouqWallet.app/BitouqWallet";
+			};
+			name = Debug;
+		};
+		AF09B6DA21AC3A7700B9E1E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WH25XMTWX7;
+				INFOPLIST_FILE = BitouqWalletTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Joker.BitouqWalletTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BitouqWallet.app/BitouqWallet";
+			};
+			name = Release;
+		};
+		AF09B6DC21AC3A7700B9E1E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WH25XMTWX7;
+				INFOPLIST_FILE = BitouqWalletUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Joker.BitouqWalletUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BitouqWallet;
+			};
+			name = Debug;
+		};
+		AF09B6DD21AC3A7700B9E1E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WH25XMTWX7;
+				INFOPLIST_FILE = BitouqWalletUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Joker.BitouqWalletUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BitouqWallet;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF09B6A421AC3A7500B9E1E4 /* Build configuration list for PBXProject "BitouqWallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF09B6D321AC3A7700B9E1E4 /* Debug */,
+				AF09B6D421AC3A7700B9E1E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF09B6D521AC3A7700B9E1E4 /* Build configuration list for PBXNativeTarget "BitouqWallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF09B6D621AC3A7700B9E1E4 /* Debug */,
+				AF09B6D721AC3A7700B9E1E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF09B6D821AC3A7700B9E1E4 /* Build configuration list for PBXNativeTarget "BitouqWalletTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF09B6D921AC3A7700B9E1E4 /* Debug */,
+				AF09B6DA21AC3A7700B9E1E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF09B6DB21AC3A7700B9E1E4 /* Build configuration list for PBXNativeTarget "BitouqWalletUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF09B6DC21AC3A7700B9E1E4 /* Debug */,
+				AF09B6DD21AC3A7700B9E1E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF09B6A121AC3A7500B9E1E4 /* Project object */;
+}
