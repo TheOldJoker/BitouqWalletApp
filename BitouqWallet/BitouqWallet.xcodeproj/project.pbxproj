@@ -29,6 +29,7 @@
 		AF09B78721AD7B9500B9E1E4 /* Record.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF09B78621AD7B9500B9E1E4 /* Record.storyboard */; };
 		AF09B78A21AD7BCD00B9E1E4 /* Duplicate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF09B78821AD7BCD00B9E1E4 /* Duplicate.storyboard */; };
 		AF09B78C21AD7BFD00B9E1E4 /* rlue.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF09B78B21AD7BFD00B9E1E4 /* rlue.storyboard */; };
+		AF09B79121AD7E6400B9E1E4 /* UIViewController+BWViewControllerCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = AF09B79021AD7E6400B9E1E4 /* UIViewController+BWViewControllerCategory.m */; };
 		B3D35B7A0FD06B351857CB2B /* Pods_BitouqWallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7931BF157400160B43C18B4E /* Pods_BitouqWallet.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,9 @@
 		AF09B78921AD7BCD00B9E1E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = BWRootViewController/Base.lproj/Duplicate.storyboard; sourceTree = "<group>"; };
 		AF09B78B21AD7BFD00B9E1E4 /* rlue.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = rlue.storyboard; sourceTree = "<group>"; };
 		AF09B78D21AD7C8500B9E1E4 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		AF09B78F21AD7E6400B9E1E4 /* UIViewController+BWViewControllerCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BWViewControllerCategory.h"; sourceTree = "<group>"; };
+		AF09B79021AD7E6400B9E1E4 /* UIViewController+BWViewControllerCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BWViewControllerCategory.m"; sourceTree = "<group>"; };
+		AF09B79221AD7F3400B9E1E4 /* BWCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWCategory.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,7 @@
 		AF09B71721AD6EAB00B9E1E4 = {
 			isa = PBXGroup;
 			children = (
+				AF09B78E21AD7E3A00B9E1E4 /* BWCategory */,
 				AF09B78B21AD7BFD00B9E1E4 /* rlue.storyboard */,
 				AF09B78821AD7BCD00B9E1E4 /* Duplicate.storyboard */,
 				AF09B78621AD7B9500B9E1E4 /* Record.storyboard */,
@@ -292,6 +297,16 @@
 			children = (
 			);
 			path = "BWGesturesPasswordViewcontroller(手势密码)";
+			sourceTree = "<group>";
+		};
+		AF09B78E21AD7E3A00B9E1E4 /* BWCategory */ = {
+			isa = PBXGroup;
+			children = (
+				AF09B79221AD7F3400B9E1E4 /* BWCategory.h */,
+				AF09B78F21AD7E6400B9E1E4 /* UIViewController+BWViewControllerCategory.h */,
+				AF09B79021AD7E6400B9E1E4 /* UIViewController+BWViewControllerCategory.m */,
+			);
+			path = BWCategory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -492,6 +507,7 @@
 				AF09B77221AD799C00B9E1E4 /* BWMiningViewController.m in Sources */,
 				AF09B72521AD6EAB00B9E1E4 /* AppDelegate.m in Sources */,
 				AF09B76C21AD797500B9E1E4 /* BWBRTStarsViewController.m in Sources */,
+				AF09B79121AD7E6400B9E1E4 /* UIViewController+BWViewControllerCategory.m in Sources */,
 				AF09B76621AD790600B9E1E4 /* BWTabBarController.m in Sources */,
 				AF09B76F21AD798900B9E1E4 /* BWVicOrDefViewController.m in Sources */,
 				AF09B77B21AD79D700B9E1E4 /* BWRlueVIewController.m in Sources */,

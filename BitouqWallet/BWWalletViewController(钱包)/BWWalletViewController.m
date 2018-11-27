@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"钱包";
+    [self initNav];
 }
 
 /*
