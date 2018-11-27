@@ -29,6 +29,7 @@
 		AF09B78721AD7B9500B9E1E4 /* Record.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF09B78621AD7B9500B9E1E4 /* Record.storyboard */; };
 		AF09B78A21AD7BCD00B9E1E4 /* Duplicate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF09B78821AD7BCD00B9E1E4 /* Duplicate.storyboard */; };
 		AF09B78C21AD7BFD00B9E1E4 /* rlue.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF09B78B21AD7BFD00B9E1E4 /* rlue.storyboard */; };
+		B3D35B7A0FD06B351857CB2B /* Pods_BitouqWallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7931BF157400160B43C18B4E /* Pods_BitouqWallet.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		25A5DFD709F8D4D06451C13F /* Pods-BitouqWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitouqWallet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitouqWallet/Pods-BitouqWallet.debug.xcconfig"; sourceTree = "<group>"; };
+		7931BF157400160B43C18B4E /* Pods_BitouqWallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitouqWallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FA0EAB86AADCE36C0BC0869 /* Pods-BitouqWallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitouqWallet.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitouqWallet/Pods-BitouqWallet.release.xcconfig"; sourceTree = "<group>"; };
 		AF09B72021AD6EAB00B9E1E4 /* BitouqWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitouqWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF09B72321AD6EAB00B9E1E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AF09B72421AD6EAB00B9E1E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3D35B7A0FD06B351857CB2B /* Pods_BitouqWallet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +119,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B293205EA422EB96A8463D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7931BF157400160B43C18B4E /* Pods_BitouqWallet.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		676E53AC2493E5860AB6C798 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				25A5DFD709F8D4D06451C13F /* Pods-BitouqWallet.debug.xcconfig */,
+				9FA0EAB86AADCE36C0BC0869 /* Pods-BitouqWallet.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AF09B71721AD6EAB00B9E1E4 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +160,8 @@
 				AF09B73B21AD6EAC00B9E1E4 /* BitouqWalletTests */,
 				AF09B74621AD6EAC00B9E1E4 /* BitouqWalletUITests */,
 				AF09B72121AD6EAB00B9E1E4 /* Products */,
+				676E53AC2493E5860AB6C798 /* Pods */,
+				0B293205EA422EB96A8463D7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -277,9 +301,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF09B74C21AD6EAC00B9E1E4 /* Build configuration list for PBXNativeTarget "BitouqWallet" */;
 			buildPhases = (
+				E7711D65F6305E1ECD8F66CC /* [CP] Check Pods Manifest.lock */,
 				AF09B71C21AD6EAB00B9E1E4 /* Sources */,
 				AF09B71D21AD6EAB00B9E1E4 /* Frameworks */,
 				AF09B71E21AD6EAB00B9E1E4 /* Resources */,
+				E00BB9380ADADFE018AE654D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -402,6 +428,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E00BB9380ADADFE018AE654D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BitouqWallet/Pods-BitouqWallet-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/YHCategroy/YHCategroy.framework",
+				"${BUILT_PRODUCTS_DIR}/YHModaTransitonHelper/YHModaTransitonHelper.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YHCategroy.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YHModaTransitonHelper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitouqWallet/Pods-BitouqWallet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7711D65F6305E1ECD8F66CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BitouqWallet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AF09B71C21AD6EAB00B9E1E4 /* Sources */ = {
@@ -610,6 +687,7 @@
 		};
 		AF09B74D21AD6EAC00B9E1E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25A5DFD709F8D4D06451C13F /* Pods-BitouqWallet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -629,6 +707,7 @@
 		};
 		AF09B74E21AD6EAC00B9E1E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FA0EAB86AADCE36C0BC0869 /* Pods-BitouqWallet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

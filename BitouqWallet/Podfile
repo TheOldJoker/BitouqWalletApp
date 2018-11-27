@@ -1,0 +1,10 @@
+use_frameworks!
+target 'BitouqWallet' do
+pod 'YHModaTransitonHelper'
+pod 'YHCategroy'
+pod 'MBProgressHUD'
+pod 'YYCache'
+pod 'MJRefresh'
+pod 'IQKeyboardManager'
+pod 'AFNetworking'
+end
