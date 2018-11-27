@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  BitouqWallet
 //
-//  Created by 赵一欢 on 2018/11/26.
+//  Created by 赵一欢 on 2018/11/27.
 //  Copyright © 2018 Joker. All rights reserved.
 //
 

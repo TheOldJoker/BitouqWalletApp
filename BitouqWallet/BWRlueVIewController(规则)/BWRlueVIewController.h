@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  BWRlueVIewController.h
 //  BitouqWallet
 //
 //  Created by 赵一欢 on 2018/11/27.
@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+NS_ASSUME_NONNULL_BEGIN
 
-@property (strong, nonatomic) UIWindow *window;
-
+@interface BWRlueVIewController : UIViewController
 
 @end
 
+NS_ASSUME_NONNULL_END

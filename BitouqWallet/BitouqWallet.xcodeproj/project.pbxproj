@@ -7,79 +7,104 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7C45B8C0C70A8B0186E9204B /* Pods_BitouqWallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462D7C1154548EBCD8B3C45F /* Pods_BitouqWallet.framework */; };
-		AF09B6AE21AC3A7500B9E1E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF09B6AD21AC3A7500B9E1E4 /* AppDelegate.m */; };
-		AF09B6B421AC3A7500B9E1E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF09B6B221AC3A7500B9E1E4 /* Main.storyboard */; };
-		AF09B6B621AC3A7600B9E1E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF09B6B521AC3A7600B9E1E4 /* Assets.xcassets */; };
-		AF09B6B921AC3A7600B9E1E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF09B6B721AC3A7600B9E1E4 /* LaunchScreen.storyboard */; };
-		AF09B6BC21AC3A7600B9E1E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF09B6BB21AC3A7600B9E1E4 /* main.m */; };
-		AF09B6C621AC3A7700B9E1E4 /* BitouqWalletTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF09B6C521AC3A7700B9E1E4 /* BitouqWalletTests.m */; };
-		AF09B6D121AC3A7700B9E1E4 /* BitouqWalletUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF09B6D021AC3A7700B9E1E4 /* BitouqWalletUITests.m */; };
-		AF09B6E321AC3BFB00B9E1E4 /* BWRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF09B6E221AC3BFB00B9E1E4 /* BWRootViewController.m */; };
-		AF09B6E921AC421700B9E1E4 /* BWWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF09B6E821AC421700B9E1E4 /* BWWalletViewController.m */; };
-		AF09B6EB21AC42EB00B9E1E4 /* Wallet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF09B6EA21AC42EB00B9E1E4 /* Wallet.storyboard */; };
+		AF09B72521AD6EAB00B9E1E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF09B72421AD6EAB00B9E1E4 /* AppDelegate.m */; };
+		AF09B72B21AD6EAB00B9E1E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF09B72921AD6EAB00B9E1E4 /* Main.storyboard */; };
+		AF09B72D21AD6EAB00B9E1E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF09B72C21AD6EAB00B9E1E4 /* Assets.xcassets */; };
+		AF09B73021AD6EAB00B9E1E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF09B72E21AD6EAB00B9E1E4 /* LaunchScreen.storyboard */; };
+		AF09B73321AD6EAB00B9E1E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF09B73221AD6EAB00B9E1E4 /* main.m */; };
+		AF09B73D21AD6EAC00B9E1E4 /* BitouqWalletTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF09B73C21AD6EAC00B9E1E4 /* BitouqWalletTests.m */; };
+		AF09B74821AD6EAC00B9E1E4 /* BitouqWalletUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF09B74721AD6EAC00B9E1E4 /* BitouqWalletUITests.m */; };
+		AF09B76321AD78AA00B9E1E4 /* wallet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF09B76221AD78AA00B9E1E4 /* wallet.storyboard */; };
+		AF09B76621AD790600B9E1E4 /* BWTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF09B76521AD790600B9E1E4 /* BWTabBarController.m */; };
+		AF09B76921AD795B00B9E1E4 /* BWWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF09B76821AD795B00B9E1E4 /* BWWalletViewController.m */; };
+		AF09B76C21AD797500B9E1E4 /* BWBRTStarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF09B76B21AD797500B9E1E4 /* BWBRTStarsViewController.m */; };
+		AF09B76F21AD798900B9E1E4 /* BWVicOrDefViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF09B76E21AD798900B9E1E4 /* BWVicOrDefViewController.m */; };
+		AF09B77221AD799C00B9E1E4 /* BWMiningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF09B77121AD799C00B9E1E4 /* BWMiningViewController.m */; };
+		AF09B77521AD79B000B9E1E4 /* BWRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF09B77421AD79B000B9E1E4 /* BWRecordViewController.m */; };
+		AF09B77821AD79C500B9E1E4 /* BWDuplicateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF09B77721AD79C500B9E1E4 /* BWDuplicateViewController.m */; };
+		AF09B77B21AD79D700B9E1E4 /* BWRlueVIewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF09B77A21AD79D700B9E1E4 /* BWRlueVIewController.m */; };
+		AF09B77E21AD7A0900B9E1E4 /* BRTStars.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF09B77C21AD7A0900B9E1E4 /* BRTStars.storyboard */; };
+		AF09B78321AD7AFC00B9E1E4 /* VicOrDef.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF09B78121AD7AFC00B9E1E4 /* VicOrDef.storyboard */; };
+		AF09B78521AD7B3F00B9E1E4 /* mining.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF09B78421AD7B3F00B9E1E4 /* mining.storyboard */; };
+		AF09B78721AD7B9500B9E1E4 /* Record.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF09B78621AD7B9500B9E1E4 /* Record.storyboard */; };
+		AF09B78A21AD7BCD00B9E1E4 /* Duplicate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF09B78821AD7BCD00B9E1E4 /* Duplicate.storyboard */; };
+		AF09B78C21AD7BFD00B9E1E4 /* rlue.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF09B78B21AD7BFD00B9E1E4 /* rlue.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AF09B6C221AC3A7700B9E1E4 /* PBXContainerItemProxy */ = {
+		AF09B73921AD6EAC00B9E1E4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = AF09B6A121AC3A7500B9E1E4 /* Project object */;
+			containerPortal = AF09B71821AD6EAB00B9E1E4 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AF09B6A821AC3A7500B9E1E4;
+			remoteGlobalIDString = AF09B71F21AD6EAB00B9E1E4;
 			remoteInfo = BitouqWallet;
 		};
-		AF09B6CD21AC3A7700B9E1E4 /* PBXContainerItemProxy */ = {
+		AF09B74421AD6EAC00B9E1E4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = AF09B6A121AC3A7500B9E1E4 /* Project object */;
+			containerPortal = AF09B71821AD6EAB00B9E1E4 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AF09B6A821AC3A7500B9E1E4;
+			remoteGlobalIDString = AF09B71F21AD6EAB00B9E1E4;
 			remoteInfo = BitouqWallet;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		462D7C1154548EBCD8B3C45F /* Pods_BitouqWallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitouqWallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B8C357939650B0EEBA7CA91 /* Pods-BitouqWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitouqWallet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitouqWallet/Pods-BitouqWallet.debug.xcconfig"; sourceTree = "<group>"; };
-		AF09B6A921AC3A7500B9E1E4 /* BitouqWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitouqWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF09B6AC21AC3A7500B9E1E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		AF09B6AD21AC3A7500B9E1E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AF09B6B321AC3A7500B9E1E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AF09B6B521AC3A7600B9E1E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AF09B6B821AC3A7600B9E1E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AF09B6BA21AC3A7600B9E1E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF09B6BB21AC3A7600B9E1E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		AF09B6C121AC3A7700B9E1E4 /* BitouqWalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitouqWalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF09B6C521AC3A7700B9E1E4 /* BitouqWalletTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BitouqWalletTests.m; sourceTree = "<group>"; };
-		AF09B6C721AC3A7700B9E1E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF09B6CC21AC3A7700B9E1E4 /* BitouqWalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitouqWalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF09B6D021AC3A7700B9E1E4 /* BitouqWalletUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BitouqWalletUITests.m; sourceTree = "<group>"; };
-		AF09B6D221AC3A7700B9E1E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF09B6E121AC3BFB00B9E1E4 /* BWRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWRootViewController.h; sourceTree = "<group>"; };
-		AF09B6E221AC3BFB00B9E1E4 /* BWRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWRootViewController.m; sourceTree = "<group>"; };
-		AF09B6E521AC3FA300B9E1E4 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../../../PrefixHeader.pch; sourceTree = "<group>"; };
-		AF09B6E721AC421600B9E1E4 /* BWWalletViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWWalletViewController.h; sourceTree = "<group>"; };
-		AF09B6E821AC421700B9E1E4 /* BWWalletViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWWalletViewController.m; sourceTree = "<group>"; };
-		AF09B6EA21AC42EB00B9E1E4 /* Wallet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Wallet.storyboard; sourceTree = "<group>"; };
-		E844192080C0AF3169FF626E /* Pods-BitouqWallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitouqWallet.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitouqWallet/Pods-BitouqWallet.release.xcconfig"; sourceTree = "<group>"; };
+		AF09B72021AD6EAB00B9E1E4 /* BitouqWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitouqWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF09B72321AD6EAB00B9E1E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AF09B72421AD6EAB00B9E1E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AF09B72A21AD6EAB00B9E1E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF09B72C21AD6EAB00B9E1E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF09B72F21AD6EAB00B9E1E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AF09B73121AD6EAB00B9E1E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF09B73221AD6EAB00B9E1E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AF09B73821AD6EAC00B9E1E4 /* BitouqWalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitouqWalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF09B73C21AD6EAC00B9E1E4 /* BitouqWalletTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BitouqWalletTests.m; sourceTree = "<group>"; };
+		AF09B73E21AD6EAC00B9E1E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF09B74321AD6EAC00B9E1E4 /* BitouqWalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitouqWalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF09B74721AD6EAC00B9E1E4 /* BitouqWalletUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BitouqWalletUITests.m; sourceTree = "<group>"; };
+		AF09B74921AD6EAC00B9E1E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF09B76221AD78AA00B9E1E4 /* wallet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = wallet.storyboard; path = "BWWalletViewController(钱包)/wallet.storyboard"; sourceTree = "<group>"; };
+		AF09B76421AD790600B9E1E4 /* BWTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWTabBarController.h; sourceTree = "<group>"; };
+		AF09B76521AD790600B9E1E4 /* BWTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWTabBarController.m; sourceTree = "<group>"; };
+		AF09B76721AD795B00B9E1E4 /* BWWalletViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWWalletViewController.h; sourceTree = "<group>"; };
+		AF09B76821AD795B00B9E1E4 /* BWWalletViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWWalletViewController.m; sourceTree = "<group>"; };
+		AF09B76A21AD797500B9E1E4 /* BWBRTStarsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWBRTStarsViewController.h; sourceTree = "<group>"; };
+		AF09B76B21AD797500B9E1E4 /* BWBRTStarsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWBRTStarsViewController.m; sourceTree = "<group>"; };
+		AF09B76D21AD798900B9E1E4 /* BWVicOrDefViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWVicOrDefViewController.h; sourceTree = "<group>"; };
+		AF09B76E21AD798900B9E1E4 /* BWVicOrDefViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWVicOrDefViewController.m; sourceTree = "<group>"; };
+		AF09B77021AD799C00B9E1E4 /* BWMiningViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWMiningViewController.h; sourceTree = "<group>"; };
+		AF09B77121AD799C00B9E1E4 /* BWMiningViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWMiningViewController.m; sourceTree = "<group>"; };
+		AF09B77321AD79B000B9E1E4 /* BWRecordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWRecordViewController.h; sourceTree = "<group>"; };
+		AF09B77421AD79B000B9E1E4 /* BWRecordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWRecordViewController.m; sourceTree = "<group>"; };
+		AF09B77621AD79C500B9E1E4 /* BWDuplicateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWDuplicateViewController.h; sourceTree = "<group>"; };
+		AF09B77721AD79C500B9E1E4 /* BWDuplicateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWDuplicateViewController.m; sourceTree = "<group>"; };
+		AF09B77921AD79D700B9E1E4 /* BWRlueVIewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWRlueVIewController.h; sourceTree = "<group>"; };
+		AF09B77A21AD79D700B9E1E4 /* BWRlueVIewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWRlueVIewController.m; sourceTree = "<group>"; };
+		AF09B77D21AD7A0900B9E1E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = BWRootViewController/Base.lproj/BRTStars.storyboard; sourceTree = "<group>"; };
+		AF09B78221AD7AFC00B9E1E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = BWRootViewController/Base.lproj/VicOrDef.storyboard; sourceTree = "<group>"; };
+		AF09B78421AD7B3F00B9E1E4 /* mining.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = mining.storyboard; sourceTree = "<group>"; };
+		AF09B78621AD7B9500B9E1E4 /* Record.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Record.storyboard; sourceTree = "<group>"; };
+		AF09B78921AD7BCD00B9E1E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = BWRootViewController/Base.lproj/Duplicate.storyboard; sourceTree = "<group>"; };
+		AF09B78B21AD7BFD00B9E1E4 /* rlue.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = rlue.storyboard; sourceTree = "<group>"; };
+		AF09B78D21AD7C8500B9E1E4 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AF09B6A621AC3A7500B9E1E4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7C45B8C0C70A8B0186E9204B /* Pods_BitouqWallet.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AF09B6BE21AC3A7700B9E1E4 /* Frameworks */ = {
+		AF09B71D21AD6EAB00B9E1E4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF09B6C921AC3A7700B9E1E4 /* Frameworks */ = {
+		AF09B73521AD6EAC00B9E1E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF09B74021AD6EAC00B9E1E4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -89,127 +114,172 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AC53EA4E3899E9A2E91274D5 /* Frameworks */ = {
+		AF09B71721AD6EAB00B9E1E4 = {
 			isa = PBXGroup;
 			children = (
-				462D7C1154548EBCD8B3C45F /* Pods_BitouqWallet.framework */,
+				AF09B78B21AD7BFD00B9E1E4 /* rlue.storyboard */,
+				AF09B78821AD7BCD00B9E1E4 /* Duplicate.storyboard */,
+				AF09B78621AD7B9500B9E1E4 /* Record.storyboard */,
+				AF09B78421AD7B3F00B9E1E4 /* mining.storyboard */,
+				AF09B78121AD7AFC00B9E1E4 /* VicOrDef.storyboard */,
+				AF09B77C21AD7A0900B9E1E4 /* BRTStars.storyboard */,
+				AF09B76221AD78AA00B9E1E4 /* wallet.storyboard */,
+				AF09B75E21AD71F000B9E1E4 /* BWGesturesPasswordViewcontroller(手势密码) */,
+				AF09B75D21AD71EE00B9E1E4 /* BWLoginViewController(登录) */,
+				AF09B75821AD71D900B9E1E4 /* BWRlueVIewController(规则) */,
+				AF09B75C21AD71EC00B9E1E4 /* BWDuplicateViewController(备份) */,
+				AF09B75B21AD71EA00B9E1E4 /* BWRecordViewController(交易记录) */,
+				AF09B75A21AD71E700B9E1E4 /* BWMiningViewController(挖矿) */,
+				AF09B75921AD71E500B9E1E4 /* BWVicOrDefViewController(胜负手) */,
+				AF09B75721AD71D300B9E1E4 /* BWBRTStarsViewController(BRTStars) */,
+				AF09B75621AD712700B9E1E4 /* BWWalletViewController(钱包) */,
+				AF09B75521AD70DF00B9E1E4 /* BWRootViewController */,
+				AF09B72221AD6EAB00B9E1E4 /* BitouqWallet */,
+				AF09B73B21AD6EAC00B9E1E4 /* BitouqWalletTests */,
+				AF09B74621AD6EAC00B9E1E4 /* BitouqWalletUITests */,
+				AF09B72121AD6EAB00B9E1E4 /* Products */,
 			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		AF09B6A021AC3A7500B9E1E4 = {
+		AF09B72121AD6EAB00B9E1E4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AF09B6DF21AC3B6000B9E1E4 /* BWUIKit */,
-				AF09B6DE21AC3B4F00B9E1E4 /* BWViewController */,
-				AF09B6AB21AC3A7500B9E1E4 /* BitouqWallet */,
-				AF09B6C421AC3A7700B9E1E4 /* BitouqWalletTests */,
-				AF09B6CF21AC3A7700B9E1E4 /* BitouqWalletUITests */,
-				AF09B6AA21AC3A7500B9E1E4 /* Products */,
-				CA675295300863F5FDDADE52 /* Pods */,
-				AC53EA4E3899E9A2E91274D5 /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		AF09B6AA21AC3A7500B9E1E4 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				AF09B6A921AC3A7500B9E1E4 /* BitouqWallet.app */,
-				AF09B6C121AC3A7700B9E1E4 /* BitouqWalletTests.xctest */,
-				AF09B6CC21AC3A7700B9E1E4 /* BitouqWalletUITests.xctest */,
+				AF09B72021AD6EAB00B9E1E4 /* BitouqWallet.app */,
+				AF09B73821AD6EAC00B9E1E4 /* BitouqWalletTests.xctest */,
+				AF09B74321AD6EAC00B9E1E4 /* BitouqWalletUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AF09B6AB21AC3A7500B9E1E4 /* BitouqWallet */ = {
+		AF09B72221AD6EAB00B9E1E4 /* BitouqWallet */ = {
 			isa = PBXGroup;
 			children = (
-				AF09B6E521AC3FA300B9E1E4 /* PrefixHeader.pch */,
-				AF09B6AC21AC3A7500B9E1E4 /* AppDelegate.h */,
-				AF09B6AD21AC3A7500B9E1E4 /* AppDelegate.m */,
-				AF09B6B521AC3A7600B9E1E4 /* Assets.xcassets */,
-				AF09B6B721AC3A7600B9E1E4 /* LaunchScreen.storyboard */,
-				AF09B6BA21AC3A7600B9E1E4 /* Info.plist */,
-				AF09B6BB21AC3A7600B9E1E4 /* main.m */,
+				AF09B78D21AD7C8500B9E1E4 /* PrefixHeader.pch */,
+				AF09B72321AD6EAB00B9E1E4 /* AppDelegate.h */,
+				AF09B72421AD6EAB00B9E1E4 /* AppDelegate.m */,
+				AF09B72C21AD6EAB00B9E1E4 /* Assets.xcassets */,
+				AF09B72E21AD6EAB00B9E1E4 /* LaunchScreen.storyboard */,
+				AF09B73121AD6EAB00B9E1E4 /* Info.plist */,
+				AF09B73221AD6EAB00B9E1E4 /* main.m */,
 			);
 			path = BitouqWallet;
 			sourceTree = "<group>";
 		};
-		AF09B6C421AC3A7700B9E1E4 /* BitouqWalletTests */ = {
+		AF09B73B21AD6EAC00B9E1E4 /* BitouqWalletTests */ = {
 			isa = PBXGroup;
 			children = (
-				AF09B6C521AC3A7700B9E1E4 /* BitouqWalletTests.m */,
-				AF09B6C721AC3A7700B9E1E4 /* Info.plist */,
+				AF09B73C21AD6EAC00B9E1E4 /* BitouqWalletTests.m */,
+				AF09B73E21AD6EAC00B9E1E4 /* Info.plist */,
 			);
 			path = BitouqWalletTests;
 			sourceTree = "<group>";
 		};
-		AF09B6CF21AC3A7700B9E1E4 /* BitouqWalletUITests */ = {
+		AF09B74621AD6EAC00B9E1E4 /* BitouqWalletUITests */ = {
 			isa = PBXGroup;
 			children = (
-				AF09B6D021AC3A7700B9E1E4 /* BitouqWalletUITests.m */,
-				AF09B6D221AC3A7700B9E1E4 /* Info.plist */,
+				AF09B74721AD6EAC00B9E1E4 /* BitouqWalletUITests.m */,
+				AF09B74921AD6EAC00B9E1E4 /* Info.plist */,
 			);
 			path = BitouqWalletUITests;
 			sourceTree = "<group>";
 		};
-		AF09B6DE21AC3B4F00B9E1E4 /* BWViewController */ = {
+		AF09B75521AD70DF00B9E1E4 /* BWRootViewController */ = {
 			isa = PBXGroup;
 			children = (
-				AF09B6E621AC41A000B9E1E4 /* BWWalletViewController */,
-				AF09B6E021AC3BCC00B9E1E4 /* BWRootViewcontroller */,
+				AF09B72921AD6EAB00B9E1E4 /* Main.storyboard */,
+				AF09B76421AD790600B9E1E4 /* BWTabBarController.h */,
+				AF09B76521AD790600B9E1E4 /* BWTabBarController.m */,
 			);
-			path = BWViewController;
+			path = BWRootViewController;
 			sourceTree = "<group>";
 		};
-		AF09B6DF21AC3B6000B9E1E4 /* BWUIKit */ = {
+		AF09B75621AD712700B9E1E4 /* BWWalletViewController(钱包) */ = {
 			isa = PBXGroup;
 			children = (
+				AF09B76721AD795B00B9E1E4 /* BWWalletViewController.h */,
+				AF09B76821AD795B00B9E1E4 /* BWWalletViewController.m */,
 			);
-			path = BWUIKit;
+			path = "BWWalletViewController(钱包)";
 			sourceTree = "<group>";
 		};
-		AF09B6E021AC3BCC00B9E1E4 /* BWRootViewcontroller */ = {
+		AF09B75721AD71D300B9E1E4 /* BWBRTStarsViewController(BRTStars) */ = {
 			isa = PBXGroup;
 			children = (
-				AF09B6B221AC3A7500B9E1E4 /* Main.storyboard */,
-				AF09B6E121AC3BFB00B9E1E4 /* BWRootViewController.h */,
-				AF09B6E221AC3BFB00B9E1E4 /* BWRootViewController.m */,
+				AF09B76A21AD797500B9E1E4 /* BWBRTStarsViewController.h */,
+				AF09B76B21AD797500B9E1E4 /* BWBRTStarsViewController.m */,
 			);
-			path = BWRootViewcontroller;
+			path = "BWBRTStarsViewController(BRTStars)";
 			sourceTree = "<group>";
 		};
-		AF09B6E621AC41A000B9E1E4 /* BWWalletViewController */ = {
+		AF09B75821AD71D900B9E1E4 /* BWRlueVIewController(规则) */ = {
 			isa = PBXGroup;
 			children = (
-				AF09B6EA21AC42EB00B9E1E4 /* Wallet.storyboard */,
-				AF09B6E721AC421600B9E1E4 /* BWWalletViewController.h */,
-				AF09B6E821AC421700B9E1E4 /* BWWalletViewController.m */,
+				AF09B77921AD79D700B9E1E4 /* BWRlueVIewController.h */,
+				AF09B77A21AD79D700B9E1E4 /* BWRlueVIewController.m */,
 			);
-			path = BWWalletViewController;
+			path = "BWRlueVIewController(规则)";
 			sourceTree = "<group>";
 		};
-		CA675295300863F5FDDADE52 /* Pods */ = {
+		AF09B75921AD71E500B9E1E4 /* BWVicOrDefViewController(胜负手) */ = {
 			isa = PBXGroup;
 			children = (
-				7B8C357939650B0EEBA7CA91 /* Pods-BitouqWallet.debug.xcconfig */,
-				E844192080C0AF3169FF626E /* Pods-BitouqWallet.release.xcconfig */,
+				AF09B76D21AD798900B9E1E4 /* BWVicOrDefViewController.h */,
+				AF09B76E21AD798900B9E1E4 /* BWVicOrDefViewController.m */,
 			);
-			name = Pods;
+			path = "BWVicOrDefViewController(胜负手)";
+			sourceTree = "<group>";
+		};
+		AF09B75A21AD71E700B9E1E4 /* BWMiningViewController(挖矿) */ = {
+			isa = PBXGroup;
+			children = (
+				AF09B77021AD799C00B9E1E4 /* BWMiningViewController.h */,
+				AF09B77121AD799C00B9E1E4 /* BWMiningViewController.m */,
+			);
+			path = "BWMiningViewController(挖矿)";
+			sourceTree = "<group>";
+		};
+		AF09B75B21AD71EA00B9E1E4 /* BWRecordViewController(交易记录) */ = {
+			isa = PBXGroup;
+			children = (
+				AF09B77321AD79B000B9E1E4 /* BWRecordViewController.h */,
+				AF09B77421AD79B000B9E1E4 /* BWRecordViewController.m */,
+			);
+			path = "BWRecordViewController(交易记录)";
+			sourceTree = "<group>";
+		};
+		AF09B75C21AD71EC00B9E1E4 /* BWDuplicateViewController(备份) */ = {
+			isa = PBXGroup;
+			children = (
+				AF09B77621AD79C500B9E1E4 /* BWDuplicateViewController.h */,
+				AF09B77721AD79C500B9E1E4 /* BWDuplicateViewController.m */,
+			);
+			path = "BWDuplicateViewController(备份)";
+			sourceTree = "<group>";
+		};
+		AF09B75D21AD71EE00B9E1E4 /* BWLoginViewController(登录) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "BWLoginViewController(登录)";
+			sourceTree = "<group>";
+		};
+		AF09B75E21AD71F000B9E1E4 /* BWGesturesPasswordViewcontroller(手势密码) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "BWGesturesPasswordViewcontroller(手势密码)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AF09B6A821AC3A7500B9E1E4 /* BitouqWallet */ = {
+		AF09B71F21AD6EAB00B9E1E4 /* BitouqWallet */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AF09B6D521AC3A7700B9E1E4 /* Build configuration list for PBXNativeTarget "BitouqWallet" */;
+			buildConfigurationList = AF09B74C21AD6EAC00B9E1E4 /* Build configuration list for PBXNativeTarget "BitouqWallet" */;
 			buildPhases = (
-				507CEA3705D6388AEA79FB88 /* [CP] Check Pods Manifest.lock */,
-				AF09B6A521AC3A7500B9E1E4 /* Sources */,
-				AF09B6A621AC3A7500B9E1E4 /* Frameworks */,
-				AF09B6A721AC3A7500B9E1E4 /* Resources */,
-				5F6F4B07762229D61580A6A0 /* [CP] Embed Pods Frameworks */,
+				AF09B71C21AD6EAB00B9E1E4 /* Sources */,
+				AF09B71D21AD6EAB00B9E1E4 /* Frameworks */,
+				AF09B71E21AD6EAB00B9E1E4 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -217,69 +287,69 @@
 			);
 			name = BitouqWallet;
 			productName = BitouqWallet;
-			productReference = AF09B6A921AC3A7500B9E1E4 /* BitouqWallet.app */;
+			productReference = AF09B72021AD6EAB00B9E1E4 /* BitouqWallet.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AF09B6C021AC3A7700B9E1E4 /* BitouqWalletTests */ = {
+		AF09B73721AD6EAC00B9E1E4 /* BitouqWalletTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AF09B6D821AC3A7700B9E1E4 /* Build configuration list for PBXNativeTarget "BitouqWalletTests" */;
+			buildConfigurationList = AF09B74F21AD6EAC00B9E1E4 /* Build configuration list for PBXNativeTarget "BitouqWalletTests" */;
 			buildPhases = (
-				AF09B6BD21AC3A7700B9E1E4 /* Sources */,
-				AF09B6BE21AC3A7700B9E1E4 /* Frameworks */,
-				AF09B6BF21AC3A7700B9E1E4 /* Resources */,
+				AF09B73421AD6EAC00B9E1E4 /* Sources */,
+				AF09B73521AD6EAC00B9E1E4 /* Frameworks */,
+				AF09B73621AD6EAC00B9E1E4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AF09B6C321AC3A7700B9E1E4 /* PBXTargetDependency */,
+				AF09B73A21AD6EAC00B9E1E4 /* PBXTargetDependency */,
 			);
 			name = BitouqWalletTests;
 			productName = BitouqWalletTests;
-			productReference = AF09B6C121AC3A7700B9E1E4 /* BitouqWalletTests.xctest */;
+			productReference = AF09B73821AD6EAC00B9E1E4 /* BitouqWalletTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		AF09B6CB21AC3A7700B9E1E4 /* BitouqWalletUITests */ = {
+		AF09B74221AD6EAC00B9E1E4 /* BitouqWalletUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AF09B6DB21AC3A7700B9E1E4 /* Build configuration list for PBXNativeTarget "BitouqWalletUITests" */;
+			buildConfigurationList = AF09B75221AD6EAC00B9E1E4 /* Build configuration list for PBXNativeTarget "BitouqWalletUITests" */;
 			buildPhases = (
-				AF09B6C821AC3A7700B9E1E4 /* Sources */,
-				AF09B6C921AC3A7700B9E1E4 /* Frameworks */,
-				AF09B6CA21AC3A7700B9E1E4 /* Resources */,
+				AF09B73F21AD6EAC00B9E1E4 /* Sources */,
+				AF09B74021AD6EAC00B9E1E4 /* Frameworks */,
+				AF09B74121AD6EAC00B9E1E4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AF09B6CE21AC3A7700B9E1E4 /* PBXTargetDependency */,
+				AF09B74521AD6EAC00B9E1E4 /* PBXTargetDependency */,
 			);
 			name = BitouqWalletUITests;
 			productName = BitouqWalletUITests;
-			productReference = AF09B6CC21AC3A7700B9E1E4 /* BitouqWalletUITests.xctest */;
+			productReference = AF09B74321AD6EAC00B9E1E4 /* BitouqWalletUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AF09B6A121AC3A7500B9E1E4 /* Project object */ = {
+		AF09B71821AD6EAB00B9E1E4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = BW;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Joker;
 				TargetAttributes = {
-					AF09B6A821AC3A7500B9E1E4 = {
+					AF09B71F21AD6EAB00B9E1E4 = {
 						CreatedOnToolsVersion = 10.1;
 					};
-					AF09B6C021AC3A7700B9E1E4 = {
+					AF09B73721AD6EAC00B9E1E4 = {
 						CreatedOnToolsVersion = 10.1;
-						TestTargetID = AF09B6A821AC3A7500B9E1E4;
+						TestTargetID = AF09B71F21AD6EAB00B9E1E4;
 					};
-					AF09B6CB21AC3A7700B9E1E4 = {
+					AF09B74221AD6EAC00B9E1E4 = {
 						CreatedOnToolsVersion = 10.1;
-						TestTargetID = AF09B6A821AC3A7500B9E1E4;
+						TestTargetID = AF09B71F21AD6EAB00B9E1E4;
 					};
 				};
 			};
-			buildConfigurationList = AF09B6A421AC3A7500B9E1E4 /* Build configuration list for PBXProject "BitouqWallet" */;
+			buildConfigurationList = AF09B71B21AD6EAB00B9E1E4 /* Build configuration list for PBXProject "BitouqWallet" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -287,38 +357,44 @@
 				en,
 				Base,
 			);
-			mainGroup = AF09B6A021AC3A7500B9E1E4;
-			productRefGroup = AF09B6AA21AC3A7500B9E1E4 /* Products */;
+			mainGroup = AF09B71721AD6EAB00B9E1E4;
+			productRefGroup = AF09B72121AD6EAB00B9E1E4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AF09B6A821AC3A7500B9E1E4 /* BitouqWallet */,
-				AF09B6C021AC3A7700B9E1E4 /* BitouqWalletTests */,
-				AF09B6CB21AC3A7700B9E1E4 /* BitouqWalletUITests */,
+				AF09B71F21AD6EAB00B9E1E4 /* BitouqWallet */,
+				AF09B73721AD6EAC00B9E1E4 /* BitouqWalletTests */,
+				AF09B74221AD6EAC00B9E1E4 /* BitouqWalletUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AF09B6A721AC3A7500B9E1E4 /* Resources */ = {
+		AF09B71E21AD6EAB00B9E1E4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF09B6B921AC3A7600B9E1E4 /* LaunchScreen.storyboard in Resources */,
-				AF09B6EB21AC42EB00B9E1E4 /* Wallet.storyboard in Resources */,
-				AF09B6B621AC3A7600B9E1E4 /* Assets.xcassets in Resources */,
-				AF09B6B421AC3A7500B9E1E4 /* Main.storyboard in Resources */,
+				AF09B78321AD7AFC00B9E1E4 /* VicOrDef.storyboard in Resources */,
+				AF09B73021AD6EAB00B9E1E4 /* LaunchScreen.storyboard in Resources */,
+				AF09B78C21AD7BFD00B9E1E4 /* rlue.storyboard in Resources */,
+				AF09B76321AD78AA00B9E1E4 /* wallet.storyboard in Resources */,
+				AF09B77E21AD7A0900B9E1E4 /* BRTStars.storyboard in Resources */,
+				AF09B72D21AD6EAB00B9E1E4 /* Assets.xcassets in Resources */,
+				AF09B78521AD7B3F00B9E1E4 /* mining.storyboard in Resources */,
+				AF09B78A21AD7BCD00B9E1E4 /* Duplicate.storyboard in Resources */,
+				AF09B72B21AD6EAB00B9E1E4 /* Main.storyboard in Resources */,
+				AF09B78721AD7B9500B9E1E4 /* Record.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF09B6BF21AC3A7700B9E1E4 /* Resources */ = {
+		AF09B73621AD6EAC00B9E1E4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF09B6CA21AC3A7700B9E1E4 /* Resources */ = {
+		AF09B74121AD6EAC00B9E1E4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -327,121 +403,100 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		507CEA3705D6388AEA79FB88 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BitouqWallet-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5F6F4B07762229D61580A6A0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BitouqWallet/Pods-BitouqWallet-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
-				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
-				"${BUILT_PRODUCTS_DIR}/YHCategroy/YHCategroy.framework",
-				"${BUILT_PRODUCTS_DIR}/YHModaTransitonHelper/YHModaTransitonHelper.framework",
-				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YHCategroy.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YHModaTransitonHelper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitouqWallet/Pods-BitouqWallet-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		AF09B6A521AC3A7500B9E1E4 /* Sources */ = {
+		AF09B71C21AD6EAB00B9E1E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF09B6E921AC421700B9E1E4 /* BWWalletViewController.m in Sources */,
-				AF09B6BC21AC3A7600B9E1E4 /* main.m in Sources */,
-				AF09B6AE21AC3A7500B9E1E4 /* AppDelegate.m in Sources */,
-				AF09B6E321AC3BFB00B9E1E4 /* BWRootViewController.m in Sources */,
+				AF09B76921AD795B00B9E1E4 /* BWWalletViewController.m in Sources */,
+				AF09B73321AD6EAB00B9E1E4 /* main.m in Sources */,
+				AF09B77821AD79C500B9E1E4 /* BWDuplicateViewController.m in Sources */,
+				AF09B77521AD79B000B9E1E4 /* BWRecordViewController.m in Sources */,
+				AF09B77221AD799C00B9E1E4 /* BWMiningViewController.m in Sources */,
+				AF09B72521AD6EAB00B9E1E4 /* AppDelegate.m in Sources */,
+				AF09B76C21AD797500B9E1E4 /* BWBRTStarsViewController.m in Sources */,
+				AF09B76621AD790600B9E1E4 /* BWTabBarController.m in Sources */,
+				AF09B76F21AD798900B9E1E4 /* BWVicOrDefViewController.m in Sources */,
+				AF09B77B21AD79D700B9E1E4 /* BWRlueVIewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF09B6BD21AC3A7700B9E1E4 /* Sources */ = {
+		AF09B73421AD6EAC00B9E1E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF09B6C621AC3A7700B9E1E4 /* BitouqWalletTests.m in Sources */,
+				AF09B73D21AD6EAC00B9E1E4 /* BitouqWalletTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF09B6C821AC3A7700B9E1E4 /* Sources */ = {
+		AF09B73F21AD6EAC00B9E1E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF09B6D121AC3A7700B9E1E4 /* BitouqWalletUITests.m in Sources */,
+				AF09B74821AD6EAC00B9E1E4 /* BitouqWalletUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AF09B6C321AC3A7700B9E1E4 /* PBXTargetDependency */ = {
+		AF09B73A21AD6EAC00B9E1E4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AF09B6A821AC3A7500B9E1E4 /* BitouqWallet */;
-			targetProxy = AF09B6C221AC3A7700B9E1E4 /* PBXContainerItemProxy */;
+			target = AF09B71F21AD6EAB00B9E1E4 /* BitouqWallet */;
+			targetProxy = AF09B73921AD6EAC00B9E1E4 /* PBXContainerItemProxy */;
 		};
-		AF09B6CE21AC3A7700B9E1E4 /* PBXTargetDependency */ = {
+		AF09B74521AD6EAC00B9E1E4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AF09B6A821AC3A7500B9E1E4 /* BitouqWallet */;
-			targetProxy = AF09B6CD21AC3A7700B9E1E4 /* PBXContainerItemProxy */;
+			target = AF09B71F21AD6EAB00B9E1E4 /* BitouqWallet */;
+			targetProxy = AF09B74421AD6EAC00B9E1E4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AF09B6B221AC3A7500B9E1E4 /* Main.storyboard */ = {
+		AF09B72921AD6EAB00B9E1E4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AF09B6B321AC3A7500B9E1E4 /* Base */,
+				AF09B72A21AD6EAB00B9E1E4 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		AF09B6B721AC3A7600B9E1E4 /* LaunchScreen.storyboard */ = {
+		AF09B72E21AD6EAB00B9E1E4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AF09B6B821AC3A7600B9E1E4 /* Base */,
+				AF09B72F21AD6EAB00B9E1E4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		AF09B77C21AD7A0900B9E1E4 /* BRTStars.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF09B77D21AD7A0900B9E1E4 /* Base */,
+			);
+			name = BRTStars.storyboard;
+			sourceTree = "<group>";
+		};
+		AF09B78121AD7AFC00B9E1E4 /* VicOrDef.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF09B78221AD7AFC00B9E1E4 /* Base */,
+			);
+			name = VicOrDef.storyboard;
+			sourceTree = "<group>";
+		};
+		AF09B78821AD7BCD00B9E1E4 /* Duplicate.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF09B78921AD7BCD00B9E1E4 /* Base */,
+			);
+			name = Duplicate.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		AF09B6D321AC3A7700B9E1E4 /* Debug */ = {
+		AF09B74A21AD6EAC00B9E1E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -500,7 +555,7 @@
 			};
 			name = Debug;
 		};
-		AF09B6D421AC3A7700B9E1E4 /* Release */ = {
+		AF09B74B21AD6EAC00B9E1E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -553,9 +608,8 @@
 			};
 			name = Release;
 		};
-		AF09B6D621AC3A7700B9E1E4 /* Debug */ = {
+		AF09B74D21AD6EAC00B9E1E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B8C357939650B0EEBA7CA91 /* Pods-BitouqWallet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -573,9 +627,8 @@
 			};
 			name = Debug;
 		};
-		AF09B6D721AC3A7700B9E1E4 /* Release */ = {
+		AF09B74E21AD6EAC00B9E1E4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E844192080C0AF3169FF626E /* Pods-BitouqWallet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -593,7 +646,7 @@
 			};
 			name = Release;
 		};
-		AF09B6D921AC3A7700B9E1E4 /* Debug */ = {
+		AF09B75021AD6EAC00B9E1E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -612,7 +665,7 @@
 			};
 			name = Debug;
 		};
-		AF09B6DA21AC3A7700B9E1E4 /* Release */ = {
+		AF09B75121AD6EAC00B9E1E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -631,7 +684,7 @@
 			};
 			name = Release;
 		};
-		AF09B6DC21AC3A7700B9E1E4 /* Debug */ = {
+		AF09B75321AD6EAC00B9E1E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -649,7 +702,7 @@
 			};
 			name = Debug;
 		};
-		AF09B6DD21AC3A7700B9E1E4 /* Release */ = {
+		AF09B75421AD6EAC00B9E1E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -670,43 +723,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AF09B6A421AC3A7500B9E1E4 /* Build configuration list for PBXProject "BitouqWallet" */ = {
+		AF09B71B21AD6EAB00B9E1E4 /* Build configuration list for PBXProject "BitouqWallet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AF09B6D321AC3A7700B9E1E4 /* Debug */,
-				AF09B6D421AC3A7700B9E1E4 /* Release */,
+				AF09B74A21AD6EAC00B9E1E4 /* Debug */,
+				AF09B74B21AD6EAC00B9E1E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AF09B6D521AC3A7700B9E1E4 /* Build configuration list for PBXNativeTarget "BitouqWallet" */ = {
+		AF09B74C21AD6EAC00B9E1E4 /* Build configuration list for PBXNativeTarget "BitouqWallet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AF09B6D621AC3A7700B9E1E4 /* Debug */,
-				AF09B6D721AC3A7700B9E1E4 /* Release */,
+				AF09B74D21AD6EAC00B9E1E4 /* Debug */,
+				AF09B74E21AD6EAC00B9E1E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AF09B6D821AC3A7700B9E1E4 /* Build configuration list for PBXNativeTarget "BitouqWalletTests" */ = {
+		AF09B74F21AD6EAC00B9E1E4 /* Build configuration list for PBXNativeTarget "BitouqWalletTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AF09B6D921AC3A7700B9E1E4 /* Debug */,
-				AF09B6DA21AC3A7700B9E1E4 /* Release */,
+				AF09B75021AD6EAC00B9E1E4 /* Debug */,
+				AF09B75121AD6EAC00B9E1E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AF09B6DB21AC3A7700B9E1E4 /* Build configuration list for PBXNativeTarget "BitouqWalletUITests" */ = {
+		AF09B75221AD6EAC00B9E1E4 /* Build configuration list for PBXNativeTarget "BitouqWalletUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AF09B6DC21AC3A7700B9E1E4 /* Debug */,
-				AF09B6DD21AC3A7700B9E1E4 /* Release */,
+				AF09B75321AD6EAC00B9E1E4 /* Debug */,
+				AF09B75421AD6EAC00B9E1E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = AF09B6A121AC3A7500B9E1E4 /* Project object */;
+	rootObject = AF09B71821AD6EAB00B9E1E4 /* Project object */;
 }
