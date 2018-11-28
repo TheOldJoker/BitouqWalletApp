@@ -1,25 +1,26 @@
 //
-//  BWWalletViewController.m
+//  BWMenuViewController.m
 //  BitouqWallet
 //
-//  Created by 赵一欢 on 2018/11/27.
+//  Created by 赵一欢 on 2018/11/28.
 //  Copyright © 2018 Joker. All rights reserved.
 //
 
-#import "BWWalletViewController.h"
+#import "BWMenuViewController.h"
 
-@interface BWWalletViewController ()
+@interface BWMenuViewController ()
 
 @end
 
-@implementation BWWalletViewController
+@implementation BWMenuViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"錢包";
-    [self initMenuNav];
+    self.view.backgroundColor = [UIColor purpleColor];
 }
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 /*
 #pragma mark - Navigation
 

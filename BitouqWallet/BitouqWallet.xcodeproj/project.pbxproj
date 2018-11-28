@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF06701021AE324D00F23D22 /* YHBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06700E21AE324C00F23D22 /* YHBaseNavigationController.m */; };
+		AF06701521AE37AD00F23D22 /* BWMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06701321AE37AD00F23D22 /* BWMenuViewController.m */; };
+		AF06701621AE37AD00F23D22 /* BWMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF06701421AE37AD00F23D22 /* BWMenuViewController.xib */; };
 		AF09B72521AD6EAB00B9E1E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF09B72421AD6EAB00B9E1E4 /* AppDelegate.m */; };
 		AF09B72B21AD6EAB00B9E1E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF09B72921AD6EAB00B9E1E4 /* Main.storyboard */; };
 		AF09B72D21AD6EAB00B9E1E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF09B72C21AD6EAB00B9E1E4 /* Assets.xcassets */; };
@@ -54,6 +57,11 @@
 		25A5DFD709F8D4D06451C13F /* Pods-BitouqWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitouqWallet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitouqWallet/Pods-BitouqWallet.debug.xcconfig"; sourceTree = "<group>"; };
 		7931BF157400160B43C18B4E /* Pods_BitouqWallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitouqWallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FA0EAB86AADCE36C0BC0869 /* Pods-BitouqWallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitouqWallet.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitouqWallet/Pods-BitouqWallet.release.xcconfig"; sourceTree = "<group>"; };
+		AF06700E21AE324C00F23D22 /* YHBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHBaseNavigationController.m; sourceTree = "<group>"; };
+		AF06700F21AE324C00F23D22 /* YHBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHBaseNavigationController.h; sourceTree = "<group>"; };
+		AF06701221AE37AD00F23D22 /* BWMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWMenuViewController.h; sourceTree = "<group>"; };
+		AF06701321AE37AD00F23D22 /* BWMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWMenuViewController.m; sourceTree = "<group>"; };
+		AF06701421AE37AD00F23D22 /* BWMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWMenuViewController.xib; sourceTree = "<group>"; };
 		AF09B72021AD6EAB00B9E1E4 /* BitouqWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitouqWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF09B72321AD6EAB00B9E1E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AF09B72421AD6EAB00B9E1E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -140,9 +148,30 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AF06700D21AE323B00F23D22 /* YHBase */ = {
+			isa = PBXGroup;
+			children = (
+				AF06700F21AE324C00F23D22 /* YHBaseNavigationController.h */,
+				AF06700E21AE324C00F23D22 /* YHBaseNavigationController.m */,
+			);
+			path = YHBase;
+			sourceTree = "<group>";
+		};
+		AF06701121AE372C00F23D22 /* BWMenuViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AF06701221AE37AD00F23D22 /* BWMenuViewController.h */,
+				AF06701321AE37AD00F23D22 /* BWMenuViewController.m */,
+				AF06701421AE37AD00F23D22 /* BWMenuViewController.xib */,
+			);
+			path = BWMenuViewController;
+			sourceTree = "<group>";
+		};
 		AF09B71721AD6EAB00B9E1E4 = {
 			isa = PBXGroup;
 			children = (
+				AF06701121AE372C00F23D22 /* BWMenuViewController */,
+				AF06700D21AE323B00F23D22 /* YHBase */,
 				AF09B78E21AD7E3A00B9E1E4 /* BWCategory */,
 				AF09B78B21AD7BFD00B9E1E4 /* rlue.storyboard */,
 				AF09B78821AD7BCD00B9E1E4 /* Duplicate.storyboard */,
@@ -418,6 +447,7 @@
 				AF09B78321AD7AFC00B9E1E4 /* VicOrDef.storyboard in Resources */,
 				AF09B73021AD6EAB00B9E1E4 /* LaunchScreen.storyboard in Resources */,
 				AF09B78C21AD7BFD00B9E1E4 /* rlue.storyboard in Resources */,
+				AF06701621AE37AD00F23D22 /* BWMenuViewController.xib in Resources */,
 				AF09B76321AD78AA00B9E1E4 /* wallet.storyboard in Resources */,
 				AF09B77E21AD7A0900B9E1E4 /* BRTStars.storyboard in Resources */,
 				AF09B72D21AD6EAB00B9E1E4 /* Assets.xcassets in Resources */,
@@ -503,7 +533,9 @@
 				AF09B76921AD795B00B9E1E4 /* BWWalletViewController.m in Sources */,
 				AF09B73321AD6EAB00B9E1E4 /* main.m in Sources */,
 				AF09B77821AD79C500B9E1E4 /* BWDuplicateViewController.m in Sources */,
+				AF06701021AE324D00F23D22 /* YHBaseNavigationController.m in Sources */,
 				AF09B77521AD79B000B9E1E4 /* BWRecordViewController.m in Sources */,
+				AF06701521AE37AD00F23D22 /* BWMenuViewController.m in Sources */,
 				AF09B77221AD799C00B9E1E4 /* BWMiningViewController.m in Sources */,
 				AF09B72521AD6EAB00B9E1E4 /* AppDelegate.m in Sources */,
 				AF09B76C21AD797500B9E1E4 /* BWBRTStarsViewController.m in Sources */,

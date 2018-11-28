@@ -13,9 +13,10 @@
         <!--Item-->
         <scene sceneID="u3U-i4-rgU">
             <objects>
-                <navigationController navigationBarHidden="YES" id="TAv-5n-Bfk" sceneMemberID="viewController">
+                <navigationController id="TAv-5n-Bfk" customClass="YHBaseNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="3Dx-nd-0pi"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1r6-dO-qmg">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

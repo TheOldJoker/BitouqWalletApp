@@ -7,7 +7,7 @@
 //
 
 #import "BWTabBarController.h"
-
+#import "BWMenuViewController.h"
 @interface BWTabBarController ()
 
 @end
@@ -16,9 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     // Do any additional setup after loading the view.
 }
-
+- (void)showMenu {
+    BWMenuViewController *menuVC = [[BWMenuViewController alloc] init];
+    [self customPresentVC:menuVC animation:(YHModaAnimationTypePush) showBlackBackgroud:NO canTapDismiss:NO];
+}
 /*
 #pragma mark - Navigation
 

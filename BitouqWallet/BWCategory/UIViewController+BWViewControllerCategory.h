@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UIViewController (BWViewControllerCategory)
-- (void)initNav;
+- (void)initMenuNav;
 @end
 
 NS_ASSUME_NONNULL_END
