@@ -21,7 +21,7 @@
 }
 - (void)showMenu {
     BWMenuViewController *menuVC = [[BWMenuViewController alloc] init];
-    [self customPresentVC:menuVC animation:(YHModaAnimationTypePush) showBlackBackgroud:NO canTapDismiss:NO];
+    [self customPresentVC:menuVC animation:(YHModaAnimationTypeDrawer) showBlackBackgroud:NO canTapDismiss:NO];
 }
 /*
 #pragma mark - Navigation

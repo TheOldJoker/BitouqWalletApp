@@ -10,6 +10,7 @@
 typedef NS_ENUM(NSUInteger, YHModaAnimationType) {
     YHModaAnimationTypeSpring = 0,
     YHModaAnimationTypeAlpha,
+    YHModaAnimationTypeDrawer,
     YHModaAnimationTypePush,
     YHModaAnimationTypePresent,
     YHModaAnimationTypeScale,

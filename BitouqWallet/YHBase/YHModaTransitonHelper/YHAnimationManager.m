@@ -24,6 +24,10 @@
         case YHModaAnimationTypePresent:
             present == YES ? [self doPresentAnimationPresentWithView:toView completion:completion] : [self doDismissAnimationDismissWithView:toView completion:completion];
             break;
+            //抽屜
+        case YHModaAnimationTypeDrawer:
+            present == YES ? [self doDrawerAnimationPresentWithView:toView completion:completion] : [self doDrawerPopAnimationDismissWithView:toView completion:completion];
+            break;
             //伪push
         case YHModaAnimationTypePush:
             present == YES ? [self doPushAnimationPresentWithView:toView completion:completion] : [self doPopAnimationDismissWithView:toView completion:completion];
@@ -137,6 +141,29 @@
 {
     [UIView animateWithDuration:0.2 delay:0 options:(UIViewAnimationOptionCurveEaseIn) animations:^{
         view.transform = CGAffineTransformMakeTranslation(0, view.bounds.size.height);
+    } completion:^(BOOL finished) {
+        if (completion) {
+            completion(finished);
+        }
+    }];
+}
+#pragma mark 左推(抽屜)
+//drawer
++ (void)doDrawerAnimationPresentWithView:(UIView *)view completion:(void (^)(BOOL finished))completion
+{
+    view.transform = CGAffineTransformMakeTranslation(-view.bounds.size.width, 0);
+    [UIView animateWithDuration:0.3 delay:0 options:(UIViewAnimationOptionCurveEaseInOut) animations:^{
+        view.transform = CGAffineTransformMakeTranslation(0, 0);
+    } completion:^(BOOL finished) {
+        if (completion) {
+            completion(finished);
+        }
+    }];
+}
++ (void)doDrawerPopAnimationDismissWithView:(UIView *)view completion:(void (^)(BOOL finished))completion
+{
+    [UIView animateWithDuration:0.3 delay:0 options:(UIViewAnimationOptionCurveEaseIn) animations:^{
+        view.transform = CGAffineTransformMakeTranslation(-view.bounds.size.width, 0);
     } completion:^(BOOL finished) {
         if (completion) {
             completion(finished);

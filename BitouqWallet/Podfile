@@ -1,6 +1,5 @@
 use_frameworks!
 target 'BitouqWallet' do
-pod 'YHModaTransitonHelper'
 pod 'YHCategroy'
 pod 'MBProgressHUD'
 pod 'YYCache'
