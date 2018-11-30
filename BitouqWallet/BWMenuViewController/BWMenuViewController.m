@@ -7,20 +7,46 @@
 //
 
 #import "BWMenuViewController.h"
-
+#import "BWMenuButton.h"
 @interface BWMenuViewController ()
-
+@property (strong, nonatomic) IBOutlet BWMenuButton *walletButton;
+@property (strong, nonatomic) IBOutlet BWMenuButton *starsButton;
+@property (strong, nonatomic) IBOutlet BWMenuButton *vicOrDevButton;
+@property (strong, nonatomic) IBOutlet BWMenuButton *miningButton;
+@property (strong, nonatomic) IBOutlet BWMenuButton *recordButton;
+@property (strong, nonatomic) IBOutlet BWMenuButton *deuplicateButton;
+@property (strong, nonatomic) IBOutlet BWMenuButton *rlueButton;
+@property (strong, nonatomic) NSArray *buttonArray;
 @end
 
 @implementation BWMenuViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor purpleColor];
+    [self initSubViews];
+    BWMenuButton *temp = self.buttonArray[self.selectedIndex];
+    temp.isSelected = YES;
 }
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+- (void)initSubViews{
+    self.walletButton.customTitle = @"錢包";
+    self.starsButton.customTitle = @"BRTStars";
+    self.vicOrDevButton.customTitle = @"勝負手";
+    self.miningButton.customTitle = @"挖礦";
+    self.recordButton.customTitle = @"交易記錄";
+    self.deuplicateButton.customTitle = @"備份錢包";
+    self.rlueButton.customTitle = @"規則";
+    self.buttonArray = @[self.walletButton,self.starsButton,self.vicOrDevButton,self.miningButton,self.recordButton,self.deuplicateButton,self.rlueButton];
+    for (BWMenuButton *temp in self.buttonArray) {
+        temp.isSelected = NO;
+    }
+}
+- (IBAction)menuAction:(BWMenuButton *)sender {
+    if ([self.delegate respondsToSelector:@selector(menuSelectedIndex:)]) {
+        [self.delegate menuSelectedIndex:sender.tag - 2001];
+    }
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 /*
 #pragma mark - Navigation
 

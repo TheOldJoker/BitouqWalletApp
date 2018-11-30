@@ -8,7 +8,7 @@
 
 #import "BWTabBarController.h"
 #import "BWMenuViewController.h"
-@interface BWTabBarController ()
+@interface BWTabBarController ()<BWMenuViewControllerDelegate>
 
 @end
 
@@ -21,7 +21,13 @@
 }
 - (void)showMenu {
     BWMenuViewController *menuVC = [[BWMenuViewController alloc] init];
+    menuVC.selectedIndex = self.selectedIndex;
+    menuVC.delegate = self;
     [self customPresentVC:menuVC animation:(YHModaAnimationTypeDrawer) showBlackBackgroud:NO canTapDismiss:NO];
+}
+- (void)menuSelectedIndex:(NSInteger)selectedIndex
+{
+    self.selectedIndex = selectedIndex;
 }
 /*
 #pragma mark - Navigation

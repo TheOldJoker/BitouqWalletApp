@@ -9,19 +9,7 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#define isIphoneX ({\
-int tmp = 0;\
-if (@available(iOS 11.0, *)) {\
-if (!UIEdgeInsetsEqualToEdgeInsets([UIApplication sharedApplication].delegate.window.safeAreaInsets, UIEdgeInsetsZero)) {\
-tmp = 1;\
-}else{\
-tmp = 0;\
-}\
-}else{\
-tmp = 0;\
-}\
-tmp;\
-})
+#define is_iPhoneX @available(iOS 11.0, *) && UIApplication.sharedApplication.keyWindow.safeAreaInsets.bottom > 0.0
 
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height

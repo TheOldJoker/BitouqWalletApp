@@ -1,26 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BWMenuViewController">
             <connections>
+                <outlet property="deuplicateButton" destination="zab-KQ-uLs" id="0lT-zQ-onA"/>
+                <outlet property="miningButton" destination="UgY-1l-G71" id="FTJ-OC-ikG"/>
+                <outlet property="recordButton" destination="l2G-71-YA1" id="vZA-UM-W8z"/>
+                <outlet property="rlueButton" destination="79i-oS-1hX" id="LE3-px-YWd"/>
+                <outlet property="starsButton" destination="h2y-YJ-tG1" id="fRL-NG-ByW"/>
+                <outlet property="vicOrDevButton" destination="maQ-O9-HSY" id="m09-t3-azj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="walletButton" destination="2jl-RR-WKS" id="nhU-Ie-g4n"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_background" translatesAutoresizingMaskIntoConstraints="NO" id="CLA-ab-Ahr">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <button opaque="NO" tag="2001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jl-RR-WKS" customClass="BWMenuButton">
+                    <rect key="frame" x="0.0" y="217" width="414" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="o0Y-G4-abI"/>
+                    </constraints>
+                    <connections>
+                        <action selector="menuAction:" destination="-1" eventType="touchUpInside" id="9Pk-D3-mC6"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="2002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2y-YJ-tG1" customClass="BWMenuButton">
+                    <rect key="frame" x="0.0" y="261" width="414" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Vc3-h5-u6Q"/>
+                    </constraints>
+                    <connections>
+                        <action selector="menuAction:" destination="-1" eventType="touchUpInside" id="rO1-Iv-jLN"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="2003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maQ-O9-HSY" customClass="BWMenuButton">
+                    <rect key="frame" x="0.0" y="305" width="414" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="VoC-Ql-Wtb"/>
+                    </constraints>
+                    <connections>
+                        <action selector="menuAction:" destination="-1" eventType="touchUpInside" id="dsN-oM-kRa"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="2004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgY-1l-G71" customClass="BWMenuButton">
+                    <rect key="frame" x="0.0" y="349" width="414" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="aPi-UV-fVl"/>
+                    </constraints>
+                    <connections>
+                        <action selector="menuAction:" destination="-1" eventType="touchUpInside" id="Hcg-ur-enx"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="2005" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2G-71-YA1" customClass="BWMenuButton">
+                    <rect key="frame" x="0.0" y="393" width="414" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="qYH-u9-5N7"/>
+                    </constraints>
+                    <connections>
+                        <action selector="menuAction:" destination="-1" eventType="touchUpInside" id="tV9-8O-rXt"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="2006" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zab-KQ-uLs" customClass="BWMenuButton">
+                    <rect key="frame" x="0.0" y="437" width="414" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="dj1-WC-PeS"/>
+                    </constraints>
+                    <connections>
+                        <action selector="menuAction:" destination="-1" eventType="touchUpInside" id="T6D-Jq-BkK"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="2007" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79i-oS-1hX" customClass="BWMenuButton">
+                    <rect key="frame" x="0.0" y="481" width="414" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="e1a-Jg-6aE"/>
+                    </constraints>
+                    <connections>
+                        <action selector="menuAction:" destination="-1" eventType="touchUpInside" id="VGW-dW-K74"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <constraints>
+                <constraint firstItem="2jl-RR-WKS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1H8-7y-8OE"/>
+                <constraint firstItem="CLA-ab-Ahr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="43V-k9-36y"/>
+                <constraint firstAttribute="bottom" secondItem="CLA-ab-Ahr" secondAttribute="bottom" id="5TE-bk-N1I"/>
+                <constraint firstItem="79i-oS-1hX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5or-eK-wk0"/>
+                <constraint firstAttribute="trailing" secondItem="2jl-RR-WKS" secondAttribute="trailing" id="67b-1c-Pte"/>
+                <constraint firstItem="UgY-1l-G71" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6bo-qk-ke6"/>
+                <constraint firstItem="l2G-71-YA1" firstAttribute="top" secondItem="UgY-1l-G71" secondAttribute="bottom" id="D5o-By-wB1"/>
+                <constraint firstItem="l2G-71-YA1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DKr-A9-3rf"/>
+                <constraint firstAttribute="trailing" secondItem="79i-oS-1hX" secondAttribute="trailing" id="NvU-Cu-jdg"/>
+                <constraint firstItem="h2y-YJ-tG1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Pnk-GZ-jIm"/>
+                <constraint firstItem="maQ-O9-HSY" firstAttribute="top" secondItem="h2y-YJ-tG1" secondAttribute="bottom" id="QJw-ff-XEp"/>
+                <constraint firstItem="maQ-O9-HSY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="VB1-Rz-uuZ"/>
+                <constraint firstItem="2jl-RR-WKS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="217" id="W7B-nS-Mlt"/>
+                <constraint firstItem="79i-oS-1hX" firstAttribute="top" secondItem="zab-KQ-uLs" secondAttribute="bottom" id="WF1-km-TGl"/>
+                <constraint firstItem="UgY-1l-G71" firstAttribute="top" secondItem="maQ-O9-HSY" secondAttribute="bottom" id="YAO-Ax-q7t"/>
+                <constraint firstAttribute="trailing" secondItem="CLA-ab-Ahr" secondAttribute="trailing" id="dRq-LB-fle"/>
+                <constraint firstAttribute="trailing" secondItem="maQ-O9-HSY" secondAttribute="trailing" id="dmw-pQ-yf2"/>
+                <constraint firstAttribute="trailing" secondItem="h2y-YJ-tG1" secondAttribute="trailing" id="duV-ey-Ree"/>
+                <constraint firstItem="CLA-ab-Ahr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hUv-ci-CR2"/>
+                <constraint firstAttribute="trailing" secondItem="UgY-1l-G71" secondAttribute="trailing" id="iaW-fy-0zN"/>
+                <constraint firstItem="zab-KQ-uLs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jgG-dc-fl0"/>
+                <constraint firstAttribute="trailing" secondItem="zab-KQ-uLs" secondAttribute="trailing" id="kcW-V0-Yxt"/>
+                <constraint firstItem="zab-KQ-uLs" firstAttribute="top" secondItem="l2G-71-YA1" secondAttribute="bottom" id="o3x-G3-ENj"/>
+                <constraint firstItem="h2y-YJ-tG1" firstAttribute="top" secondItem="2jl-RR-WKS" secondAttribute="bottom" id="r6d-xy-NaP"/>
+                <constraint firstAttribute="trailing" secondItem="l2G-71-YA1" secondAttribute="trailing" id="x59-Kn-XwQ"/>
+            </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="menu_background" width="375" height="812"/>
+    </resources>
 </document>

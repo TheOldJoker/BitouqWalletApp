@@ -38,6 +38,7 @@
 		AF09B78A21AD7BCD00B9E1E4 /* Duplicate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF09B78821AD7BCD00B9E1E4 /* Duplicate.storyboard */; };
 		AF09B78C21AD7BFD00B9E1E4 /* rlue.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF09B78B21AD7BFD00B9E1E4 /* rlue.storyboard */; };
 		AF09B79121AD7E6400B9E1E4 /* UIViewController+BWViewControllerCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = AF09B79021AD7E6400B9E1E4 /* UIViewController+BWViewControllerCategory.m */; };
+		AFEBA7AF21B17A8100F5ECEF /* BWMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBA7AE21B17A8100F5ECEF /* BWMenuButton.m */; };
 		B3D35B7A0FD06B351857CB2B /* Pods_BitouqWallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7931BF157400160B43C18B4E /* Pods_BitouqWallet.framework */; };
 /* End PBXBuildFile section */
 
@@ -119,6 +120,8 @@
 		AF09B78F21AD7E6400B9E1E4 /* UIViewController+BWViewControllerCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BWViewControllerCategory.h"; sourceTree = "<group>"; };
 		AF09B79021AD7E6400B9E1E4 /* UIViewController+BWViewControllerCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BWViewControllerCategory.m"; sourceTree = "<group>"; };
 		AF09B79221AD7F3400B9E1E4 /* BWCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWCategory.h; sourceTree = "<group>"; };
+		AFEBA7AD21B17A8100F5ECEF /* BWMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWMenuButton.h; sourceTree = "<group>"; };
+		AFEBA7AE21B17A8100F5ECEF /* BWMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWMenuButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +180,7 @@
 		AF06701121AE372C00F23D22 /* BWMenuViewController */ = {
 			isa = PBXGroup;
 			children = (
+				AFEBA7AC21B17A3D00F5ECEF /* view */,
 				AF06701221AE37AD00F23D22 /* BWMenuViewController.h */,
 				AF06701321AE37AD00F23D22 /* BWMenuViewController.m */,
 				AF06701421AE37AD00F23D22 /* BWMenuViewController.xib */,
@@ -371,6 +375,16 @@
 				AF09B79021AD7E6400B9E1E4 /* UIViewController+BWViewControllerCategory.m */,
 			);
 			path = BWCategory;
+			sourceTree = "<group>";
+		};
+		AFEBA7AC21B17A3D00F5ECEF /* view */ = {
+			isa = PBXGroup;
+			children = (
+				AFEBA7AD21B17A8100F5ECEF /* BWMenuButton.h */,
+				AFEBA7AE21B17A8100F5ECEF /* BWMenuButton.m */,
+			);
+			name = view;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -572,6 +586,7 @@
 				AF06701521AE37AD00F23D22 /* BWMenuViewController.m in Sources */,
 				AF06704821AECF0E00F23D22 /* YHCAAimationModalTransition.m in Sources */,
 				AF09B77221AD799C00B9E1E4 /* BWMiningViewController.m in Sources */,
+				AFEBA7AF21B17A8100F5ECEF /* BWMenuButton.m in Sources */,
 				AF09B72521AD6EAB00B9E1E4 /* AppDelegate.m in Sources */,
 				AF09B76C21AD797500B9E1E4 /* BWBRTStarsViewController.m in Sources */,
 				AF09B79121AD7E6400B9E1E4 /* UIViewController+BWViewControllerCategory.m in Sources */,
@@ -781,6 +796,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/BitouqWallet/PrefixHeader.pch";
 				INFOPLIST_FILE = BitouqWallet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -801,6 +817,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/BitouqWallet/PrefixHeader.pch";
 				INFOPLIST_FILE = BitouqWallet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
