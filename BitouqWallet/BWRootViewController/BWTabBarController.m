@@ -13,11 +13,17 @@
 @end
 
 @implementation BWTabBarController
-
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self JudgeLoginState];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    // Do any additional setup after loading the view.
+    
+}
+- (void)JudgeLoginState {
+    [self showLogin];
 }
 - (void)showMenu {
     BWMenuViewController *menuVC = [[BWMenuViewController alloc] init];
@@ -28,6 +34,12 @@
 - (void)menuSelectedIndex:(NSInteger)selectedIndex
 {
     self.selectedIndex = selectedIndex;
+}
+- (void)showLogin{
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+    UINavigationController * vc = [storyBoard instantiateViewControllerWithIdentifier:@"begin"];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self presentViewController:vc animated:YES completion:nil];
 }
 /*
 #pragma mark - Navigation

@@ -39,6 +39,8 @@
 		AF09B78C21AD7BFD00B9E1E4 /* rlue.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF09B78B21AD7BFD00B9E1E4 /* rlue.storyboard */; };
 		AF09B79121AD7E6400B9E1E4 /* UIViewController+BWViewControllerCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = AF09B79021AD7E6400B9E1E4 /* UIViewController+BWViewControllerCategory.m */; };
 		AFEBA7AF21B17A8100F5ECEF /* BWMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBA7AE21B17A8100F5ECEF /* BWMenuButton.m */; };
+		AFEBA7B121B3C4DD00F5ECEF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFEBA7B021B3C4DD00F5ECEF /* Login.storyboard */; };
+		AFEBA7B421B3D2AA00F5ECEF /* BWLoginSugeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBA7B321B3D2AA00F5ECEF /* BWLoginSugeViewController.m */; };
 		B3D35B7A0FD06B351857CB2B /* Pods_BitouqWallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7931BF157400160B43C18B4E /* Pods_BitouqWallet.framework */; };
 /* End PBXBuildFile section */
 
@@ -122,6 +124,9 @@
 		AF09B79221AD7F3400B9E1E4 /* BWCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWCategory.h; sourceTree = "<group>"; };
 		AFEBA7AD21B17A8100F5ECEF /* BWMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWMenuButton.h; sourceTree = "<group>"; };
 		AFEBA7AE21B17A8100F5ECEF /* BWMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWMenuButton.m; sourceTree = "<group>"; };
+		AFEBA7B021B3C4DD00F5ECEF /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		AFEBA7B221B3D2AA00F5ECEF /* BWLoginSugeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWLoginSugeViewController.h; sourceTree = "<group>"; };
+		AFEBA7B321B3D2AA00F5ECEF /* BWLoginSugeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWLoginSugeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,12 +200,12 @@
 				AF06703D21AECF0E00F23D22 /* YHModaTransitionHelper.h */,
 				AF06703E21AECF0E00F23D22 /* YHCAAimationModalTransition.h */,
 				AF06703F21AECF0E00F23D22 /* UIViewController+YHModaTransitonHelper.h */,
+				AF06704521AECF0E00F23D22 /* UIViewController+YHModaTransitonHelper.m */,
 				AF06704021AECF0E00F23D22 /* YHPresentationController.m */,
 				AF06704121AECF0E00F23D22 /* YHModaAnimationManager.h */,
 				AF06704221AECF0E00F23D22 /* YHCAAimationModalTransition.m */,
 				AF06704321AECF0E00F23D22 /* YHAnimationManager.m */,
 				AF06704421AECF0E00F23D22 /* YHPresentationController.h */,
-				AF06704521AECF0E00F23D22 /* UIViewController+YHModaTransitonHelper.m */,
 				AF06704621AECF0E00F23D22 /* YHModaAnimationManager.m */,
 			);
 			path = YHModaTransitonHelper;
@@ -356,6 +361,9 @@
 		AF09B75D21AD71EE00B9E1E4 /* BWLoginViewController(登录) */ = {
 			isa = PBXGroup;
 			children = (
+				AFEBA7B021B3C4DD00F5ECEF /* Login.storyboard */,
+				AFEBA7B221B3D2AA00F5ECEF /* BWLoginSugeViewController.h */,
+				AFEBA7B321B3D2AA00F5ECEF /* BWLoginSugeViewController.m */,
 			);
 			path = "BWLoginViewController(登录)";
 			sourceTree = "<group>";
@@ -501,6 +509,7 @@
 				AF09B77E21AD7A0900B9E1E4 /* BRTStars.storyboard in Resources */,
 				AF09B72D21AD6EAB00B9E1E4 /* Assets.xcassets in Resources */,
 				AF09B78521AD7B3F00B9E1E4 /* mining.storyboard in Resources */,
+				AFEBA7B121B3C4DD00F5ECEF /* Login.storyboard in Resources */,
 				AF09B78A21AD7BCD00B9E1E4 /* Duplicate.storyboard in Resources */,
 				AF09B72B21AD6EAB00B9E1E4 /* Main.storyboard in Resources */,
 				AF09B78721AD7B9500B9E1E4 /* Record.storyboard in Resources */,
@@ -590,6 +599,7 @@
 				AF09B72521AD6EAB00B9E1E4 /* AppDelegate.m in Sources */,
 				AF09B76C21AD797500B9E1E4 /* BWBRTStarsViewController.m in Sources */,
 				AF09B79121AD7E6400B9E1E4 /* UIViewController+BWViewControllerCategory.m in Sources */,
+				AFEBA7B421B3D2AA00F5ECEF /* BWLoginSugeViewController.m in Sources */,
 				AF06704B21AECF0E00F23D22 /* YHModaAnimationManager.m in Sources */,
 				AF06704921AECF0E00F23D22 /* YHAnimationManager.m in Sources */,
 				AF06704721AECF0E00F23D22 /* YHPresentationController.m in Sources */,
