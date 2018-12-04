@@ -15,14 +15,19 @@
 @implementation BWTabBarController
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+    //1.判斷登錄狀態
     [self JudgeLoginState];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    
 }
 - (void)JudgeLoginState {
+    BWUser *user = [BWUserManager shareManager].user;
+    //1.如果user存在,切privatekey存在則為登錄狀態
+    if (user != nil && !stringIsEmpty(user.privatekey)) {
+        return;
+    }
     [self showLogin];
 }
 - (void)showMenu {

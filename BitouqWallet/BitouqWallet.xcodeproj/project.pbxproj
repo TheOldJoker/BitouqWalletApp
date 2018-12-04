@@ -41,6 +41,15 @@
 		AFEBA7AF21B17A8100F5ECEF /* BWMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBA7AE21B17A8100F5ECEF /* BWMenuButton.m */; };
 		AFEBA7B121B3C4DD00F5ECEF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFEBA7B021B3C4DD00F5ECEF /* Login.storyboard */; };
 		AFEBA7B421B3D2AA00F5ECEF /* BWLoginSugeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBA7B321B3D2AA00F5ECEF /* BWLoginSugeViewController.m */; };
+		AFEBA7B721B40A7700F5ECEF /* BWLoginPrivatekeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBA7B621B40A7700F5ECEF /* BWLoginPrivatekeyViewController.m */; };
+		AFEBA7BA21B4139100F5ECEF /* BWLoginSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBA7B921B4139100F5ECEF /* BWLoginSuccessViewController.m */; };
+		AFEBA7BD21B4193700F5ECEF /* BWLoginLeadPrivatekeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBA7BC21B4193700F5ECEF /* BWLoginLeadPrivatekeyViewController.m */; };
+		AFEBA7C221B41F5D00F5ECEF /* BWUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBA7C121B41F5D00F5ECEF /* BWUserManager.m */; };
+		AFEBA7C521B41F7A00F5ECEF /* BWUser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBA7C421B41F7A00F5ECEF /* BWUser.m */; };
+		AFEBA7CF21B4227F00F5ECEF /* YYDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBA7C721B4227F00F5ECEF /* YYDiskCache.m */; };
+		AFEBA7D021B4227F00F5ECEF /* YYCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBA7C921B4227F00F5ECEF /* YYCache.m */; };
+		AFEBA7D121B4227F00F5ECEF /* YYKVStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBA7CD21B4227F00F5ECEF /* YYKVStorage.m */; };
+		AFEBA7D221B4227F00F5ECEF /* YYMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBA7CE21B4227F00F5ECEF /* YYMemoryCache.m */; };
 		B3D35B7A0FD06B351857CB2B /* Pods_BitouqWallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7931BF157400160B43C18B4E /* Pods_BitouqWallet.framework */; };
 /* End PBXBuildFile section */
 
@@ -127,6 +136,24 @@
 		AFEBA7B021B3C4DD00F5ECEF /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		AFEBA7B221B3D2AA00F5ECEF /* BWLoginSugeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWLoginSugeViewController.h; sourceTree = "<group>"; };
 		AFEBA7B321B3D2AA00F5ECEF /* BWLoginSugeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWLoginSugeViewController.m; sourceTree = "<group>"; };
+		AFEBA7B521B40A7700F5ECEF /* BWLoginPrivatekeyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWLoginPrivatekeyViewController.h; sourceTree = "<group>"; };
+		AFEBA7B621B40A7700F5ECEF /* BWLoginPrivatekeyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWLoginPrivatekeyViewController.m; sourceTree = "<group>"; };
+		AFEBA7B821B4139100F5ECEF /* BWLoginSuccessViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWLoginSuccessViewController.h; sourceTree = "<group>"; };
+		AFEBA7B921B4139100F5ECEF /* BWLoginSuccessViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWLoginSuccessViewController.m; sourceTree = "<group>"; };
+		AFEBA7BB21B4193700F5ECEF /* BWLoginLeadPrivatekeyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWLoginLeadPrivatekeyViewController.h; sourceTree = "<group>"; };
+		AFEBA7BC21B4193700F5ECEF /* BWLoginLeadPrivatekeyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWLoginLeadPrivatekeyViewController.m; sourceTree = "<group>"; };
+		AFEBA7C021B41F5D00F5ECEF /* BWUserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWUserManager.h; sourceTree = "<group>"; };
+		AFEBA7C121B41F5D00F5ECEF /* BWUserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWUserManager.m; sourceTree = "<group>"; };
+		AFEBA7C321B41F7A00F5ECEF /* BWUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWUser.h; sourceTree = "<group>"; };
+		AFEBA7C421B41F7A00F5ECEF /* BWUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWUser.m; sourceTree = "<group>"; };
+		AFEBA7C721B4227F00F5ECEF /* YYDiskCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYDiskCache.m; sourceTree = "<group>"; };
+		AFEBA7C821B4227F00F5ECEF /* YYKVStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYKVStorage.h; sourceTree = "<group>"; };
+		AFEBA7C921B4227F00F5ECEF /* YYCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYCache.m; sourceTree = "<group>"; };
+		AFEBA7CA21B4227F00F5ECEF /* YYMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMemoryCache.h; sourceTree = "<group>"; };
+		AFEBA7CB21B4227F00F5ECEF /* YYDiskCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYDiskCache.h; sourceTree = "<group>"; };
+		AFEBA7CC21B4227F00F5ECEF /* YYCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCache.h; sourceTree = "<group>"; };
+		AFEBA7CD21B4227F00F5ECEF /* YYKVStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYKVStorage.m; sourceTree = "<group>"; };
+		AFEBA7CE21B4227F00F5ECEF /* YYMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMemoryCache.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +241,7 @@
 		AF09B71721AD6EAB00B9E1E4 = {
 			isa = PBXGroup;
 			children = (
+				AFEBA7BE21B41BA400F5ECEF /* Class */,
 				AF06701121AE372C00F23D22 /* BWMenuViewController */,
 				AF06700D21AE323B00F23D22 /* YHBase */,
 				AF09B78E21AD7E3A00B9E1E4 /* BWCategory */,
@@ -364,6 +392,12 @@
 				AFEBA7B021B3C4DD00F5ECEF /* Login.storyboard */,
 				AFEBA7B221B3D2AA00F5ECEF /* BWLoginSugeViewController.h */,
 				AFEBA7B321B3D2AA00F5ECEF /* BWLoginSugeViewController.m */,
+				AFEBA7B521B40A7700F5ECEF /* BWLoginPrivatekeyViewController.h */,
+				AFEBA7B621B40A7700F5ECEF /* BWLoginPrivatekeyViewController.m */,
+				AFEBA7BB21B4193700F5ECEF /* BWLoginLeadPrivatekeyViewController.h */,
+				AFEBA7BC21B4193700F5ECEF /* BWLoginLeadPrivatekeyViewController.m */,
+				AFEBA7B821B4139100F5ECEF /* BWLoginSuccessViewController.h */,
+				AFEBA7B921B4139100F5ECEF /* BWLoginSuccessViewController.m */,
 			);
 			path = "BWLoginViewController(登录)";
 			sourceTree = "<group>";
@@ -393,6 +427,41 @@
 			);
 			name = view;
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		AFEBA7BE21B41BA400F5ECEF /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				AFEBA7BF21B41F2F00F5ECEF /* BWUserManager */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		AFEBA7BF21B41F2F00F5ECEF /* BWUserManager */ = {
+			isa = PBXGroup;
+			children = (
+				AFEBA7C621B4227F00F5ECEF /* YYCache */,
+				AFEBA7C021B41F5D00F5ECEF /* BWUserManager.h */,
+				AFEBA7C121B41F5D00F5ECEF /* BWUserManager.m */,
+				AFEBA7C321B41F7A00F5ECEF /* BWUser.h */,
+				AFEBA7C421B41F7A00F5ECEF /* BWUser.m */,
+			);
+			path = BWUserManager;
+			sourceTree = "<group>";
+		};
+		AFEBA7C621B4227F00F5ECEF /* YYCache */ = {
+			isa = PBXGroup;
+			children = (
+				AFEBA7C721B4227F00F5ECEF /* YYDiskCache.m */,
+				AFEBA7C821B4227F00F5ECEF /* YYKVStorage.h */,
+				AFEBA7C921B4227F00F5ECEF /* YYCache.m */,
+				AFEBA7CA21B4227F00F5ECEF /* YYMemoryCache.h */,
+				AFEBA7CB21B4227F00F5ECEF /* YYDiskCache.h */,
+				AFEBA7CC21B4227F00F5ECEF /* YYCache.h */,
+				AFEBA7CD21B4227F00F5ECEF /* YYKVStorage.m */,
+				AFEBA7CE21B4227F00F5ECEF /* YYMemoryCache.m */,
+			);
+			path = YYCache;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -545,7 +614,6 @@
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/YHCategroy/YHCategroy.framework",
-				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -554,7 +622,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YHCategroy.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -591,21 +658,30 @@
 				AF09B73321AD6EAB00B9E1E4 /* main.m in Sources */,
 				AF09B77821AD79C500B9E1E4 /* BWDuplicateViewController.m in Sources */,
 				AF06701021AE324D00F23D22 /* YHBaseNavigationController.m in Sources */,
+				AFEBA7C221B41F5D00F5ECEF /* BWUserManager.m in Sources */,
 				AF09B77521AD79B000B9E1E4 /* BWRecordViewController.m in Sources */,
 				AF06701521AE37AD00F23D22 /* BWMenuViewController.m in Sources */,
+				AFEBA7D121B4227F00F5ECEF /* YYKVStorage.m in Sources */,
 				AF06704821AECF0E00F23D22 /* YHCAAimationModalTransition.m in Sources */,
+				AFEBA7D221B4227F00F5ECEF /* YYMemoryCache.m in Sources */,
+				AFEBA7B721B40A7700F5ECEF /* BWLoginPrivatekeyViewController.m in Sources */,
 				AF09B77221AD799C00B9E1E4 /* BWMiningViewController.m in Sources */,
 				AFEBA7AF21B17A8100F5ECEF /* BWMenuButton.m in Sources */,
+				AFEBA7BD21B4193700F5ECEF /* BWLoginLeadPrivatekeyViewController.m in Sources */,
 				AF09B72521AD6EAB00B9E1E4 /* AppDelegate.m in Sources */,
+				AFEBA7C521B41F7A00F5ECEF /* BWUser.m in Sources */,
 				AF09B76C21AD797500B9E1E4 /* BWBRTStarsViewController.m in Sources */,
+				AFEBA7BA21B4139100F5ECEF /* BWLoginSuccessViewController.m in Sources */,
 				AF09B79121AD7E6400B9E1E4 /* UIViewController+BWViewControllerCategory.m in Sources */,
 				AFEBA7B421B3D2AA00F5ECEF /* BWLoginSugeViewController.m in Sources */,
 				AF06704B21AECF0E00F23D22 /* YHModaAnimationManager.m in Sources */,
 				AF06704921AECF0E00F23D22 /* YHAnimationManager.m in Sources */,
 				AF06704721AECF0E00F23D22 /* YHPresentationController.m in Sources */,
 				AF09B76621AD790600B9E1E4 /* BWTabBarController.m in Sources */,
+				AFEBA7D021B4227F00F5ECEF /* YYCache.m in Sources */,
 				AF09B76F21AD798900B9E1E4 /* BWVicOrDefViewController.m in Sources */,
 				AF09B77B21AD79D700B9E1E4 /* BWRlueVIewController.m in Sources */,
+				AFEBA7CF21B4227F00F5ECEF /* YYDiskCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

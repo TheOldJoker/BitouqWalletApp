@@ -2,7 +2,6 @@ use_frameworks!
 target 'BitouqWallet' do
 pod 'YHCategroy'
 pod 'MBProgressHUD'
-pod 'YYCache'
 pod 'MJRefresh'
 pod 'IQKeyboardManager'
 pod 'AFNetworking'
