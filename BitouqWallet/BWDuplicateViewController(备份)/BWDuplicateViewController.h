@@ -6,11 +6,11 @@
 //  Copyright © 2018 Joker. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BWBaseViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BWDuplicateViewController : UIViewController
+@interface BWDuplicateViewController : BWBaseViewController
 
 @end
 

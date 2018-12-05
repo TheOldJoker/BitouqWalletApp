@@ -75,7 +75,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uRZ-xE-YHM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="uRZ-xE-YHM">
                                 <rect key="frame" x="167" y="321" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="8Km-nh-5tC"/>
@@ -277,7 +277,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKO-p2-d5a">
-                                <rect key="frame" x="51.5" y="623" width="311" height="50"/>
+                                <rect key="frame" x="51.5" y="732" width="311" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ACY-Nk-hgc"/>
                                     <constraint firstAttribute="width" constant="311" id="hD4-Jd-ABn"/>
@@ -295,11 +295,11 @@
                             <constraint firstItem="eGn-eL-1gn" firstAttribute="leading" secondItem="X4P-GQ-1L2" secondAttribute="leading" constant="32" id="DAk-5f-vQU"/>
                             <constraint firstItem="eGn-eL-1gn" firstAttribute="top" secondItem="2fa-aJ-faF" secondAttribute="bottom" constant="37" id="Ite-Z3-0rL"/>
                             <constraint firstItem="2fa-aJ-faF" firstAttribute="leading" secondItem="X4P-GQ-1L2" secondAttribute="leading" constant="32" id="QVd-Y6-Mdw"/>
+                            <constraint firstItem="w4s-5h-l1w" firstAttribute="top" secondItem="jKO-p2-d5a" secondAttribute="bottom" constant="80" id="U6F-vd-cDb"/>
                             <constraint firstItem="ljg-Co-lU5" firstAttribute="top" secondItem="X4P-GQ-1L2" secondAttribute="top" id="ZdN-JA-XFc"/>
                             <constraint firstAttribute="trailing" secondItem="2fa-aJ-faF" secondAttribute="trailing" constant="32" id="ben-GN-ud4"/>
                             <constraint firstItem="ljg-Co-lU5" firstAttribute="leading" secondItem="X4P-GQ-1L2" secondAttribute="leading" id="fdg-T0-Qc1"/>
                             <constraint firstItem="jKO-p2-d5a" firstAttribute="centerX" secondItem="X4P-GQ-1L2" secondAttribute="centerX" id="meU-qd-vaO"/>
-                            <constraint firstItem="w4s-5h-l1w" firstAttribute="top" secondItem="jKO-p2-d5a" secondAttribute="bottom" constant="189" id="naE-SE-oku"/>
                             <constraint firstAttribute="trailing" secondItem="eGn-eL-1gn" secondAttribute="trailing" constant="32" id="qyg-Mz-J6C"/>
                         </constraints>
                     </view>
@@ -503,7 +503,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rz-5i-kc6">
-                                <rect key="frame" x="51.5" y="623" width="311" height="50"/>
+                                <rect key="frame" x="51.5" y="732" width="311" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="311" id="33x-88-0Gh"/>
                                     <constraint firstAttribute="height" constant="50" id="tdn-ps-FuY"/>
@@ -517,7 +517,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6rz-5i-kc6" firstAttribute="centerX" secondItem="tWT-my-Vat" secondAttribute="centerX" id="7jp-jZ-IXn"/>
-                            <constraint firstItem="szO-5M-yYx" firstAttribute="top" secondItem="6rz-5i-kc6" secondAttribute="bottom" constant="189" id="Bch-fr-RQb"/>
                             <constraint firstItem="dJ4-nz-EpU" firstAttribute="top" secondItem="5lv-jB-Ge2" secondAttribute="bottom" constant="60" id="EdG-Tk-orq"/>
                             <constraint firstAttribute="trailing" secondItem="5lv-jB-Ge2" secondAttribute="trailing" id="HSe-KT-9kd"/>
                             <constraint firstItem="mVP-C0-TaP" firstAttribute="top" secondItem="dJ4-nz-EpU" secondAttribute="bottom" constant="37" id="KDj-mf-j9r"/>
@@ -527,6 +526,7 @@
                             <constraint firstItem="dJ4-nz-EpU" firstAttribute="leading" secondItem="tWT-my-Vat" secondAttribute="leading" constant="32" id="S77-Tn-AGy"/>
                             <constraint firstItem="5lv-jB-Ge2" firstAttribute="leading" secondItem="tWT-my-Vat" secondAttribute="leading" id="bUq-R1-zUQ"/>
                             <constraint firstItem="5lv-jB-Ge2" firstAttribute="top" secondItem="tWT-my-Vat" secondAttribute="top" id="lPh-zF-Ieu"/>
+                            <constraint firstItem="szO-5M-yYx" firstAttribute="top" secondItem="6rz-5i-kc6" secondAttribute="bottom" constant="80" id="q41-LX-DkZ"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -603,7 +603,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueT-d0-UeL">
-                                <rect key="frame" x="51.5" y="623" width="311" height="50"/>
+                                <rect key="frame" x="51.5" y="732" width="311" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="311" id="ahJ-qc-cbg"/>
                                     <constraint firstAttribute="height" constant="50" id="gzZ-Ro-sOc"/>
@@ -629,7 +629,7 @@
                             <constraint firstItem="cQp-eG-Emu" firstAttribute="leading" secondItem="9Uh-x3-Sgc" secondAttribute="leading" constant="32" id="U6T-3B-Ij5"/>
                             <constraint firstItem="WaJ-cX-NzW" firstAttribute="leading" secondItem="9Uh-x3-Sgc" secondAttribute="leading" constant="32" id="cws-Lb-k7Z"/>
                             <constraint firstItem="ueT-d0-UeL" firstAttribute="centerX" secondItem="9Uh-x3-Sgc" secondAttribute="centerX" id="hF1-Wv-sn3"/>
-                            <constraint firstItem="CS3-f4-5gd" firstAttribute="top" secondItem="ueT-d0-UeL" secondAttribute="bottom" constant="189" id="kSf-j4-Oyy"/>
+                            <constraint firstItem="CS3-f4-5gd" firstAttribute="top" secondItem="ueT-d0-UeL" secondAttribute="bottom" constant="80" id="kSf-j4-Oyy"/>
                         </constraints>
                     </view>
                     <connections>
@@ -709,7 +709,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pw8-Ae-Tho">
-                                <rect key="frame" x="51.5" y="623" width="311" height="50"/>
+                                <rect key="frame" x="51.5" y="732" width="311" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="311" id="C13-J4-a1Z"/>
                                     <constraint firstAttribute="height" constant="50" id="ix1-ty-QHc"/>
@@ -728,7 +728,7 @@
                             <constraint firstItem="9jy-nN-07p" firstAttribute="top" secondItem="atF-cz-oP4" secondAttribute="bottom" constant="48" id="7dN-Wf-cm4"/>
                             <constraint firstItem="OUw-Rw-KVZ" firstAttribute="leading" secondItem="w2h-fU-YNZ" secondAttribute="leading" id="7qk-BV-m8E"/>
                             <constraint firstItem="rce-mR-J02" firstAttribute="leading" secondItem="w2h-fU-YNZ" secondAttribute="leading" constant="32" id="F4P-oT-FXy"/>
-                            <constraint firstItem="uUQ-9J-hiv" firstAttribute="top" secondItem="pw8-Ae-Tho" secondAttribute="bottom" constant="189" id="K7S-Tr-0Gd"/>
+                            <constraint firstItem="uUQ-9J-hiv" firstAttribute="top" secondItem="pw8-Ae-Tho" secondAttribute="bottom" constant="80" id="K7S-Tr-0Gd"/>
                             <constraint firstAttribute="trailing" secondItem="OUw-Rw-KVZ" secondAttribute="trailing" id="OQr-Bt-RFQ"/>
                             <constraint firstItem="9jy-nN-07p" firstAttribute="leading" secondItem="w2h-fU-YNZ" secondAttribute="leading" constant="32" id="Tik-j8-5AW"/>
                             <constraint firstItem="pw8-Ae-Tho" firstAttribute="centerX" secondItem="w2h-fU-YNZ" secondAttribute="centerX" id="bU9-pW-sTl"/>
@@ -744,6 +744,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="login_Logo" width="80" height="80"/>
         <image name="login_lead" width="303" height="50"/>
         <image name="login_page_next" width="14" height="14"/>
         <image name="login_privatekey_putin_background" width="343" height="180"/>

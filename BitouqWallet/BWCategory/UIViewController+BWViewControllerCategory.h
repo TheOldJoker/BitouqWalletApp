@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)showHUDWithAlert:(NSString *)alertString;
 //隱藏HUD
 - (void)hiddenHUD;
-- (void)initMenuNav;
+
 @end
 
 NS_ASSUME_NONNULL_END

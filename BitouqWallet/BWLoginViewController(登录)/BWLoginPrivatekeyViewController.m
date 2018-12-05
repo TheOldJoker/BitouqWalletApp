@@ -17,7 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.privatekeyLabel.text = @"13D4wpCqN4vtJ1FHyAb6gsLoai4yEzaDxCe3oBCbfK6796rtd8";
+    self.privatekeyLabel.text = @"127Ktr61h2GtWS22MzJGApX8F73CRpAyjKp2yKh3weXo";
+    BWUser *user = [[BWUser alloc] init];
+    user.privatekey = self.privatekeyLabel.text;
+    [BWUserManager shareManager].user = user;
 }
 -(IBAction)unwindSegue:(UIStoryboardSegue *)sender{
 }
