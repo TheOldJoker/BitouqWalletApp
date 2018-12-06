@@ -45,6 +45,11 @@
 		AFCECF0021B6BB6A0089E3AF /* BWWalletTopSelectedView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCECEFF21B6BB6A0089E3AF /* BWWalletTopSelectedView.m */; };
 		AFCECF0321B6CAF50089E3AF /* BWWalletPublickeyInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCECF0221B6CAF50089E3AF /* BWWalletPublickeyInfoView.m */; };
 		AFCECF0621B6DD3F0089E3AF /* BWWalletOverviewActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCECF0521B6DD3F0089E3AF /* BWWalletOverviewActivityView.m */; };
+		AFCECF0921B7D4080089E3AF /* BWGlobalconst.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCECF0821B7D4080089E3AF /* BWGlobalconst.m */; };
+		AFCECF0C21B7D4A60089E3AF /* BWWalletSendHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCECF0B21B7D4A60089E3AF /* BWWalletSendHeadView.m */; };
+		AFCECF0F21B8132A0089E3AF /* UIView+BWViewCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCECF0E21B8132A0089E3AF /* UIView+BWViewCategory.m */; };
+		AFCECF1321B81E490089E3AF /* BWWalletrecordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCECF1121B81E490089E3AF /* BWWalletrecordTableViewCell.m */; };
+		AFCECF1421B81E490089E3AF /* BWWalletrecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFCECF1221B81E490089E3AF /* BWWalletrecordTableViewCell.xib */; };
 		AFEBA7AF21B17A8100F5ECEF /* BWMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBA7AE21B17A8100F5ECEF /* BWMenuButton.m */; };
 		AFEBA7B121B3C4DD00F5ECEF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFEBA7B021B3C4DD00F5ECEF /* Login.storyboard */; };
 		AFEBA7B421B3D2AA00F5ECEF /* BWLoginSugeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBA7B321B3D2AA00F5ECEF /* BWLoginSugeViewController.m */; };
@@ -152,6 +157,15 @@
 		AFCECF0221B6CAF50089E3AF /* BWWalletPublickeyInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWWalletPublickeyInfoView.m; sourceTree = "<group>"; };
 		AFCECF0421B6DD3F0089E3AF /* BWWalletOverviewActivityView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWWalletOverviewActivityView.h; sourceTree = "<group>"; };
 		AFCECF0521B6DD3F0089E3AF /* BWWalletOverviewActivityView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWWalletOverviewActivityView.m; sourceTree = "<group>"; };
+		AFCECF0721B7D4080089E3AF /* BWGlobalconst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWGlobalconst.h; sourceTree = "<group>"; };
+		AFCECF0821B7D4080089E3AF /* BWGlobalconst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWGlobalconst.m; sourceTree = "<group>"; };
+		AFCECF0A21B7D4A60089E3AF /* BWWalletSendHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWWalletSendHeadView.h; sourceTree = "<group>"; };
+		AFCECF0B21B7D4A60089E3AF /* BWWalletSendHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWWalletSendHeadView.m; sourceTree = "<group>"; };
+		AFCECF0D21B8132A0089E3AF /* UIView+BWViewCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+BWViewCategory.h"; sourceTree = "<group>"; };
+		AFCECF0E21B8132A0089E3AF /* UIView+BWViewCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+BWViewCategory.m"; sourceTree = "<group>"; };
+		AFCECF1021B81E490089E3AF /* BWWalletrecordTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWWalletrecordTableViewCell.h; sourceTree = "<group>"; };
+		AFCECF1121B81E490089E3AF /* BWWalletrecordTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWWalletrecordTableViewCell.m; sourceTree = "<group>"; };
+		AFCECF1221B81E490089E3AF /* BWWalletrecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWWalletrecordTableViewCell.xib; sourceTree = "<group>"; };
 		AFEBA7AD21B17A8100F5ECEF /* BWMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWMenuButton.h; sourceTree = "<group>"; };
 		AFEBA7AE21B17A8100F5ECEF /* BWMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWMenuButton.m; sourceTree = "<group>"; };
 		AFEBA7B021B3C4DD00F5ECEF /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -314,6 +328,8 @@
 				AF09B72E21AD6EAB00B9E1E4 /* LaunchScreen.storyboard */,
 				AF09B73121AD6EAB00B9E1E4 /* Info.plist */,
 				AF09B73221AD6EAB00B9E1E4 /* main.m */,
+				AFCECF0721B7D4080089E3AF /* BWGlobalconst.h */,
+				AFCECF0821B7D4080089E3AF /* BWGlobalconst.m */,
 			);
 			path = BitouqWallet;
 			sourceTree = "<group>";
@@ -445,6 +461,8 @@
 				AF09B79221AD7F3400B9E1E4 /* BWCategory.h */,
 				AF09B78F21AD7E6400B9E1E4 /* UIViewController+BWViewControllerCategory.h */,
 				AF09B79021AD7E6400B9E1E4 /* UIViewController+BWViewControllerCategory.m */,
+				AFCECF0D21B8132A0089E3AF /* UIView+BWViewCategory.h */,
+				AFCECF0E21B8132A0089E3AF /* UIView+BWViewCategory.m */,
 			);
 			path = BWCategory;
 			sourceTree = "<group>";
@@ -458,6 +476,11 @@
 				AFCECF0221B6CAF50089E3AF /* BWWalletPublickeyInfoView.m */,
 				AFCECF0421B6DD3F0089E3AF /* BWWalletOverviewActivityView.h */,
 				AFCECF0521B6DD3F0089E3AF /* BWWalletOverviewActivityView.m */,
+				AFCECF0A21B7D4A60089E3AF /* BWWalletSendHeadView.h */,
+				AFCECF0B21B7D4A60089E3AF /* BWWalletSendHeadView.m */,
+				AFCECF1021B81E490089E3AF /* BWWalletrecordTableViewCell.h */,
+				AFCECF1121B81E490089E3AF /* BWWalletrecordTableViewCell.m */,
+				AFCECF1221B81E490089E3AF /* BWWalletrecordTableViewCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -615,6 +638,7 @@
 			files = (
 				AF09B78321AD7AFC00B9E1E4 /* VicOrDef.storyboard in Resources */,
 				AF09B73021AD6EAB00B9E1E4 /* LaunchScreen.storyboard in Resources */,
+				AFCECF1421B81E490089E3AF /* BWWalletrecordTableViewCell.xib in Resources */,
 				AF09B78C21AD7BFD00B9E1E4 /* rlue.storyboard in Resources */,
 				AF06701621AE37AD00F23D22 /* BWMenuViewController.xib in Resources */,
 				AF09B76321AD78AA00B9E1E4 /* wallet.storyboard in Resources */,
@@ -705,6 +729,8 @@
 				AF09B73321AD6EAB00B9E1E4 /* main.m in Sources */,
 				AF09B77821AD79C500B9E1E4 /* BWDuplicateViewController.m in Sources */,
 				AF06701021AE324D00F23D22 /* YHBaseNavigationController.m in Sources */,
+				AFCECF0921B7D4080089E3AF /* BWGlobalconst.m in Sources */,
+				AFCECF0C21B7D4A60089E3AF /* BWWalletSendHeadView.m in Sources */,
 				AFEBA7C221B41F5D00F5ECEF /* BWUserManager.m in Sources */,
 				AF09B77521AD79B000B9E1E4 /* BWRecordViewController.m in Sources */,
 				AF06701521AE37AD00F23D22 /* BWMenuViewController.m in Sources */,
@@ -714,6 +740,7 @@
 				AFEBA7D221B4227F00F5ECEF /* YYMemoryCache.m in Sources */,
 				AFEBA7B721B40A7700F5ECEF /* BWLoginPrivatekeyViewController.m in Sources */,
 				AF09B77221AD799C00B9E1E4 /* BWMiningViewController.m in Sources */,
+				AFCECF1321B81E490089E3AF /* BWWalletrecordTableViewCell.m in Sources */,
 				AFEBA7AF21B17A8100F5ECEF /* BWMenuButton.m in Sources */,
 				AFEBA7BD21B4193700F5ECEF /* BWLoginLeadPrivatekeyViewController.m in Sources */,
 				AF09B72521AD6EAB00B9E1E4 /* AppDelegate.m in Sources */,
@@ -731,6 +758,7 @@
 				AF09B76F21AD798900B9E1E4 /* BWVicOrDefViewController.m in Sources */,
 				AF09B77B21AD79D700B9E1E4 /* BWRlueVIewController.m in Sources */,
 				AFCECF0621B6DD3F0089E3AF /* BWWalletOverviewActivityView.m in Sources */,
+				AFCECF0F21B8132A0089E3AF /* UIView+BWViewCategory.m in Sources */,
 				AFEBA7CF21B4227F00F5ECEF /* YYDiskCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

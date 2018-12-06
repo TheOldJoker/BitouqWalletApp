@@ -8,3 +8,4 @@
 
 
 #import "UIViewController+BWViewControllerCategory.h"
+#import "UIView+BWViewCategory.h"
