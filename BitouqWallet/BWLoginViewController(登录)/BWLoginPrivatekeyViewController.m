@@ -7,22 +7,38 @@
 //
 
 #import "BWLoginPrivatekeyViewController.h"
-
+#import "BWLoginCreateKeyRootModel.h"
 @interface BWLoginPrivatekeyViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *privatekeyLabel;
-
+@property (strong, nonatomic) BWLoginCreateKeyRootModel *mainData;
 @end
 
 @implementation BWLoginPrivatekeyViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.privatekeyLabel.text = @"127Ktr61h2GtWS22MzJGApX8F73CRpAyjKp2yKh3weXo";
-    BWUser *user = [[BWUser alloc] init];
-    user.privatekey = self.privatekeyLabel.text;
-    [BWUserManager shareManager].user = user;
+    [self loadData];
+//    self.privatekeyLabel.text = @"127Ktr61h2GtWS22MzJGApX8F73CRpAyjKp2yKh3weXo";
+//    BWUser *user = [[BWUser alloc] init];
+//    user.privatekey = self.privatekeyLabel.text;
+//    [BWUserManager shareManager].user = user;
+}
+- (void)setValue{
+    
+}
+- (void)loadData{
+    [self showHUDWithAlert:@""];
+    [BWDataSource getKeySuccess:^(id  _Nonnull response) {
+        [self hiddenHUD];
+//        self.mainData = [BWLoginCreateKeyRootModel ]
+        NSLog(@"%@",[self getMyNeedJsonWithDict:response]);
+    } fail:^(NSError * _Nonnull error) {
+        [self hiddenHUD];
+        NSLog(@"%@",error);
+    }];
 }
 -(IBAction)unwindSegue:(UIStoryboardSegue *)sender{
+    
 }
 /*
 #pragma mark - Navigation

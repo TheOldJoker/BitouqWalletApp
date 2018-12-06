@@ -5,4 +5,5 @@ pod 'MBProgressHUD'
 pod 'MJRefresh'
 pod 'IQKeyboardManager'
 pod 'AFNetworking'
+pod 'MJExtension'
 end

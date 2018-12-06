@@ -23,5 +23,12 @@
 - (void)hiddenHUD{
     [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
-
+- (NSString *)getMyNeedJsonWithDict:(id)response
+{
+    if (response == nil) {
+        return nil;
+    }
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:response options:NSJSONWritingPrettyPrinted error:nil];
+    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+}
 @end

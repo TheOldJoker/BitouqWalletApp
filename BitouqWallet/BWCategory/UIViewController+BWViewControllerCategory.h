@@ -17,7 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)showHUDWithAlert:(NSString *)alertString;
 //隱藏HUD
 - (void)hiddenHUD;
-
+//打印json
+- (NSString *)getMyNeedJsonWithDict:(id)response;
 @end
 
 NS_ASSUME_NONNULL_END

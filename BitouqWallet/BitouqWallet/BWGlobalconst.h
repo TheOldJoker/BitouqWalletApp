@@ -8,4 +8,4 @@
 
 #import <UIKit/UIKit.h>
 
-UIKIT_EXTERN NSString *const GOOGLE_API_KEY;
+UIKIT_EXTERN NSString *const domain;
