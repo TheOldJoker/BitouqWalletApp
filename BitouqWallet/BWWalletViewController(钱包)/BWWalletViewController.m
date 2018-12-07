@@ -33,6 +33,11 @@
     [self addChildViewController:self.sendViewController];
     [self addChildViewController:self.getViewController];
 }
+- (void)loadData{
+    [self.overviewViewController loadData];
+    [self.sendViewController loadData];
+    [self.getViewController loadData];
+}
 #pragma mark - lazyload
 - (BWWalletTopSelectedView *)topSelectedView{
     if (!_topSelectedView) {

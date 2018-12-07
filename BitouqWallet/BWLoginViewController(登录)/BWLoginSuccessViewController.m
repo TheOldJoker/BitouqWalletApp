@@ -19,6 +19,8 @@
     // Do any additional setup after loading the view.
 }
 - (IBAction)loginSuccessAction:(UIButton *)sender {
+    NSNotification * note = [[NSNotification alloc] initWithName:LOGIN_SUCCESS_NOTE object:nil userInfo:nil];
+    [[NSNotificationCenter defaultCenter] postNotification:note];
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 

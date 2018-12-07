@@ -13,3 +13,9 @@ NSString *const DOMAINSTRING = @"http://39.104.52.88:80/";
 
 #pragma mark - 全局文案
 NSString *const LOADING_STRING = @"正在獲取數據...";
+
+#pragma mark - 通知KEY
+NSString *const LOGIN_SUCCESS_NOTE = @"loginSuccess";
+
+#pragma mark - yanse
+NSString *const COLOR_MAIN = @"3905cd";

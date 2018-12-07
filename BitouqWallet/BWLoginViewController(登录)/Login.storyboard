@@ -596,11 +596,14 @@
                                 <color key="textColor" red="0.52531343699999999" green="0.52938878540000001" blue="0.53347319360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C71-kw-hDc">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C71-kw-hDc">
                                 <rect key="frame" x="32" y="379" width="350" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.78391212224960327" green="0.5390896201133728" blue="0.99942916631698608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="SjS-2G-BiB" appends="YES" id="2qN-9K-haS"/>
+                                </connections>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueT-d0-UeL">
                                 <rect key="frame" x="51.5" y="732" width="311" height="50"/>
@@ -615,6 +618,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="cQp-eG-Emu" firstAttribute="top" secondItem="Q7K-TY-rCR" secondAttribute="bottom" constant="60" id="1BV-I4-gnH"/>
                             <constraint firstAttribute="trailing" secondItem="cQp-eG-Emu" secondAttribute="trailing" constant="32" id="1nA-il-Lod"/>
@@ -638,6 +642,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="65P-kQ-RFV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="yUR-cW-N5j" userLabel="Exit" sceneMemberID="exit"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="SjS-2G-BiB">
+                    <connections>
+                        <action selector="longPressAction:" destination="K0h-Su-iGx" id="rye-wL-KVD"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3764" y="130"/>
         </scene>

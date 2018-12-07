@@ -26,7 +26,6 @@
 @implementation BWWalletOverviewViewController
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [self loadData];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];

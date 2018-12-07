@@ -58,6 +58,16 @@
 		AFE2FA2521B9847E005F7A84 /* BWUserAssetRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE2FA2421B9847E005F7A84 /* BWUserAssetRootModel.m */; };
 		AFE2FA2821BA06CD005F7A84 /* BWWalletActivityRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE2FA2721BA06CD005F7A84 /* BWWalletActivityRootModel.m */; };
 		AFE2FA2B21BA06E1005F7A84 /* BWWalletActivityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE2FA2A21BA06E1005F7A84 /* BWWalletActivityModel.m */; };
+		AFE2FA2F21BA42E9005F7A84 /* BWCodeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE2FA2E21BA42E9005F7A84 /* BWCodeHelper.m */; };
+		AFE2FA3221BA461D005F7A84 /* BWWalletSendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE2FA3121BA461D005F7A84 /* BWWalletSendModel.m */; };
+		AFE2FA3521BA4B6A005F7A84 /* BWWalletDefaultservicefeeRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE2FA3421BA4B6A005F7A84 /* BWWalletDefaultservicefeeRootModel.m */; };
+		AFE2FA3821BA5008005F7A84 /* BWWalletrecordRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE2FA3721BA5008005F7A84 /* BWWalletrecordRootModel.m */; };
+		AFE2FA3B21BA5017005F7A84 /* BWWalletrecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE2FA3A21BA5017005F7A84 /* BWWalletrecordModel.m */; };
+		AFE2FA3E21BA58D9005F7A84 /* BWCommonRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE2FA3D21BA58D9005F7A84 /* BWCommonRootModel.m */; };
+		AFE2FA4121BA5B94005F7A84 /* BWCodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE2FA4021BA5B94005F7A84 /* BWCodeScanViewController.m */; };
+		AFE2FA4421BA5DCB005F7A84 /* YHMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE2FA4221BA5DCA005F7A84 /* YHMaskView.m */; };
+		AFE2FA4921BA66A1005F7A84 /* BWRlueTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE2FA4721BA66A1005F7A84 /* BWRlueTableViewCell.m */; };
+		AFE2FA4A21BA66A1005F7A84 /* BWRlueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFE2FA4821BA66A1005F7A84 /* BWRlueTableViewCell.xib */; };
 		AFEBA7AF21B17A8100F5ECEF /* BWMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBA7AE21B17A8100F5ECEF /* BWMenuButton.m */; };
 		AFEBA7B121B3C4DD00F5ECEF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFEBA7B021B3C4DD00F5ECEF /* Login.storyboard */; };
 		AFEBA7B421B3D2AA00F5ECEF /* BWLoginSugeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBA7B321B3D2AA00F5ECEF /* BWLoginSugeViewController.m */; };
@@ -190,6 +200,25 @@
 		AFE2FA2721BA06CD005F7A84 /* BWWalletActivityRootModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWWalletActivityRootModel.m; sourceTree = "<group>"; };
 		AFE2FA2921BA06E1005F7A84 /* BWWalletActivityModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWWalletActivityModel.h; sourceTree = "<group>"; };
 		AFE2FA2A21BA06E1005F7A84 /* BWWalletActivityModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWWalletActivityModel.m; sourceTree = "<group>"; };
+		AFE2FA2D21BA42E9005F7A84 /* BWCodeHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWCodeHelper.h; sourceTree = "<group>"; };
+		AFE2FA2E21BA42E9005F7A84 /* BWCodeHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWCodeHelper.m; sourceTree = "<group>"; };
+		AFE2FA3021BA461D005F7A84 /* BWWalletSendModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWWalletSendModel.h; sourceTree = "<group>"; };
+		AFE2FA3121BA461D005F7A84 /* BWWalletSendModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWWalletSendModel.m; sourceTree = "<group>"; };
+		AFE2FA3321BA4B6A005F7A84 /* BWWalletDefaultservicefeeRootModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWWalletDefaultservicefeeRootModel.h; sourceTree = "<group>"; };
+		AFE2FA3421BA4B6A005F7A84 /* BWWalletDefaultservicefeeRootModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWWalletDefaultservicefeeRootModel.m; sourceTree = "<group>"; };
+		AFE2FA3621BA5008005F7A84 /* BWWalletrecordRootModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWWalletrecordRootModel.h; sourceTree = "<group>"; };
+		AFE2FA3721BA5008005F7A84 /* BWWalletrecordRootModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWWalletrecordRootModel.m; sourceTree = "<group>"; };
+		AFE2FA3921BA5017005F7A84 /* BWWalletrecordModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWWalletrecordModel.h; sourceTree = "<group>"; };
+		AFE2FA3A21BA5017005F7A84 /* BWWalletrecordModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWWalletrecordModel.m; sourceTree = "<group>"; };
+		AFE2FA3C21BA58D9005F7A84 /* BWCommonRootModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWCommonRootModel.h; sourceTree = "<group>"; };
+		AFE2FA3D21BA58D9005F7A84 /* BWCommonRootModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWCommonRootModel.m; sourceTree = "<group>"; };
+		AFE2FA3F21BA5B94005F7A84 /* BWCodeScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWCodeScanViewController.h; sourceTree = "<group>"; };
+		AFE2FA4021BA5B94005F7A84 /* BWCodeScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWCodeScanViewController.m; sourceTree = "<group>"; };
+		AFE2FA4221BA5DCA005F7A84 /* YHMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHMaskView.m; sourceTree = "<group>"; };
+		AFE2FA4321BA5DCB005F7A84 /* YHMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHMaskView.h; sourceTree = "<group>"; };
+		AFE2FA4621BA66A1005F7A84 /* BWRlueTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWRlueTableViewCell.h; sourceTree = "<group>"; };
+		AFE2FA4721BA66A1005F7A84 /* BWRlueTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWRlueTableViewCell.m; sourceTree = "<group>"; };
+		AFE2FA4821BA66A1005F7A84 /* BWRlueTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWRlueTableViewCell.xib; sourceTree = "<group>"; };
 		AFEBA7AD21B17A8100F5ECEF /* BWMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWMenuButton.h; sourceTree = "<group>"; };
 		AFEBA7AE21B17A8100F5ECEF /* BWMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWMenuButton.m; sourceTree = "<group>"; };
 		AFEBA7B021B3C4DD00F5ECEF /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -397,6 +426,8 @@
 				AFCECEF521B6B9AB0089E3AF /* BWWalletOverviewViewController.m */,
 				AFCECEF721B6B9C20089E3AF /* BWWalletSendViewController.h */,
 				AFCECEF821B6B9C20089E3AF /* BWWalletSendViewController.m */,
+				AFE2FA3F21BA5B94005F7A84 /* BWCodeScanViewController.h */,
+				AFE2FA4021BA5B94005F7A84 /* BWCodeScanViewController.m */,
 				AFCECEFA21B6B9D80089E3AF /* BWWalletGetViewController.h */,
 				AFCECEFB21B6B9D80089E3AF /* BWWalletGetViewController.m */,
 			);
@@ -415,6 +446,7 @@
 		AF09B75821AD71D900B9E1E4 /* BWRlueVIewController(规则) */ = {
 			isa = PBXGroup;
 			children = (
+				AFE2FA4521BA667F005F7A84 /* view */,
 				AF09B77921AD79D700B9E1E4 /* BWRlueVIewController.h */,
 				AF09B77A21AD79D700B9E1E4 /* BWRlueVIewController.m */,
 			);
@@ -498,6 +530,8 @@
 		AFCECEFD21B6BB3C0089E3AF /* view */ = {
 			isa = PBXGroup;
 			children = (
+				AFE2FA4321BA5DCB005F7A84 /* YHMaskView.h */,
+				AFE2FA4221BA5DCA005F7A84 /* YHMaskView.m */,
 				AFCECEFE21B6BB6A0089E3AF /* BWWalletTopSelectedView.h */,
 				AFCECEFF21B6BB6A0089E3AF /* BWWalletTopSelectedView.m */,
 				AFCECF0121B6CAF50089E3AF /* BWWalletPublickeyInfoView.h */,
@@ -527,6 +561,8 @@
 			children = (
 				AFE2FA1521B95312005F7A84 /* BWDataSource.h */,
 				AFE2FA1621B95312005F7A84 /* BWDataSource.m */,
+				AFE2FA3C21BA58D9005F7A84 /* BWCommonRootModel.h */,
+				AFE2FA3D21BA58D9005F7A84 /* BWCommonRootModel.m */,
 			);
 			path = BWDataSource;
 			sourceTree = "<group>";
@@ -551,8 +587,35 @@
 				AFE2FA2721BA06CD005F7A84 /* BWWalletActivityRootModel.m */,
 				AFE2FA2921BA06E1005F7A84 /* BWWalletActivityModel.h */,
 				AFE2FA2A21BA06E1005F7A84 /* BWWalletActivityModel.m */,
+				AFE2FA3021BA461D005F7A84 /* BWWalletSendModel.h */,
+				AFE2FA3121BA461D005F7A84 /* BWWalletSendModel.m */,
+				AFE2FA3321BA4B6A005F7A84 /* BWWalletDefaultservicefeeRootModel.h */,
+				AFE2FA3421BA4B6A005F7A84 /* BWWalletDefaultservicefeeRootModel.m */,
+				AFE2FA3621BA5008005F7A84 /* BWWalletrecordRootModel.h */,
+				AFE2FA3721BA5008005F7A84 /* BWWalletrecordRootModel.m */,
+				AFE2FA3921BA5017005F7A84 /* BWWalletrecordModel.h */,
+				AFE2FA3A21BA5017005F7A84 /* BWWalletrecordModel.m */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		AFE2FA2C21BA42CD005F7A84 /* BWCodeHelper */ = {
+			isa = PBXGroup;
+			children = (
+				AFE2FA2D21BA42E9005F7A84 /* BWCodeHelper.h */,
+				AFE2FA2E21BA42E9005F7A84 /* BWCodeHelper.m */,
+			);
+			path = BWCodeHelper;
+			sourceTree = "<group>";
+		};
+		AFE2FA4521BA667F005F7A84 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				AFE2FA4621BA66A1005F7A84 /* BWRlueTableViewCell.h */,
+				AFE2FA4721BA66A1005F7A84 /* BWRlueTableViewCell.m */,
+				AFE2FA4821BA66A1005F7A84 /* BWRlueTableViewCell.xib */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		AFEBA7AC21B17A3D00F5ECEF /* view */ = {
@@ -568,6 +631,7 @@
 		AFEBA7BE21B41BA400F5ECEF /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				AFE2FA2C21BA42CD005F7A84 /* BWCodeHelper */,
 				AFE2FA1421B952F9005F7A84 /* BWDataSource */,
 				AFE2FA1021B951A6005F7A84 /* BWNetHelper */,
 				AFEBA7BF21B41F2F00F5ECEF /* BWUserManager */,
@@ -710,6 +774,7 @@
 			files = (
 				AF09B78321AD7AFC00B9E1E4 /* VicOrDef.storyboard in Resources */,
 				AF09B73021AD6EAB00B9E1E4 /* LaunchScreen.storyboard in Resources */,
+				AFE2FA4A21BA66A1005F7A84 /* BWRlueTableViewCell.xib in Resources */,
 				AFCECF1421B81E490089E3AF /* BWWalletrecordTableViewCell.xib in Resources */,
 				AF09B78C21AD7BFD00B9E1E4 /* rlue.storyboard in Resources */,
 				AF06701621AE37AD00F23D22 /* BWMenuViewController.xib in Resources */,
@@ -802,9 +867,11 @@
 				AFCECEF621B6B9AB0089E3AF /* BWWalletOverviewViewController.m in Sources */,
 				AFE2FA1321B951CB005F7A84 /* BWNetHelper.m in Sources */,
 				AFCECF0321B6CAF50089E3AF /* BWWalletPublickeyInfoView.m in Sources */,
+				AFE2FA2F21BA42E9005F7A84 /* BWCodeHelper.m in Sources */,
 				AFCECEF921B6B9C20089E3AF /* BWWalletSendViewController.m in Sources */,
 				AFE2FA2121B95869005F7A84 /* BWLoginCreateKeyModel.m in Sources */,
 				AF06704A21AECF0E00F23D22 /* UIViewController+YHModaTransitonHelper.m in Sources */,
+				AFE2FA3821BA5008005F7A84 /* BWWalletrecordRootModel.m in Sources */,
 				AF09B73321AD6EAB00B9E1E4 /* main.m in Sources */,
 				AF09B77821AD79C500B9E1E4 /* BWDuplicateViewController.m in Sources */,
 				AF06701021AE324D00F23D22 /* YHBaseNavigationController.m in Sources */,
@@ -813,8 +880,10 @@
 				AFCECF0C21B7D4A60089E3AF /* BWWalletSendHeadView.m in Sources */,
 				AFEBA7C221B41F5D00F5ECEF /* BWUserManager.m in Sources */,
 				AF09B77521AD79B000B9E1E4 /* BWRecordViewController.m in Sources */,
+				AFE2FA4921BA66A1005F7A84 /* BWRlueTableViewCell.m in Sources */,
 				AF06701521AE37AD00F23D22 /* BWMenuViewController.m in Sources */,
 				AFCECEF321B6B8220089E3AF /* BWBaseViewController.m in Sources */,
+				AFE2FA3E21BA58D9005F7A84 /* BWCommonRootModel.m in Sources */,
 				AFEBA7D121B4227F00F5ECEF /* YYKVStorage.m in Sources */,
 				AFE2FA2521B9847E005F7A84 /* BWUserAssetRootModel.m in Sources */,
 				AF06704821AECF0E00F23D22 /* YHCAAimationModalTransition.m in Sources */,
@@ -822,6 +891,7 @@
 				AFEBA7D221B4227F00F5ECEF /* YYMemoryCache.m in Sources */,
 				AFEBA7B721B40A7700F5ECEF /* BWLoginPrivatekeyViewController.m in Sources */,
 				AF09B77221AD799C00B9E1E4 /* BWMiningViewController.m in Sources */,
+				AFE2FA3521BA4B6A005F7A84 /* BWWalletDefaultservicefeeRootModel.m in Sources */,
 				AFCECF1321B81E490089E3AF /* BWWalletrecordTableViewCell.m in Sources */,
 				AFEBA7AF21B17A8100F5ECEF /* BWMenuButton.m in Sources */,
 				AFEBA7BD21B4193700F5ECEF /* BWLoginLeadPrivatekeyViewController.m in Sources */,
@@ -830,11 +900,15 @@
 				AF09B76C21AD797500B9E1E4 /* BWBRTStarsViewController.m in Sources */,
 				AFEBA7BA21B4139100F5ECEF /* BWLoginSuccessViewController.m in Sources */,
 				AF09B79121AD7E6400B9E1E4 /* UIViewController+BWViewControllerCategory.m in Sources */,
+				AFE2FA3221BA461D005F7A84 /* BWWalletSendModel.m in Sources */,
+				AFE2FA4421BA5DCB005F7A84 /* YHMaskView.m in Sources */,
 				AFEBA7B421B3D2AA00F5ECEF /* BWLoginSugeViewController.m in Sources */,
 				AFCECF0021B6BB6A0089E3AF /* BWWalletTopSelectedView.m in Sources */,
 				AFE2FA1721B95312005F7A84 /* BWDataSource.m in Sources */,
 				AF06704B21AECF0E00F23D22 /* YHModaAnimationManager.m in Sources */,
 				AF06704921AECF0E00F23D22 /* YHAnimationManager.m in Sources */,
+				AFE2FA3B21BA5017005F7A84 /* BWWalletrecordModel.m in Sources */,
+				AFE2FA4121BA5B94005F7A84 /* BWCodeScanViewController.m in Sources */,
 				AF06704721AECF0E00F23D22 /* YHPresentationController.m in Sources */,
 				AF09B76621AD790600B9E1E4 /* BWTabBarController.m in Sources */,
 				AFEBA7D021B4227F00F5ECEF /* YYCache.m in Sources */,

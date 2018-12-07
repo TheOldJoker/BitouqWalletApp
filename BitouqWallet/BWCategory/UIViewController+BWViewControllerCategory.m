@@ -22,7 +22,9 @@
 }
 - (void)showServerError{
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeText;
     hud.label.text = @"連接服務器失敗";
+    [hud hideAnimated:YES afterDelay:1];
 }
 - (void)hiddenHUD{
     [MBProgressHUD hideHUDForView:self.view animated:YES];

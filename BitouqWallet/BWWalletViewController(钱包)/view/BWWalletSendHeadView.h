@@ -7,11 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "BWWalletSendModel.h"
 NS_ASSUME_NONNULL_BEGIN
+@protocol BWWalletSendHeadViewDelegate <NSObject>
 
+- (void)walletSendHeadReloadDataAciton;
+
+@end
 @interface BWWalletSendHeadView : UIView
-@property (nonatomic, strong) UIButton * sendButton;//發送按鈕
+@property (nonatomic, weak) id<BWWalletSendHeadViewDelegate> delegate;
+@property (nonatomic, strong) BWWalletSendModel *mainModel;
+@property (nonatomic, strong) UITextField *getAddressTextField;
+@property (nonatomic, strong) UITextField *moneyTextField;
+@property (nonatomic, strong) UITextField *miningTextFiled;
+@property (nonatomic, strong) UIButton *sendButton;//發送按鈕
+@property (nonatomic, strong) UIButton *codeButton;//二維碼按鈕
 - (void)initSubviews;
 @end
 

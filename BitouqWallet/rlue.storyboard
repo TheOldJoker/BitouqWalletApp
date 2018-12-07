@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -33,14 +32,56 @@
                     <view key="view" contentMode="scaleToFill" id="bxG-W8-vge">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4gF-eA-YSq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="CJj-P7-nY9">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eY3-CJ-MJN">
+                                            <rect key="frame" x="10" y="10" width="355" height="54"/>
+                                            <string key="text">您可以自行設置BRTStars單注投注金額。
+當您選擇好號碼以後，系統會自動計算出您本次投注數量。
+投注倍數默認為一倍，您可根據自身風險偏好調整投注倍數。</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="eY3-CJ-MJN" firstAttribute="leading" secondItem="CJj-P7-nY9" secondAttribute="leading" constant="10" id="TWl-Yy-bQE"/>
+                                        <constraint firstItem="eY3-CJ-MJN" firstAttribute="top" secondItem="CJj-P7-nY9" secondAttribute="top" constant="10" id="UZV-mw-QYu"/>
+                                        <constraint firstAttribute="bottom" secondItem="eY3-CJ-MJN" secondAttribute="bottom" constant="10" id="hyR-X7-Ihc"/>
+                                        <constraint firstAttribute="trailing" secondItem="eY3-CJ-MJN" secondAttribute="trailing" constant="10" id="zQS-cN-GF2"/>
+                                    </constraints>
+                                </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="cE8-PN-qtJ" id="xaY-EA-K9E"/>
+                                    <outlet property="delegate" destination="cE8-PN-qtJ" id="4av-cs-ViJ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4gF-eA-YSq" firstAttribute="leading" secondItem="Idd-sW-tHz" secondAttribute="leading" id="0fq-1D-s6o"/>
+                            <constraint firstItem="4gF-eA-YSq" firstAttribute="trailing" secondItem="Idd-sW-tHz" secondAttribute="trailing" id="QyB-6N-vfJ"/>
+                            <constraint firstItem="4gF-eA-YSq" firstAttribute="bottom" secondItem="Idd-sW-tHz" secondAttribute="bottom" id="jEs-Re-CMk"/>
+                            <constraint firstItem="4gF-eA-YSq" firstAttribute="top" secondItem="bxG-W8-vge" secondAttribute="top" id="suq-fQ-blK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Idd-sW-tHz"/>
                     </view>
                     <navigationItem key="navigationItem" id="wKZ-bb-PqH"/>
+                    <connections>
+                        <outlet property="mainTabTopValue" destination="suq-fQ-blK" id="X3Y-wK-x8G"/>
+                        <outlet property="mainTableView" destination="4gF-eA-YSq" id="vMz-gr-DLG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="37R-ew-1Zc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2044" y="-149"/>
+            <point key="canvasLocation" x="2044" y="-149.77511244377811"/>
         </scene>
     </scenes>
 </document>

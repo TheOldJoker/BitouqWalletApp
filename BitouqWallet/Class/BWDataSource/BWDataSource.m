@@ -54,4 +54,56 @@
         }
     }];
 }
+#pragma mark - 獲取錢包頁面轉賬記錄
++ (void)getWalletrecordSuccess:(void (^)(id response))success fail:(void (^)(NSError * error))failure{
+    BWUser *user = [BWUserManager shareManager].user;
+    NSDictionary *params = @{
+                             @"pubkey":user.publickey
+                             };
+    [BWNetHelper getWithUrl:[@"transfer/record" getSeverUrl] params:params header:NO success:^(id response) {
+        if (success) {
+            success(response);
+        }
+    } fail:^(NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+#pragma mark - 默認礦工費
++ (void)getDefaultservicefeeSuccess:(void (^)(id response))success fail:(void (^)(NSError * error))failure{
+    BWUser *user = [BWUserManager shareManager].user;
+    NSDictionary *params = @{
+                             @"pubkey":user.publickey
+                             };
+    [BWNetHelper getWithUrl:[@"transfer/defaultservicefee" getSeverUrl] params:params header:NO success:^(id response) {
+        if (success) {
+            success(response);
+        }
+    } fail:^(NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+#pragma mark - 轉賬
++ (void)transferAssetWithModel:(BWWalletSendModel *)sendModel success:(void (^)(id response))success fail:(void (^)(NSError * error))failure{
+    BWUser *user = [BWUserManager shareManager].user;
+    NSDictionary *params = @{
+                             @"frompubkey":user.publickey,
+                             @"fromprikey":user.privatekey,
+                             @"topubkey":sendModel.getAddress,
+                             @"amount":sendModel.sendMoney,
+                             @"serviceFee":sendModel.miningMoney
+                             };
+    [BWNetHelper postWithUrl:[@"transfer" getSeverUrl] params:params header:NO success:^(id response) {
+        if (success) {
+            success(response);
+        }
+    } fail:^(NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
 @end

@@ -5,7 +5,8 @@
 //  Created by 赵一欢 on 2018/12/2.
 //  Copyright © 2018 Joker. All rights reserved.
 //
-
+//公钥：8JWRqEGK84GxbF7jpn5TZoEnefjuzxDA39iBRrVYge2D
+//私钥：127Ktr61h2GtWS22MzJGApX8F73CRpAyjKp2yKh3weXo
 #import "BWLoginPrivatekeyViewController.h"
 #import "BWLoginCreateKeyRootModel.h"
 @interface BWLoginPrivatekeyViewController ()
@@ -24,6 +25,10 @@
     BWUser *user = [[BWUser alloc] init];
     user.privatekey = self.mainData.data.prikey;
     user.publickey = self.mainData.data.pubkey;
+    
+    user.privatekey = @"127Ktr61h2GtWS22MzJGApX8F73CRpAyjKp2yKh3weXo";
+    user.publickey = @"8JWRqEGK84GxbF7jpn5TZoEnefjuzxDA39iBRrVYge2D";
+    
     [BWUserManager shareManager].user = user;
 }
 - (void)loadData{
@@ -41,6 +46,22 @@
         [self showServerError];
     }];
 }
+- (IBAction)longPressAction:(UILongPressGestureRecognizer *)sender {
+    
+    if (stringIsEmpty(self.privatekeyLabel.text)) {
+        [self showWeakAlertWithString:@"未獲取私钥"];
+        return;
+    }
+    UIPasteboard *pab = [UIPasteboard generalPasteboard];
+    [pab setString:self.privatekeyLabel.text];
+    if (pab == nil) {
+        [self showWeakAlertWithString:@"複製失敗"];
+    }else
+    {
+        [self showWeakAlertWithString:@"已複製"];
+    }
+}
+
 -(IBAction)unwindSegue:(UIStoryboardSegue *)sender{
     
 }

@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "BWWalletrecordModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BWWalletrecordTableViewCell : UITableViewCell
-- (void)setValueWithModel:(NSInteger)model;
+- (void)setValueWithModel:(BWWalletrecordModel *)model;
 @end
 
 NS_ASSUME_NONNULL_END

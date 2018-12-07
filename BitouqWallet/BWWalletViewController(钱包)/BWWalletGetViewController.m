@@ -7,6 +7,7 @@
 //
 
 #import "BWWalletGetViewController.h"
+#import "BWCodeHelper.h"
 #import <Photos/Photos.h>
 @interface BWWalletGetViewController ()
 @property (nonatomic, strong) UIImageView *codeImageView;
@@ -20,7 +21,6 @@
 @implementation BWWalletGetViewController
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [self loadData];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,9 +31,8 @@
     BWUser *user = [BWUserManager shareManager].user;
     if (!stringIsEmpty(user.publickey)) {
         self.publickeyLabel.text = user.publickey;
+        self.codeImageView.image = [BWCodeHelper createCodeImageWithString:user.publickey];
     }
-    
-    self.codeImageView.image = [UIImage imageNamed:@"wallet_code"];
     self.explianLabel.text = @"請保管好您的接收地址，它將用於接收代幣，您的朋友可以通過向網絡發出請求向您的地址進行轉賬，您將通過此地址獲得代幣。請確認地址的完整性和正確性，否則代幣將丟失在網絡中。同時您可以使用二維碼進行接收代幣。";
     [self.explianLabel reSetHeight];
 }
@@ -102,7 +101,7 @@
         [self showWeakAlertWithString:@"複製失敗"];
     }else
     {
-        [self showWeakAlertWithString:@"已複製公鑰"];
+        [self showWeakAlertWithString:@"已複製"];
     }
 }
 - (void)saveCodeAction:(UIButton *)sender{

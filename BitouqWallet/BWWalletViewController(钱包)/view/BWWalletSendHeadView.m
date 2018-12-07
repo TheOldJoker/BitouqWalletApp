@@ -10,12 +10,16 @@
 #import "BWWalletPublickeyInfoView.h"
 @interface BWWalletSendHeadView()
 @property (nonatomic, strong) BWWalletPublickeyInfoView *publickeyInfoView;
-@property (nonatomic, strong) UITextField *getAddressTextField;
-@property (nonatomic, strong) UITextField *moneyTextField;
-@property (nonatomic, strong) UITextField *miningTextFiled;
 @property (nonatomic, strong) UILabel *bottomLabel;
 @end
 @implementation BWWalletSendHeadView
+- (void)setMainModel:(BWWalletSendModel *)mainModel{
+    _mainModel = mainModel;
+    BWUser *user = [BWUserManager shareManager].user;
+    self.publickeyInfoView.publickey = user.publickey;
+    self.publickeyInfoView.money = [NSString stringWithFormat:@"%@ BRT",user.asset];
+    self.miningTextFiled.placeholder = [NSString stringWithFormat:@"礦工費 %@",mainModel.miningMoney];
+}
 - (void)initSubviews{
     [self.publickeyInfoView initSubview];
     self.getAddressTextField.placeholder = @"输入接收地址";
@@ -53,6 +57,7 @@
         [self addSubview:backgroundView];
         _miningTextFiled = [[UITextField alloc] initWithFrame:(CGRectMake(20, 16, backgroundView.width - 20, 18))];
         _miningTextFiled.font = [UIFont systemFontOfSize:13.f];
+        _miningTextFiled.keyboardType = UIKeyboardTypeNumberPad;
         [backgroundView addSubview:_miningTextFiled];
     }
     return _miningTextFiled;
@@ -65,6 +70,7 @@
         [self addSubview:backgroundView];
         _moneyTextField = [[UITextField alloc] initWithFrame:(CGRectMake(20, 16, self.width - 60, 18))];
         _moneyTextField.font = [UIFont systemFontOfSize:13.f];
+        _moneyTextField.keyboardType = UIKeyboardTypeNumberPad;
         [backgroundView addSubview:_moneyTextField];
     }
     return _moneyTextField;
@@ -75,9 +81,13 @@
         backgroundView.backgroundColor = [UIColor colorWithHexString:@"eff0f1"];
         [backgroundView setCornerWithCornerSize:(MyCornerSizeMake(5, 0, 0, 5))];
         [self addSubview:backgroundView];
-        _getAddressTextField = [[UITextField alloc] initWithFrame:(CGRectMake(20, 16, self.width - 60, 18))];
+        _getAddressTextField = [[UITextField alloc] initWithFrame:(CGRectMake(20, 16, self.width - 100, 18))];
         _getAddressTextField.font = [UIFont systemFontOfSize:13.f];
         [backgroundView addSubview:_getAddressTextField];
+        
+        self.codeButton = [[UIButton alloc] initWithFrame:(CGRectMake(backgroundView.width - 36, 15, 20, 20))];
+        [self.codeButton setImage:[UIImage imageNamed:@"wallet_code"] forState:(UIControlStateNormal)];
+        [backgroundView addSubview:self.codeButton];
     }
     return _getAddressTextField;
 }
@@ -91,6 +101,8 @@
     return _publickeyInfoView;
 }
 - (void)reloadDataAction:(UIButton *)sender{
-    
+    if ([self.delegate respondsToSelector:@selector(walletSendHeadReloadDataAciton)]) {
+        [self.delegate walletSendHeadReloadDataAciton];
+    }
 }
 @end
