@@ -16,6 +16,7 @@ PODS:
     - AFNetworking/NSURLSession
   - IQKeyboardManager (6.2.0)
   - MBProgressHUD (1.1.0)
+  - MJExtension (3.0.15.1)
   - MJRefresh (3.1.15.7)
   - YHCategroy (0.0.6)
 
@@ -23,6 +24,7 @@ DEPENDENCIES:
   - AFNetworking
   - IQKeyboardManager
   - MBProgressHUD
+  - MJExtension
   - MJRefresh
   - YHCategroy
 
@@ -31,6 +33,7 @@ SPEC REPOS:
     - AFNetworking
     - IQKeyboardManager
     - MBProgressHUD
+    - MJExtension
     - MJRefresh
     - YHCategroy
 
@@ -38,9 +41,10 @@ SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   YHCategroy: 3ef0133cb28d7513fc8bd34d8a05632346903fdf
 
-PODFILE CHECKSUM: 03b180c845ae1e5abeca13a4125a9a019e9d535e
+PODFILE CHECKSUM: 93967fce070ea86ac37c24901cda341f9ba7b93e
 
 COCOAPODS: 1.5.3

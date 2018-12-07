@@ -9,4 +9,7 @@
 #import "BWGlobalconst.h"
 
 #pragma mark - 域名
-NSString *const domain = @"http://39.104.52.88:80/";
+NSString *const DOMAINSTRING = @"http://39.104.52.88:80/";
+
+#pragma mark - 全局文案
+NSString *const LOADING_STRING = @"正在獲取數據...";

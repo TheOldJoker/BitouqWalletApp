@@ -18,23 +18,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self loadData];
-//    self.privatekeyLabel.text = @"127Ktr61h2GtWS22MzJGApX8F73CRpAyjKp2yKh3weXo";
-//    BWUser *user = [[BWUser alloc] init];
-//    user.privatekey = self.privatekeyLabel.text;
-//    [BWUserManager shareManager].user = user;
 }
 - (void)setValue{
-    
+    self.privatekeyLabel.text = self.mainData.data.prikey;
+    BWUser *user = [[BWUser alloc] init];
+    user.privatekey = self.mainData.data.prikey;
+    user.publickey = self.mainData.data.pubkey;
+    [BWUserManager shareManager].user = user;
 }
 - (void)loadData{
-    [self showHUDWithAlert:@""];
+    [self showHUDWithAlert:LOADING_STRING];
     [BWDataSource getKeySuccess:^(id  _Nonnull response) {
         [self hiddenHUD];
-//        self.mainData = [BWLoginCreateKeyRootModel ]
-        NSLog(@"%@",[self getMyNeedJsonWithDict:response]);
+        self.mainData = [BWLoginCreateKeyRootModel mj_objectWithKeyValues:response];
+        if (self.mainData.errorCode == 0) {
+            [self setValue];
+        }else{
+            [self showNetErrorMessageWithStatus:self.mainData.status errorCode:self.mainData.errorCode errorMessage:self.mainData.errorMsg];
+        }
     } fail:^(NSError * _Nonnull error) {
         [self hiddenHUD];
-        NSLog(@"%@",error);
+        [self showServerError];
     }];
 }
 -(IBAction)unwindSegue:(UIStoryboardSegue *)sender{

@@ -8,4 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-UIKIT_EXTERN NSString *const domain;
+UIKIT_EXTERN NSString *const DOMAINSTRING;
+UIKIT_EXTERN NSString *const LOADING_STRING;

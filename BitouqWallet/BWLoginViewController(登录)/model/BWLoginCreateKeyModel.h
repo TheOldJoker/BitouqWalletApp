@@ -11,7 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BWLoginCreateKeyModel : NSObject
-
+@property (nonatomic, copy) NSString *prikey;//私钥
+@property (nonatomic, copy) NSString *pubkey;//公钥
 @end
 
 NS_ASSUME_NONNULL_END

@@ -7,15 +7,16 @@
 //
 
 #import "BWUser.h"
-
 @implementation BWUser
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
     [aCoder encodeObject:self.privatekey forKey:@"privatekey"];
+    [aCoder encodeObject:self.publickey forKey:@"publickey"];
 }
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     self.privatekey = [aDecoder decodeObjectForKey:@"privatekey"];
+    self.publickey = [aDecoder decodeObjectForKey:@"publickey"];
     return self;
 }
 @end

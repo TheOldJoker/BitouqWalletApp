@@ -20,8 +20,34 @@
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.label.text = alertString;
 }
+- (void)showServerError{
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.label.text = @"連接服務器失敗";
+}
 - (void)hiddenHUD{
     [MBProgressHUD hideHUDForView:self.view animated:YES];
+}
+- (void)showNetErrorMessageWithStatus:(NSInteger)status errorCode:(NSInteger)errorCode errorMessage:(NSString *)errorMessage{
+    if (errorCode == 0) {
+        return;
+    }
+    [self showWeakAlertWithString:errorMessage];
+    if (errorCode == 1001) {
+        NSLog(@"用戶資產不足");
+        return;
+    }
+    if (errorCode == 5001) {
+        NSLog(@"參數格式錯誤");
+        return;
+    }
+    if (status == 0 || status == 500) {
+        NSLog(@"服務器異常");
+        return;
+    }
+    if (status == 404) {
+        NSLog(@"地址錯誤");
+        return;
+    }
 }
 - (NSString *)getMyNeedJsonWithDict:(id)response
 {

@@ -55,6 +55,9 @@
 		AFE2FA1A21B95394005F7A84 /* NSString+BWStringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE2FA1921B95394005F7A84 /* NSString+BWStringCategory.m */; };
 		AFE2FA1E21B957F3005F7A84 /* BWLoginCreateKeyRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE2FA1D21B957F3005F7A84 /* BWLoginCreateKeyRootModel.m */; };
 		AFE2FA2121B95869005F7A84 /* BWLoginCreateKeyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE2FA2021B95869005F7A84 /* BWLoginCreateKeyModel.m */; };
+		AFE2FA2521B9847E005F7A84 /* BWUserAssetRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE2FA2421B9847E005F7A84 /* BWUserAssetRootModel.m */; };
+		AFE2FA2821BA06CD005F7A84 /* BWWalletActivityRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE2FA2721BA06CD005F7A84 /* BWWalletActivityRootModel.m */; };
+		AFE2FA2B21BA06E1005F7A84 /* BWWalletActivityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE2FA2A21BA06E1005F7A84 /* BWWalletActivityModel.m */; };
 		AFEBA7AF21B17A8100F5ECEF /* BWMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBA7AE21B17A8100F5ECEF /* BWMenuButton.m */; };
 		AFEBA7B121B3C4DD00F5ECEF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFEBA7B021B3C4DD00F5ECEF /* Login.storyboard */; };
 		AFEBA7B421B3D2AA00F5ECEF /* BWLoginSugeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBA7B321B3D2AA00F5ECEF /* BWLoginSugeViewController.m */; };
@@ -181,6 +184,12 @@
 		AFE2FA1D21B957F3005F7A84 /* BWLoginCreateKeyRootModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWLoginCreateKeyRootModel.m; sourceTree = "<group>"; };
 		AFE2FA1F21B95869005F7A84 /* BWLoginCreateKeyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWLoginCreateKeyModel.h; sourceTree = "<group>"; };
 		AFE2FA2021B95869005F7A84 /* BWLoginCreateKeyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWLoginCreateKeyModel.m; sourceTree = "<group>"; };
+		AFE2FA2321B9847E005F7A84 /* BWUserAssetRootModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWUserAssetRootModel.h; sourceTree = "<group>"; };
+		AFE2FA2421B9847E005F7A84 /* BWUserAssetRootModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWUserAssetRootModel.m; sourceTree = "<group>"; };
+		AFE2FA2621BA06CD005F7A84 /* BWWalletActivityRootModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWWalletActivityRootModel.h; sourceTree = "<group>"; };
+		AFE2FA2721BA06CD005F7A84 /* BWWalletActivityRootModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWWalletActivityRootModel.m; sourceTree = "<group>"; };
+		AFE2FA2921BA06E1005F7A84 /* BWWalletActivityModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWWalletActivityModel.h; sourceTree = "<group>"; };
+		AFE2FA2A21BA06E1005F7A84 /* BWWalletActivityModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWWalletActivityModel.m; sourceTree = "<group>"; };
 		AFEBA7AD21B17A8100F5ECEF /* BWMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWMenuButton.h; sourceTree = "<group>"; };
 		AFEBA7AE21B17A8100F5ECEF /* BWMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWMenuButton.m; sourceTree = "<group>"; };
 		AFEBA7B021B3C4DD00F5ECEF /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -380,6 +389,7 @@
 		AF09B75621AD712700B9E1E4 /* BWWalletViewController(钱包) */ = {
 			isa = PBXGroup;
 			children = (
+				AFE2FA2221B98464005F7A84 /* model */,
 				AFCECEFD21B6BB3C0089E3AF /* view */,
 				AF09B76721AD795B00B9E1E4 /* BWWalletViewController.h */,
 				AF09B76821AD795B00B9E1E4 /* BWWalletViewController.m */,
@@ -528,6 +538,19 @@
 				AFE2FA1D21B957F3005F7A84 /* BWLoginCreateKeyRootModel.m */,
 				AFE2FA1F21B95869005F7A84 /* BWLoginCreateKeyModel.h */,
 				AFE2FA2021B95869005F7A84 /* BWLoginCreateKeyModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		AFE2FA2221B98464005F7A84 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				AFE2FA2321B9847E005F7A84 /* BWUserAssetRootModel.h */,
+				AFE2FA2421B9847E005F7A84 /* BWUserAssetRootModel.m */,
+				AFE2FA2621BA06CD005F7A84 /* BWWalletActivityRootModel.h */,
+				AFE2FA2721BA06CD005F7A84 /* BWWalletActivityRootModel.m */,
+				AFE2FA2921BA06E1005F7A84 /* BWWalletActivityModel.h */,
+				AFE2FA2A21BA06E1005F7A84 /* BWWalletActivityModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -728,6 +751,7 @@
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/YHCategroy/YHCategroy.framework",
 			);
@@ -736,6 +760,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YHCategroy.framework",
 			);
@@ -771,6 +796,7 @@
 			files = (
 				AF09B76921AD795B00B9E1E4 /* BWWalletViewController.m in Sources */,
 				AFCECEFC21B6B9D80089E3AF /* BWWalletGetViewController.m in Sources */,
+				AFE2FA2B21BA06E1005F7A84 /* BWWalletActivityModel.m in Sources */,
 				AFCECEF621B6B9AB0089E3AF /* BWWalletOverviewViewController.m in Sources */,
 				AFE2FA1321B951CB005F7A84 /* BWNetHelper.m in Sources */,
 				AFCECF0321B6CAF50089E3AF /* BWWalletPublickeyInfoView.m in Sources */,
@@ -781,12 +807,14 @@
 				AF09B77821AD79C500B9E1E4 /* BWDuplicateViewController.m in Sources */,
 				AF06701021AE324D00F23D22 /* YHBaseNavigationController.m in Sources */,
 				AFCECF0921B7D4080089E3AF /* BWGlobalconst.m in Sources */,
+				AFE2FA2821BA06CD005F7A84 /* BWWalletActivityRootModel.m in Sources */,
 				AFCECF0C21B7D4A60089E3AF /* BWWalletSendHeadView.m in Sources */,
 				AFEBA7C221B41F5D00F5ECEF /* BWUserManager.m in Sources */,
 				AF09B77521AD79B000B9E1E4 /* BWRecordViewController.m in Sources */,
 				AF06701521AE37AD00F23D22 /* BWMenuViewController.m in Sources */,
 				AFCECEF321B6B8220089E3AF /* BWBaseViewController.m in Sources */,
 				AFEBA7D121B4227F00F5ECEF /* YYKVStorage.m in Sources */,
+				AFE2FA2521B9847E005F7A84 /* BWUserAssetRootModel.m in Sources */,
 				AF06704821AECF0E00F23D22 /* YHCAAimationModalTransition.m in Sources */,
 				AFE2FA1E21B957F3005F7A84 /* BWLoginCreateKeyRootModel.m in Sources */,
 				AFEBA7D221B4227F00F5ECEF /* YYMemoryCache.m in Sources */,

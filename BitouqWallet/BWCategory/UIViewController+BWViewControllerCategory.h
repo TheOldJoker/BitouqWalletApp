@@ -17,8 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)showHUDWithAlert:(NSString *)alertString;
 //隱藏HUD
 - (void)hiddenHUD;
+//連接服務器失敗
+- (void)showServerError;
 //打印json
 - (NSString *)getMyNeedJsonWithDict:(id)response;
+- (void)showNetErrorMessageWithStatus:(NSInteger)status errorCode:(NSInteger)errorCode errorMessage:(NSString *)errorMessage;
 @end
 
 NS_ASSUME_NONNULL_END

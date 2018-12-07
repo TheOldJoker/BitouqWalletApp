@@ -9,6 +9,8 @@
 #import "BWWalletOverviewViewController.h"
 #import "BWWalletPublickeyInfoView.h"
 #import "BWWalletOverviewActivityView.h"
+#import "BWUserAssetRootModel.h"
+#import "BWWalletActivityRootModel.h"
 @interface BWWalletOverviewViewController ()
 @property (nonatomic, strong) UIScrollView *mainScorllView;
 @property (nonatomic, strong) BWWalletPublickeyInfoView *publickeyInfoView;
@@ -17,6 +19,8 @@
 @property (nonatomic, strong) BWWalletOverviewActivityView *activityView2;
 @property (nonatomic, strong) BWWalletOverviewActivityView *activityView3;
 @property (nonatomic, strong) BWWalletOverviewActivityView *activityView4;
+@property (nonatomic, strong) BWUserAssetRootModel *userAssetRootModel;
+@property (nonatomic, strong) BWWalletActivityRootModel *activityRootModel;
 @end
 
 @implementation BWWalletOverviewViewController
@@ -28,14 +32,75 @@
     [super viewDidLoad];
 }
 #pragma mark - func
+#pragma mark 獲取個人數據
+- (void)loadDataForUserPublickeyInfoCompletion:(void (^ __nullable)(void))completion{
+    [BWDataSource getUserAssetSuccess:^(id  _Nonnull response) {
+        self.userAssetRootModel = [BWUserAssetRootModel mj_objectWithKeyValues:response];
+        if (self.userAssetRootModel.errorCode == 0) {
+            BWUser *user = [BWUserManager shareManager].user;
+            user.asset = self.userAssetRootModel.data;
+            self.publickeyInfoView.money = [NSString stringWithFormat:@"%@ BRT",user.asset];
+        }else{
+            [self showNetErrorMessageWithStatus:self.userAssetRootModel.status errorCode:self.userAssetRootModel.errorCode errorMessage:self.userAssetRootModel.errorMsg];
+        }
+        completion();
+    } fail:^(NSError * _Nonnull error) {
+        [self showServerError];
+        completion();
+    }];
+}
+#pragma mark 獲取活動數據
+- (void)loadActivityDataCompletion:(void (^ __nullable)(void))completion{
+    [BWDataSource getWalletActivityDataSuccess:^(id  _Nonnull response) {
+        self.activityRootModel = [BWWalletActivityRootModel mj_objectWithKeyValues:response];
+        if (self.activityRootModel.errorCode == 0) {
+            //交易
+            self.activityView1.content = self.activityRootModel.data.transferSum;
+            //BRTStrar
+            self.activityView2.content = self.activityRootModel.data.starSum;
+            //勝負手
+            self.activityView3.content = self.activityRootModel.data.diceSum;
+            //挖礦
+            self.activityView4.content = self.activityRootModel.data.miningSum;
+        }else{
+            [self showNetErrorMessageWithStatus:self.activityRootModel.status errorCode:self.activityRootModel.errorCode errorMessage:self.activityRootModel.errorMsg];
+        }
+        completion();
+    } fail:^(NSError * _Nonnull error) {
+        [self showServerError];
+        completion();
+    }];
+}
+#pragma mark 初始化賦值
 - (void)loadData{
-    self.publickeyInfoView.publickey = @"8JWRqEGK84GxbF7jpn5TZoEnefjuzxDA39iBRrVYge2D";
-    self.publickeyInfoView.money = @"197860123.213 BRT";
-    
-    self.activityView1.content = @"+ 1010230";
-    self.activityView2.content = @"+ 1010230";
-    self.activityView3.content = @"- 10";
-    self.activityView4.content = @"0";
+    self.publickeyInfoView.publickey = [BWUserManager shareManager].user.publickey;
+    //已經向服務器請求到正確數據
+    if (self.userAssetRootModel && self.userAssetRootModel.errorCode == 0) {
+        BWUser *user = [BWUserManager shareManager].user;
+        user.asset = self.userAssetRootModel.data;
+        self.publickeyInfoView.money = [NSString stringWithFormat:@"%@ BRT",user.asset];
+    }else{
+        //獲取個人信息數據
+        [self loadDataForUserPublickeyInfoCompletion:^{
+            
+        }];
+    }
+    //獲取活動數據
+    if (self.activityRootModel) {
+        //交易
+        self.activityView1.content = self.activityRootModel.data.transferSum;
+        //BRTStrar
+        self.activityView2.content = self.activityRootModel.data.starSum;
+        //勝負手
+        self.activityView3.content = self.activityRootModel.data.diceSum;
+        //挖礦
+        self.activityView4.content = self.activityRootModel.data.miningSum;
+    }else{
+        [self showHUDWithAlert:LOADING_STRING];
+        [self loadActivityDataCompletion:^{
+            [self hiddenHUD];
+        }];
+    }
 }
 #pragma mark - lazyload
 - (BWWalletOverviewActivityView *)activityView4{
@@ -118,7 +183,10 @@
 }
 #pragma mark - buttonAction
 - (void)reloadDataAction:(UIButton *)sender{
-    NSLog(@"reloadDataAction");
+    [self showHUDWithAlert:LOADING_STRING];
+    [self loadDataForUserPublickeyInfoCompletion:^{
+        [self hiddenHUD];
+    }];
 }
 /*
 #pragma mark - Navigation

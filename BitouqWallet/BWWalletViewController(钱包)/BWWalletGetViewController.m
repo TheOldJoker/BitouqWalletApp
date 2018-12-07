@@ -27,6 +27,12 @@
 }
 #pragma mark - func
 - (void)loadData{
+    
+    BWUser *user = [BWUserManager shareManager].user;
+    if (!stringIsEmpty(user.publickey)) {
+        self.publickeyLabel.text = user.publickey;
+    }
+    
     self.codeImageView.image = [UIImage imageNamed:@"wallet_code"];
     self.explianLabel.text = @"請保管好您的接收地址，它將用於接收代幣，您的朋友可以通過向網絡發出請求向您的地址進行轉賬，您將通過此地址獲得代幣。請確認地址的完整性和正確性，否則代幣將丟失在網絡中。同時您可以使用二維碼進行接收代幣。";
     [self.explianLabel reSetHeight];
@@ -54,7 +60,13 @@
         _publickeyLabel = [[UILabel alloc] initWithFrame:(CGRectMake((self.view.width - 275) / 2, self.saveCodeButton.bottom + 27, 275, 42))];
         [_publickeyLabel configWithTextColor:[UIColor blackColor] font:[UIFont systemFontOfSize:15] textAlignment:(NSTextAlignmentCenter) backgroundColor:nil];
         _publickeyLabel.numberOfLines = 2;
+        _publickeyLabel.userInteractionEnabled = YES;
         [self.view addSubview:_publickeyLabel];
+        
+        UIButton *copyButton = [[UIButton alloc] initWithFrame:(CGRectMake(200, 22, 18, 18))];
+        [copyButton setImage:[UIImage imageNamed:@"main_copy"] forState:(UIControlStateNormal)];
+        [copyButton addTarget:self action:@selector(copyPublickeyAction:) forControlEvents:(UIControlEventTouchUpInside)];
+        [_publickeyLabel addSubview:copyButton];
     }
     return _publickeyLabel;
 }
@@ -79,6 +91,20 @@
     return _codeImageView;
 }
 #pragma mark - buttonAction
+- (void)copyPublickeyAction:(UIButton *)sender{
+    if (stringIsEmpty(self.publickeyLabel.text)) {
+        [self showWeakAlertWithString:@"未獲取公鑰"];
+        return;
+    }
+    UIPasteboard *pab = [UIPasteboard generalPasteboard];
+    [pab setString:self.publickeyLabel.text];
+    if (pab == nil) {
+        [self showWeakAlertWithString:@"複製失敗"];
+    }else
+    {
+        [self showWeakAlertWithString:@"已複製公鑰"];
+    }
+}
 - (void)saveCodeAction:(UIButton *)sender{
     if (self.codeImageView.image == nil) {
         return;

@@ -11,6 +11,6 @@
 @implementation NSString (BWStringCategory)
 - (NSString *)getSeverUrl
 {
-    return [NSString stringWithFormat:@"%@%@",domain,self];
+    return [NSString stringWithFormat:@"%@%@",DOMAINSTRING,self];
 }
 @end

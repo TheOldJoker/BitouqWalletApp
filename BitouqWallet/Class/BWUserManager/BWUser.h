@@ -11,7 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BWUser : NSObject<NSCoding>
-@property (nonatomic, copy) NSString *privatekey;
+@property (nonatomic, copy) NSString *privatekey;//私鑰
+@property (nonatomic, copy) NSString *publickey;//公鑰
+@property (nonatomic, copy) NSString *asset;//資產餘額
 @end
 
 NS_ASSUME_NONNULL_END
