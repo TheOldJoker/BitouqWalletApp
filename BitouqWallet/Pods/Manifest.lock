@@ -18,6 +18,9 @@ PODS:
   - MBProgressHUD (1.1.0)
   - MJExtension (3.0.15.1)
   - MJRefresh (3.1.15.7)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
   - YHCategroy (0.0.6)
 
 DEPENDENCIES:
@@ -26,6 +29,7 @@ DEPENDENCIES:
   - MBProgressHUD
   - MJExtension
   - MJRefresh
+  - SDWebImage
   - YHCategroy
 
 SPEC REPOS:
@@ -35,6 +39,7 @@ SPEC REPOS:
     - MBProgressHUD
     - MJExtension
     - MJRefresh
+    - SDWebImage
     - YHCategroy
 
 SPEC CHECKSUMS:
@@ -43,8 +48,9 @@ SPEC CHECKSUMS:
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   YHCategroy: 3ef0133cb28d7513fc8bd34d8a05632346903fdf
 
-PODFILE CHECKSUM: 93967fce070ea86ac37c24901cda341f9ba7b93e
+PODFILE CHECKSUM: c10a13cfdb0f14fd922e91c41af252160f111c31
 
 COCOAPODS: 1.5.3
