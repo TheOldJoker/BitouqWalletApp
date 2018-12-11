@@ -63,6 +63,8 @@
 		AF1273A721BFB290002E55C2 /* BWMyMiningInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1273A621BFB290002E55C2 /* BWMyMiningInfoModel.m */; };
 		AF1273AB21BFDB7A002E55C2 /* BWDicelastWinerRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1273AA21BFDB7A002E55C2 /* BWDicelastWinerRootModel.m */; };
 		AF1273AE21BFDB8B002E55C2 /* BWDicelastWinerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1273AD21BFDB8B002E55C2 /* BWDicelastWinerModel.m */; };
+		AF1273B221C00C96002E55C2 /* BWDiceLastWinerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1273B121C00C96002E55C2 /* BWDiceLastWinerView.m */; };
+		AF1273B421C00CC4002E55C2 /* BWDiceLastWinerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF1273B321C00CC4002E55C2 /* BWDiceLastWinerView.xib */; };
 		AF91BFA321BA6CDD003A423F /* BWRlueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF91BFA221BA6CDD003A423F /* BWRlueModel.m */; };
 		AFCECEF321B6B8220089E3AF /* BWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCECEF221B6B8220089E3AF /* BWBaseViewController.m */; };
 		AFCECEF621B6B9AB0089E3AF /* BWWalletOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCECEF521B6B9AB0089E3AF /* BWWalletOverviewViewController.m */; };
@@ -233,6 +235,9 @@
 		AF1273AA21BFDB7A002E55C2 /* BWDicelastWinerRootModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWDicelastWinerRootModel.m; sourceTree = "<group>"; };
 		AF1273AC21BFDB8B002E55C2 /* BWDicelastWinerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWDicelastWinerModel.h; sourceTree = "<group>"; };
 		AF1273AD21BFDB8B002E55C2 /* BWDicelastWinerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWDicelastWinerModel.m; sourceTree = "<group>"; };
+		AF1273B021C00C96002E55C2 /* BWDiceLastWinerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWDiceLastWinerView.h; sourceTree = "<group>"; };
+		AF1273B121C00C96002E55C2 /* BWDiceLastWinerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWDiceLastWinerView.m; sourceTree = "<group>"; };
+		AF1273B321C00CC4002E55C2 /* BWDiceLastWinerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWDiceLastWinerView.xib; sourceTree = "<group>"; };
 		AF91BFA121BA6CDD003A423F /* BWRlueModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWRlueModel.h; sourceTree = "<group>"; };
 		AF91BFA221BA6CDD003A423F /* BWRlueModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWRlueModel.m; sourceTree = "<group>"; };
 		AFCECEF121B6B8220089E3AF /* BWBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWBaseViewController.h; sourceTree = "<group>"; };
@@ -531,6 +536,7 @@
 		AF09B75921AD71E500B9E1E4 /* BWVicOrDefViewController(胜负手) */ = {
 			isa = PBXGroup;
 			children = (
+				AF1273AF21C00C74002E55C2 /* view */,
 				AF1273A821BFDB57002E55C2 /* model */,
 				AF09B76D21AD798900B9E1E4 /* BWVicOrDefViewController.h */,
 				AF09B76E21AD798900B9E1E4 /* BWVicOrDefViewController.m */,
@@ -686,6 +692,16 @@
 				AF1273AD21BFDB8B002E55C2 /* BWDicelastWinerModel.m */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		AF1273AF21C00C74002E55C2 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				AF1273B021C00C96002E55C2 /* BWDiceLastWinerView.h */,
+				AF1273B121C00C96002E55C2 /* BWDiceLastWinerView.m */,
+				AF1273B321C00CC4002E55C2 /* BWDiceLastWinerView.xib */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		AF91BFA021BA6CC0003A423F /* model */ = {
@@ -953,6 +969,7 @@
 				AF12739821BF54E7002E55C2 /* BWVoteTableViewCell.xib in Resources */,
 				AF09B77E21AD7A0900B9E1E4 /* BRTStars.storyboard in Resources */,
 				AF09B72D21AD6EAB00B9E1E4 /* Assets.xcassets in Resources */,
+				AF1273B421C00CC4002E55C2 /* BWDiceLastWinerView.xib in Resources */,
 				AF09B78521AD7B3F00B9E1E4 /* mining.storyboard in Resources */,
 				AFEBA7B121B3C4DD00F5ECEF /* Login.storyboard in Resources */,
 				AF09B78A21AD7BCD00B9E1E4 /* Duplicate.storyboard in Resources */,
@@ -1053,6 +1070,7 @@
 				AF09B77821AD79C500B9E1E4 /* BWDuplicateViewController.m in Sources */,
 				AF06701021AE324D00F23D22 /* YHBaseNavigationController.m in Sources */,
 				AF1273AB21BFDB7A002E55C2 /* BWDicelastWinerRootModel.m in Sources */,
+				AF1273B221C00C96002E55C2 /* BWDiceLastWinerView.m in Sources */,
 				AFCECF0921B7D4080089E3AF /* BWGlobalconst.m in Sources */,
 				AFE2FA2821BA06CD005F7A84 /* BWWalletActivityRootModel.m in Sources */,
 				AFCECF0C21B7D4A60089E3AF /* BWWalletSendHeadView.m in Sources */,
