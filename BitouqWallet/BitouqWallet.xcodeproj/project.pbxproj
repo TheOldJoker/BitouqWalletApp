@@ -38,6 +38,32 @@
 		AF09B78A21AD7BCD00B9E1E4 /* Duplicate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF09B78821AD7BCD00B9E1E4 /* Duplicate.storyboard */; };
 		AF09B78C21AD7BFD00B9E1E4 /* rlue.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF09B78B21AD7BFD00B9E1E4 /* rlue.storyboard */; };
 		AF09B79121AD7E6400B9E1E4 /* UIViewController+BWViewControllerCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = AF09B79021AD7E6400B9E1E4 /* UIViewController+BWViewControllerCategory.m */; };
+		AF12736421BE663E002E55C2 /* BWRecordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF12736221BE663E002E55C2 /* BWRecordTableViewCell.m */; };
+		AF12736521BE663E002E55C2 /* BWRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF12736321BE663E002E55C2 /* BWRecordTableViewCell.xib */; };
+		AF12736921BE6801002E55C2 /* BWRecordRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF12736821BE6801002E55C2 /* BWRecordRootModel.m */; };
+		AF12736C21BE680F002E55C2 /* BWRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF12736B21BE680F002E55C2 /* BWRecordModel.m */; };
+		AF12737121BE77EC002E55C2 /* BWMiningVoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF12737021BE77EC002E55C2 /* BWMiningVoteViewController.m */; };
+		AF12737421BE7810002E55C2 /* BWMiningProductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF12737321BE7810002E55C2 /* BWMiningProductionViewController.m */; };
+		AF12737721BE7837002E55C2 /* BWMiningTopSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF12737621BE7837002E55C2 /* BWMiningTopSelectView.m */; };
+		AF12737A21BE7BBA002E55C2 /* BWMiningOwnerRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF12737921BE7BBA002E55C2 /* BWMiningOwnerRootModel.m */; };
+		AF12737D21BE7BCB002E55C2 /* BWMiningOwnerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF12737C21BE7BCB002E55C2 /* BWMiningOwnerModel.m */; };
+		AF12738021BE8461002E55C2 /* BWMiningOwnerHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF12737F21BE8461002E55C2 /* BWMiningOwnerHeadView.m */; };
+		AF12738321BE8FD8002E55C2 /* BWNumberSelectedView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF12738221BE8FD8002E55C2 /* BWNumberSelectedView.m */; };
+		AF12738621BE8FFF002E55C2 /* BWMiningOwnerNumbersView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF12738521BE8FFF002E55C2 /* BWMiningOwnerNumbersView.m */; };
+		AF12738C21BEAB6E002E55C2 /* BWMiningErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF12738B21BEAB6E002E55C2 /* BWMiningErrorView.m */; };
+		AF12738E21BEAB7C002E55C2 /* BWMiningErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF12738D21BEAB7C002E55C2 /* BWMiningErrorView.xib */; };
+		AF12739121BEC6D1002E55C2 /* BWMiningVoteHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF12739021BEC6D1002E55C2 /* BWMiningVoteHeadView.m */; };
+		AF12739321BEC6E3002E55C2 /* BWMiningVoteHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF12739221BEC6E3002E55C2 /* BWMiningVoteHeadView.xib */; };
+		AF12739721BF54E7002E55C2 /* BWVoteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF12739521BF54E7002E55C2 /* BWVoteTableViewCell.m */; };
+		AF12739821BF54E7002E55C2 /* BWVoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF12739621BF54E7002E55C2 /* BWVoteTableViewCell.xib */; };
+		AF12739B21BF6739002E55C2 /* BWMyMiningAgeRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF12739A21BF6739002E55C2 /* BWMyMiningAgeRootModel.m */; };
+		AF12739E21BF674B002E55C2 /* BWMyMiningAgeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF12739D21BF674B002E55C2 /* BWMyMiningAgeModel.m */; };
+		AF1273A121BF8D63002E55C2 /* BWVoteCellButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1273A021BF8D63002E55C2 /* BWVoteCellButton.m */; };
+		AF1273A421BFB281002E55C2 /* BWMyMiningInfoRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1273A321BFB281002E55C2 /* BWMyMiningInfoRootModel.m */; };
+		AF1273A721BFB290002E55C2 /* BWMyMiningInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1273A621BFB290002E55C2 /* BWMyMiningInfoModel.m */; };
+		AF1273AB21BFDB7A002E55C2 /* BWDicelastWinerRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1273AA21BFDB7A002E55C2 /* BWDicelastWinerRootModel.m */; };
+		AF1273AE21BFDB8B002E55C2 /* BWDicelastWinerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1273AD21BFDB8B002E55C2 /* BWDicelastWinerModel.m */; };
+		AF91BFA321BA6CDD003A423F /* BWRlueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF91BFA221BA6CDD003A423F /* BWRlueModel.m */; };
 		AFCECEF321B6B8220089E3AF /* BWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCECEF221B6B8220089E3AF /* BWBaseViewController.m */; };
 		AFCECEF621B6B9AB0089E3AF /* BWWalletOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCECEF521B6B9AB0089E3AF /* BWWalletOverviewViewController.m */; };
 		AFCECEF921B6B9C20089E3AF /* BWWalletSendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCECEF821B6B9C20089E3AF /* BWWalletSendViewController.m */; };
@@ -161,6 +187,54 @@
 		AF09B78F21AD7E6400B9E1E4 /* UIViewController+BWViewControllerCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BWViewControllerCategory.h"; sourceTree = "<group>"; };
 		AF09B79021AD7E6400B9E1E4 /* UIViewController+BWViewControllerCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BWViewControllerCategory.m"; sourceTree = "<group>"; };
 		AF09B79221AD7F3400B9E1E4 /* BWCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWCategory.h; sourceTree = "<group>"; };
+		AF12736121BE663E002E55C2 /* BWRecordTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWRecordTableViewCell.h; sourceTree = "<group>"; };
+		AF12736221BE663E002E55C2 /* BWRecordTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWRecordTableViewCell.m; sourceTree = "<group>"; };
+		AF12736321BE663E002E55C2 /* BWRecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWRecordTableViewCell.xib; sourceTree = "<group>"; };
+		AF12736721BE6801002E55C2 /* BWRecordRootModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWRecordRootModel.h; sourceTree = "<group>"; };
+		AF12736821BE6801002E55C2 /* BWRecordRootModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWRecordRootModel.m; sourceTree = "<group>"; };
+		AF12736A21BE680F002E55C2 /* BWRecordModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWRecordModel.h; sourceTree = "<group>"; };
+		AF12736B21BE680F002E55C2 /* BWRecordModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWRecordModel.m; sourceTree = "<group>"; };
+		AF12736F21BE77EC002E55C2 /* BWMiningVoteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWMiningVoteViewController.h; sourceTree = "<group>"; };
+		AF12737021BE77EC002E55C2 /* BWMiningVoteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWMiningVoteViewController.m; sourceTree = "<group>"; };
+		AF12737221BE7810002E55C2 /* BWMiningProductionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWMiningProductionViewController.h; sourceTree = "<group>"; };
+		AF12737321BE7810002E55C2 /* BWMiningProductionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWMiningProductionViewController.m; sourceTree = "<group>"; };
+		AF12737521BE7837002E55C2 /* BWMiningTopSelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWMiningTopSelectView.h; sourceTree = "<group>"; };
+		AF12737621BE7837002E55C2 /* BWMiningTopSelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWMiningTopSelectView.m; sourceTree = "<group>"; };
+		AF12737821BE7BBA002E55C2 /* BWMiningOwnerRootModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWMiningOwnerRootModel.h; sourceTree = "<group>"; };
+		AF12737921BE7BBA002E55C2 /* BWMiningOwnerRootModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWMiningOwnerRootModel.m; sourceTree = "<group>"; };
+		AF12737B21BE7BCB002E55C2 /* BWMiningOwnerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWMiningOwnerModel.h; sourceTree = "<group>"; };
+		AF12737C21BE7BCB002E55C2 /* BWMiningOwnerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWMiningOwnerModel.m; sourceTree = "<group>"; };
+		AF12737E21BE8461002E55C2 /* BWMiningOwnerHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWMiningOwnerHeadView.h; sourceTree = "<group>"; };
+		AF12737F21BE8461002E55C2 /* BWMiningOwnerHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWMiningOwnerHeadView.m; sourceTree = "<group>"; };
+		AF12738121BE8FD8002E55C2 /* BWNumberSelectedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWNumberSelectedView.h; sourceTree = "<group>"; };
+		AF12738221BE8FD8002E55C2 /* BWNumberSelectedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWNumberSelectedView.m; sourceTree = "<group>"; };
+		AF12738421BE8FFF002E55C2 /* BWMiningOwnerNumbersView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWMiningOwnerNumbersView.h; sourceTree = "<group>"; };
+		AF12738521BE8FFF002E55C2 /* BWMiningOwnerNumbersView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWMiningOwnerNumbersView.m; sourceTree = "<group>"; };
+		AF12738A21BEAB6E002E55C2 /* BWMiningErrorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWMiningErrorView.h; sourceTree = "<group>"; };
+		AF12738B21BEAB6E002E55C2 /* BWMiningErrorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWMiningErrorView.m; sourceTree = "<group>"; };
+		AF12738D21BEAB7C002E55C2 /* BWMiningErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWMiningErrorView.xib; sourceTree = "<group>"; };
+		AF12738F21BEC6D1002E55C2 /* BWMiningVoteHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWMiningVoteHeadView.h; sourceTree = "<group>"; };
+		AF12739021BEC6D1002E55C2 /* BWMiningVoteHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWMiningVoteHeadView.m; sourceTree = "<group>"; };
+		AF12739221BEC6E3002E55C2 /* BWMiningVoteHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWMiningVoteHeadView.xib; sourceTree = "<group>"; };
+		AF12739421BF54E7002E55C2 /* BWVoteTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWVoteTableViewCell.h; sourceTree = "<group>"; };
+		AF12739521BF54E7002E55C2 /* BWVoteTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWVoteTableViewCell.m; sourceTree = "<group>"; };
+		AF12739621BF54E7002E55C2 /* BWVoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWVoteTableViewCell.xib; sourceTree = "<group>"; };
+		AF12739921BF6739002E55C2 /* BWMyMiningAgeRootModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWMyMiningAgeRootModel.h; sourceTree = "<group>"; };
+		AF12739A21BF6739002E55C2 /* BWMyMiningAgeRootModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWMyMiningAgeRootModel.m; sourceTree = "<group>"; };
+		AF12739C21BF674B002E55C2 /* BWMyMiningAgeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWMyMiningAgeModel.h; sourceTree = "<group>"; };
+		AF12739D21BF674B002E55C2 /* BWMyMiningAgeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWMyMiningAgeModel.m; sourceTree = "<group>"; };
+		AF12739F21BF8D63002E55C2 /* BWVoteCellButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWVoteCellButton.h; sourceTree = "<group>"; };
+		AF1273A021BF8D63002E55C2 /* BWVoteCellButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWVoteCellButton.m; sourceTree = "<group>"; };
+		AF1273A221BFB281002E55C2 /* BWMyMiningInfoRootModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWMyMiningInfoRootModel.h; sourceTree = "<group>"; };
+		AF1273A321BFB281002E55C2 /* BWMyMiningInfoRootModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWMyMiningInfoRootModel.m; sourceTree = "<group>"; };
+		AF1273A521BFB290002E55C2 /* BWMyMiningInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWMyMiningInfoModel.h; sourceTree = "<group>"; };
+		AF1273A621BFB290002E55C2 /* BWMyMiningInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWMyMiningInfoModel.m; sourceTree = "<group>"; };
+		AF1273A921BFDB7A002E55C2 /* BWDicelastWinerRootModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWDicelastWinerRootModel.h; sourceTree = "<group>"; };
+		AF1273AA21BFDB7A002E55C2 /* BWDicelastWinerRootModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWDicelastWinerRootModel.m; sourceTree = "<group>"; };
+		AF1273AC21BFDB8B002E55C2 /* BWDicelastWinerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWDicelastWinerModel.h; sourceTree = "<group>"; };
+		AF1273AD21BFDB8B002E55C2 /* BWDicelastWinerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWDicelastWinerModel.m; sourceTree = "<group>"; };
+		AF91BFA121BA6CDD003A423F /* BWRlueModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWRlueModel.h; sourceTree = "<group>"; };
+		AF91BFA221BA6CDD003A423F /* BWRlueModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWRlueModel.m; sourceTree = "<group>"; };
 		AFCECEF121B6B8220089E3AF /* BWBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWBaseViewController.h; sourceTree = "<group>"; };
 		AFCECEF221B6B8220089E3AF /* BWBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWBaseViewController.m; sourceTree = "<group>"; };
 		AFCECEF421B6B9AB0089E3AF /* BWWalletOverviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWWalletOverviewViewController.h; sourceTree = "<group>"; };
@@ -446,6 +520,7 @@
 		AF09B75821AD71D900B9E1E4 /* BWRlueVIewController(规则) */ = {
 			isa = PBXGroup;
 			children = (
+				AF91BFA021BA6CC0003A423F /* model */,
 				AFE2FA4521BA667F005F7A84 /* view */,
 				AF09B77921AD79D700B9E1E4 /* BWRlueVIewController.h */,
 				AF09B77A21AD79D700B9E1E4 /* BWRlueVIewController.m */,
@@ -456,6 +531,7 @@
 		AF09B75921AD71E500B9E1E4 /* BWVicOrDefViewController(胜负手) */ = {
 			isa = PBXGroup;
 			children = (
+				AF1273A821BFDB57002E55C2 /* model */,
 				AF09B76D21AD798900B9E1E4 /* BWVicOrDefViewController.h */,
 				AF09B76E21AD798900B9E1E4 /* BWVicOrDefViewController.m */,
 			);
@@ -465,8 +541,14 @@
 		AF09B75A21AD71E700B9E1E4 /* BWMiningViewController(挖矿) */ = {
 			isa = PBXGroup;
 			children = (
+				AF12736E21BE732E002E55C2 /* model */,
+				AF12736D21BE7323002E55C2 /* view */,
 				AF09B77021AD799C00B9E1E4 /* BWMiningViewController.h */,
 				AF09B77121AD799C00B9E1E4 /* BWMiningViewController.m */,
+				AF12736F21BE77EC002E55C2 /* BWMiningVoteViewController.h */,
+				AF12737021BE77EC002E55C2 /* BWMiningVoteViewController.m */,
+				AF12737221BE7810002E55C2 /* BWMiningProductionViewController.h */,
+				AF12737321BE7810002E55C2 /* BWMiningProductionViewController.m */,
 			);
 			path = "BWMiningViewController(挖矿)";
 			sourceTree = "<group>";
@@ -474,6 +556,8 @@
 		AF09B75B21AD71EA00B9E1E4 /* BWRecordViewController(交易记录) */ = {
 			isa = PBXGroup;
 			children = (
+				AF12736621BE67E6002E55C2 /* model */,
+				AF12736021BE661C002E55C2 /* view */,
 				AF09B77321AD79B000B9E1E4 /* BWRecordViewController.h */,
 				AF09B77421AD79B000B9E1E4 /* BWRecordViewController.m */,
 			);
@@ -525,6 +609,92 @@
 				AFE2FA1921B95394005F7A84 /* NSString+BWStringCategory.m */,
 			);
 			path = BWCategory;
+			sourceTree = "<group>";
+		};
+		AF12736021BE661C002E55C2 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				AF12736121BE663E002E55C2 /* BWRecordTableViewCell.h */,
+				AF12736221BE663E002E55C2 /* BWRecordTableViewCell.m */,
+				AF12736321BE663E002E55C2 /* BWRecordTableViewCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		AF12736621BE67E6002E55C2 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				AF12736721BE6801002E55C2 /* BWRecordRootModel.h */,
+				AF12736821BE6801002E55C2 /* BWRecordRootModel.m */,
+				AF12736A21BE680F002E55C2 /* BWRecordModel.h */,
+				AF12736B21BE680F002E55C2 /* BWRecordModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		AF12736D21BE7323002E55C2 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				AF12737521BE7837002E55C2 /* BWMiningTopSelectView.h */,
+				AF12737621BE7837002E55C2 /* BWMiningTopSelectView.m */,
+				AF12737E21BE8461002E55C2 /* BWMiningOwnerHeadView.h */,
+				AF12737F21BE8461002E55C2 /* BWMiningOwnerHeadView.m */,
+				AF12738A21BEAB6E002E55C2 /* BWMiningErrorView.h */,
+				AF12738B21BEAB6E002E55C2 /* BWMiningErrorView.m */,
+				AF12738D21BEAB7C002E55C2 /* BWMiningErrorView.xib */,
+				AF12738121BE8FD8002E55C2 /* BWNumberSelectedView.h */,
+				AF12738221BE8FD8002E55C2 /* BWNumberSelectedView.m */,
+				AF12738421BE8FFF002E55C2 /* BWMiningOwnerNumbersView.h */,
+				AF12738521BE8FFF002E55C2 /* BWMiningOwnerNumbersView.m */,
+				AF12738F21BEC6D1002E55C2 /* BWMiningVoteHeadView.h */,
+				AF12739021BEC6D1002E55C2 /* BWMiningVoteHeadView.m */,
+				AF12739221BEC6E3002E55C2 /* BWMiningVoteHeadView.xib */,
+				AF12739421BF54E7002E55C2 /* BWVoteTableViewCell.h */,
+				AF12739521BF54E7002E55C2 /* BWVoteTableViewCell.m */,
+				AF12739621BF54E7002E55C2 /* BWVoteTableViewCell.xib */,
+				AF12739F21BF8D63002E55C2 /* BWVoteCellButton.h */,
+				AF1273A021BF8D63002E55C2 /* BWVoteCellButton.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		AF12736E21BE732E002E55C2 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				AF12737821BE7BBA002E55C2 /* BWMiningOwnerRootModel.h */,
+				AF12737921BE7BBA002E55C2 /* BWMiningOwnerRootModel.m */,
+				AF12737B21BE7BCB002E55C2 /* BWMiningOwnerModel.h */,
+				AF12737C21BE7BCB002E55C2 /* BWMiningOwnerModel.m */,
+				AF12739921BF6739002E55C2 /* BWMyMiningAgeRootModel.h */,
+				AF12739A21BF6739002E55C2 /* BWMyMiningAgeRootModel.m */,
+				AF12739C21BF674B002E55C2 /* BWMyMiningAgeModel.h */,
+				AF12739D21BF674B002E55C2 /* BWMyMiningAgeModel.m */,
+				AF1273A221BFB281002E55C2 /* BWMyMiningInfoRootModel.h */,
+				AF1273A321BFB281002E55C2 /* BWMyMiningInfoRootModel.m */,
+				AF1273A521BFB290002E55C2 /* BWMyMiningInfoModel.h */,
+				AF1273A621BFB290002E55C2 /* BWMyMiningInfoModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		AF1273A821BFDB57002E55C2 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				AF1273A921BFDB7A002E55C2 /* BWDicelastWinerRootModel.h */,
+				AF1273AA21BFDB7A002E55C2 /* BWDicelastWinerRootModel.m */,
+				AF1273AC21BFDB8B002E55C2 /* BWDicelastWinerModel.h */,
+				AF1273AD21BFDB8B002E55C2 /* BWDicelastWinerModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		AF91BFA021BA6CC0003A423F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				AF91BFA121BA6CDD003A423F /* BWRlueModel.h */,
+				AF91BFA221BA6CDD003A423F /* BWRlueModel.m */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		AFCECEFD21B6BB3C0089E3AF /* view */ = {
@@ -778,14 +948,18 @@
 				AFCECF1421B81E490089E3AF /* BWWalletrecordTableViewCell.xib in Resources */,
 				AF09B78C21AD7BFD00B9E1E4 /* rlue.storyboard in Resources */,
 				AF06701621AE37AD00F23D22 /* BWMenuViewController.xib in Resources */,
+				AF12738E21BEAB7C002E55C2 /* BWMiningErrorView.xib in Resources */,
 				AF09B76321AD78AA00B9E1E4 /* wallet.storyboard in Resources */,
+				AF12739821BF54E7002E55C2 /* BWVoteTableViewCell.xib in Resources */,
 				AF09B77E21AD7A0900B9E1E4 /* BRTStars.storyboard in Resources */,
 				AF09B72D21AD6EAB00B9E1E4 /* Assets.xcassets in Resources */,
 				AF09B78521AD7B3F00B9E1E4 /* mining.storyboard in Resources */,
 				AFEBA7B121B3C4DD00F5ECEF /* Login.storyboard in Resources */,
 				AF09B78A21AD7BCD00B9E1E4 /* Duplicate.storyboard in Resources */,
+				AF12739321BEC6E3002E55C2 /* BWMiningVoteHeadView.xib in Resources */,
 				AF09B72B21AD6EAB00B9E1E4 /* Main.storyboard in Resources */,
 				AF09B78721AD7B9500B9E1E4 /* Record.storyboard in Resources */,
+				AF12736521BE663E002E55C2 /* BWRecordTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -861,9 +1035,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF91BFA321BA6CDD003A423F /* BWRlueModel.m in Sources */,
 				AF09B76921AD795B00B9E1E4 /* BWWalletViewController.m in Sources */,
 				AFCECEFC21B6B9D80089E3AF /* BWWalletGetViewController.m in Sources */,
 				AFE2FA2B21BA06E1005F7A84 /* BWWalletActivityModel.m in Sources */,
+				AF12737421BE7810002E55C2 /* BWMiningProductionViewController.m in Sources */,
 				AFCECEF621B6B9AB0089E3AF /* BWWalletOverviewViewController.m in Sources */,
 				AFE2FA1321B951CB005F7A84 /* BWNetHelper.m in Sources */,
 				AFCECF0321B6CAF50089E3AF /* BWWalletPublickeyInfoView.m in Sources */,
@@ -871,39 +1047,56 @@
 				AFCECEF921B6B9C20089E3AF /* BWWalletSendViewController.m in Sources */,
 				AFE2FA2121B95869005F7A84 /* BWLoginCreateKeyModel.m in Sources */,
 				AF06704A21AECF0E00F23D22 /* UIViewController+YHModaTransitonHelper.m in Sources */,
+				AF12739121BEC6D1002E55C2 /* BWMiningVoteHeadView.m in Sources */,
 				AFE2FA3821BA5008005F7A84 /* BWWalletrecordRootModel.m in Sources */,
 				AF09B73321AD6EAB00B9E1E4 /* main.m in Sources */,
 				AF09B77821AD79C500B9E1E4 /* BWDuplicateViewController.m in Sources */,
 				AF06701021AE324D00F23D22 /* YHBaseNavigationController.m in Sources */,
+				AF1273AB21BFDB7A002E55C2 /* BWDicelastWinerRootModel.m in Sources */,
 				AFCECF0921B7D4080089E3AF /* BWGlobalconst.m in Sources */,
 				AFE2FA2821BA06CD005F7A84 /* BWWalletActivityRootModel.m in Sources */,
 				AFCECF0C21B7D4A60089E3AF /* BWWalletSendHeadView.m in Sources */,
+				AF12739B21BF6739002E55C2 /* BWMyMiningAgeRootModel.m in Sources */,
 				AFEBA7C221B41F5D00F5ECEF /* BWUserManager.m in Sources */,
 				AF09B77521AD79B000B9E1E4 /* BWRecordViewController.m in Sources */,
 				AFE2FA4921BA66A1005F7A84 /* BWRlueTableViewCell.m in Sources */,
+				AF12737D21BE7BCB002E55C2 /* BWMiningOwnerModel.m in Sources */,
 				AF06701521AE37AD00F23D22 /* BWMenuViewController.m in Sources */,
 				AFCECEF321B6B8220089E3AF /* BWBaseViewController.m in Sources */,
 				AFE2FA3E21BA58D9005F7A84 /* BWCommonRootModel.m in Sources */,
 				AFEBA7D121B4227F00F5ECEF /* YYKVStorage.m in Sources */,
+				AF12738321BE8FD8002E55C2 /* BWNumberSelectedView.m in Sources */,
+				AF1273A421BFB281002E55C2 /* BWMyMiningInfoRootModel.m in Sources */,
 				AFE2FA2521B9847E005F7A84 /* BWUserAssetRootModel.m in Sources */,
+				AF12737721BE7837002E55C2 /* BWMiningTopSelectView.m in Sources */,
 				AF06704821AECF0E00F23D22 /* YHCAAimationModalTransition.m in Sources */,
 				AFE2FA1E21B957F3005F7A84 /* BWLoginCreateKeyRootModel.m in Sources */,
 				AFEBA7D221B4227F00F5ECEF /* YYMemoryCache.m in Sources */,
 				AFEBA7B721B40A7700F5ECEF /* BWLoginPrivatekeyViewController.m in Sources */,
+				AF1273AE21BFDB8B002E55C2 /* BWDicelastWinerModel.m in Sources */,
 				AF09B77221AD799C00B9E1E4 /* BWMiningViewController.m in Sources */,
 				AFE2FA3521BA4B6A005F7A84 /* BWWalletDefaultservicefeeRootModel.m in Sources */,
 				AFCECF1321B81E490089E3AF /* BWWalletrecordTableViewCell.m in Sources */,
 				AFEBA7AF21B17A8100F5ECEF /* BWMenuButton.m in Sources */,
 				AFEBA7BD21B4193700F5ECEF /* BWLoginLeadPrivatekeyViewController.m in Sources */,
+				AF12738621BE8FFF002E55C2 /* BWMiningOwnerNumbersView.m in Sources */,
 				AF09B72521AD6EAB00B9E1E4 /* AppDelegate.m in Sources */,
+				AF1273A121BF8D63002E55C2 /* BWVoteCellButton.m in Sources */,
 				AFEBA7C521B41F7A00F5ECEF /* BWUser.m in Sources */,
+				AF1273A721BFB290002E55C2 /* BWMyMiningInfoModel.m in Sources */,
 				AF09B76C21AD797500B9E1E4 /* BWBRTStarsViewController.m in Sources */,
 				AFEBA7BA21B4139100F5ECEF /* BWLoginSuccessViewController.m in Sources */,
+				AF12738C21BEAB6E002E55C2 /* BWMiningErrorView.m in Sources */,
+				AF12736421BE663E002E55C2 /* BWRecordTableViewCell.m in Sources */,
+				AF12736C21BE680F002E55C2 /* BWRecordModel.m in Sources */,
+				AF12737121BE77EC002E55C2 /* BWMiningVoteViewController.m in Sources */,
 				AF09B79121AD7E6400B9E1E4 /* UIViewController+BWViewControllerCategory.m in Sources */,
 				AFE2FA3221BA461D005F7A84 /* BWWalletSendModel.m in Sources */,
+				AF12737A21BE7BBA002E55C2 /* BWMiningOwnerRootModel.m in Sources */,
 				AFE2FA4421BA5DCB005F7A84 /* YHMaskView.m in Sources */,
 				AFEBA7B421B3D2AA00F5ECEF /* BWLoginSugeViewController.m in Sources */,
 				AFCECF0021B6BB6A0089E3AF /* BWWalletTopSelectedView.m in Sources */,
+				AF12738021BE8461002E55C2 /* BWMiningOwnerHeadView.m in Sources */,
 				AFE2FA1721B95312005F7A84 /* BWDataSource.m in Sources */,
 				AF06704B21AECF0E00F23D22 /* YHModaAnimationManager.m in Sources */,
 				AF06704921AECF0E00F23D22 /* YHAnimationManager.m in Sources */,
@@ -911,13 +1104,16 @@
 				AFE2FA4121BA5B94005F7A84 /* BWCodeScanViewController.m in Sources */,
 				AF06704721AECF0E00F23D22 /* YHPresentationController.m in Sources */,
 				AF09B76621AD790600B9E1E4 /* BWTabBarController.m in Sources */,
+				AF12739E21BF674B002E55C2 /* BWMyMiningAgeModel.m in Sources */,
 				AFEBA7D021B4227F00F5ECEF /* YYCache.m in Sources */,
 				AFE2FA1A21B95394005F7A84 /* NSString+BWStringCategory.m in Sources */,
 				AF09B76F21AD798900B9E1E4 /* BWVicOrDefViewController.m in Sources */,
+				AF12739721BF54E7002E55C2 /* BWVoteTableViewCell.m in Sources */,
 				AF09B77B21AD79D700B9E1E4 /* BWRlueVIewController.m in Sources */,
 				AFCECF0621B6DD3F0089E3AF /* BWWalletOverviewActivityView.m in Sources */,
 				AFCECF0F21B8132A0089E3AF /* UIView+BWViewCategory.m in Sources */,
 				AFEBA7CF21B4227F00F5ECEF /* YYDiskCache.m in Sources */,
+				AF12736921BE6801002E55C2 /* BWRecordRootModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

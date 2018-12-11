@@ -34,9 +34,25 @@
     [self addChildViewController:self.getViewController];
 }
 - (void)loadData{
-    [self.overviewViewController loadData];
-    [self.sendViewController loadData];
-    [self.getViewController loadData];
+    switch (self.topSelectedView.selectedIndex) {
+        case 0:
+        {
+                [self.overviewViewController loadData];
+        }
+            break;
+        case 1:
+        {
+            [self.sendViewController loadData];
+        }
+            break;
+        case 2:
+        {
+            [self.getViewController loadData];
+        }
+            break;
+        default:
+            break;
+    }
 }
 #pragma mark - lazyload
 - (BWWalletTopSelectedView *)topSelectedView{
@@ -90,10 +106,12 @@
 #pragma mark - BWWalletTopSelectedViewDelegate
 - (void)topSelectedViewSelectedIndex:(NSInteger)index{
     [self.mainScrollView setContentOffset:(CGPointMake(SCREEN_WIDTH * index, 0)) animated:YES];
+    [self loadData];
 }
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     self.topSelectedView.selectedIndex = scrollView.contentOffset.x / scrollView.width;
+    [self loadData];
 }
 /*
 #pragma mark - Navigation

@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -92,6 +91,13 @@
                         <action selector="menuAction:" destination="-1" eventType="touchUpInside" id="VGW-dW-K74"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="k7p-3g-5bL">
+                    <rect key="frame" x="60" y="102" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="nBH-W8-DgH"/>
+                        <constraint firstAttribute="width" constant="60" id="oZP-Yt-JPh"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -113,6 +119,8 @@
                 <constraint firstAttribute="trailing" secondItem="CLA-ab-Ahr" secondAttribute="trailing" id="dRq-LB-fle"/>
                 <constraint firstAttribute="trailing" secondItem="maQ-O9-HSY" secondAttribute="trailing" id="dmw-pQ-yf2"/>
                 <constraint firstAttribute="trailing" secondItem="h2y-YJ-tG1" secondAttribute="trailing" id="duV-ey-Ree"/>
+                <constraint firstItem="k7p-3g-5bL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="eX3-rD-oDk"/>
+                <constraint firstItem="2jl-RR-WKS" firstAttribute="top" secondItem="k7p-3g-5bL" secondAttribute="bottom" constant="55" id="hHy-rK-jmV"/>
                 <constraint firstItem="CLA-ab-Ahr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hUv-ci-CR2"/>
                 <constraint firstAttribute="trailing" secondItem="UgY-1l-G71" secondAttribute="trailing" id="iaW-fy-0zN"/>
                 <constraint firstItem="zab-KQ-uLs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jgG-dc-fl0"/>
@@ -121,9 +129,11 @@
                 <constraint firstItem="h2y-YJ-tG1" firstAttribute="top" secondItem="2jl-RR-WKS" secondAttribute="bottom" id="r6d-xy-NaP"/>
                 <constraint firstAttribute="trailing" secondItem="l2G-71-YA1" secondAttribute="trailing" id="x59-Kn-XwQ"/>
             </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="86.383928571428569"/>
         </view>
     </objects>
     <resources>
+        <image name="login_Logo" width="80" height="80"/>
         <image name="menu_background" width="375" height="812"/>
     </resources>
 </document>

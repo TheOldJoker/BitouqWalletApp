@@ -106,4 +106,167 @@
         }
     }];
 }
+#pragma mark - 轉賬記錄
++ (void)getRecordeSuccess:(void (^)(id response))success fail:(void (^)(NSError * error))failure{
+    BWUser *user = [BWUserManager shareManager].user;
+    NSDictionary *params = @{
+                             @"pubkey":user.publickey
+                             };
+    [BWNetHelper getWithUrl:[@"billdetailbypubkey" getSeverUrl] params:params header:NO success:^(id response) {
+        if (success) {
+            success(response);
+        }
+    } fail:^(NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+#pragma mark - 獲取所有礦主信息
++ (void)getAllTheMineOwnerSuccess:(void (^)(id response))success fail:(void (^)(NSError * error))failure{
+//    BWUser *user = [BWUserManager shareManager].user;
+    NSDictionary *params = @{
+                             };
+    [BWNetHelper getWithUrl:[@"xjssc/mining/master" getSeverUrl] params:params header:NO success:^(id response) {
+        if (success) {
+            success(response);
+        }
+    } fail:^(NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+#pragma mark - 矿主挖矿
++ (void)miningProductionWithNum1:(NSString *)num1 num2:(NSString *)num2 num3:(NSString *)num3 num4:(NSString *)num4 num5:(NSString *)num5 success:(void (^)(id response))success fail:(void (^)(NSError * error))failure{
+    BWUser *user = [BWUserManager shareManager].user;
+    NSDictionary *params = @{
+                             @"pubkey":user.publickey,
+                             @"prikey":user.privatekey,
+                             @"num1":num1,
+                             @"num2":num2,
+                             @"num3":num3,
+                             @"num4":num4,
+                             @"num5":num5
+                             };
+    
+    [BWNetHelper postWithUrl:[@"xjssx/mining" getSeverUrl] params:params header:NO success:^(id response) {
+        if (success) {
+            success(response);
+        }
+    } fail:^(NSError *error) {
+        
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+#pragma mark - 查詢我的礦主
++ (void)getMyMiningOwnerSuccess:(void (^)(id response))success fail:(void (^)(NSError * error))failure{
+    BWUser *user = [BWUserManager shareManager].user;
+    NSDictionary *params = @{
+                             @"pubkey":user.publickey
+                             };
+    [BWNetHelper getWithUrl:[@"xjssc/voteinfo" getSeverUrl] params:params header:NO success:^(id response) {
+        if (success) {
+            success(response);
+        }
+    } fail:^(NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+#pragma mark - 查詢我的累計收益
++ (void)getMyMiningEarningsSuccess:(void (^)(id response))success fail:(void (^)(NSError * error))failure{
+    BWUser *user = [BWUserManager shareManager].user;
+    NSDictionary *params = @{
+                             @"pubkey":user.publickey
+                             };
+    [BWNetHelper getWithUrl:[@"xjssx/mining/profit" getSeverUrl] params:params header:NO success:^(id response) {
+        
+        if (success) {
+            success(response);
+        }
+    } fail:^(NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+#pragma mark - 查詢我的幣齡
++ (void)getMyMiningAgeSuccess:(void (^)(id response))success fail:(void (^)(NSError * error))failure{
+    BWUser *user = [BWUserManager shareManager].user;
+    NSDictionary *params = @{
+                             @"pubkey":user.publickey
+                             };
+    
+    [BWNetHelper getWithUrl:[@"xjssc/mining/age" getSeverUrl] params:params header:NO success:^(id response) {
+        if (success) {
+            success(response);
+        }
+    } fail:^(NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+#pragma mark - 投票
++ (void)voteToMiningOwnerWithKey:(NSString *)pubkey success:(void (^)(id response))success fail:(void (^)(NSError * error))failure{
+    BWUser *user = [BWUserManager shareManager].user;
+    NSDictionary *params = @{
+                             @"pubkey":user.publickey,
+                             @"prikey":user.privatekey,
+                             @"master":pubkey
+                             };
+    
+    [BWNetHelper postWithUrl:[@"xjssc/vote" getSeverUrl] params:params header:NO success:^(id response) {
+        if (success) {
+            success(response);
+        }
+    } fail:^(NSError *error) {
+        
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+#pragma mark - 獲取礦主挖礦信息
++ (void)getMyMiningInfoSuccess:(void (^)(id response))success fail:(void (^)(NSError * error))failure{
+    BWUser *user = [BWUserManager shareManager].user;
+    NSDictionary *params = @{
+                             @"pubkey":user.publickey,
+                             @"prikey":user.privatekey
+                             };
+    
+    [BWNetHelper getWithUrl:[@"xjssx/mininginfo" getSeverUrl] params:params header:NO success:^(id response) {
+        
+        if (success) {
+            success(response);
+        }
+    } fail:^(NSError *error) {
+        
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+#pragma mark - 获取胜负手上次开奖记录
++ (void)getLastDiceWinerSuccess:(void (^)(id response))success fail:(void (^)(NSError * error))failure{
+    BWUser *user = [BWUserManager shareManager].user;
+    NSDictionary *params = @{
+                             @"pubkey":user.publickey
+                             };
+    [BWNetHelper getWithUrl:[@"dice/lastrecordbypubkey" getSeverUrl] params:params header:NO success:^(id response) {
+        
+        if (success) {
+            success(response);
+        }
+    } fail:^(NSError *error) {
+        
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
 @end

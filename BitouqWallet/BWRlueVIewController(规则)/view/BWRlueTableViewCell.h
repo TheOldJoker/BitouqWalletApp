@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "BWRlueModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BWRlueTableViewCell : UITableViewCell
-
+- (void)setValueWithModel:(BWRlueModel *)model;
 @end
 
 NS_ASSUME_NONNULL_END

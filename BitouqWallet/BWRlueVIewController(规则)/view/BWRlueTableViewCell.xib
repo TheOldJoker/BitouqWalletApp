@@ -37,23 +37,22 @@
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UxV-oh-U9m">
-                        <rect key="frame" x="148" y="44.5" width="46" height="13"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cX0-NM-qBC">
+                        <rect key="frame" x="140" y="44.5" width="46" height="13"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="46" id="2g0-r9-8Ix"/>
-                            <constraint firstAttribute="height" constant="13" id="wrs-4A-e7o"/>
+                            <constraint firstAttribute="height" constant="13" id="3DI-gt-6s4"/>
+                            <constraint firstAttribute="width" constant="46" id="L3O-db-ukP"/>
                         </constraints>
-                    </view>
+                    </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="cX0-NM-qBC" firstAttribute="leading" secondItem="1E4-RX-dS8" secondAttribute="trailing" id="Axt-lN-rSn"/>
                     <constraint firstItem="1E4-RX-dS8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="36" id="Dk1-zh-pfy"/>
-                    <constraint firstItem="UxV-oh-U9m" firstAttribute="leading" secondItem="1E4-RX-dS8" secondAttribute="trailing" constant="8" id="DkC-y0-VGn"/>
+                    <constraint firstItem="cX0-NM-qBC" firstAttribute="centerY" secondItem="1E4-RX-dS8" secondAttribute="centerY" id="JDB-Ue-oWI"/>
                     <constraint firstItem="K0g-2V-PNW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="JXP-J2-ZLG"/>
                     <constraint firstItem="K0g-2V-PNW" firstAttribute="top" secondItem="1E4-RX-dS8" secondAttribute="bottom" constant="8" id="MXa-9k-Dpt"/>
                     <constraint firstItem="v9g-be-VQR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="NNt-R2-Fk6"/>
                     <constraint firstAttribute="trailing" secondItem="K0g-2V-PNW" secondAttribute="trailing" constant="31" id="Obf-P5-Sbz"/>
-                    <constraint firstItem="UxV-oh-U9m" firstAttribute="centerY" secondItem="1E4-RX-dS8" secondAttribute="centerY" id="WzJ-yH-Php"/>
                     <constraint firstItem="1E4-RX-dS8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="YUX-zo-ich"/>
                     <constraint firstAttribute="bottom" secondItem="v9g-be-VQR" secondAttribute="bottom" constant="10" id="cQQ-F5-WDY"/>
                     <constraint firstAttribute="bottom" secondItem="K0g-2V-PNW" secondAttribute="bottom" constant="22" id="cwc-5L-u2K"/>
@@ -62,7 +61,12 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
-            <point key="canvasLocation" x="109.59999999999999" y="38.680659670164921"/>
+            <connections>
+                <outlet property="mainContentLabel" destination="K0g-2V-PNW" id="Bvh-zx-drC"/>
+                <outlet property="mainTitleLabel" destination="1E4-RX-dS8" id="sJv-tA-yhT"/>
+                <outlet property="starImageView" destination="cX0-NM-qBC" id="OWs-n7-Qhb"/>
+            </connections>
+            <point key="canvasLocation" x="37.600000000000001" y="36.881559220389811"/>
         </tableViewCell>
     </objects>
     <resources>

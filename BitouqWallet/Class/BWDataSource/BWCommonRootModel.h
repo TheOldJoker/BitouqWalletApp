@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *errorMsg;
 @property (nonatomic, assign) NSInteger errorCode;//0成功
 @property (nonatomic, assign) NSInteger status;
+
+@property (nonatomic, copy) NSString *data;//字符串數據
 @end
 
 NS_ASSUME_NONNULL_END
