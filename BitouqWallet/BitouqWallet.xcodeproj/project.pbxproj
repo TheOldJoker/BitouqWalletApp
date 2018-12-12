@@ -65,6 +65,8 @@
 		AF1273AE21BFDB8B002E55C2 /* BWDicelastWinerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1273AD21BFDB8B002E55C2 /* BWDicelastWinerModel.m */; };
 		AF1273B221C00C96002E55C2 /* BWDiceLastWinerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1273B121C00C96002E55C2 /* BWDiceLastWinerView.m */; };
 		AF1273B421C00CC4002E55C2 /* BWDiceLastWinerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF1273B321C00CC4002E55C2 /* BWDiceLastWinerView.xib */; };
+		AF1273B721C0A14A002E55C2 /* BWDiceBetView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1273B621C0A14A002E55C2 /* BWDiceBetView.m */; };
+		AF1273BC21C0E32D002E55C2 /* BWDiceOddsInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1273BB21C0E32D002E55C2 /* BWDiceOddsInfoView.m */; };
 		AF91BFA321BA6CDD003A423F /* BWRlueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF91BFA221BA6CDD003A423F /* BWRlueModel.m */; };
 		AFCECEF321B6B8220089E3AF /* BWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCECEF221B6B8220089E3AF /* BWBaseViewController.m */; };
 		AFCECEF621B6B9AB0089E3AF /* BWWalletOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCECEF521B6B9AB0089E3AF /* BWWalletOverviewViewController.m */; };
@@ -238,6 +240,10 @@
 		AF1273B021C00C96002E55C2 /* BWDiceLastWinerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWDiceLastWinerView.h; sourceTree = "<group>"; };
 		AF1273B121C00C96002E55C2 /* BWDiceLastWinerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWDiceLastWinerView.m; sourceTree = "<group>"; };
 		AF1273B321C00CC4002E55C2 /* BWDiceLastWinerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWDiceLastWinerView.xib; sourceTree = "<group>"; };
+		AF1273B521C0A14A002E55C2 /* BWDiceBetView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWDiceBetView.h; sourceTree = "<group>"; };
+		AF1273B621C0A14A002E55C2 /* BWDiceBetView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWDiceBetView.m; sourceTree = "<group>"; };
+		AF1273BA21C0E32D002E55C2 /* BWDiceOddsInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWDiceOddsInfoView.h; sourceTree = "<group>"; };
+		AF1273BB21C0E32D002E55C2 /* BWDiceOddsInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWDiceOddsInfoView.m; sourceTree = "<group>"; };
 		AF91BFA121BA6CDD003A423F /* BWRlueModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWRlueModel.h; sourceTree = "<group>"; };
 		AF91BFA221BA6CDD003A423F /* BWRlueModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWRlueModel.m; sourceTree = "<group>"; };
 		AFCECEF121B6B8220089E3AF /* BWBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWBaseViewController.h; sourceTree = "<group>"; };
@@ -700,6 +706,10 @@
 				AF1273B021C00C96002E55C2 /* BWDiceLastWinerView.h */,
 				AF1273B121C00C96002E55C2 /* BWDiceLastWinerView.m */,
 				AF1273B321C00CC4002E55C2 /* BWDiceLastWinerView.xib */,
+				AF1273B521C0A14A002E55C2 /* BWDiceBetView.h */,
+				AF1273B621C0A14A002E55C2 /* BWDiceBetView.m */,
+				AF1273BA21C0E32D002E55C2 /* BWDiceOddsInfoView.h */,
+				AF1273BB21C0E32D002E55C2 /* BWDiceOddsInfoView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1101,6 +1111,7 @@
 				AF09B72521AD6EAB00B9E1E4 /* AppDelegate.m in Sources */,
 				AF1273A121BF8D63002E55C2 /* BWVoteCellButton.m in Sources */,
 				AFEBA7C521B41F7A00F5ECEF /* BWUser.m in Sources */,
+				AF1273B721C0A14A002E55C2 /* BWDiceBetView.m in Sources */,
 				AF1273A721BFB290002E55C2 /* BWMyMiningInfoModel.m in Sources */,
 				AF09B76C21AD797500B9E1E4 /* BWBRTStarsViewController.m in Sources */,
 				AFEBA7BA21B4139100F5ECEF /* BWLoginSuccessViewController.m in Sources */,
@@ -1111,6 +1122,7 @@
 				AF09B79121AD7E6400B9E1E4 /* UIViewController+BWViewControllerCategory.m in Sources */,
 				AFE2FA3221BA461D005F7A84 /* BWWalletSendModel.m in Sources */,
 				AF12737A21BE7BBA002E55C2 /* BWMiningOwnerRootModel.m in Sources */,
+				AF1273BC21C0E32D002E55C2 /* BWDiceOddsInfoView.m in Sources */,
 				AFE2FA4421BA5DCB005F7A84 /* YHMaskView.m in Sources */,
 				AFEBA7B421B3D2AA00F5ECEF /* BWLoginSugeViewController.m in Sources */,
 				AFCECF0021B6BB6A0089E3AF /* BWWalletTopSelectedView.m in Sources */,

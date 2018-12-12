@@ -42,6 +42,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)getMyMiningInfoSuccess:(void (^)(id response))success fail:(void (^)(NSError * error))failure;
 //获取胜负手上次开奖记录
 + (void)getLastDiceWinerSuccess:(void (^)(id response))success fail:(void (^)(NSError * error))failure;
+//获取胜负手赔率
++ (void)getDiceOddsSuccess:(void (^)(id response))success fail:(void (^)(NSError * error))failure;
+//投票
++ (void)betWithGuessNumber:(NSString *)guessNumber money:(NSString *)money success:(void (^)(id response))success fail:(void (^)(NSError * error))failure;
 @end
 
 NS_ASSUME_NONNULL_END

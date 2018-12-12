@@ -7,7 +7,7 @@
 //
 
 #import "NSString+BWStringCategory.h"
-
+NSString *const accurateTime = @"yyyy-MM-dd HH:mm:ss";
 @implementation NSString (BWStringCategory)
 - (NSString *)getSeverUrl
 {
@@ -22,5 +22,16 @@
         targetString = [NSMutableString stringWithFormat:@"%@", [targetString substringFromIndex:1]];
     }
     return tagArray;
+}
+- (NSString *)getTime{
+    NSInteger timeIn = [self integerValue] / 1000;
+    
+    if (timeIn != 0) {
+        NSDate *confromTimesp = [NSDate dateWithTimeIntervalSince1970:timeIn];
+        NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:accurateTime];
+        return [formatter stringFromDate:confromTimesp];
+    }
+    return @"";
 }
 @end

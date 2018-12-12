@@ -269,4 +269,39 @@
         }
     }];
 }
+#pragma mark - 获取胜负手赔率
++ (void)getDiceOddsSuccess:(void (^)(id response))success fail:(void (^)(NSError * error))failure{
+    NSDictionary *params = @{};
+    [BWNetHelper postWithUrl:[@"dice/odds" getSeverUrl] params:params header:NO success:^(id response) {
+        
+        if (success) {
+            success(response);
+        }
+    } fail:^(NSError *error) {
+        
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+#pragma mark - 投票
++ (void)betWithGuessNumber:(NSString *)guessNumber money:(NSString *)money success:(void (^)(id response))success fail:(void (^)(NSError * error))failure{
+    BWUser *user = [BWUserManager shareManager].user;
+    NSDictionary *params = @{
+                             @"pubkey":user.publickey,
+                             @"prikey":user.privatekey,
+                             @"amount":money,
+                             @"guessnum":guessNumber
+                             };
+    [BWNetHelper postWithUrl:[@"dice" getSeverUrl] params:params header:NO success:^(id response) {
+        if (success) {
+            success(response);
+        }
+    } fail:^(NSError *error) {
+        
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
 @end

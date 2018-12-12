@@ -15,7 +15,7 @@
 @end
 @implementation BWRecordTableViewCell
 - (void)setValueWithModel:(BWRecordModel *)model{
-    self.leftTopLabel.text = model.createtime;
+    self.leftTopLabel.text = [model.createtime getTime];
     switch (model.type) {
             //轉賬
         case 1001:

@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSString (BWStringCategory)
 - (NSString *)getSeverUrl;
 - (NSArray *)componentsSeparatedByCharset;
+- (NSString *)getTime;
 @end
 
 NS_ASSUME_NONNULL_END
