@@ -9,6 +9,7 @@
 #import "BWTabBarController.h"
 #import "BWMenuViewController.h"
 #import "BWWalletViewController.h"
+#import "BWGesturesPasswordViewcontroller.h"
 @interface BWTabBarController ()<BWMenuViewControllerDelegate>
 
 @end
@@ -23,16 +24,31 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     //登陆成功之后将所有页面数据刷新
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshAllController) name:LOGIN_SUCCESS_NOTE object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccess) name:LOGIN_SUCCESS_NOTE object:nil];
 }
 - (void)JudgeLoginState {
     BWUser *user = [BWUserManager shareManager].user;
     //1.如果user存在,切privatekey存在則為登錄狀態
     if (user != nil && !stringIsEmpty(user.privatekey)) {
         [self refreshAllController];
+        [self createPassword];
         return;
     }
     [self showLogin];
+}
+- (void)loginSuccess{
+    [self createPassword];
+    [self refreshAllController];
+}
+- (void)createPassword{
+    BWUser *user = [BWUserManager shareManager].user;
+    if (stringIsEmpty(user.password)) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            BWGesturesPasswordViewcontroller *vc = [[BWGesturesPasswordViewcontroller alloc] init];
+            vc.gesturesPasswordType = BWGesturesPasswordTypeCreate;
+            [self customPresentVC:vc animation:(YHModaAnimationTypeAlpha) showBlackBackgroud:NO canTapDismiss:NO];
+        });
+    }
 }
 - (void)refreshAllController{
     UINavigationController *walletNav = self.viewControllers[0];

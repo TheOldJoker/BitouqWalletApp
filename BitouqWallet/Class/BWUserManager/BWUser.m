@@ -11,11 +11,13 @@
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
     [aCoder encodeObject:self.privatekey forKey:@"privatekey"];
+    [aCoder encodeObject:self.password forKey:@"password"];
     [aCoder encodeObject:self.publickey forKey:@"publickey"];
 }
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     self.privatekey = [aDecoder decodeObjectForKey:@"privatekey"];
+    self.password = [aDecoder decodeObjectForKey:@"password"];
     self.publickey = [aDecoder decodeObjectForKey:@"publickey"];
     return self;
 }

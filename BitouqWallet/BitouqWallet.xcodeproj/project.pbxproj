@@ -67,6 +67,9 @@
 		AF1273B421C00CC4002E55C2 /* BWDiceLastWinerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF1273B321C00CC4002E55C2 /* BWDiceLastWinerView.xib */; };
 		AF1273B721C0A14A002E55C2 /* BWDiceBetView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1273B621C0A14A002E55C2 /* BWDiceBetView.m */; };
 		AF1273BC21C0E32D002E55C2 /* BWDiceOddsInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1273BB21C0E32D002E55C2 /* BWDiceOddsInfoView.m */; };
+		AF12740121C15C6E002E55C2 /* BWGesturesPasswordViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1273FF21C15C6E002E55C2 /* BWGesturesPasswordViewcontroller.m */; };
+		AF12740221C15C6E002E55C2 /* BWGesturesPasswordViewcontroller.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF12740021C15C6E002E55C2 /* BWGesturesPasswordViewcontroller.xib */; };
+		AF12740621C1659E002E55C2 /* YHGesturePasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF12740421C1659E002E55C2 /* YHGesturePasswordView.m */; };
 		AF91BFA321BA6CDD003A423F /* BWRlueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF91BFA221BA6CDD003A423F /* BWRlueModel.m */; };
 		AFCECEF321B6B8220089E3AF /* BWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCECEF221B6B8220089E3AF /* BWBaseViewController.m */; };
 		AFCECEF621B6B9AB0089E3AF /* BWWalletOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCECEF521B6B9AB0089E3AF /* BWWalletOverviewViewController.m */; };
@@ -244,6 +247,11 @@
 		AF1273B621C0A14A002E55C2 /* BWDiceBetView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWDiceBetView.m; sourceTree = "<group>"; };
 		AF1273BA21C0E32D002E55C2 /* BWDiceOddsInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWDiceOddsInfoView.h; sourceTree = "<group>"; };
 		AF1273BB21C0E32D002E55C2 /* BWDiceOddsInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWDiceOddsInfoView.m; sourceTree = "<group>"; };
+		AF1273FE21C15C6E002E55C2 /* BWGesturesPasswordViewcontroller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWGesturesPasswordViewcontroller.h; sourceTree = "<group>"; };
+		AF1273FF21C15C6E002E55C2 /* BWGesturesPasswordViewcontroller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWGesturesPasswordViewcontroller.m; sourceTree = "<group>"; };
+		AF12740021C15C6E002E55C2 /* BWGesturesPasswordViewcontroller.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWGesturesPasswordViewcontroller.xib; sourceTree = "<group>"; };
+		AF12740421C1659E002E55C2 /* YHGesturePasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHGesturePasswordView.m; sourceTree = "<group>"; };
+		AF12740521C1659E002E55C2 /* YHGesturePasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHGesturePasswordView.h; sourceTree = "<group>"; };
 		AF91BFA121BA6CDD003A423F /* BWRlueModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWRlueModel.h; sourceTree = "<group>"; };
 		AF91BFA221BA6CDD003A423F /* BWRlueModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWRlueModel.m; sourceTree = "<group>"; };
 		AFCECEF121B6B8220089E3AF /* BWBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWBaseViewController.h; sourceTree = "<group>"; };
@@ -605,6 +613,10 @@
 		AF09B75E21AD71F000B9E1E4 /* BWGesturesPasswordViewcontroller(手势密码) */ = {
 			isa = PBXGroup;
 			children = (
+				AF12740321C16580002E55C2 /* view */,
+				AF1273FE21C15C6E002E55C2 /* BWGesturesPasswordViewcontroller.h */,
+				AF1273FF21C15C6E002E55C2 /* BWGesturesPasswordViewcontroller.m */,
+				AF12740021C15C6E002E55C2 /* BWGesturesPasswordViewcontroller.xib */,
 			);
 			path = "BWGesturesPasswordViewcontroller(手势密码)";
 			sourceTree = "<group>";
@@ -710,6 +722,15 @@
 				AF1273B621C0A14A002E55C2 /* BWDiceBetView.m */,
 				AF1273BA21C0E32D002E55C2 /* BWDiceOddsInfoView.h */,
 				AF1273BB21C0E32D002E55C2 /* BWDiceOddsInfoView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		AF12740321C16580002E55C2 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				AF12740521C1659E002E55C2 /* YHGesturePasswordView.h */,
+				AF12740421C1659E002E55C2 /* YHGesturePasswordView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -982,6 +1003,7 @@
 				AF1273B421C00CC4002E55C2 /* BWDiceLastWinerView.xib in Resources */,
 				AF09B78521AD7B3F00B9E1E4 /* mining.storyboard in Resources */,
 				AFEBA7B121B3C4DD00F5ECEF /* Login.storyboard in Resources */,
+				AF12740221C15C6E002E55C2 /* BWGesturesPasswordViewcontroller.xib in Resources */,
 				AF09B78A21AD7BCD00B9E1E4 /* Duplicate.storyboard in Resources */,
 				AF12739321BEC6E3002E55C2 /* BWMiningVoteHeadView.xib in Resources */,
 				AF09B72B21AD6EAB00B9E1E4 /* Main.storyboard in Resources */,
@@ -1098,6 +1120,7 @@
 				AFE2FA2521B9847E005F7A84 /* BWUserAssetRootModel.m in Sources */,
 				AF12737721BE7837002E55C2 /* BWMiningTopSelectView.m in Sources */,
 				AF06704821AECF0E00F23D22 /* YHCAAimationModalTransition.m in Sources */,
+				AF12740621C1659E002E55C2 /* YHGesturePasswordView.m in Sources */,
 				AFE2FA1E21B957F3005F7A84 /* BWLoginCreateKeyRootModel.m in Sources */,
 				AFEBA7D221B4227F00F5ECEF /* YYMemoryCache.m in Sources */,
 				AFEBA7B721B40A7700F5ECEF /* BWLoginPrivatekeyViewController.m in Sources */,
@@ -1140,6 +1163,7 @@
 				AF09B76F21AD798900B9E1E4 /* BWVicOrDefViewController.m in Sources */,
 				AF12739721BF54E7002E55C2 /* BWVoteTableViewCell.m in Sources */,
 				AF09B77B21AD79D700B9E1E4 /* BWRlueVIewController.m in Sources */,
+				AF12740121C15C6E002E55C2 /* BWGesturesPasswordViewcontroller.m in Sources */,
 				AFCECF0621B6DD3F0089E3AF /* BWWalletOverviewActivityView.m in Sources */,
 				AFCECF0F21B8132A0089E3AF /* UIView+BWViewCategory.m in Sources */,
 				AFEBA7CF21B4227F00F5ECEF /* YYDiskCache.m in Sources */,

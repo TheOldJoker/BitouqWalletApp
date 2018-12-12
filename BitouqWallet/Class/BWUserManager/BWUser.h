@@ -12,10 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BWUser : NSObject<NSCoding>
 @property (nonatomic, copy) NSString *privatekey;//私鑰
+@property (nonatomic, copy) NSString *password;//手势密码
 @property (nonatomic, copy) NSString *publickey;//公鑰
 @property (nonatomic, copy) NSString *asset;//資產餘額
 @property (nonatomic, copy) NSString *miningOwner;//所屬礦主公鑰
 @property (nonatomic, copy) NSString *miningAge;//幣齡
+
 #pragma mark 矿主身份属性
 @property (nonatomic, copy) NSString *productRadio;//矿主身份
 @property (nonatomic, copy) NSString *degree;//概率指数
