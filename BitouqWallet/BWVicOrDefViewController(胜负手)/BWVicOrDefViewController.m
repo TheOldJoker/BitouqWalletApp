@@ -20,6 +20,8 @@
 @property (nonatomic, strong) BWDiceOddsInfoView *oddsInfoView;
 @property (nonatomic, strong) UISlider *mainSlider;
 @property (nonatomic, strong) UIButton *diceButton;
+@property (nonatomic, strong) NSArray *probabilityArray;
+@property (nonatomic, strong) NSDictionary *probabilityDict;
 @end
 
 @implementation BWVicOrDefViewController
@@ -47,7 +49,8 @@
     }
 }
 - (void)setSelectedValue:(NSInteger)selectedValue{
-    float odd = selectedValue * 0.95;
+    NSString * oddString = (NSString *)[self.probabilityDict valueForKey:[NSString stringWithFormat:@"%ld",selectedValue]];
+    double odd = [oddString doubleValue];
     self.oddsInfoView.titleLabel1.text = [NSString stringWithFormat:@"%.2f",odd];
     self.oddsInfoView.titleLabel3.text = [NSString stringWithFormat:@"≤%ld",(long)selectedValue];
     
@@ -88,8 +91,20 @@
 }
 #pragma mark 获取赔率
 - (void)loadOddsCompletion:(void (^ __nullable)(void))completion{
+    if (self.probabilityArray.count != 0) {
+        completion();
+        return;
+    }
     [BWDataSource getDiceOddsSuccess:^(id  _Nonnull response) {
-        NSLog(@"%@",response);
+        BWCommonRootModel *root = [BWCommonRootModel mj_objectWithKeyValues:response];
+        if (root.errorCode == 0) {
+            NSDictionary *dict = response[@"data"];
+            self.probabilityArray = [dict allValues];
+            self.probabilityDict = dict;
+            
+        }else{
+            [self showNetErrorMessageWithStatus:root.status errorCode:root.errorCode errorMessage:root.errorMsg];
+        }
         completion();
     } fail:^(NSError * _Nonnull error) {
         [self showServerError];
@@ -194,6 +209,7 @@
     [self showHUDWithAlert:@"正在提交..."];
     [self commitDiceCompletion:^{
         [self hiddenHUD];
+        self.diceBetView.betValueTextField.text = nil;
         //上次选择结果
         if (!stringIsEmpty(self.diceRootModel.data.guess)) {
             [self setSelectedValue:[self.diceRootModel.data.guess integerValue]];

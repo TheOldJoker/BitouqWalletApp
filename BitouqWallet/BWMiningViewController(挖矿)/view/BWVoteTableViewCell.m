@@ -25,10 +25,14 @@
     _model = model;
     self.userActionButton.model = model;
     //1.公鑰
-    NSMutableAttributedString *atString = [[NSMutableAttributedString alloc] initWithString:model.pubkey];
-    [atString setAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"9014ee"]}
-                      range:NSMakeRange(model.pubkey.length - 6, 6)];
-    self.pubkeyLabel.attributedText = atString;
+    if ([model.pubkey isPubKey]) {
+        NSMutableAttributedString *atString = [[NSMutableAttributedString alloc] initWithString:model.pubkey];
+        [atString setAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"9014ee"]}
+                          range:NSMakeRange(model.pubkey.length - 6, 6)];
+        self.pubkeyLabel.attributedText = atString;
+    }else{
+        self.pubkeyLabel.text = model.pubkey;
+    }
     //2.持幣量
     self.leftLabel.text = model.asset;
     //3.生產力

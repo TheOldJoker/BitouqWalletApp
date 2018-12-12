@@ -17,8 +17,17 @@
 @end
 
 @implementation BWRecordViewController
+- (void)viewWillDisappear:(BOOL)animated{
+    [super  viewWillDisappear:animated];
+    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+    }
+}
 - (void)viewDidAppear:(BOOL)animated{
     [self loadData];
+    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+    }
 }
 - (void)viewDidLoad {
     [super viewDidLoad];

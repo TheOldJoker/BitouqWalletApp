@@ -43,6 +43,7 @@
 #pragma mark 獲取所有礦主信息
 - (void)loadMiningOwnerCompletion:(void (^ __nullable)(void))completion{
     [BWDataSource getAllTheMineOwnerSuccess:^(id  _Nonnull response) {
+        
         self.miningOwnerRootModel = [BWMiningOwnerRootModel mj_objectWithKeyValues:response];
         if (self.miningOwnerRootModel.errorCode == 0) {
             
