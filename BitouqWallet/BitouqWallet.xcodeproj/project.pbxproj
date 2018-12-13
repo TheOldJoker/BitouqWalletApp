@@ -70,6 +70,18 @@
 		AF12740121C15C6E002E55C2 /* BWGesturesPasswordViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1273FF21C15C6E002E55C2 /* BWGesturesPasswordViewcontroller.m */; };
 		AF12740221C15C6E002E55C2 /* BWGesturesPasswordViewcontroller.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF12740021C15C6E002E55C2 /* BWGesturesPasswordViewcontroller.xib */; };
 		AF12740621C1659E002E55C2 /* YHGesturePasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF12740421C1659E002E55C2 /* YHGesturePasswordView.m */; };
+		AF24A65921C1F8E50064EDC9 /* BWForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF24A65721C1F8E50064EDC9 /* BWForgetPasswordViewController.m */; };
+		AF24A65A21C1F8E50064EDC9 /* BWForgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF24A65821C1F8E50064EDC9 /* BWForgetPasswordViewController.xib */; };
+		AF24A66421C24B890064EDC9 /* BWBRTStarsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF24A66221C24B890064EDC9 /* BWBRTStarsTableViewCell.m */; };
+		AF24A66521C24B890064EDC9 /* BWBRTStarsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF24A66321C24B890064EDC9 /* BWBRTStarsTableViewCell.xib */; };
+		AF24A66821C24CE30064EDC9 /* BWBRTStarsHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF24A66721C24CE30064EDC9 /* BWBRTStarsHeadView.m */; };
+		AF24A66B21C24CF20064EDC9 /* BWBWBRTStarsFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF24A66A21C24CF20064EDC9 /* BWBWBRTStarsFootView.m */; };
+		AF24A66F21C2526D0064EDC9 /* BWBRTStarsLastResRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF24A66E21C2526D0064EDC9 /* BWBRTStarsLastResRootModel.m */; };
+		AF24A67221C2527C0064EDC9 /* BWBRTStarsLastResModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF24A67121C2527C0064EDC9 /* BWBRTStarsLastResModel.m */; };
+		AF24A67521C2771F0064EDC9 /* BWBRTStarsNewsRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF24A67421C2771F0064EDC9 /* BWBRTStarsNewsRootModel.m */; };
+		AF24A67821C2772C0064EDC9 /* BWBRTStarsNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF24A67721C2772C0064EDC9 /* BWBRTStarsNewsModel.m */; };
+		AF24A67B21C277DE0064EDC9 /* BWNewsView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF24A67A21C277DE0064EDC9 /* BWNewsView.m */; };
+		AF24A67E21C280860064EDC9 /* BWTheLotteryResultsView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF24A67D21C280860064EDC9 /* BWTheLotteryResultsView.m */; };
 		AF91BFA321BA6CDD003A423F /* BWRlueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF91BFA221BA6CDD003A423F /* BWRlueModel.m */; };
 		AFCECEF321B6B8220089E3AF /* BWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCECEF221B6B8220089E3AF /* BWBaseViewController.m */; };
 		AFCECEF621B6B9AB0089E3AF /* BWWalletOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCECEF521B6B9AB0089E3AF /* BWWalletOverviewViewController.m */; };
@@ -252,6 +264,28 @@
 		AF12740021C15C6E002E55C2 /* BWGesturesPasswordViewcontroller.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWGesturesPasswordViewcontroller.xib; sourceTree = "<group>"; };
 		AF12740421C1659E002E55C2 /* YHGesturePasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHGesturePasswordView.m; sourceTree = "<group>"; };
 		AF12740521C1659E002E55C2 /* YHGesturePasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHGesturePasswordView.h; sourceTree = "<group>"; };
+		AF24A65621C1F8E50064EDC9 /* BWForgetPasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWForgetPasswordViewController.h; sourceTree = "<group>"; };
+		AF24A65721C1F8E50064EDC9 /* BWForgetPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWForgetPasswordViewController.m; sourceTree = "<group>"; };
+		AF24A65821C1F8E50064EDC9 /* BWForgetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWForgetPasswordViewController.xib; sourceTree = "<group>"; };
+		AF24A66121C24B890064EDC9 /* BWBRTStarsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWBRTStarsTableViewCell.h; sourceTree = "<group>"; };
+		AF24A66221C24B890064EDC9 /* BWBRTStarsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWBRTStarsTableViewCell.m; sourceTree = "<group>"; };
+		AF24A66321C24B890064EDC9 /* BWBRTStarsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWBRTStarsTableViewCell.xib; sourceTree = "<group>"; };
+		AF24A66621C24CE30064EDC9 /* BWBRTStarsHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWBRTStarsHeadView.h; sourceTree = "<group>"; };
+		AF24A66721C24CE30064EDC9 /* BWBRTStarsHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWBRTStarsHeadView.m; sourceTree = "<group>"; };
+		AF24A66921C24CF20064EDC9 /* BWBWBRTStarsFootView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWBWBRTStarsFootView.h; sourceTree = "<group>"; };
+		AF24A66A21C24CF20064EDC9 /* BWBWBRTStarsFootView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWBWBRTStarsFootView.m; sourceTree = "<group>"; };
+		AF24A66D21C2526D0064EDC9 /* BWBRTStarsLastResRootModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWBRTStarsLastResRootModel.h; sourceTree = "<group>"; };
+		AF24A66E21C2526D0064EDC9 /* BWBRTStarsLastResRootModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWBRTStarsLastResRootModel.m; sourceTree = "<group>"; };
+		AF24A67021C2527C0064EDC9 /* BWBRTStarsLastResModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWBRTStarsLastResModel.h; sourceTree = "<group>"; };
+		AF24A67121C2527C0064EDC9 /* BWBRTStarsLastResModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWBRTStarsLastResModel.m; sourceTree = "<group>"; };
+		AF24A67321C2771F0064EDC9 /* BWBRTStarsNewsRootModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWBRTStarsNewsRootModel.h; sourceTree = "<group>"; };
+		AF24A67421C2771F0064EDC9 /* BWBRTStarsNewsRootModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWBRTStarsNewsRootModel.m; sourceTree = "<group>"; };
+		AF24A67621C2772C0064EDC9 /* BWBRTStarsNewsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWBRTStarsNewsModel.h; sourceTree = "<group>"; };
+		AF24A67721C2772C0064EDC9 /* BWBRTStarsNewsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWBRTStarsNewsModel.m; sourceTree = "<group>"; };
+		AF24A67921C277DE0064EDC9 /* BWNewsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWNewsView.h; sourceTree = "<group>"; };
+		AF24A67A21C277DE0064EDC9 /* BWNewsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWNewsView.m; sourceTree = "<group>"; };
+		AF24A67C21C280860064EDC9 /* BWTheLotteryResultsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWTheLotteryResultsView.h; sourceTree = "<group>"; };
+		AF24A67D21C280860064EDC9 /* BWTheLotteryResultsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWTheLotteryResultsView.m; sourceTree = "<group>"; };
 		AF91BFA121BA6CDD003A423F /* BWRlueModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWRlueModel.h; sourceTree = "<group>"; };
 		AF91BFA221BA6CDD003A423F /* BWRlueModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWRlueModel.m; sourceTree = "<group>"; };
 		AFCECEF121B6B8220089E3AF /* BWBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWBaseViewController.h; sourceTree = "<group>"; };
@@ -530,6 +564,8 @@
 		AF09B75721AD71D300B9E1E4 /* BWBRTStarsViewController(BRTStars) */ = {
 			isa = PBXGroup;
 			children = (
+				AF24A66C21C2524D0064EDC9 /* model */,
+				AF24A66021C24B4D0064EDC9 /* view */,
 				AF09B76A21AD797500B9E1E4 /* BWBRTStarsViewController.h */,
 				AF09B76B21AD797500B9E1E4 /* BWBRTStarsViewController.m */,
 			);
@@ -617,6 +653,9 @@
 				AF1273FE21C15C6E002E55C2 /* BWGesturesPasswordViewcontroller.h */,
 				AF1273FF21C15C6E002E55C2 /* BWGesturesPasswordViewcontroller.m */,
 				AF12740021C15C6E002E55C2 /* BWGesturesPasswordViewcontroller.xib */,
+				AF24A65621C1F8E50064EDC9 /* BWForgetPasswordViewController.h */,
+				AF24A65721C1F8E50064EDC9 /* BWForgetPasswordViewController.m */,
+				AF24A65821C1F8E50064EDC9 /* BWForgetPasswordViewController.xib */,
 			);
 			path = "BWGesturesPasswordViewcontroller(手势密码)";
 			sourceTree = "<group>";
@@ -733,6 +772,39 @@
 				AF12740421C1659E002E55C2 /* YHGesturePasswordView.m */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		AF24A66021C24B4D0064EDC9 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				AF24A66121C24B890064EDC9 /* BWBRTStarsTableViewCell.h */,
+				AF24A66221C24B890064EDC9 /* BWBRTStarsTableViewCell.m */,
+				AF24A66321C24B890064EDC9 /* BWBRTStarsTableViewCell.xib */,
+				AF24A66621C24CE30064EDC9 /* BWBRTStarsHeadView.h */,
+				AF24A66721C24CE30064EDC9 /* BWBRTStarsHeadView.m */,
+				AF24A67C21C280860064EDC9 /* BWTheLotteryResultsView.h */,
+				AF24A67D21C280860064EDC9 /* BWTheLotteryResultsView.m */,
+				AF24A66921C24CF20064EDC9 /* BWBWBRTStarsFootView.h */,
+				AF24A66A21C24CF20064EDC9 /* BWBWBRTStarsFootView.m */,
+				AF24A67921C277DE0064EDC9 /* BWNewsView.h */,
+				AF24A67A21C277DE0064EDC9 /* BWNewsView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		AF24A66C21C2524D0064EDC9 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				AF24A66D21C2526D0064EDC9 /* BWBRTStarsLastResRootModel.h */,
+				AF24A66E21C2526D0064EDC9 /* BWBRTStarsLastResRootModel.m */,
+				AF24A67021C2527C0064EDC9 /* BWBRTStarsLastResModel.h */,
+				AF24A67121C2527C0064EDC9 /* BWBRTStarsLastResModel.m */,
+				AF24A67321C2771F0064EDC9 /* BWBRTStarsNewsRootModel.h */,
+				AF24A67421C2771F0064EDC9 /* BWBRTStarsNewsRootModel.m */,
+				AF24A67621C2772C0064EDC9 /* BWBRTStarsNewsModel.h */,
+				AF24A67721C2772C0064EDC9 /* BWBRTStarsNewsModel.m */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		AF91BFA021BA6CC0003A423F /* model */ = {
@@ -991,6 +1063,7 @@
 			files = (
 				AF09B78321AD7AFC00B9E1E4 /* VicOrDef.storyboard in Resources */,
 				AF09B73021AD6EAB00B9E1E4 /* LaunchScreen.storyboard in Resources */,
+				AF24A65A21C1F8E50064EDC9 /* BWForgetPasswordViewController.xib in Resources */,
 				AFE2FA4A21BA66A1005F7A84 /* BWRlueTableViewCell.xib in Resources */,
 				AFCECF1421B81E490089E3AF /* BWWalletrecordTableViewCell.xib in Resources */,
 				AF09B78C21AD7BFD00B9E1E4 /* rlue.storyboard in Resources */,
@@ -999,6 +1072,7 @@
 				AF09B76321AD78AA00B9E1E4 /* wallet.storyboard in Resources */,
 				AF12739821BF54E7002E55C2 /* BWVoteTableViewCell.xib in Resources */,
 				AF09B77E21AD7A0900B9E1E4 /* BRTStars.storyboard in Resources */,
+				AF24A66521C24B890064EDC9 /* BWBRTStarsTableViewCell.xib in Resources */,
 				AF09B72D21AD6EAB00B9E1E4 /* Assets.xcassets in Resources */,
 				AF1273B421C00CC4002E55C2 /* BWDiceLastWinerView.xib in Resources */,
 				AF09B78521AD7B3F00B9E1E4 /* mining.storyboard in Resources */,
@@ -1085,8 +1159,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF91BFA321BA6CDD003A423F /* BWRlueModel.m in Sources */,
+				AF24A67521C2771F0064EDC9 /* BWBRTStarsNewsRootModel.m in Sources */,
 				AF09B76921AD795B00B9E1E4 /* BWWalletViewController.m in Sources */,
 				AFCECEFC21B6B9D80089E3AF /* BWWalletGetViewController.m in Sources */,
+				AF24A66421C24B890064EDC9 /* BWBRTStarsTableViewCell.m in Sources */,
 				AFE2FA2B21BA06E1005F7A84 /* BWWalletActivityModel.m in Sources */,
 				AF12737421BE7810002E55C2 /* BWMiningProductionViewController.m in Sources */,
 				AFCECEF621B6B9AB0089E3AF /* BWWalletOverviewViewController.m in Sources */,
@@ -1116,6 +1192,7 @@
 				AFE2FA3E21BA58D9005F7A84 /* BWCommonRootModel.m in Sources */,
 				AFEBA7D121B4227F00F5ECEF /* YYKVStorage.m in Sources */,
 				AF12738321BE8FD8002E55C2 /* BWNumberSelectedView.m in Sources */,
+				AF24A67E21C280860064EDC9 /* BWTheLotteryResultsView.m in Sources */,
 				AF1273A421BFB281002E55C2 /* BWMyMiningInfoRootModel.m in Sources */,
 				AFE2FA2521B9847E005F7A84 /* BWUserAssetRootModel.m in Sources */,
 				AF12737721BE7837002E55C2 /* BWMiningTopSelectView.m in Sources */,
@@ -1123,7 +1200,10 @@
 				AF12740621C1659E002E55C2 /* YHGesturePasswordView.m in Sources */,
 				AFE2FA1E21B957F3005F7A84 /* BWLoginCreateKeyRootModel.m in Sources */,
 				AFEBA7D221B4227F00F5ECEF /* YYMemoryCache.m in Sources */,
+				AF24A66821C24CE30064EDC9 /* BWBRTStarsHeadView.m in Sources */,
 				AFEBA7B721B40A7700F5ECEF /* BWLoginPrivatekeyViewController.m in Sources */,
+				AF24A65921C1F8E50064EDC9 /* BWForgetPasswordViewController.m in Sources */,
+				AF24A66B21C24CF20064EDC9 /* BWBWBRTStarsFootView.m in Sources */,
 				AF1273AE21BFDB8B002E55C2 /* BWDicelastWinerModel.m in Sources */,
 				AF09B77221AD799C00B9E1E4 /* BWMiningViewController.m in Sources */,
 				AFE2FA3521BA4B6A005F7A84 /* BWWalletDefaultservicefeeRootModel.m in Sources */,
@@ -1135,6 +1215,7 @@
 				AF1273A121BF8D63002E55C2 /* BWVoteCellButton.m in Sources */,
 				AFEBA7C521B41F7A00F5ECEF /* BWUser.m in Sources */,
 				AF1273B721C0A14A002E55C2 /* BWDiceBetView.m in Sources */,
+				AF24A67821C2772C0064EDC9 /* BWBRTStarsNewsModel.m in Sources */,
 				AF1273A721BFB290002E55C2 /* BWMyMiningInfoModel.m in Sources */,
 				AF09B76C21AD797500B9E1E4 /* BWBRTStarsViewController.m in Sources */,
 				AFEBA7BA21B4139100F5ECEF /* BWLoginSuccessViewController.m in Sources */,
@@ -1143,6 +1224,7 @@
 				AF12736C21BE680F002E55C2 /* BWRecordModel.m in Sources */,
 				AF12737121BE77EC002E55C2 /* BWMiningVoteViewController.m in Sources */,
 				AF09B79121AD7E6400B9E1E4 /* UIViewController+BWViewControllerCategory.m in Sources */,
+				AF24A67B21C277DE0064EDC9 /* BWNewsView.m in Sources */,
 				AFE2FA3221BA461D005F7A84 /* BWWalletSendModel.m in Sources */,
 				AF12737A21BE7BBA002E55C2 /* BWMiningOwnerRootModel.m in Sources */,
 				AF1273BC21C0E32D002E55C2 /* BWDiceOddsInfoView.m in Sources */,
@@ -1164,10 +1246,12 @@
 				AF12739721BF54E7002E55C2 /* BWVoteTableViewCell.m in Sources */,
 				AF09B77B21AD79D700B9E1E4 /* BWRlueVIewController.m in Sources */,
 				AF12740121C15C6E002E55C2 /* BWGesturesPasswordViewcontroller.m in Sources */,
+				AF24A67221C2527C0064EDC9 /* BWBRTStarsLastResModel.m in Sources */,
 				AFCECF0621B6DD3F0089E3AF /* BWWalletOverviewActivityView.m in Sources */,
 				AFCECF0F21B8132A0089E3AF /* UIView+BWViewCategory.m in Sources */,
 				AFEBA7CF21B4227F00F5ECEF /* YYDiskCache.m in Sources */,
 				AF12736921BE6801002E55C2 /* BWRecordRootModel.m in Sources */,
+				AF24A66F21C2526D0064EDC9 /* BWBRTStarsLastResRootModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

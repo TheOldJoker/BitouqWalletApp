@@ -7,8 +7,11 @@
 //
 
 #import "BWDuplicateViewController.h"
-
-@interface BWDuplicateViewController ()
+#import "BWGesturesPasswordViewcontroller.h"
+#import "BWForgetPasswordViewController.h"
+#import "BWTabBarController.h"
+@interface BWDuplicateViewController ()<BWGesturesPasswordViewcontrollerDelegate,BWForgetPasswordViewControllerDelegate>
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *titleLabelTopValue;
 
 @end
 
@@ -16,10 +19,64 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"備份錢包";
-    [self initMenuNav];
+    self.title = @"";
+    double y = 34;
+    if (is_iPhoneX) {
+        y += 44;
+    }
+    UIButton *menuButton = [[UIButton alloc] initWithFrame:(CGRectMake(20, y, 30, 30))];
+    [menuButton setImage:[UIImage imageNamed:@"nac_back_gray"] forState:(UIControlStateNormal)];
+    [menuButton addTarget:self action:@selector(menuAction) forControlEvents:(UIControlEventTouchUpInside)];
+    [self.view addSubview:menuButton];
+    self.titleLabelTopValue.constant = menuButton.bottom + 20;
 }
-
+- (void)menuAction{
+    BWTabBarController *tabBarController = (BWTabBarController *)self.tabBarController;
+    [tabBarController showMenu];
+}
+- (void)viewDidLayoutSubviews{
+    self.view.width = SCREEN_WIDTH;
+    self.view.height = SCREEN_HEIGHT;
+    
+}
+- (IBAction)duplicateAction:(UIButton *)sender {
+    BWGesturesPasswordViewcontroller *gestureVC = [[BWGesturesPasswordViewcontroller alloc] init];
+    gestureVC.gesturesPasswordType = BWGesturesPasswordTypeVerify;
+    gestureVC.delegate = self;
+    [self customPresentVC:gestureVC animation:(YHModaAnimationTypeAlpha) showBlackBackgroud:NO canTapDismiss:NO];
+}
+#pragma mark - BWGesturesPasswordViewcontrollerDelegate
+- (void)verifyPasswordSuccess{
+    BWUser *user = [BWUserManager shareManager].user;
+    if (stringIsEmpty(user.privatekey)) {
+        [self showWeakAlertWithString:@"未獲取私钥"];
+        return;
+    }
+    UIPasteboard *pab = [UIPasteboard generalPasteboard];
+    [pab setString:user.privatekey];
+    if (pab == nil) {
+        [self showWeakAlertWithString:@"複製失敗"];
+    }else
+    {
+        [self showWeakAlertWithString:@"已複製"];
+    }
+}
+//忘记密码
+- (void)forgetThePassword{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        BWForgetPasswordViewController *vc = [[BWForgetPasswordViewController alloc] init];
+        vc.delegate = self;
+        [self customPresentVC:vc animation:(YHModaAnimationTypeAlpha) showBlackBackgroud:NO canTapDismiss:NO];
+    });
+}
+#pragma mark -BWForgetPasswordViewControllerDelegate
+- (void)resetpassword{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        BWGesturesPasswordViewcontroller *vc = [[BWGesturesPasswordViewcontroller alloc] init];
+        vc.gesturesPasswordType = BWGesturesPasswordTypeCreate;
+        [self customPresentVC:vc animation:(YHModaAnimationTypeAlpha) showBlackBackgroud:NO canTapDismiss:NO];
+    });
+}
 /*
 #pragma mark - Navigation
 

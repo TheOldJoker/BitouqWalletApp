@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)getSeverUrl;
 - (NSArray *)componentsSeparatedByCharset;
 - (NSString *)getTime;
-- (BOOL)isPubKey;
+- (BOOL)isKey;
 @end
 
 NS_ASSUME_NONNULL_END

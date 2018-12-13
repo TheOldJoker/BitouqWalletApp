@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mAa-h9-Sq9">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,16 +30,30 @@
             <objects>
                 <viewController id="hpB-Q9-0O6" customClass="BWBRTStarsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jgP-AM-pLv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_background" translatesAutoresizingMaskIntoConstraints="NO" id="FpZ-QD-jKu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FpZ-QD-jKu" firstAttribute="top" secondItem="jgP-AM-pLv" secondAttribute="top" id="LZO-kc-tXE"/>
+                            <constraint firstAttribute="bottom" secondItem="FpZ-QD-jKu" secondAttribute="bottom" id="May-Ld-9Zo"/>
+                            <constraint firstItem="FpZ-QD-jKu" firstAttribute="trailing" secondItem="TeV-3i-k3r" secondAttribute="trailing" id="UF1-4c-ocI"/>
+                            <constraint firstItem="FpZ-QD-jKu" firstAttribute="leading" secondItem="TeV-3i-k3r" secondAttribute="leading" id="vHD-4w-Zq4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="TeV-3i-k3r"/>
                     </view>
                     <navigationItem key="navigationItem" id="j2s-Lk-NVW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jpN-Df-KbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1772" y="-348"/>
+            <point key="canvasLocation" x="1772" y="-348.02955665024632"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="main_background" width="375" height="812"/>
+    </resources>
 </document>

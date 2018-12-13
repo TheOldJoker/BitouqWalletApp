@@ -304,4 +304,97 @@
         }
     }];
 }
+#pragma mark - 根據私鑰獲取公鑰
++ (void)getPubkeyWithPrikey:(NSString *)prikey success:(void (^)(id response))success fail:(void (^)(NSError * error))failure{
+    NSDictionary *params = @{
+                             @"prikey":prikey
+                             };
+    [BWNetHelper getWithUrl:[@"addr/getpubbypri" getSeverUrl] params:params header:NO success:^(id response) {
+        if (success) {
+            success(response);
+        }
+    } fail:^(NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+#pragma mark - 获取最新一期开奖结果
++ (void)getLastBRTStarsResSuccess:(void (^)(id response))success fail:(void (^)(NSError * error))failure{
+    NSDictionary *params =@{};
+    [BWNetHelper getWithUrl:[@"xjssx/lastterm" getSeverUrl] params:params header:NO success:^(id response) {
+        
+        if (success) {
+            success(response);
+        }
+    } fail:^(NSError *error) {
+        
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+#pragma mark - 获取中奖消息
++ (void)getBRTStarsNewsSuccess:(void (^)(id response))success fail:(void (^)(NSError * error))failure{
+    NSDictionary *params =@{};
+    [BWNetHelper getWithUrl:[@"xjssx/newestwinner" getSeverUrl] params:params header:NO success:^(id response) {
+        
+        if (success) {
+            success(response);
+        }
+    } fail:^(NSError *error) {
+        
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+#pragma mark - 获取投注记录
++ (void)getBettingRecordSuccess:(void (^)(id response))success fail:(void (^)(NSError * error))failure{
+    BWUser *user = [BWUserManager shareManager].user;
+    NSDictionary *params = @{
+                             @"pubkey":user.publickey
+                             };
+    [BWNetHelper getWithUrl:[@"xjssx/recordbypubkey" getSeverUrl] params:params header:NO success:^(id response) {
+        if (success) {
+            success(response);
+        }
+    } fail:^(NSError *error) {
+        
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+#pragma mark - 获取开奖记录
++ (void)getTheLotteryRecordSuccess:(void (^)(id response))success fail:(void (^)(NSError * error))failure{
+    NSDictionary *params = @{};
+    [BWNetHelper getWithUrl:[@"xjssx/term" getSeverUrl] params:params header:NO success:^(id response) {
+        if (success) {
+            success(response);
+        }
+    } fail:^(NSError *error) {
+        
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+#pragma mark - 获取游戏赔率
++ (void)getTheGameOddsSuccess:(void (^)(id response))success fail:(void (^)(NSError * error))failure{
+    NSDictionary *params = @{};
+    [BWNetHelper getWithUrl:[@"xjssx/gamerule" getSeverUrl] params:params header:NO success:^(id response) {
+        if (success) {
+            success(response);
+        }
+    } fail:^(NSError *error) {
+        
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+#pragma mark - 游戏投注
+//xjssx
+//+ (void)gameBetWith
 @end

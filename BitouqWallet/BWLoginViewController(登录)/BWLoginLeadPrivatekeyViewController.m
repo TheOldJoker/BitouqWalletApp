@@ -8,9 +8,10 @@
 
 #import "BWLoginLeadPrivatekeyViewController.h"
 #import "BWLoginSuccessViewController.h"
+#import "BWLoginCreateKeyRootModel.h"
 @interface BWLoginLeadPrivatekeyViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *privatekeyTextField;
-
+@property (nonatomic, strong) BWLoginCreateKeyRootModel *loginRootModel;
 @end
 
 @implementation BWLoginLeadPrivatekeyViewController
@@ -28,11 +29,12 @@
     //2.驗證私鑰
     [self showHUDWithAlert:@"正在驗證私鑰..."];
     [self verifyPrivatekeyCompletion:^{
-        BWUser *user = [[BWUser alloc] init];
-        user.privatekey = self.privatekeyTextField.text;
-        [BWUserManager shareManager].user = user;
         [self hiddenHUD];
-        [self showLoginSuccessViewCongtroller];
+        if (self.loginRootModel.errorCode == 0) {
+            [self showLoginSuccessViewCongtroller];
+        }else{
+            [self showWeakAlertWithString:@"無效的私鑰"];
+        }
     }];
 }
 - (void)showLoginSuccessViewCongtroller{
@@ -41,11 +43,23 @@
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
-//與服務器交互,驗證私鑰
+//驗證私鑰
 - (void)verifyPrivatekeyCompletion:(void (^ __nullable)(void))completion{
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    [BWDataSource getPubkeyWithPrikey:self.privatekeyTextField.text success:^(id  _Nonnull response) {
+        self.loginRootModel = [BWLoginCreateKeyRootModel mj_objectWithKeyValues:response];
+        if (self.loginRootModel.errorCode == 0) {
+            BWUser *user = [[BWUser alloc] init];
+            user.privatekey = self.loginRootModel.data.prikey;
+            user.publickey = self.loginRootModel.data.pubkey;
+            [BWUserManager shareManager].user = user;
+        }else{
+            [self showNetErrorMessageWithStatus:self.loginRootModel.status errorCode:self.loginRootModel.errorCode errorMessage:self.loginRootModel.errorMsg];
+        }
         completion();
-    });
+    } fail:^(NSError * _Nonnull error) {
+        [self showServerError];
+        completion();
+    }];
 }
 - (IBAction)loginAction:(UIButton *)sender {
     [self loginApp];

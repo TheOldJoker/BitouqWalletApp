@@ -22,8 +22,8 @@
 }
 - (void)initSubviews{
     [self.publickeyInfoView initSubview];
-    self.getAddressTextField.placeholder = @"输入接收地址";
-    self.moneyTextField.placeholder = @"输入金额";
+    self.getAddressTextField.placeholder = @"輸入接收地址";
+    self.moneyTextField.placeholder = @"輸入金額";
     self.miningTextFiled.placeholder = @"";
     self.height = self.bottomLabel.bottom + 17;
 }
@@ -71,6 +71,7 @@
         _moneyTextField = [[UITextField alloc] initWithFrame:(CGRectMake(20, 16, self.width - 60, 18))];
         _moneyTextField.font = [UIFont systemFontOfSize:13.f];
         _moneyTextField.keyboardType = UIKeyboardTypeNumberPad;
+        _moneyTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
         [backgroundView addSubview:_moneyTextField];
     }
     return _moneyTextField;
@@ -83,6 +84,7 @@
         [self addSubview:backgroundView];
         _getAddressTextField = [[UITextField alloc] initWithFrame:(CGRectMake(20, 16, self.width - 100, 18))];
         _getAddressTextField.font = [UIFont systemFontOfSize:13.f];
+        _getAddressTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
         [backgroundView addSubview:_getAddressTextField];
         
         self.codeButton = [[UIButton alloc] initWithFrame:(CGRectMake(backgroundView.width - 36, 15, 20, 20))];

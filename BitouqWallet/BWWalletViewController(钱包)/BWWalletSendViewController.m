@@ -13,7 +13,9 @@
 #import "BWUserAssetRootModel.h"
 #import "BWWalletrecordRootModel.h"
 #import "BWCodeScanViewController.h"
-@interface BWWalletSendViewController ()<UITableViewDelegate,UITableViewDataSource,BWWalletSendHeadViewDelegate,BWCodeScanViewControllerDelegate>
+#import "BWGesturesPasswordViewcontroller.h"
+#import "BWForgetPasswordViewController.h"
+@interface BWWalletSendViewController ()<UITableViewDelegate,UITableViewDataSource,BWWalletSendHeadViewDelegate,BWCodeScanViewControllerDelegate,BWGesturesPasswordViewcontrollerDelegate,BWForgetPasswordViewControllerDelegate>
 @property (nonatomic, strong) UITableView *mainTableView;
 @property (nonatomic, strong) BWWalletSendHeadView *headView;
 @property (nonatomic, strong) NSMutableArray *dataSource;
@@ -69,6 +71,26 @@
         completion();
     }];
 }
+- (void)sendBRT{
+    [self showHUDWithAlert:@"正在發送..."];
+    [BWDataSource transferAssetWithModel:self.mainSendModel success:^(id  _Nonnull response) {
+        [self hiddenHUD];
+        BWCommonRootModel *rootModel = [BWCommonRootModel mj_objectWithKeyValues:response];
+        if (rootModel.errorCode == 0) {
+            [self showWeakAlertWithString:@"發送成功"];
+            //刷新個人信息
+            [self loadDataForUserPublickeyInfoCompletion:^{
+                //獲取默認曠工費
+                [self loadData];
+            }];
+        }else{
+            [self showNetErrorMessageWithStatus:rootModel.status errorCode:rootModel.errorCode errorMessage:rootModel.errorMsg];
+        }
+    } fail:^(NSError * _Nonnull error) {
+        [self hiddenHUD];
+        [self showServerError];
+    }];
+}
 #pragma mark - lazyload
 - (BWWalletSendModel *)mainSendModel{
     if (!_mainSendModel) {
@@ -119,34 +141,43 @@
     if (!stringIsEmpty(self.headView.miningTextFiled.text)) {
         self.mainSendModel.miningMoney = self.headView.miningTextFiled.text;
     }
-    
     if ([[BWUserManager shareManager].user.asset doubleValue] < [self.mainSendModel.miningMoney doubleValue] + [self.mainSendModel.sendMoney doubleValue]) {
         [self showWeakAlertWithString:@"您的錢包餘額不足"];
         return;
     }
-    [self showHUDWithAlert:@"正在發送..."];
-    [BWDataSource transferAssetWithModel:self.mainSendModel success:^(id  _Nonnull response) {
-        [self hiddenHUD];
-        BWCommonRootModel *rootModel = [BWCommonRootModel mj_objectWithKeyValues:response];
-        if (rootModel.errorCode == 0) {
-            [self showWeakAlertWithString:@"發送成功"];
-            //刷新個人信息
-            [self loadDataForUserPublickeyInfoCompletion:^{
-                //獲取默認曠工費
-                [self loadData];
-            }];
-        }else{
-            [self showNetErrorMessageWithStatus:rootModel.status errorCode:rootModel.errorCode errorMessage:rootModel.errorMsg];
-        }
-    } fail:^(NSError * _Nonnull error) {
-        [self hiddenHUD];
-        [self showServerError];
-    }];
+    BWGesturesPasswordViewcontroller *gestureVC = [[BWGesturesPasswordViewcontroller alloc] init];
+    gestureVC.gesturesPasswordType = BWGesturesPasswordTypeVerify;
+    gestureVC.delegate = self;
+    [self customPresentVC:gestureVC animation:(YHModaAnimationTypeAlpha) showBlackBackgroud:NO canTapDismiss:NO];
 }
 - (void)codeScanAciton:(UIButton *)sender{
     BWCodeScanViewController *scanVC = [[BWCodeScanViewController alloc] init];
     scanVC.delegate = self;
     [self presentViewController:scanVC animated:YES completion:nil];
+}
+#pragma mark - BWGesturesPasswordViewcontrollerDelegate
+- (void)verifyPasswordSuccess{
+    [self sendBRT];
+}
+//忘记密码
+- (void)forgetThePassword{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        BWForgetPasswordViewController *vc = [[BWForgetPasswordViewController alloc] init];
+        vc.delegate = self;
+        [self customPresentVC:vc animation:(YHModaAnimationTypeAlpha) showBlackBackgroud:NO canTapDismiss:NO];
+    });
+}
+#pragma mark -BWForgetPasswordViewControllerDelegate
+- (void)resetpassword{
+    [self loadData];
+    [self loadDataForUserPublickeyInfoCompletion:^{
+        
+    }];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        BWGesturesPasswordViewcontroller *vc = [[BWGesturesPasswordViewcontroller alloc] init];
+        vc.gesturesPasswordType = BWGesturesPasswordTypeCreate;
+        [self customPresentVC:vc animation:(YHModaAnimationTypeAlpha) showBlackBackgroud:NO canTapDismiss:NO];
+    });
 }
 #pragma mark - BWCodeScanViewControllerDelegate
 - (void)scanCodeResString:(NSString *)codeString{

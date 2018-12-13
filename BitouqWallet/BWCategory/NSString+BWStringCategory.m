@@ -9,7 +9,7 @@
 #import "NSString+BWStringCategory.h"
 NSString *const accurateTime = @"yyyy-MM-dd-HH-mm-ss";
 @implementation NSString (BWStringCategory)
-- (BOOL)isPubKey{
+- (BOOL)isKey{
     if (self.length == 44) {
         return YES;
     }

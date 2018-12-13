@@ -25,7 +25,7 @@
     _model = model;
     self.userActionButton.model = model;
     //1.公鑰
-    if ([model.pubkey isPubKey]) {
+    if ([model.pubkey isKey]) {
         NSMutableAttributedString *atString = [[NSMutableAttributedString alloc] initWithString:model.pubkey];
         [atString setAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"9014ee"]}
                           range:NSMakeRange(model.pubkey.length - 6, 6)];

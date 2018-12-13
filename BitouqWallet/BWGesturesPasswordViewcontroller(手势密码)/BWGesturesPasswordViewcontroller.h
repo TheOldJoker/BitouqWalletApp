@@ -12,9 +12,15 @@ typedef NS_ENUM(NSInteger , BWGesturesPasswordType) {
     BWGesturesPasswordTypeVerify//验证密码
 };
 NS_ASSUME_NONNULL_BEGIN
+@protocol BWGesturesPasswordViewcontrollerDelegate <NSObject>
 
+- (void)verifyPasswordSuccess;
+- (void)forgetThePassword;
+
+@end
 @interface BWGesturesPasswordViewcontroller : UIViewController
-@property (nonatomic , assign) BWGesturesPasswordType gesturesPasswordType;
+@property (nonatomic, assign) BWGesturesPasswordType gesturesPasswordType;
+@property (nonatomic, weak) id<BWGesturesPasswordViewcontrollerDelegate> delegate;
 @end
 
 NS_ASSUME_NONNULL_END

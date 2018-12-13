@@ -34,21 +34,26 @@
         [self initSubviews];
         return;
     }
+    
     [self getMiningInfoCompletion:^{
+        
         [self initSubviews];
     }];
 }
 #pragma mark 獲取礦主挖礦信息
 - (void)getMiningInfoCompletion:(void (^ __nullable)(void))completion{
     [BWDataSource getMyMiningInfoSuccess:^(id  _Nonnull response) {
+        
         self.miningInfoRootModel = [BWMyMiningInfoRootModel mj_objectWithKeyValues:response];
         if (self.miningInfoRootModel.errorCode == 0) {
             if (self.miningInfoRootModel.data == nil) {
+                 completion();
                 return;
             }
             NSString *resDegree = [NSString stringWithFormat:@"%.2f%%", [self.miningInfoRootModel.data.degree doubleValue] / 1000];
             [BWUserManager shareManager].user.degree = resDegree;
         }else{
+            
             [self showNetErrorMessageWithStatus:self.miningInfoRootModel.status errorCode:self.miningInfoRootModel.errorCode errorMessage:self.miningInfoRootModel.errorMsg];
         }
         completion();
@@ -71,6 +76,7 @@
 #pragma mark 加載頁面
 - (void)initSubviews{
     if (self.miningOwner) {
+        
         //是礦主
         //1.節點幣齡
         BWUser *user = [BWUserManager shareManager].user;

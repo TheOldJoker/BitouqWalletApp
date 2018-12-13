@@ -46,6 +46,18 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)getDiceOddsSuccess:(void (^)(id response))success fail:(void (^)(NSError * error))failure;
 //投票
 + (void)betWithGuessNumber:(NSString *)guessNumber money:(NSString *)money success:(void (^)(id response))success fail:(void (^)(NSError * error))failure;
+//根據私鑰獲取公鑰
++ (void)getPubkeyWithPrikey:(NSString *)prikey success:(void (^)(id response))success fail:(void (^)(NSError * error))failure;
+//获取最新一期开奖结果
++ (void)getLastBRTStarsResSuccess:(void (^)(id response))success fail:(void (^)(NSError * error))failure;
+//获取中奖消息
++ (void)getBRTStarsNewsSuccess:(void (^)(id response))success fail:(void (^)(NSError * error))failure;
+//获取投注记录
++ (void)getBettingRecordSuccess:(void (^)(id response))success fail:(void (^)(NSError * error))failure;
+//获取开奖记录
++ (void)getTheLotteryRecordSuccess:(void (^)(id response))success fail:(void (^)(NSError * error))failure;
+//获取游戏赔率
++ (void)getTheGameOddsSuccess:(void (^)(id response))success fail:(void (^)(NSError * error))failure;
 @end
 
 NS_ASSUME_NONNULL_END

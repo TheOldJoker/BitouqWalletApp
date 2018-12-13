@@ -13,6 +13,7 @@ float const SCAN_HEIGHT = 300.0f;
 @interface BWCodeScanViewController ()<AVCaptureMetadataOutputObjectsDelegate>
 @property (nonatomic, strong) AVCaptureSession *session;
 @property (nonatomic, strong)YHMaskView * maskView;
+@property (nonatomic, strong) UIButton *cancelButton;
 @end
 
 @implementation BWCodeScanViewController
@@ -34,6 +35,11 @@ float const SCAN_HEIGHT = 300.0f;
     _maskView.alpha = 0.6;
     [_maskView showRectPathWithFrame:(CGRectMake((self.view.width - (SCAN_HEIGHT - 2)) / 2, (self.view.height - (SCAN_HEIGHT - 2)) / 2 - 64, (SCAN_HEIGHT - 2), (SCAN_HEIGHT - 2))) andRadius:0];
     [self.view addSubview:_maskView];
+    
+    self.cancelButton = [[UIButton alloc] initWithFrame:(CGRectMake(15, 64, 30, 30))];
+    [self.cancelButton setImage:[UIImage imageNamed:@"nav_cancel"] forState:(UIControlStateNormal)];
+    [self.cancelButton addTarget:self action:@selector(dismissVC) forControlEvents:(UIControlEventTouchUpInside)];
+    [self.view addSubview:self.cancelButton];
     
     UIView * topLine = [[UIView alloc] initWithFrame:(CGRectMake((self.view.width - (SCAN_HEIGHT - 2)) / 2, (self.view.height - (SCAN_HEIGHT - 2)) / 2 - 64, SCAN_HEIGHT - 2, 1))];
     topLine.backgroundColor = [UIColor colorWithHexString:COLOR_MAIN];
@@ -93,6 +99,9 @@ float const SCAN_HEIGHT = 300.0f;
         }
         [self dismissViewControllerAnimated:YES completion:nil];
     }
+}
+- (void)dismissVC{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 /*
 #pragma mark - Navigation
