@@ -12,7 +12,11 @@
 #import "BWBWBRTStarsFootView.h"
 #import "BWBRTStarsLastResRootModel.h"
 #import "BWBRTStarsNewsRootModel.h"
-@interface BWBRTStarsViewController ()<UITableViewDelegate,UITableViewDataSource>
+#import "BWLotteryRecordViewController.h"
+#import "BWBetRecordViewController.h"
+#import "BWGamePickerViewController.h"
+#import "BWUserAssetRootModel.h"
+@interface BWBRTStarsViewController ()<UITableViewDelegate,UITableViewDataSource,BWGamePickerViewControllerDelegate,BWBRTStarsHeadViewDelegate>
 @property (nonatomic, strong) UITableView *mainTableView;
 @property (nonatomic, strong) BWBRTStarsHeadView *headView;
 @property (nonatomic, strong) BWBWBRTStarsFootView *footView;
@@ -33,13 +37,50 @@
 #pragma mark - func
 - (void)loadData{
     [self.mainTableView reloadData];
+    if (self.lastResRootModel) {
+        [self.mainTableView.refreshControl beginRefreshing];
+    }
     //获取上次开奖结果
     [self getLastBRTStarsResCompletion:^{
+        //获取中奖信息
+        [self getNewsCompletion:^{
+            if ([self.mainTableView.refreshControl isRefreshing]) {
+                [self.mainTableView.refreshControl endRefreshing];
+            }
+            if ([self.lastResRootModel.data.countdown integerValue] < 0) {
+                [self showWeakAlertWithString:@"正在開獎,請下拉刷新頁面"];
+            }
+            //获取游戏赔率
+            [self getGameOddsCompletion:^{
+                
+            }];
+        }];
+    }];
+    //獲取賬戶餘額
+    [self loadMyAsset];
+}
+#pragma mark 獲取遊戲賠率
+- (void)getGameOddsCompletion:(void (^ __nullable)(void))completion{
+    [BWDataSource getTheGameOddsSuccess:^(id  _Nonnull response) {
+        NSLog(@"%@",response);
+    } fail:^(NSError * _Nonnull error) {
         
     }];
-    //获取中奖信息
-    [self getNewsCompletion:^{
-        
+}
+#pragma mark 獲取餘額
+- (void)loadMyAsset{
+    [BWDataSource getUserAssetSuccess:^(id  _Nonnull response) {
+        BWUserAssetRootModel *userAssetRootModel = [BWUserAssetRootModel mj_objectWithKeyValues:response];
+        if (userAssetRootModel.errorCode == 0) {
+            BWUser *user = [BWUserManager shareManager].user;
+            user.asset = userAssetRootModel.data;
+            self.footView.userAssetLabel.text = [NSString stringWithFormat:@"錢包餘額 %@ BRT",user.asset];
+        }else{
+            
+            [self showNetErrorMessageWithStatus:userAssetRootModel.status errorCode:userAssetRootModel.errorCode errorMessage:userAssetRootModel.errorMsg];
+        }
+    } fail:^(NSError * _Nonnull error) {
+        [self showServerError];
     }];
 }
 - (void)getNewsCompletion:(void (^ __nullable)(void))completion{
@@ -58,10 +99,12 @@
 }
 - (void)getLastBRTStarsResCompletion:(void (^ __nullable)(void))completion{
     [BWDataSource getLastBRTStarsResSuccess:^(id  _Nonnull response) {
+        
         self.lastResRootModel = [BWBRTStarsLastResRootModel mj_objectWithKeyValues:response];
         if (self.lastResRootModel.errorCode == 0) {
             [self.mainTableView reloadData];
             self.headView.theLotteryResults = self.lastResRootModel.data.result;
+            self.headView.countdown = self.lastResRootModel.data.countdown;
         }else{
             [self showNetErrorMessageWithStatus:self.lastResRootModel.status errorCode:self.lastResRootModel.errorCode errorMessage:self.lastResRootModel.errorMsg];
         }
@@ -74,16 +117,21 @@
 #pragma mark - lazyload
 - (BWBRTStarsHeadView *)headView{
     if (!_headView) {
-        _headView = [[BWBRTStarsHeadView alloc] initWithFrame:(CGRectMake(0, 0, self.view.width, 400))];
+        _headView = [[BWBRTStarsHeadView alloc] initWithFrame:(CGRectMake(0, 0, self.view.width, 0))];
+        _headView.gameType = 1;
         [_headView.bettingRecordButton addTarget:self action:@selector(bettingRecordAction:) forControlEvents:(UIControlEventTouchUpInside)];
         [_headView.theLotteryRecordButton addTarget:self action:@selector(theLotteryRecordAction:) forControlEvents:(UIControlEventTouchUpInside)];
+        _headView.delegate = self;
         [_headView.gameButton addTarget:self action:@selector(gameButtonAction:) forControlEvents:(UIControlEventTouchUpInside)];
     }
     return _headView;
 }
 - (BWBWBRTStarsFootView *)footView{
     if (!_footView) {
-        _footView = [[BWBWBRTStarsFootView alloc] initWithFrame:(CGRectMake(0, 0, self.view.width, 400))];
+        _footView = [[BWBWBRTStarsFootView alloc] initWithFrame:(CGRectMake(0, 0, self.view.width, 462))];
+        
+        [_footView initSubViews];
+        [_footView.sendButton addTarget:self action:@selector(guessAction:) forControlEvents:(UIControlEventTouchUpInside)];
     }
     return _footView;
 }
@@ -96,24 +144,92 @@
         _mainTableView.tableHeaderView = self.headView;
         _mainTableView.tableFooterView = self.footView;
         _mainTableView.backgroundColor = [UIColor clearColor];
+        
+        UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+        refreshControl.tintColor = [UIColor whiteColor];
+//        refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"下拉刷新"];
+        [refreshControl addTarget:self action:@selector(loadData) forControlEvents:UIControlEventValueChanged];
+        self.mainTableView.refreshControl = refreshControl;
         [self.view addSubview:_mainTableView];
     }
     return _mainTableView;
 }
 #pragma mark - buttonAction
+- (void)guessAction:(UIButton *)sender{
+    if (stringIsEmpty(self.footView.betValueTextField.text)) {
+        [self showWeakAlertWithString:@"請輸入單注金額"];
+        return;
+    }
+    NSString *num1 = @"";
+    if (self.headView.gameType > 5) {
+        num1 = self.headView.gameStarsView2.resNumber;
+        if (stringIsEmpty(self.headView.gameStarsView2.resNumber)) {
+            [self showWeakAlertWithString:@"競猜信息不全"];
+            return;
+        }
+    }else{
+        if (stringIsEmpty(self.headView.gameStarsView1.greenView.resNumber) && stringIsEmpty(self.headView.gameStarsView1.blueView.resNumber)&& stringIsEmpty(self.headView.gameStarsView1.redView.resNumber)&& stringIsEmpty(self.headView.gameStarsView1.yellowView.resNumber)&& stringIsEmpty(self.headView.gameStarsView1.grayView.resNumber)) {
+            [self showWeakAlertWithString:@"競猜信息不全"];
+            return;
+        }
+        num1 = self.headView.gameStarsView1.greenView.resNumber;
+    }
+    NSInteger version = [self.lastResRootModel.data.ID integerValue];
+    NSString *term = [NSString stringWithFormat:@"%ld",version + 1];
+    [BWDataSource gameBetWithOnebase:self.footView.betValueTextField.text term:term multiple:self.footView.multipleTextField.text num1:num1 num2:self.headView.gameStarsView1.blueView.resNumber num3:self.headView.gameStarsView1.redView.resNumber num4:self.headView.gameStarsView1.yellowView.resNumber num5:self.headView.gameStarsView1.grayView.resNumber type:self.headView.gameType success:^(id  _Nonnull response) {
+        [self hiddenHUD];
+        BWCommonRootModel *root = [BWCommonRootModel mj_objectWithKeyValues:response];
+        if (root.errorCode == 0) {
+            [self showWeakAlertWithString:@"參加競猜成功"];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self loadData];
+            });
+        }else{
+            [self showNetErrorMessageWithStatus:root.status errorCode:root.errorCode errorMessage:root.errorMsg];
+        }
+    } fail:^(NSError * _Nonnull error) {
+        [self hiddenHUD];
+        [self showServerError];
+    }];
+}
 #pragma mark 选择游戏类型
 - (void)gameButtonAction:(UIButton *)sender{
-    
+    BWGamePickerViewController *vc = [[BWGamePickerViewController alloc] init];
+    vc.view.frame = CGRectMake(0, self.view.height - 244, SCREEN_WIDTH, 244);
+    vc.delegate = self;
+    [self customPresentVC:vc animation:(YHModaAnimationTypePresent) showBlackBackgroud:YES canTapDismiss:YES];
 }
 #pragma mark 查看开奖记录
 - (void)theLotteryRecordAction:(UIButton *)sender{
-    
+    BWLotteryRecordViewController *vc = [[BWLotteryRecordViewController alloc] init];
+    vc.view.frame = CGRectMake(0, 280, SCREEN_WIDTH,SCREEN_HEIGHT - 280);
+    [self customPresentVC:vc animation:(YHModaAnimationTypePresent) showBlackBackgroud:NO canTapDismiss:YES];
 }
 #pragma mark 查看投注记录
 - (void)bettingRecordAction:(UIButton *)sender{
+    BWBetRecordViewController *vc = [[BWBetRecordViewController alloc] init];
     
+    vc.view.frame = CGRectMake(0, 280, SCREEN_WIDTH,SCREEN_HEIGHT - 280);
+    
+    [self customPresentVC:vc animation:(YHModaAnimationTypePresent) showBlackBackgroud:NO canTapDismiss:YES];
 }
 #pragma mark - delegate
+#pragma mark BWBRTStarsHeadViewDelegate
+- (void)timeOver{
+    [self loadData];
+}
+#pragma mark - BWGamePickerViewControllerDelegate
+- (void)changeGameType:(NSInteger)type{
+    self.headView.gameType = type;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.mainTableView reloadData];
+    });
+}
+#pragma mark - UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 36;
+}
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 1;

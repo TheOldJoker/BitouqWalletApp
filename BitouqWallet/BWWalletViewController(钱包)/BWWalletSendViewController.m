@@ -204,6 +204,7 @@
     if (!cell) {
         cell = [[NSBundle mainBundle] loadNibNamed:@"BWWalletrecordTableViewCell" owner:self options:nil].firstObject;
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     BWWalletrecordModel *model = self.recordRootModel.data[indexPath.row];
     [cell setValueWithModel:model];
     return cell;

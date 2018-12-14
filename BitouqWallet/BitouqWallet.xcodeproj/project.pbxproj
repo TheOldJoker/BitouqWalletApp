@@ -82,6 +82,19 @@
 		AF24A67821C2772C0064EDC9 /* BWBRTStarsNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF24A67721C2772C0064EDC9 /* BWBRTStarsNewsModel.m */; };
 		AF24A67B21C277DE0064EDC9 /* BWNewsView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF24A67A21C277DE0064EDC9 /* BWNewsView.m */; };
 		AF24A67E21C280860064EDC9 /* BWTheLotteryResultsView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF24A67D21C280860064EDC9 /* BWTheLotteryResultsView.m */; };
+		AF474BEB21C37F1B00982C88 /* BWLotteryRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF474BEA21C37F1B00982C88 /* BWLotteryRecordViewController.m */; };
+		AF474BEE21C38AC800982C88 /* BWBRTStarsLotteryRecordRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF474BED21C38AC800982C88 /* BWBRTStarsLotteryRecordRootModel.m */; };
+		AF474BF121C38ADD00982C88 /* BWBRTStarsLotteryRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF474BF021C38ADD00982C88 /* BWBRTStarsLotteryRecordModel.m */; };
+		AF474BF821C38F0A00982C88 /* BWBRTLotteryRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF474BF621C38F0A00982C88 /* BWBRTLotteryRecordCell.m */; };
+		AF474BF921C38F0A00982C88 /* BWBRTLotteryRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF474BF721C38F0A00982C88 /* BWBRTLotteryRecordCell.xib */; };
+		AF474BFF21C3952E00982C88 /* BWBetRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF474BFE21C3952E00982C88 /* BWBetRecordViewController.m */; };
+		AF474C0221C396C200982C88 /* BWBRTRecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF474C0121C396C200982C88 /* BWBRTRecordView.m */; };
+		AF474C0521C3982A00982C88 /* BWBRTStarsBetRecordRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF474C0421C3982A00982C88 /* BWBRTStarsBetRecordRootModel.m */; };
+		AF474C0B21C3987200982C88 /* BWBRTStarsBetRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF474C0A21C3987200982C88 /* BWBRTStarsBetRecordModel.m */; };
+		AF474C0F21C39A5B00982C88 /* BWBetRecoredTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF474C0D21C39A5B00982C88 /* BWBetRecoredTableViewCell.m */; };
+		AF474C1021C39A5B00982C88 /* BWBetRecoredTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF474C0E21C39A5B00982C88 /* BWBetRecoredTableViewCell.xib */; };
+		AF474C1621C3B48E00982C88 /* BWGamePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF474C1521C3B48E00982C88 /* BWGamePickerViewController.m */; };
+		AF474C1921C3D07800982C88 /* BWBRTStarsGameGambleView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF474C1821C3D07800982C88 /* BWBRTStarsGameGambleView.m */; };
 		AF91BFA321BA6CDD003A423F /* BWRlueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF91BFA221BA6CDD003A423F /* BWRlueModel.m */; };
 		AFCECEF321B6B8220089E3AF /* BWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCECEF221B6B8220089E3AF /* BWBaseViewController.m */; };
 		AFCECEF621B6B9AB0089E3AF /* BWWalletOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCECEF521B6B9AB0089E3AF /* BWWalletOverviewViewController.m */; };
@@ -286,6 +299,30 @@
 		AF24A67A21C277DE0064EDC9 /* BWNewsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWNewsView.m; sourceTree = "<group>"; };
 		AF24A67C21C280860064EDC9 /* BWTheLotteryResultsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWTheLotteryResultsView.h; sourceTree = "<group>"; };
 		AF24A67D21C280860064EDC9 /* BWTheLotteryResultsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWTheLotteryResultsView.m; sourceTree = "<group>"; };
+		AF474BE921C37F1B00982C88 /* BWLotteryRecordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWLotteryRecordViewController.h; sourceTree = "<group>"; };
+		AF474BEA21C37F1B00982C88 /* BWLotteryRecordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWLotteryRecordViewController.m; sourceTree = "<group>"; };
+		AF474BEC21C38AC800982C88 /* BWBRTStarsLotteryRecordRootModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWBRTStarsLotteryRecordRootModel.h; sourceTree = "<group>"; };
+		AF474BED21C38AC800982C88 /* BWBRTStarsLotteryRecordRootModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWBRTStarsLotteryRecordRootModel.m; sourceTree = "<group>"; };
+		AF474BEF21C38ADD00982C88 /* BWBRTStarsLotteryRecordModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWBRTStarsLotteryRecordModel.h; sourceTree = "<group>"; };
+		AF474BF021C38ADD00982C88 /* BWBRTStarsLotteryRecordModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWBRTStarsLotteryRecordModel.m; sourceTree = "<group>"; };
+		AF474BF521C38F0A00982C88 /* BWBRTLotteryRecordCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWBRTLotteryRecordCell.h; sourceTree = "<group>"; };
+		AF474BF621C38F0A00982C88 /* BWBRTLotteryRecordCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWBRTLotteryRecordCell.m; sourceTree = "<group>"; };
+		AF474BF721C38F0A00982C88 /* BWBRTLotteryRecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWBRTLotteryRecordCell.xib; sourceTree = "<group>"; };
+		AF474BFD21C3952E00982C88 /* BWBetRecordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWBetRecordViewController.h; sourceTree = "<group>"; };
+		AF474BFE21C3952E00982C88 /* BWBetRecordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWBetRecordViewController.m; sourceTree = "<group>"; };
+		AF474C0021C396C200982C88 /* BWBRTRecordView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWBRTRecordView.h; sourceTree = "<group>"; };
+		AF474C0121C396C200982C88 /* BWBRTRecordView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWBRTRecordView.m; sourceTree = "<group>"; };
+		AF474C0321C3982A00982C88 /* BWBRTStarsBetRecordRootModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWBRTStarsBetRecordRootModel.h; sourceTree = "<group>"; };
+		AF474C0421C3982A00982C88 /* BWBRTStarsBetRecordRootModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWBRTStarsBetRecordRootModel.m; sourceTree = "<group>"; };
+		AF474C0921C3987200982C88 /* BWBRTStarsBetRecordModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWBRTStarsBetRecordModel.h; sourceTree = "<group>"; };
+		AF474C0A21C3987200982C88 /* BWBRTStarsBetRecordModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWBRTStarsBetRecordModel.m; sourceTree = "<group>"; };
+		AF474C0C21C39A5B00982C88 /* BWBetRecoredTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWBetRecoredTableViewCell.h; sourceTree = "<group>"; };
+		AF474C0D21C39A5B00982C88 /* BWBetRecoredTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWBetRecoredTableViewCell.m; sourceTree = "<group>"; };
+		AF474C0E21C39A5B00982C88 /* BWBetRecoredTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWBetRecoredTableViewCell.xib; sourceTree = "<group>"; };
+		AF474C1421C3B48E00982C88 /* BWGamePickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWGamePickerViewController.h; sourceTree = "<group>"; };
+		AF474C1521C3B48E00982C88 /* BWGamePickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWGamePickerViewController.m; sourceTree = "<group>"; };
+		AF474C1721C3D07800982C88 /* BWBRTStarsGameGambleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWBRTStarsGameGambleView.h; sourceTree = "<group>"; };
+		AF474C1821C3D07800982C88 /* BWBRTStarsGameGambleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWBRTStarsGameGambleView.m; sourceTree = "<group>"; };
 		AF91BFA121BA6CDD003A423F /* BWRlueModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWRlueModel.h; sourceTree = "<group>"; };
 		AF91BFA221BA6CDD003A423F /* BWRlueModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWRlueModel.m; sourceTree = "<group>"; };
 		AFCECEF121B6B8220089E3AF /* BWBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWBaseViewController.h; sourceTree = "<group>"; };
@@ -568,6 +605,12 @@
 				AF24A66021C24B4D0064EDC9 /* view */,
 				AF09B76A21AD797500B9E1E4 /* BWBRTStarsViewController.h */,
 				AF09B76B21AD797500B9E1E4 /* BWBRTStarsViewController.m */,
+				AF474BE921C37F1B00982C88 /* BWLotteryRecordViewController.h */,
+				AF474BEA21C37F1B00982C88 /* BWLotteryRecordViewController.m */,
+				AF474BFD21C3952E00982C88 /* BWBetRecordViewController.h */,
+				AF474BFE21C3952E00982C88 /* BWBetRecordViewController.m */,
+				AF474C1421C3B48E00982C88 /* BWGamePickerViewController.h */,
+				AF474C1521C3B48E00982C88 /* BWGamePickerViewController.m */,
 			);
 			path = "BWBRTStarsViewController(BRTStars)";
 			sourceTree = "<group>";
@@ -782,12 +825,22 @@
 				AF24A66321C24B890064EDC9 /* BWBRTStarsTableViewCell.xib */,
 				AF24A66621C24CE30064EDC9 /* BWBRTStarsHeadView.h */,
 				AF24A66721C24CE30064EDC9 /* BWBRTStarsHeadView.m */,
+				AF474C1721C3D07800982C88 /* BWBRTStarsGameGambleView.h */,
+				AF474C1821C3D07800982C88 /* BWBRTStarsGameGambleView.m */,
 				AF24A67C21C280860064EDC9 /* BWTheLotteryResultsView.h */,
 				AF24A67D21C280860064EDC9 /* BWTheLotteryResultsView.m */,
 				AF24A66921C24CF20064EDC9 /* BWBWBRTStarsFootView.h */,
 				AF24A66A21C24CF20064EDC9 /* BWBWBRTStarsFootView.m */,
 				AF24A67921C277DE0064EDC9 /* BWNewsView.h */,
 				AF24A67A21C277DE0064EDC9 /* BWNewsView.m */,
+				AF474C0021C396C200982C88 /* BWBRTRecordView.h */,
+				AF474C0121C396C200982C88 /* BWBRTRecordView.m */,
+				AF474C0C21C39A5B00982C88 /* BWBetRecoredTableViewCell.h */,
+				AF474C0D21C39A5B00982C88 /* BWBetRecoredTableViewCell.m */,
+				AF474C0E21C39A5B00982C88 /* BWBetRecoredTableViewCell.xib */,
+				AF474BF521C38F0A00982C88 /* BWBRTLotteryRecordCell.h */,
+				AF474BF621C38F0A00982C88 /* BWBRTLotteryRecordCell.m */,
+				AF474BF721C38F0A00982C88 /* BWBRTLotteryRecordCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -803,6 +856,14 @@
 				AF24A67421C2771F0064EDC9 /* BWBRTStarsNewsRootModel.m */,
 				AF24A67621C2772C0064EDC9 /* BWBRTStarsNewsModel.h */,
 				AF24A67721C2772C0064EDC9 /* BWBRTStarsNewsModel.m */,
+				AF474BEC21C38AC800982C88 /* BWBRTStarsLotteryRecordRootModel.h */,
+				AF474BED21C38AC800982C88 /* BWBRTStarsLotteryRecordRootModel.m */,
+				AF474BEF21C38ADD00982C88 /* BWBRTStarsLotteryRecordModel.h */,
+				AF474BF021C38ADD00982C88 /* BWBRTStarsLotteryRecordModel.m */,
+				AF474C0321C3982A00982C88 /* BWBRTStarsBetRecordRootModel.h */,
+				AF474C0421C3982A00982C88 /* BWBRTStarsBetRecordRootModel.m */,
+				AF474C0921C3987200982C88 /* BWBRTStarsBetRecordModel.h */,
+				AF474C0A21C3987200982C88 /* BWBRTStarsBetRecordModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1067,8 +1128,10 @@
 				AFE2FA4A21BA66A1005F7A84 /* BWRlueTableViewCell.xib in Resources */,
 				AFCECF1421B81E490089E3AF /* BWWalletrecordTableViewCell.xib in Resources */,
 				AF09B78C21AD7BFD00B9E1E4 /* rlue.storyboard in Resources */,
+				AF474BF921C38F0A00982C88 /* BWBRTLotteryRecordCell.xib in Resources */,
 				AF06701621AE37AD00F23D22 /* BWMenuViewController.xib in Resources */,
 				AF12738E21BEAB7C002E55C2 /* BWMiningErrorView.xib in Resources */,
+				AF474C1021C39A5B00982C88 /* BWBetRecoredTableViewCell.xib in Resources */,
 				AF09B76321AD78AA00B9E1E4 /* wallet.storyboard in Resources */,
 				AF12739821BF54E7002E55C2 /* BWVoteTableViewCell.xib in Resources */,
 				AF09B77E21AD7A0900B9E1E4 /* BRTStars.storyboard in Resources */,
@@ -1162,6 +1225,7 @@
 				AF24A67521C2771F0064EDC9 /* BWBRTStarsNewsRootModel.m in Sources */,
 				AF09B76921AD795B00B9E1E4 /* BWWalletViewController.m in Sources */,
 				AFCECEFC21B6B9D80089E3AF /* BWWalletGetViewController.m in Sources */,
+				AF474C0B21C3987200982C88 /* BWBRTStarsBetRecordModel.m in Sources */,
 				AF24A66421C24B890064EDC9 /* BWBRTStarsTableViewCell.m in Sources */,
 				AFE2FA2B21BA06E1005F7A84 /* BWWalletActivityModel.m in Sources */,
 				AF12737421BE7810002E55C2 /* BWMiningProductionViewController.m in Sources */,
@@ -1174,12 +1238,14 @@
 				AF06704A21AECF0E00F23D22 /* UIViewController+YHModaTransitonHelper.m in Sources */,
 				AF12739121BEC6D1002E55C2 /* BWMiningVoteHeadView.m in Sources */,
 				AFE2FA3821BA5008005F7A84 /* BWWalletrecordRootModel.m in Sources */,
+				AF474BF821C38F0A00982C88 /* BWBRTLotteryRecordCell.m in Sources */,
 				AF09B73321AD6EAB00B9E1E4 /* main.m in Sources */,
 				AF09B77821AD79C500B9E1E4 /* BWDuplicateViewController.m in Sources */,
 				AF06701021AE324D00F23D22 /* YHBaseNavigationController.m in Sources */,
 				AF1273AB21BFDB7A002E55C2 /* BWDicelastWinerRootModel.m in Sources */,
 				AF1273B221C00C96002E55C2 /* BWDiceLastWinerView.m in Sources */,
 				AFCECF0921B7D4080089E3AF /* BWGlobalconst.m in Sources */,
+				AF474C1921C3D07800982C88 /* BWBRTStarsGameGambleView.m in Sources */,
 				AFE2FA2821BA06CD005F7A84 /* BWWalletActivityRootModel.m in Sources */,
 				AFCECF0C21B7D4A60089E3AF /* BWWalletSendHeadView.m in Sources */,
 				AF12739B21BF6739002E55C2 /* BWMyMiningAgeRootModel.m in Sources */,
@@ -1199,6 +1265,7 @@
 				AF06704821AECF0E00F23D22 /* YHCAAimationModalTransition.m in Sources */,
 				AF12740621C1659E002E55C2 /* YHGesturePasswordView.m in Sources */,
 				AFE2FA1E21B957F3005F7A84 /* BWLoginCreateKeyRootModel.m in Sources */,
+				AF474C0521C3982A00982C88 /* BWBRTStarsBetRecordRootModel.m in Sources */,
 				AFEBA7D221B4227F00F5ECEF /* YYMemoryCache.m in Sources */,
 				AF24A66821C24CE30064EDC9 /* BWBRTStarsHeadView.m in Sources */,
 				AFEBA7B721B40A7700F5ECEF /* BWLoginPrivatekeyViewController.m in Sources */,
@@ -1206,9 +1273,12 @@
 				AF24A66B21C24CF20064EDC9 /* BWBWBRTStarsFootView.m in Sources */,
 				AF1273AE21BFDB8B002E55C2 /* BWDicelastWinerModel.m in Sources */,
 				AF09B77221AD799C00B9E1E4 /* BWMiningViewController.m in Sources */,
+				AF474BEB21C37F1B00982C88 /* BWLotteryRecordViewController.m in Sources */,
 				AFE2FA3521BA4B6A005F7A84 /* BWWalletDefaultservicefeeRootModel.m in Sources */,
 				AFCECF1321B81E490089E3AF /* BWWalletrecordTableViewCell.m in Sources */,
+				AF474BFF21C3952E00982C88 /* BWBetRecordViewController.m in Sources */,
 				AFEBA7AF21B17A8100F5ECEF /* BWMenuButton.m in Sources */,
+				AF474BF121C38ADD00982C88 /* BWBRTStarsLotteryRecordModel.m in Sources */,
 				AFEBA7BD21B4193700F5ECEF /* BWLoginLeadPrivatekeyViewController.m in Sources */,
 				AF12738621BE8FFF002E55C2 /* BWMiningOwnerNumbersView.m in Sources */,
 				AF09B72521AD6EAB00B9E1E4 /* AppDelegate.m in Sources */,
@@ -1220,6 +1290,7 @@
 				AF09B76C21AD797500B9E1E4 /* BWBRTStarsViewController.m in Sources */,
 				AFEBA7BA21B4139100F5ECEF /* BWLoginSuccessViewController.m in Sources */,
 				AF12738C21BEAB6E002E55C2 /* BWMiningErrorView.m in Sources */,
+				AF474C0F21C39A5B00982C88 /* BWBetRecoredTableViewCell.m in Sources */,
 				AF12736421BE663E002E55C2 /* BWRecordTableViewCell.m in Sources */,
 				AF12736C21BE680F002E55C2 /* BWRecordModel.m in Sources */,
 				AF12737121BE77EC002E55C2 /* BWMiningVoteViewController.m in Sources */,
@@ -1237,6 +1308,9 @@
 				AF06704921AECF0E00F23D22 /* YHAnimationManager.m in Sources */,
 				AFE2FA3B21BA5017005F7A84 /* BWWalletrecordModel.m in Sources */,
 				AFE2FA4121BA5B94005F7A84 /* BWCodeScanViewController.m in Sources */,
+				AF474C0221C396C200982C88 /* BWBRTRecordView.m in Sources */,
+				AF474C1621C3B48E00982C88 /* BWGamePickerViewController.m in Sources */,
+				AF474BEE21C38AC800982C88 /* BWBRTStarsLotteryRecordRootModel.m in Sources */,
 				AF06704721AECF0E00F23D22 /* YHPresentationController.m in Sources */,
 				AF09B76621AD790600B9E1E4 /* BWTabBarController.m in Sources */,
 				AF12739E21BF674B002E55C2 /* BWMyMiningAgeModel.m in Sources */,

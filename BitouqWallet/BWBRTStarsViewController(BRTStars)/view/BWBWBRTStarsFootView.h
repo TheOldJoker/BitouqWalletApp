@@ -11,7 +11,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BWBWBRTStarsFootView : UIView
-
+@property (strong, nonatomic) UITextField *betValueTextField;
+@property (strong, nonatomic) UITextField *multipleTextField;
+@property (strong, nonatomic) UILabel *userAssetLabel;
+@property (nonatomic, strong) UIButton *sendButton;
+@property (nonatomic, assign) NSInteger gameType;
+- (void)initSubViews;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -12,14 +12,64 @@
 #import "BWTheLotteryResultsView.h"
 @interface BWBRTStarsHeadView()
 @property (nonatomic, strong) BWTheLotteryResultsView *theLotteryResultsView;//中奖结果
-@property (nonatomic, strong) UILabel *timerLabel;//计时器
+@property (nonatomic, strong) UILabel *timerLabel;//计时
 @property (nonatomic, strong) BWNewsView *publishedLabel;//中奖公告
-
+@property (nonatomic, strong) NSTimer * myTimer;//開獎倒計時
+@property (nonatomic, assign) NSInteger myTime;
 @end
 @implementation BWBRTStarsHeadView
 #pragma mark - func
-
+- (void)setCountdownTimer:(NSInteger)time{
+    self.myTime = time;
+    NSInteger day = time / 24 / 3600;
+    NSInteger hour = (time - day * 24 * 3600)/3600;
+    NSInteger min = (time - day * 24 * 3600 - hour * 3600)/60;
+    NSInteger second = time - day * 24 * 3600 - hour * 3600 - min * 60;
+    if (time <= 0) {
+        time = 0;
+        [self.myTimer invalidate];
+        self.myTimer = nil;
+        self.timerLabel.text = @"00:00:00";
+        if ([self.delegate respondsToSelector:@selector(timeOver)]) {
+            [self.delegate timeOver];
+        }
+    }
+    self.timerLabel.text = [NSString stringWithFormat:@"%02ld:%02ld:%02ld",hour,min,second];
+}
+- (void)countdownFunc {
+    self.myTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(setCountdownValue) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:self.myTimer forMode:UITrackingRunLoopMode];
+}
+- (void)setCountdownValue {
+    self.myTime -= 1;
+    self.myTime = MAX(0, self.myTime);
+    [self setCountdownTimer:self.myTime];
+}
 #pragma mark - lazyload
+- (BWBRTStarsGameGambleView *)gameStarsView2{
+    if (!_gameStarsView2) {
+        _gameStarsView2 = [[BWBRTStarsGameGambleView alloc] initWithFrame:(CGRectMake(0, self.gameButton.bottom + 20, 304, 60))];
+        _gameStarsView2.centerX = self.width / 2;
+        [_gameStarsView2 initSubViews];
+        [_gameStarsView2 setNumbersSelected:NO];
+        [self addSubview:_gameStarsView2];
+    }
+    return _gameStarsView2;
+}
+- (BWMiningOwnerNumbersView *)gameStarsView1{
+    if (!_gameStarsView1) {
+        _gameStarsView1 = [[BWMiningOwnerNumbersView alloc] initWithFrame:(CGRectMake(0, self.gameButton.bottom + 20, 304, 165))];
+        _gameStarsView1.centerX = self.width / 2;
+        [_gameStarsView1 initSubViews];
+        [_gameStarsView1.greenView setNumbersSelected:NO];
+        [_gameStarsView1.blueView setNumbersSelected:NO];
+        [_gameStarsView1.redView setNumbersSelected:NO];
+        [_gameStarsView1.yellowView setNumbersSelected:NO];
+        [_gameStarsView1.grayView setNumbersSelected:NO];
+        [self addSubview:_gameStarsView1];
+    }
+    return _gameStarsView1;
+}
 - (UIButton *)gameButton{
     if (!_gameButton) {
         _gameButton = [[UIButton alloc] initWithFrame:(CGRectMake(self.currentBettingButton.x, self.currentBettingButton.bottom + 12, 80, 30))];
@@ -110,10 +160,52 @@
 }
 #pragma mark - buttonAction
 #pragma mark - setter
+- (void)setGameType:(NSInteger)gameType{
+    _gameType = gameType;
+    NSArray *dataArray = @[@"1星競猜",@"2星競猜",@"3星競猜",@"4星競猜",@"5星競猜",@"前置3星任選",@"前置3星雙殺",@"前置3星豹子"];
+    [self.gameButton setTitle:dataArray[gameType - 1] forState:(UIControlStateNormal)];
+    if (gameType > 5) {
+        self.gameButton.width = 130;
+    }else{
+        self.gameButton.width = 80;
+    }
+    self.gameButton.centerX = self.width / 2;
+    
+    //游戏方式
+    if (gameType < 6) {
+        //1~5星游戏
+        self.gameStarsView1.hidden = NO;
+        self.gameStarsView2.hidden = YES;
+        [self.gameStarsView1.greenView setNumbersSelected:NO];
+        [self.gameStarsView1.blueView setNumbersSelected:NO];
+        [self.gameStarsView1.redView setNumbersSelected:NO];
+        [self.gameStarsView1.yellowView setNumbersSelected:NO];
+        [self.gameStarsView1.grayView setNumbersSelected:NO];
+        self.height = self.gameStarsView1.bottom + 5;
+    }else{
+        //3星特殊游戏
+        self.gameStarsView1.hidden = YES;
+        self.gameStarsView2.hidden = NO;
+        [self.gameStarsView2 setNumbersSelected:NO];
+        self.height = self.gameStarsView2.bottom + 5;
+    }
+}
+- (void)setCountdown:(NSString *)countdown{
+    if (_countdown != countdown) {
+        [self.myTimer invalidate];
+        self.myTimer = nil;
+        _countdown = countdown;
+        if ([countdown integerValue] < 0) {
+            self.timerLabel.text = @"00:00:00";
+        }else{
+            [self setCountdownTimer:[countdown integerValue]];
+            [self countdownFunc];
+        }
+    }
+}
 - (void)setTheLotteryResults:(NSString *)theLotteryResults{
     if (_theLotteryResults != theLotteryResults) {
         _theLotteryResults = theLotteryResults;
-        
         self.theLotteryResultsView.showNumber = theLotteryResults;
     }
 }

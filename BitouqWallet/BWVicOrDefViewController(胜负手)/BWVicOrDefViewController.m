@@ -74,6 +74,7 @@
     //獲取賬戶餘額
     [self loadMyAsset];
 }
+
 #pragma mark 獲取餘額
 - (void)loadMyAsset{
     [BWDataSource getUserAssetSuccess:^(id  _Nonnull response) {
@@ -83,6 +84,7 @@
             user.asset = userAssetRootModel.data;
             self.diceBetView.userAssetLabel.text = [NSString stringWithFormat:@"錢包餘額 %@ BRT",user.asset];
         }else{
+            
             [self showNetErrorMessageWithStatus:userAssetRootModel.status errorCode:userAssetRootModel.errorCode errorMessage:userAssetRootModel.errorMsg];
         }
     } fail:^(NSError * _Nonnull error) {
@@ -134,6 +136,7 @@
         if (self.diceRootModel.errorCode == 0) {
             //中奖结果
             self.lastWinerView.mainContentLabel.text = self.diceRootModel.data.result;
+            
         }else{
             [self showNetErrorMessageWithStatus:self.diceRootModel.status errorCode:self.diceRootModel.errorCode errorMessage:self.diceRootModel.errorMsg];
         }
@@ -206,9 +209,12 @@
 #pragma mark - buttonAction
 #pragma mark 投票
 - (void)diceButtonAction:(UIButton *)sender{
-    [self showHUDWithAlert:@"正在提交..."];
+    
+    if (stringIsEmpty(self.diceBetView.betValueTextField.text)) {
+        [self showWeakAlertWithString:@"請輸入投注金額"];
+        return;
+    }
     [self commitDiceCompletion:^{
-        [self hiddenHUD];
         self.diceBetView.betValueTextField.text = nil;
         //上次选择结果
         if (!stringIsEmpty(self.diceRootModel.data.guess)) {
@@ -217,6 +223,11 @@
         }
         //獲取賬戶餘額
         [self loadMyAsset];
+        if (self.diceRootModel.data.win) {
+            [self showWeakAlertWithString:@"恭喜！您獲勝了"];
+        }else{
+            [self showWeakAlertWithString:@"很遺憾，您失敗了"];
+        }
     }];
 }
 - (void)sliderAction:(UISlider *)sender{

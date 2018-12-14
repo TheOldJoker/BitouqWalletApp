@@ -1,8 +1,8 @@
 //
-//  BWBRTStarsLastResModel.h
+//  BWBRTStarsLotteryRecordModel.h
 //  BitouqWallet
 //
-//  Created by 赵一欢 on 2018/12/13.
+//  Created by 赵一欢 on 2018/12/14.
 //  Copyright © 2018 Joker. All rights reserved.
 //
 
@@ -10,12 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BWBRTStarsLastResModel : NSObject
+@interface BWBRTStarsLotteryRecordModel : NSObject
 @property (nonatomic, copy) NSString *createtime;//开奖时间
 @property (nonatomic, copy) NSString *ID;//开奖期数
 @property (nonatomic, copy) NSString *miningpubkey;//开奖用户
 @property (nonatomic, copy) NSString *result;//开奖结果
-@property (nonatomic, copy) NSString *countdown;//距离下一次开奖时间
 @end
 
 NS_ASSUME_NONNULL_END

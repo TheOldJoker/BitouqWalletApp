@@ -36,13 +36,23 @@
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_background" translatesAutoresizingMaskIntoConstraints="NO" id="FpZ-QD-jKu">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X4t-QK-KHJ">
+                                <rect key="frame" x="0.0" y="662" width="375" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="W5b-co-3HL"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="FpZ-QD-jKu" firstAttribute="top" secondItem="jgP-AM-pLv" secondAttribute="top" id="LZO-kc-tXE"/>
                             <constraint firstAttribute="bottom" secondItem="FpZ-QD-jKu" secondAttribute="bottom" id="May-Ld-9Zo"/>
+                            <constraint firstItem="X4t-QK-KHJ" firstAttribute="leading" secondItem="TeV-3i-k3r" secondAttribute="leading" id="SQ7-6M-rXv"/>
                             <constraint firstItem="FpZ-QD-jKu" firstAttribute="trailing" secondItem="TeV-3i-k3r" secondAttribute="trailing" id="UF1-4c-ocI"/>
+                            <constraint firstItem="TeV-3i-k3r" firstAttribute="trailing" secondItem="X4t-QK-KHJ" secondAttribute="trailing" id="Z3n-eX-53D"/>
                             <constraint firstItem="FpZ-QD-jKu" firstAttribute="leading" secondItem="TeV-3i-k3r" secondAttribute="leading" id="vHD-4w-Zq4"/>
+                            <constraint firstAttribute="bottom" secondItem="X4t-QK-KHJ" secondAttribute="bottom" id="xfK-kY-uQ5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TeV-3i-k3r"/>
                     </view>
