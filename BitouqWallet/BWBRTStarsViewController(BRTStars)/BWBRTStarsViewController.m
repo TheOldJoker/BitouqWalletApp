@@ -62,9 +62,14 @@
 #pragma mark 獲取遊戲賠率
 - (void)getGameOddsCompletion:(void (^ __nullable)(void))completion{
     [BWDataSource getTheGameOddsSuccess:^(id  _Nonnull response) {
-        NSLog(@"%@",response);
+        BWCommonRootModel *root = [BWCommonRootModel mj_objectWithKeyValues:response];
+        if (root.errorCode == 0) {
+            self.footView.gameOdds = response[@"data"];
+        }else{
+            [self showNetErrorMessageWithStatus:root.status errorCode:root.errorCode errorMessage:root.errorMsg];
+        }
     } fail:^(NSError * _Nonnull error) {
-        
+        [self showServerError];
     }];
 }
 #pragma mark 獲取餘額
@@ -118,6 +123,7 @@
 - (BWBRTStarsHeadView *)headView{
     if (!_headView) {
         _headView = [[BWBRTStarsHeadView alloc] initWithFrame:(CGRectMake(0, 0, self.view.width, 0))];
+        [_headView initSubviews];
         _headView.gameType = 1;
         [_headView.bettingRecordButton addTarget:self action:@selector(bettingRecordAction:) forControlEvents:(UIControlEventTouchUpInside)];
         [_headView.theLotteryRecordButton addTarget:self action:@selector(theLotteryRecordAction:) forControlEvents:(UIControlEventTouchUpInside)];
@@ -129,7 +135,7 @@
 - (BWBWBRTStarsFootView *)footView{
     if (!_footView) {
         _footView = [[BWBWBRTStarsFootView alloc] initWithFrame:(CGRectMake(0, 0, self.view.width, 462))];
-        
+        _footView.gameType = 1;
         [_footView initSubViews];
         [_footView.sendButton addTarget:self action:@selector(guessAction:) forControlEvents:(UIControlEventTouchUpInside)];
     }
@@ -218,9 +224,27 @@
 - (void)timeOver{
     [self loadData];
 }
+- (void)userPressNumbers{
+    //@"前置3星任選",@"前置3星雙殺",@"前置3星豹子"
+    if (self.headView.gameType > 5) {
+        BWGameArithmeticModel *gameArithmetic = [[BWGameArithmeticModel alloc] init];
+        gameArithmetic.specialNum = self.headView.gameStarsView2.resNumber;
+        self.footView.gameArithmetic = gameArithmetic;
+        return;
+    }
+    //@"1星競猜",@"2星競猜",@"3星競猜",@"4星競猜",@"5星競猜"
+    BWGameArithmeticModel *gameArithmetic = [[BWGameArithmeticModel alloc] init];
+    gameArithmetic.num1 = self.headView.gameStarsView1.greenView.resNumber;
+    gameArithmetic.num2 = self.headView.gameStarsView1.blueView.resNumber;
+    gameArithmetic.num3 = self.headView.gameStarsView1.redView.resNumber;
+    gameArithmetic.num4 = self.headView.gameStarsView1.yellowView.resNumber;
+    gameArithmetic.num5 = self.headView.gameStarsView1.grayView.resNumber;
+    self.footView.gameArithmetic = gameArithmetic;
+}
 #pragma mark - BWGamePickerViewControllerDelegate
 - (void)changeGameType:(NSInteger)type{
     self.headView.gameType = type;
+    self.footView.gameType = type;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.mainTableView reloadData];
     });

@@ -64,6 +64,9 @@
         [self.selectedButtons removeObject:sender];
         sender.backgroundColor = [UIColor whiteColor];
     }
+    if ([self.delegate respondsToSelector:@selector(statusChange)]) {
+        [self.delegate statusChange];
+    }
 }
 - (void)mainButtonAction:(UIButton *)sender{
     
@@ -84,6 +87,9 @@
             tempButton.selected = NO;
             tempButton.backgroundColor = [UIColor whiteColor];
         }
+    }
+    if ([self.delegate respondsToSelector:@selector(statusChange)]) {
+        [self.delegate statusChange];
     }
 }
 - (void)setMainColor:(UIColor *)mainColor{

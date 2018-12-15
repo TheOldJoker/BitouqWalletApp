@@ -9,8 +9,13 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
+@protocol BWNumberSelectedViewDelegate <NSObject>
+@optional
+- (void)statusChange;
 
+@end
 @interface BWNumberSelectedView : UIView
+@property (nonatomic, weak) id<BWNumberSelectedViewDelegate> delegate;
 @property (nonatomic, strong) UIColor *mainColor;
 @property (nonatomic, copy, readonly) NSString *resNumber;
 - (void)initSubViews;

@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol BWBRTStarsHeadViewDelegate <NSObject>
 
 - (void)timeOver;
+- (void)userPressNumbers;
 
 @end
 @interface BWBRTStarsHeadView : UIView
@@ -27,6 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSInteger gameType;//1->(1-5星),2->(3星玩法)
 @property (nonatomic, strong) BWMiningOwnerNumbersView *gameStarsView1;//1~5星
 @property (nonatomic, strong) BWBRTStarsGameGambleView *gameStarsView2;//3星玩法
+- (void)initSubviews;
 @end
 
 NS_ASSUME_NONNULL_END

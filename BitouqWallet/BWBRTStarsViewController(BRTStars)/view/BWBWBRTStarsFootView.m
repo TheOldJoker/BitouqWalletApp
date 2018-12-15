@@ -28,10 +28,35 @@
     self.multipleTextField.placeholder = @"请输入投注倍数";
     self.multipleTextField.text = @"1";
     self.sendButton.userInteractionEnabled = YES;
-    
-    self.stakesNumberLabel.text = @"已選擇 100 注，共 100,000.8888 BRT";
-    self.bonusLabel.text = @"期望獎金：90.1234 BRT";
+    [self reloadData];
 }
+- (void)setStakesValue:(NSString *)stakes total:(NSString *)total bonus:(NSString *)bonus{
+    self.stakesNumberLabel.text = [NSString stringWithFormat:@"已選擇 %@ 注，共 %@ BRT",stakes,total];
+    self.bonusLabel.text = [NSString stringWithFormat:@"期望獎金：%@ BRT",bonus];
+}
+- (void)reloadData{
+    [self setStakesValue:@"0" total:@"0" bonus:@"0"];
+    if (self.gameArithmetic == nil) {
+        return;
+    }
+    if (self.gameOdds == nil) {
+        return;
+    }
+    //投注数量
+    NSString *stakesString = [self.gameArithmetic getBetWithGameType:self.gameType];
+    //注数 * 单注金额 * 投注倍数
+    NSInteger stakes = [[self.gameArithmetic getBetWithGameType:self.gameType] integerValue];
+    double singleBet = stringIsEmpty(self.betValueTextField.text) ? 0 : [self.betValueTextField.text doubleValue];
+    NSString *totalString = [NSString stringWithFormat:@"%.4lf",stakes * singleBet * [self.multipleTextField.text integerValue]];
+    //期望奖金 = 赔率*投注倍数*单注金额*理论中奖次数n
+    //赔率
+    double gameOdds = [[self.gameOdds valueForKey:[NSString stringWithFormat:@"%ld",self.gameType]] doubleValue];
+    //理论中奖n
+    NSInteger n = [self.gameArithmetic getWinNWithGameType:self.gameType];
+    NSString *bonusString = [NSString stringWithFormat:@"%.4lf",gameOdds * [self.multipleTextField.text integerValue] * singleBet * n];
+    [self setStakesValue:stakesString total:totalString bonus:bonusString];
+}
+
 - (UIButton *)sendButton{
     if (!_sendButton) {
         _sendButton = [[UIButton alloc] initWithFrame:(CGRectMake(self.width - 160, 213, 160, 50))];
@@ -147,6 +172,7 @@
             self.multipleTextField.text = @"1";
         }
     }
+    [self reloadData];
 }
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
@@ -159,5 +185,17 @@
 }
 - (void)setGameType:(NSInteger)gameType{
     _gameType = gameType;
+    [self setStakesValue:@"0" total:@"0" bonus:@"0"];
+}
+- (void)setGameOdds:(NSDictionary *)gameOdds{
+    _gameOdds = gameOdds;
+    [self reloadData];
+}
+- (void)setGameArithmetic:(BWGameArithmeticModel *)gameArithmetic{
+    if (_gameArithmetic == gameArithmetic) {
+        return;
+    }
+    _gameArithmetic = gameArithmetic;
+    [self reloadData];
 }
 @end

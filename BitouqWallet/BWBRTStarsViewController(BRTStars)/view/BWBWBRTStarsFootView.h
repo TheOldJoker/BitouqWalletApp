@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "BWGameArithmeticModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BWBWBRTStarsFootView : UIView
@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) UILabel *userAssetLabel;
 @property (nonatomic, strong) UIButton *sendButton;
 @property (nonatomic, assign) NSInteger gameType;
+@property (nonatomic, strong) NSDictionary *gameOdds;//游戏赔率
+@property (nonatomic, strong) BWGameArithmeticModel *gameArithmetic;
 - (void)initSubViews;
 @end
 

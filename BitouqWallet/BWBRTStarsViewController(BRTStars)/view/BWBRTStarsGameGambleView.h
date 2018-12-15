@@ -9,8 +9,13 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
+@protocol BWBRTStarsGameGambleViewDelegate <NSObject>
 
+- (void)gameGambleNumberChange;
+
+@end
 @interface BWBRTStarsGameGambleView : UIView
+@property (nonatomic, weak) id<BWBRTStarsGameGambleViewDelegate> delegate;
 @property (nonatomic, copy, readonly) NSString *resNumber;
 - (void)initSubViews;
 - (void)setNumbersSelected:(BOOL)selected;

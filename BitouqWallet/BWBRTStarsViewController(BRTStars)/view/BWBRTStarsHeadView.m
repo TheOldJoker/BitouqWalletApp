@@ -10,15 +10,22 @@
 #import "BWNewsView.h"
 #import "BWBRTStarsNewsModel.h"
 #import "BWTheLotteryResultsView.h"
-@interface BWBRTStarsHeadView()
+@interface BWBRTStarsHeadView()<BWMiningOwnerNumbersViewDelegate,BWBRTStarsGameGambleViewDelegate>
 @property (nonatomic, strong) BWTheLotteryResultsView *theLotteryResultsView;//中奖结果
 @property (nonatomic, strong) UILabel *timerLabel;//计时
 @property (nonatomic, strong) BWNewsView *publishedLabel;//中奖公告
 @property (nonatomic, strong) NSTimer * myTimer;//開獎倒計時
 @property (nonatomic, assign) NSInteger myTime;
+//@property (nonatomic, strong) UIImageView *mainBackImageView;
 @end
 @implementation BWBRTStarsHeadView
 #pragma mark - func
+- (void)initSubviews{
+//    self.mainBackImageView = [[UIImageView alloc] initWithFrame:(CGRectMake(0, 0, self.width, self.height))];
+//    self.mainBackImageView.image = [UIImage imageNamed:@"main_background"];
+//    self.mainBackImageView.contentMode = UIViewContentModeTop;
+//    [self addSubview:self.mainBackImageView];
+}
 - (void)setCountdownTimer:(NSInteger)time{
     self.myTime = time;
     NSInteger day = time / 24 / 3600;
@@ -52,6 +59,7 @@
         _gameStarsView2.centerX = self.width / 2;
         [_gameStarsView2 initSubViews];
         [_gameStarsView2 setNumbersSelected:NO];
+        _gameStarsView2.delegate = self;
         [self addSubview:_gameStarsView2];
     }
     return _gameStarsView2;
@@ -66,6 +74,7 @@
         [_gameStarsView1.redView setNumbersSelected:NO];
         [_gameStarsView1.yellowView setNumbersSelected:NO];
         [_gameStarsView1.grayView setNumbersSelected:NO];
+        _gameStarsView1.delegate = self;
         [self addSubview:_gameStarsView1];
     }
     return _gameStarsView1;
@@ -189,6 +198,7 @@
         [self.gameStarsView2 setNumbersSelected:NO];
         self.height = self.gameStarsView2.bottom + 5;
     }
+//    self.mainBackImageView.height = self.height;
 }
 - (void)setCountdown:(NSString *)countdown{
     if (_countdown != countdown) {
@@ -219,6 +229,18 @@
             [contents addObject:content];
         }
         self.publishedLabel.showContent = contents;
+    }
+}
+#pragma mark - BWMiningOwnerNumbersViewDelegate
+- (void)numberStatusChange{
+    if ([self.delegate respondsToSelector:@selector(userPressNumbers)]) {
+        [self.delegate userPressNumbers];
+    }
+}
+#pragma mark - BWBRTStarsGameGambleViewDelegate
+- (void)gameGambleNumberChange{
+    if ([self.delegate respondsToSelector:@selector(userPressNumbers)]) {
+        [self.delegate userPressNumbers];
     }
 }
 @end

@@ -16,7 +16,10 @@
 @end
 
 @implementation BWDuplicateViewController
-
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"";

@@ -62,6 +62,9 @@
         [self.selectedButtons removeObject:sender];
         sender.backgroundColor = [UIColor whiteColor];
     }
+    if ([self.delegate respondsToSelector:@selector(gameGambleNumberChange)]) {
+        [self.delegate gameGambleNumberChange];
+    }
 }
 - (NSString *)resNumber{
     NSMutableString *res = [NSMutableString string];
