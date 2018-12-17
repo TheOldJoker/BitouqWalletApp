@@ -118,10 +118,11 @@
 - (UIButton *)sendButton{
     if (!_sendButton) {
         _sendButton = [[UIButton alloc] initWithFrame:(CGRectMake(self.view.width - 160, self.numberView.bottom + 25, 160, 50))];
-        [_sendButton setTitle:@"提交挖礦信息" forState:(UIControlStateNormal)];
+        [_sendButton setTitle:@"   提交挖礦信息" forState:(UIControlStateNormal)];
         [_sendButton setBackgroundImage:[UIImage imageNamed:@"wallet_send"] forState:(UIControlStateNormal)];
+        [_sendButton setImage:[UIImage imageNamed:@"main_button_logo"] forState:(UIControlStateNormal)];
         [_sendButton setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
-        _sendButton.titleLabel.font = [UIFont systemFontOfSize:13.f];
+        _sendButton.titleLabel.font = [UIFont systemFontOfSize:14.f];
         [self.view addSubview:_sendButton];
     }
     return _sendButton;

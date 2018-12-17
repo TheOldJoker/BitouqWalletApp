@@ -54,13 +54,13 @@
         self.activityRootModel = [BWWalletActivityRootModel mj_objectWithKeyValues:response];
         if (self.activityRootModel.errorCode == 0) {
             //交易
-            self.activityView1.content = self.activityRootModel.data.transferSum;
+            self.activityView1.content = [NSString stringWithFormat:@"%.lf",[self.activityRootModel.data.transferSum doubleValue]];
             //BRTStrar
-            self.activityView2.content = self.activityRootModel.data.starSum;
+            self.activityView2.content = [NSString stringWithFormat:@"%.lf",[self.activityRootModel.data.starSum doubleValue]];
             //勝負手
-            self.activityView3.content = self.activityRootModel.data.diceSum;
+            self.activityView3.content = [NSString stringWithFormat:@"%.lf",[self.activityRootModel.data.diceSum doubleValue]];
             //挖礦
-            self.activityView4.content = self.activityRootModel.data.miningSum;
+            self.activityView4.content = [NSString stringWithFormat:@"%.lf",[self.activityRootModel.data.miningSum doubleValue]];
         }else{
             [self showNetErrorMessageWithStatus:self.activityRootModel.status errorCode:self.activityRootModel.errorCode errorMessage:self.activityRootModel.errorMsg];
         }

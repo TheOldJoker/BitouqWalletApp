@@ -34,7 +34,7 @@
         self.pubkeyLabel.text = model.pubkey;
     }
     //2.持幣量
-    self.leftLabel.text = model.asset;
+    self.leftLabel.text = [NSString stringWithFormat:@"%.4lf",[model.asset doubleValue]];
     //3.生產力
     self.midLabel.text = model.productRadio;
     //4.操作

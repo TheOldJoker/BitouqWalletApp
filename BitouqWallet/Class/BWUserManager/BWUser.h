@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *asset;//資產餘額
 @property (nonatomic, copy) NSString *miningOwner;//所屬礦主公鑰
 @property (nonatomic, copy) NSString *miningAge;//幣齡
+@property (nonatomic, assign) NSInteger maxPoint;//限制位数
+@property (nonatomic, copy) NSString *officialPoint;//后台控制
 
 #pragma mark 矿主身份属性
 @property (nonatomic, copy) NSString *productRadio;//矿主身份

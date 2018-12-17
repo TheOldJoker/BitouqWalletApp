@@ -436,4 +436,18 @@
         }
     }];
 }
+#pragma mark - 后台控制小数点位数
++ (void)getCoinPointSuccess:(void (^)(id response))success fail:(void (^)(NSError * error))failure{
+    NSDictionary *params = @{};
+    [BWNetHelper getWithUrl:[@"coin/scale" getSeverUrl] params:params header:NO success:^(id response) {
+        if (success) {
+            success(response);
+        }
+    } fail:^(NSError *error) {
+        
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
 @end

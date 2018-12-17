@@ -8,7 +8,7 @@
 
 #import "BWWalletSendHeadView.h"
 #import "BWWalletPublickeyInfoView.h"
-@interface BWWalletSendHeadView()
+@interface BWWalletSendHeadView()<UITextFieldDelegate>
 @property (nonatomic, strong) BWWalletPublickeyInfoView *publickeyInfoView;
 @property (nonatomic, strong) UILabel *bottomLabel;
 @end
@@ -57,7 +57,8 @@
         [self addSubview:backgroundView];
         _miningTextFiled = [[UITextField alloc] initWithFrame:(CGRectMake(20, 16, backgroundView.width - 20, 18))];
         _miningTextFiled.font = [UIFont systemFontOfSize:13.f];
-        _miningTextFiled.keyboardType = UIKeyboardTypeNumberPad;
+        _miningTextFiled.keyboardType = UIKeyboardTypeDecimalPad;
+        _miningTextFiled.delegate = self;
         [backgroundView addSubview:_miningTextFiled];
     }
     return _miningTextFiled;
@@ -70,8 +71,9 @@
         [self addSubview:backgroundView];
         _moneyTextField = [[UITextField alloc] initWithFrame:(CGRectMake(20, 16, self.width - 60, 18))];
         _moneyTextField.font = [UIFont systemFontOfSize:13.f];
-        _moneyTextField.keyboardType = UIKeyboardTypeNumberPad;
+        _moneyTextField.keyboardType = UIKeyboardTypeDecimalPad;
         _moneyTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
+        _moneyTextField.delegate = self;
         [backgroundView addSubview:_moneyTextField];
     }
     return _moneyTextField;
@@ -106,5 +108,20 @@
     if ([self.delegate respondsToSelector:@selector(walletSendHeadReloadDataAciton)]) {
         [self.delegate walletSendHeadReloadDataAciton];
     }
+}
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    if (textField == self.moneyTextField || textField == self.miningTextFiled) {
+        //如果输入的是“.”  判断之前已经有"."或者字符串为空
+        if ([string isEqualToString:@"."] && ([textField.text rangeOfString:@"."].location != NSNotFound || [textField.text isEqualToString:@""])) {
+            return NO;
+        }
+        //拼出输入完成的str,判断str的长度大于等于“.”的位置＋4,则返回false,此次插入string失败 （"379132.424",长度10,"."的位置6, 10>=6+4）
+        NSMutableString *str = [[NSMutableString alloc] initWithString:textField.text];
+        [str insertString:string atIndex:range.location];
+        if (str.length >= [str rangeOfString:@"."].location+(2 + [BWUserManager shareManager].user.maxPoint)){
+            return NO;
+        }
+    }
+    return YES;
 }
 @end

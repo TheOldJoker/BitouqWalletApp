@@ -11,6 +11,7 @@
 #import "BWLoginCreateKeyRootModel.h"
 @interface BWLoginPrivatekeyViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *privatekeyLabel;
+@property (strong, nonatomic) IBOutlet UIButton *nextButton;
 @property (strong, nonatomic) BWLoginCreateKeyRootModel *mainData;
 @end
 
@@ -18,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.nextButton.userInteractionEnabled = NO;
     [self loadData];
 }
 - (void)setValue{
@@ -26,8 +28,8 @@
     user.privatekey = self.mainData.data.prikey;
     user.publickey = self.mainData.data.pubkey;
     
-    user.privatekey = @"127Ktr61h2GtWS22MzJGApX8F73CRpAyjKp2yKh3weXo";
-    user.publickey = @"8JWRqEGK84GxbF7jpn5TZoEnefjuzxDA39iBRrVYge2D";
+//    user.privatekey = @"127Ktr61h2GtWS22MzJGApX8F73CRpAyjKp2yKh3weXo";
+//    user.publickey = @"8JWRqEGK84GxbF7jpn5TZoEnefjuzxDA39iBRrVYge2D";
     
     [BWUserManager shareManager].user = user;
 }
@@ -37,6 +39,7 @@
         [self hiddenHUD];
         self.mainData = [BWLoginCreateKeyRootModel mj_objectWithKeyValues:response];
         if (self.mainData.errorCode == 0) {
+            self.nextButton.userInteractionEnabled = YES;
             [self setValue];
         }else{
             [self showNetErrorMessageWithStatus:self.mainData.status errorCode:self.mainData.errorCode errorMessage:self.mainData.errorMsg];
@@ -46,6 +49,7 @@
         [self showServerError];
     }];
 }
+
 - (IBAction)longPressAction:(UILongPressGestureRecognizer *)sender {
     
     if (stringIsEmpty(self.privatekeyLabel.text)) {

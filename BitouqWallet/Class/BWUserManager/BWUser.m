@@ -21,4 +21,11 @@
     self.publickey = [aDecoder decodeObjectForKey:@"publickey"];
     return self;
 }
+- (NSInteger)maxPoint{
+//    if (stringIsEmpty(self.officialPoint)) {
+//        return 4;
+//    }
+//    return [self.officialPoint integerValue];
+    return 4;
+}
 @end

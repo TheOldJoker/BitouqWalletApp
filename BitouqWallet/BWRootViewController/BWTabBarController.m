@@ -19,6 +19,7 @@
     [super viewDidAppear:animated];
     //1.判斷登錄狀態
     [self JudgeLoginState];
+    [self systemConfig];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,12 +27,22 @@
     //登陆成功之后将所有页面数据刷新
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccess) name:LOGIN_SUCCESS_NOTE object:nil];
 }
+- (void)systemConfig{
+    [BWDataSource getCoinPointSuccess:^(id  _Nonnull response) {
+        if ([response[@"errorCode"] integerValue] == 0) {
+            [BWUserManager shareManager].user.officialPoint = response[@"data"];
+        }
+    } fail:^(NSError * _Nonnull error) {
+        
+    }];
+}
 - (void)JudgeLoginState {
     BWUser *user = [BWUserManager shareManager].user;
     //1.如果user存在,切privatekey存在則為登錄狀態
     if (user != nil && !stringIsEmpty(user.privatekey)) {
         [self refreshAllController];
         [self createPassword];
+        [self systemConfig];
         return;
     }
     [self showLogin];
@@ -39,6 +50,7 @@
 - (void)loginSuccess{
     [self createPassword];
     [self refreshAllController];
+    [self systemConfig];
 }
 - (void)createPassword{
     BWUser *user = [BWUserManager shareManager].user;

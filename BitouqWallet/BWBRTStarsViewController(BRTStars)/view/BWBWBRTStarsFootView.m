@@ -60,10 +60,11 @@
 - (UIButton *)sendButton{
     if (!_sendButton) {
         _sendButton = [[UIButton alloc] initWithFrame:(CGRectMake(self.width - 160, 213, 160, 50))];
-        [_sendButton setTitle:@"競猜" forState:(UIControlStateNormal)];
+        [_sendButton setTitle:@"   競猜" forState:(UIControlStateNormal)];
         [_sendButton setBackgroundImage:[UIImage imageNamed:@"wallet_send"] forState:(UIControlStateNormal)];
         [_sendButton setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
-        _sendButton.titleLabel.font = [UIFont systemFontOfSize:13.f];
+        [_sendButton setImage:[UIImage imageNamed:@"main_button_logo"] forState:(UIControlStateNormal)];
+        _sendButton.titleLabel.font = [UIFont systemFontOfSize:14.f];
         [self.bottomBackView addSubview:_sendButton];
     }
     return _sendButton;
@@ -125,7 +126,7 @@
         _betValueTextField = [[UITextField alloc] initWithFrame:(CGRectMake(self.alertLabel.right + 2, 0, 140, 20))];
         _betValueTextField.font = [UIFont systemFontOfSize:13.f];
         _betValueTextField.centerY = self.alertLabel.centerY;
-        _betValueTextField.keyboardType = UIKeyboardTypeNumberPad;
+        _betValueTextField.keyboardType = UIKeyboardTypeDecimalPad;
         _betValueTextField.returnKeyType = UIReturnKeyDone;
         _betValueTextField.delegate = self;
         [self.back2 addSubview:_betValueTextField];
@@ -179,6 +180,21 @@
     if (textField == self.multipleTextField) {
         if (stringIsEmpty(self.multipleTextField.text)) {
             self.multipleTextField.text = @"1";
+        }
+    }
+    return YES;
+}
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    if (textField == self.betValueTextField) {
+        //如果输入的是“.”  判断之前已经有"."或者字符串为空
+        if ([string isEqualToString:@"."] && ([textField.text rangeOfString:@"."].location != NSNotFound || [textField.text isEqualToString:@""])) {
+            return NO;
+        }
+        //拼出输入完成的str,判断str的长度大于等于“.”的位置＋4,则返回false,此次插入string失败 （"379132.424",长度10,"."的位置6, 10>=6+4）
+        NSMutableString *str = [[NSMutableString alloc] initWithString:textField.text];
+        [str insertString:string atIndex:range.location];
+        if (str.length >= [str rangeOfString:@"."].location+(2 + [BWUserManager shareManager].user.maxPoint)){
+            return NO;
         }
     }
     return YES;
