@@ -61,7 +61,9 @@
     [self.mainTableView reloadData];
 }
 - (void)loadData{
-    
+    if (self.dataSource.count > 0) {
+        [self.mainTableView.refreshControl beginRefreshing];
+    }
     //累計挖礦收益
     [BWDataSource getMyMiningEarningsSuccess:^(id  _Nonnull response) {
         BWCommonRootModel *rootModel = [BWCommonRootModel mj_objectWithKeyValues:response];
@@ -138,7 +140,7 @@
         refreshControl.tintColor = [UIColor colorWithHexString:@"4d09d5"];
         //        refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"下拉刷新"];
         [refreshControl addTarget:self action:@selector(loadData) forControlEvents:UIControlEventValueChanged];
-        self.mainTableView.refreshControl = refreshControl;
+        _mainTableView.refreshControl = refreshControl;
         
         [self.view addSubview:_mainTableView];
     }

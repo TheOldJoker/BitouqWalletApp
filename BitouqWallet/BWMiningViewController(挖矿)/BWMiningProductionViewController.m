@@ -13,6 +13,7 @@
 #import "BWMiningOwnerModel.h"
 #import "BWMyMiningInfoRootModel.h"
 @interface BWMiningProductionViewController ()
+@property (nonatomic, strong) UIScrollView *mainScorllView;
 @property (nonatomic, strong) BWMiningOwnerModel *miningOwner;
 @property (nonatomic, strong) BWMiningOwnerHeadView *miningOwnerHeadView;
 @property (nonatomic, strong) BWMiningOwnerNumbersView *numberView;
@@ -35,7 +36,13 @@
         return;
     }
     
+    if (self.miningInfoRootModel != nil) {
+        [self.mainScorllView.refreshControl beginRefreshing];
+    }
     [self getMiningInfoCompletion:^{
+        if ([self.mainScorllView.refreshControl isRefreshing]) {
+            [self.mainScorllView.refreshControl endRefreshing];
+        }
         [self initSubviews];
     }];
 }
@@ -106,11 +113,27 @@
     }
 }
 #pragma mark - lazyload
+- (UIScrollView *)mainScorllView{
+    if (!_mainScorllView) {
+        _mainScorllView = [[UIScrollView alloc] initWithFrame:(CGRectMake(0, 0, self.view.width, self.view.height))];
+        _mainScorllView.showsVerticalScrollIndicator = NO;
+        _mainScorllView.showsHorizontalScrollIndicator = NO;
+        
+        UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+        refreshControl.tintColor = [UIColor colorWithHexString:@"4d09d5"];
+        //        refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"下拉刷新"];
+        [refreshControl addTarget:self action:@selector(loadData) forControlEvents:UIControlEventValueChanged];
+        _mainScorllView.refreshControl = refreshControl;
+        
+        [self.view addSubview:_mainScorllView];
+    }
+    return _mainScorllView;
+}
 - (BWMiningErrorView *)errorView{
     if (!_errorView) {
         _errorView = [[NSBundle mainBundle] loadNibNamed:@"BWMiningErrorView" owner:self options:nil].firstObject;
         _errorView.frame = CGRectMake(0, 0, self.view.width, self.view.height);
-        [self.view addSubview:_errorView];
+        [self.mainScorllView addSubview:_errorView];
     }
     return _errorView;
 }
@@ -122,7 +145,7 @@
         [_sendButton setImage:[UIImage imageNamed:@"main_button_logo"] forState:(UIControlStateNormal)];
         [_sendButton setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
         _sendButton.titleLabel.font = [UIFont systemFontOfSize:14.f];
-        [self.view addSubview:_sendButton];
+        [self.mainScorllView addSubview:_sendButton];
     }
     return _sendButton;
 }
@@ -132,7 +155,7 @@
         float h = w / 339 * 176;
         _miningOwnerHeadView = [[BWMiningOwnerHeadView alloc] initWithFrame:(CGRectMake(8, 23, w, h))];
         [_miningOwnerHeadView baseConfig];
-        [self.view addSubview:_miningOwnerHeadView];
+        [self.mainScorllView addSubview:_miningOwnerHeadView];
     }
     return _miningOwnerHeadView;
 }
@@ -141,7 +164,7 @@
         _numberView = [[BWMiningOwnerNumbersView alloc] initWithFrame:(CGRectMake(0, self.miningOwnerHeadView.bottom + 43, 304, 165))];
         [_numberView initSubViews];
         _numberView.centerX = self.view.width / 2;
-        [self.view addSubview:_numberView];
+        [self.mainScorllView addSubview:_numberView];
     }
     return _numberView;
 }
