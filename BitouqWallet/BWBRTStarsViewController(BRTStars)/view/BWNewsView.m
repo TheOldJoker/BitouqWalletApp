@@ -50,7 +50,7 @@
     self.mainScorllView.contentSize = CGSizeMake(self.mainScorllView.width, self.height * self.showContent.count);
     for (int i = 0; i < self.showContent.count; i++) {
         UILabel *lab = [[UILabel alloc] initWithFrame:(CGRectMake(0, i * self.mainScorllView.height, self.mainScorllView.width, self.mainScorllView.height))];
-        [lab configWithTextColor:[UIColor colorWithHexString:@"a3a9af"] font:[UIFont systemFontOfSize:12.f] textAlignment:(NSTextAlignmentLeft) backgroundColor:nil];
+        [lab configWithTextColor:[UIColor colorWithHexString:@"a3a9af"] font:[UIFont systemFontOfSize:12.f] textAlignment:(NSTextAlignmentCenter) backgroundColor:nil];
         lab.text = self.showContent[i];
         [self.mainScorllView addSubview:lab];
         [self.contentLabels addObject:lab];
