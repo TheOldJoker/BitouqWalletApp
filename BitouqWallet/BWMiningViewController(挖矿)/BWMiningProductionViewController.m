@@ -36,7 +36,6 @@
     }
     
     [self getMiningInfoCompletion:^{
-        
         [self initSubviews];
     }];
 }

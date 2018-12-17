@@ -61,6 +61,7 @@
     [self.mainTableView reloadData];
 }
 - (void)loadData{
+    
     //累計挖礦收益
     [BWDataSource getMyMiningEarningsSuccess:^(id  _Nonnull response) {
         BWCommonRootModel *rootModel = [BWCommonRootModel mj_objectWithKeyValues:response];
@@ -104,6 +105,12 @@
     } fail:^(NSError * _Nonnull error) {
         [self showServerError];
     }];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        if ([self.mainTableView.refreshControl isRefreshing]) {
+            [self.mainTableView.refreshControl endRefreshing];
+        }
+    });
+    
 }
 #pragma mark - lazyload
 - (NSMutableArray *)dataSource{
@@ -126,6 +133,13 @@
         _mainTableView.dataSource = self;
         [_mainTableView normalConfig];
         _mainTableView.tableHeaderView = self.headView;
+        
+        UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+        refreshControl.tintColor = [UIColor colorWithHexString:@"4d09d5"];
+        //        refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"下拉刷新"];
+        [refreshControl addTarget:self action:@selector(loadData) forControlEvents:UIControlEventValueChanged];
+        self.mainTableView.refreshControl = refreshControl;
+        
         [self.view addSubview:_mainTableView];
     }
     return _mainTableView;

@@ -51,13 +51,13 @@
 - (void)setSelectedValue:(NSInteger)selectedValue{
     NSString * oddString = (NSString *)[self.probabilityDict valueForKey:[NSString stringWithFormat:@"%ld",selectedValue]];
     double odd = [oddString doubleValue];
-    self.oddsInfoView.titleLabel1.text = [NSString stringWithFormat:@"%.2f",odd];
+    self.oddsInfoView.titleLabel1.text = [NSString stringWithFormat:@"%.2fx",odd];
     self.oddsInfoView.titleLabel3.text = [NSString stringWithFormat:@"≤%ld",(long)selectedValue];
     
     if (stringIsEmpty(self.diceBetView.betValueTextField.text)) {
         self.oddsInfoView.titleLabel2.text = @"0";
     }else{
-         self.oddsInfoView.titleLabel2.text = [NSString stringWithFormat:@"%.2f",odd * [self.diceBetView.betValueTextField.text floatValue]];
+         self.oddsInfoView.titleLabel2.text = [NSString stringWithFormat:@"%.4f",odd * [self.diceBetView.betValueTextField.text floatValue]];
     }
 }
 - (void)loadData{
@@ -209,9 +209,13 @@
 #pragma mark - buttonAction
 #pragma mark 投票
 - (void)diceButtonAction:(UIButton *)sender{
-    
     if (stringIsEmpty(self.diceBetView.betValueTextField.text)) {
         [self showWeakAlertWithString:@"請輸入投注金額"];
+        return;
+    }
+    BWUser *user = [BWUserManager shareManager].user;
+    if ([self.diceBetView.betValueTextField.text doubleValue] > [user.asset doubleValue]) {
+        [self showWeakAlertWithString:@"用戶資產不足"];
         return;
     }
     [self commitDiceCompletion:^{

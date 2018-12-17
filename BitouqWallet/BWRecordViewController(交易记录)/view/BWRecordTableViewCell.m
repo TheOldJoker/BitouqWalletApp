@@ -28,7 +28,7 @@
             }else{
                 self.rightTopLabel.text = [NSString stringWithFormat:@"+ %@ BRT",model.amount];
                 self.rightTopLabel.textColor = [UIColor colorWithHexString:@"7ed321"];
-                self.bottomContentLabel.text = [NSString stringWithFormat:@"接受 %@",model.frompubkey];
+                self.bottomContentLabel.text = [NSString stringWithFormat:@"接收 %@",model.frompubkey];
             }
         }
             break;
@@ -37,7 +37,7 @@
         {
             self.rightTopLabel.text = [NSString stringWithFormat:@"- %@ BRT",model.amount];
             self.rightTopLabel.textColor = [UIColor colorWithHexString:@"f42850"];
-            self.bottomContentLabel.text = @"矿工费支出";
+            self.bottomContentLabel.text = @"礦工費支出";
         }
             break;
             //投注 胜负手
@@ -45,7 +45,7 @@
         {
             self.rightTopLabel.text = [NSString stringWithFormat:@"- %@ BRT",model.amount];
             self.rightTopLabel.textColor = [UIColor colorWithHexString:@"f42850"];
-            self.bottomContentLabel.text = @"投注 胜负手";
+            self.bottomContentLabel.text = @"投注 勝負手";
         }
             break;
             //获胜 胜负手
@@ -53,7 +53,7 @@
         {
             self.rightTopLabel.text = [NSString stringWithFormat:@"+ %@ BRT",model.amount];
             self.rightTopLabel.textColor = [UIColor colorWithHexString:@"7ed321"];
-            self.bottomContentLabel.text = @"获胜 胜负手";
+            self.bottomContentLabel.text = @"獲勝 勝負手";
         }
             break;
             //投注 BRTStars1星竞猜
@@ -61,7 +61,7 @@
         {
             self.rightTopLabel.text = [NSString stringWithFormat:@"- %@ BRT",model.amount];
             self.rightTopLabel.textColor = [UIColor colorWithHexString:@"f42850"];
-            self.bottomContentLabel.text = @"投注 BRTStars1星竞猜";
+            self.bottomContentLabel.text = @"投注 BRTStars1星競猜";
         }
             break;
             //投注 BRTStars2星竞猜
@@ -69,7 +69,7 @@
         {
             self.rightTopLabel.text = [NSString stringWithFormat:@"- %@ BRT",model.amount];
             self.rightTopLabel.textColor = [UIColor colorWithHexString:@"f42850"];
-            self.bottomContentLabel.text = @"投注 BRTStars2星竞猜";
+            self.bottomContentLabel.text = @"投注 BRTStars2星競猜";
         }
             break;
             //投注 BRTStars3星竞猜
@@ -77,7 +77,7 @@
         {
             self.rightTopLabel.text = [NSString stringWithFormat:@"- %@ BRT",model.amount];
             self.rightTopLabel.textColor = [UIColor colorWithHexString:@"f42850"];
-            self.bottomContentLabel.text = @"投注 BRTStars3星竞猜";
+            self.bottomContentLabel.text = @"投注 BRTStars3星競猜";
         }
             break;
             //投注 BRTStars4星竞猜
@@ -85,7 +85,7 @@
         {
             self.rightTopLabel.text = [NSString stringWithFormat:@"- %@ BRT",model.amount];
             self.rightTopLabel.textColor = [UIColor colorWithHexString:@"f42850"];
-            self.bottomContentLabel.text = @"投注 BRTStars4星竞猜";
+            self.bottomContentLabel.text = @"投注 BRTStars4星競猜";
         }
             break;
             //投注 BRTStars5星竞猜
@@ -93,7 +93,7 @@
         {
             self.rightTopLabel.text = [NSString stringWithFormat:@"- %@ BRT",model.amount];
             self.rightTopLabel.textColor = [UIColor colorWithHexString:@"f42850"];
-            self.bottomContentLabel.text = @"投注 BRTStars5星竞猜";
+            self.bottomContentLabel.text = @"投注 BRTStars5星競猜";
         }
             break;
             //投注 BRTStars前置3星任选
@@ -101,7 +101,7 @@
         {
             self.rightTopLabel.text = [NSString stringWithFormat:@"- %@ BRT",model.amount];
             self.rightTopLabel.textColor = [UIColor colorWithHexString:@"f42850"];
-            self.bottomContentLabel.text = @"投注 BRTStars前置3星任选";
+            self.bottomContentLabel.text = @"投注 BRTStars前置3星任選";
         }
             break;
             //投注 BRTStars前置3星双杀
@@ -109,7 +109,7 @@
         {
             self.rightTopLabel.text = [NSString stringWithFormat:@"- %@ BRT",model.amount];
             self.rightTopLabel.textColor = [UIColor colorWithHexString:@"f42850"];
-            self.bottomContentLabel.text = @"投注 BRTStars前置3星双杀";
+            self.bottomContentLabel.text = @"投注 BRTStars前置3星雙殺";
         }
             break;
             //投注 BRTStars前置3星豹子
