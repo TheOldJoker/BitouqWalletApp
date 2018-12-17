@@ -140,6 +140,7 @@
         _footView = [[BWBWBRTStarsFootView alloc] initWithFrame:(CGRectMake(0, 0, self.view.width, 462))];
         _footView.gameType = 1;
         [_footView initSubViews];
+        [_footView.winNButton addTarget:self action:@selector(winNAction:) forControlEvents:(UIControlEventTouchUpInside)];
         [_footView.sendButton addTarget:self action:@selector(guessAction:) forControlEvents:(UIControlEventTouchUpInside)];
     }
     return _footView;
@@ -164,6 +165,9 @@
     return _mainTableView;
 }
 #pragma mark - buttonAction
+- (void)winNAction:(UIButton *)sender{
+    [self showWeakAlertWithString:[NSString stringWithFormat:@"最大中獎%ld次,此次投注可能多次中獎,此獎金為最大期望獎金",sender.tag - 9000]];
+}
 - (void)guessAction:(UIButton *)sender{
     if (stringIsEmpty(self.footView.betValueTextField.text)) {
         [self showWeakAlertWithString:@"請輸入單注金額"];

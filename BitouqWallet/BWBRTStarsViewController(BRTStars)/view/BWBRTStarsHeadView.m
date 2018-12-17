@@ -101,6 +101,7 @@
         
         [_gameButton setImage:[UIImage imageNamed:@"brtstar_pull"] forState:(UIControlStateNormal)];
         
+        
 //        CGFloat labelWidth = _gameButton.titleLabel.frame.size.width;
 //        CGFloat imageWith = _gameButton.imageView.frame.size.width;
 //        _gameButton.imageEdgeInsets = UIEdgeInsetsMake(0, labelWidth, 0, -labelWidth);
@@ -214,7 +215,6 @@
         self.versionLabel.top = self.gameStarsView2.bottom;
         self.height = self.versionLabel.bottom;
     }
-//    self.mainBackImageView.height = self.height;
 }
 - (void)setCountdown:(NSString *)countdown{
     if (_countdown != countdown) {

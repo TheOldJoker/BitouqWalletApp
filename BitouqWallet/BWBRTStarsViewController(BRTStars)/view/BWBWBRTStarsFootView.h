@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSInteger gameType;
 @property (nonatomic, strong) NSDictionary *gameOdds;//游戏赔率
 @property (nonatomic, strong) BWGameArithmeticModel *gameArithmetic;
+@property (nonatomic, strong) UIButton *winNButton;//期望中奖注数
 - (void)initSubViews;
 @end
 

@@ -33,6 +33,7 @@
 - (void)setStakesValue:(NSString *)stakes total:(NSString *)total bonus:(NSString *)bonus{
     self.stakesNumberLabel.text = [NSString stringWithFormat:@"已選擇 %@ 注，共 %@ BRT",stakes,total];
     self.bonusLabel.text = [NSString stringWithFormat:@"期望獎金：%@ BRT",bonus];
+    [self.bonusLabel reSetWidth];
 }
 - (void)reloadData{
     [self setStakesValue:@"0" total:@"0" bonus:@"0"];
@@ -55,8 +56,18 @@
     NSInteger n = [self.gameArithmetic getWinNWithGameType:self.gameType];
     NSString *bonusString = [NSString stringWithFormat:@"%.4lf",gameOdds * [self.multipleTextField.text integerValue] * singleBet * n];
     [self setStakesValue:stakesString total:totalString bonus:bonusString];
+    
+    [self.winNButton setTitle:[NSString stringWithFormat:@"[%ld]",n] forState:(UIControlStateNormal)];
+    self.winNButton.x = self.bonusLabel.right + 5;
+    
+    self.winNButton.tag = 9000 + n;
+    
+    if (self.gameType > 5) {
+        self.winNButton.hidden = YES;
+    }else{
+        self.winNButton.hidden = NO;
+    }
 }
-
 - (UIButton *)sendButton{
     if (!_sendButton) {
         _sendButton = [[UIButton alloc] initWithFrame:(CGRectMake(self.width - 160, 213, 160, 50))];
@@ -94,6 +105,12 @@
         self.bonusLabel = [[UILabel alloc] initWithFrame:(CGRectMake(30, self.stakesNumberLabel.bottom + 15, _topBackImageView.width - 60, 20))];
         [self.bonusLabel configWithTextColor:[UIColor blackColor] font:[UIFont systemFontOfSize:15.f] textAlignment:(NSTextAlignmentLeft) backgroundColor:nil];
         [_topBackImageView addSubview:self.bonusLabel];
+        
+        self.winNButton = [[UIButton alloc] initWithFrame:(CGRectMake(0, self.bonusLabel.top, 140, 20))];
+        [self.winNButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+        self.winNButton.titleLabel.font = [UIFont systemFontOfSize:15.f];
+        [self.winNButton setTitleColor:[UIColor redColor] forState:(UIControlStateNormal)];
+        [_topBackImageView addSubview:self.winNButton];
         
         [self addSubview:_topBackImageView];
     }

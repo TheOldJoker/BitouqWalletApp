@@ -110,6 +110,7 @@
     }
     return @"0";
 }
+
 - (NSInteger)getWinNWithGameType:(NSInteger)gameType{
     if (gameType > 5) {
         return 1;
