@@ -140,6 +140,7 @@
 		AFEBA7D221B4227F00F5ECEF /* YYMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBA7CE21B4227F00F5ECEF /* YYMemoryCache.m */; };
 		AFF894E121C487690049461E /* BWGameArithmeticModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF894E021C487690049461E /* BWGameArithmeticModel.m */; };
 		AFF894E421C784500049461E /* BWDuplicateSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF894E321C784500049461E /* BWDuplicateSuccessViewController.m */; };
+		AFF894EA21C7C9050049461E /* BWBRTGameButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF894E921C7C9050049461E /* BWBRTGameButton.m */; };
 		B3D35B7A0FD06B351857CB2B /* Pods_BitouqWallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7931BF157400160B43C18B4E /* Pods_BitouqWallet.framework */; };
 /* End PBXBuildFile section */
 
@@ -412,6 +413,8 @@
 		AFF894E021C487690049461E /* BWGameArithmeticModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWGameArithmeticModel.m; sourceTree = "<group>"; };
 		AFF894E221C784500049461E /* BWDuplicateSuccessViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWDuplicateSuccessViewController.h; sourceTree = "<group>"; };
 		AFF894E321C784500049461E /* BWDuplicateSuccessViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWDuplicateSuccessViewController.m; sourceTree = "<group>"; };
+		AFF894E821C7C9050049461E /* BWBRTGameButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWBRTGameButton.h; sourceTree = "<group>"; };
+		AFF894E921C7C9050049461E /* BWBRTGameButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWBRTGameButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -849,6 +852,8 @@
 				AF474BF521C38F0A00982C88 /* BWBRTLotteryRecordCell.h */,
 				AF474BF621C38F0A00982C88 /* BWBRTLotteryRecordCell.m */,
 				AF474BF721C38F0A00982C88 /* BWBRTLotteryRecordCell.xib */,
+				AFF894E821C7C9050049461E /* BWBRTGameButton.h */,
+				AFF894E921C7C9050049461E /* BWBRTGameButton.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1294,6 +1299,7 @@
 				AFEBA7BD21B4193700F5ECEF /* BWLoginLeadPrivatekeyViewController.m in Sources */,
 				AF12738621BE8FFF002E55C2 /* BWMiningOwnerNumbersView.m in Sources */,
 				AF09B72521AD6EAB00B9E1E4 /* AppDelegate.m in Sources */,
+				AFF894EA21C7C9050049461E /* BWBRTGameButton.m in Sources */,
 				AF1273A121BF8D63002E55C2 /* BWVoteCellButton.m in Sources */,
 				AFEBA7C521B41F7A00F5ECEF /* BWUser.m in Sources */,
 				AF1273B721C0A14A002E55C2 /* BWDiceBetView.m in Sources */,

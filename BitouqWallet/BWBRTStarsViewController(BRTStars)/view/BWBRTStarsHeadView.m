@@ -89,9 +89,9 @@
     }
     return _gameStarsView1;
 }
-- (UIButton *)gameButton{
+- (BWBRTGameButton *)gameButton{
     if (!_gameButton) {
-        _gameButton = [[UIButton alloc] initWithFrame:(CGRectMake(self.currentBettingButton.x, self.currentBettingButton.bottom + 12, 80, 30))];
+        _gameButton = [[BWBRTGameButton alloc] initWithFrame:(CGRectMake(self.currentBettingButton.x, self.currentBettingButton.bottom + 12, 80, 30))];
         _gameButton.backgroundColor = [UIColor colorWithHexString:@"7932DF"];
         [_gameButton setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
         [_gameButton setTitle:@"1星競猜" forState:(UIControlStateNormal)];
@@ -189,7 +189,7 @@
     NSArray *dataArray = @[@"1星競猜",@"2星競猜",@"3星競猜",@"4星競猜",@"5星競猜",@"前置3星任選",@"前置3星雙殺",@"前置3星豹子"];
     [self.gameButton setTitle:dataArray[gameType - 1] forState:(UIControlStateNormal)];
     if (gameType > 5) {
-        self.gameButton.width = 130;
+        self.gameButton.width = 110;
     }else{
         self.gameButton.width = 80;
     }
