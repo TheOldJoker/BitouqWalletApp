@@ -28,6 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSInteger gameType;//1->(1-5星),2->(3星玩法)
 @property (nonatomic, strong) BWMiningOwnerNumbersView *gameStarsView1;//1~5星
 @property (nonatomic, strong) BWBRTStarsGameGambleView *gameStarsView2;//3星玩法
+@property (nonatomic, copy) NSString *version;
 - (void)initSubviews;
 @end
 

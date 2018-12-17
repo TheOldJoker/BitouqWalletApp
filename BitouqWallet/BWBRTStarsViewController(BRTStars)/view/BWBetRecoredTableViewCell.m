@@ -23,7 +23,7 @@
         self.rightLabel.text = @"未開獎";
     }else{
         if (model.win) {
-            self.rightLabel.text = model.amount;
+            self.rightLabel.text = model.reward;
         }else{
             self.rightLabel.text = @"未中獎";
         }
@@ -61,44 +61,44 @@
             //1星竞猜
         case 1:
         {
-            self.leftLabel2.text = @"1星竞猜";
+            self.leftLabel2.text = @"1星競猜";
         }
             break;
             //2星竞猜
         case 2:
         {
-            self.leftLabel2.text = @"2星竞猜";
+            self.leftLabel2.text = @"2星競猜";
         }
             break;
             //3星竞猜
         case 3:
         {
-            self.leftLabel2.text = @"3星竞猜";
+            self.leftLabel2.text = @"3星競猜";
         }
             break;
             //4星竞猜
         case 4:
         {
-            self.leftLabel2.text = @"4星竞猜";
+            self.leftLabel2.text = @"4星競猜";
         }
             break;
             //5星竞猜
         case 5:
         {
-            self.leftLabel2.text = @"5星竞猜";
+            self.leftLabel2.text = @"5星競猜";
         }
             break;
             //前置3星任选
         case 6:
         {
-            self.leftLabel2.text = @"前置3星任选";
+            self.leftLabel2.text = @"前置3星任選";
             self.midLable1.text = model.num1;
         }
             break;
             //前置3星双杀
         case 7:
         {
-            self.leftLabel2.text = @"前置3星双杀";
+            self.leftLabel2.text = @"前置3星雙殺";
             self.midLable1.text = model.num1;
         }
             break;

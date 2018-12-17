@@ -16,15 +16,17 @@
 @property (nonatomic, strong) BWNewsView *publishedLabel;//中奖公告
 @property (nonatomic, strong) NSTimer * myTimer;//開獎倒計時
 @property (nonatomic, assign) NSInteger myTime;
-//@property (nonatomic, strong) UIImageView *mainBackImageView;
+@property (nonatomic, strong) UIImageView *mainBackImageView;
+@property (nonatomic, strong) UILabel *versionLabel;
 @end
 @implementation BWBRTStarsHeadView
 #pragma mark - func
 - (void)initSubviews{
-//    self.mainBackImageView = [[UIImageView alloc] initWithFrame:(CGRectMake(0, 0, self.width, self.height))];
-//    self.mainBackImageView.image = [UIImage imageNamed:@"main_background"];
-//    self.mainBackImageView.contentMode = UIViewContentModeTop;
-//    [self addSubview:self.mainBackImageView];
+    
+    self.mainBackImageView = [[UIImageView alloc] initWithFrame:(CGRectMake(0, 0, self.width, self.height))];
+    self.mainBackImageView.image = [UIImage imageNamed:@"main_background"];
+    self.mainBackImageView.contentMode = UIViewContentModeTop;
+    [self addSubview:self.mainBackImageView];
 }
 - (void)setCountdownTimer:(NSInteger)time{
     self.myTime = time;
@@ -53,6 +55,14 @@
     [self setCountdownTimer:self.myTime];
 }
 #pragma mark - lazyload
+- (UILabel *)versionLabel{
+    if (!_versionLabel) {
+        _versionLabel = [[UILabel alloc] initWithFrame:(CGRectMake(0, 0, self.width, 30))];
+        [_versionLabel configWithTextColor:RGBA(255, 255, 255, 0.6) font:[UIFont systemFontOfSize:13.f] textAlignment:(NSTextAlignmentCenter) backgroundColor:nil];
+        [self addSubview:_versionLabel];
+    }
+    return _versionLabel;
+}
 - (BWBRTStarsGameGambleView *)gameStarsView2{
     if (!_gameStarsView2) {
         _gameStarsView2 = [[BWBRTStarsGameGambleView alloc] initWithFrame:(CGRectMake(0, self.gameButton.bottom + 20, 304, 60))];
@@ -160,7 +170,11 @@
 }
 - (BWNewsView *)publishedLabel{
     if (!_publishedLabel) {
-        _publishedLabel = [[BWNewsView alloc] initWithFrame:(CGRectMake(0, 20, 259, 20))];
+        double y = 64;
+        if (is_iPhoneX) {
+            y += 14;
+        }
+        _publishedLabel = [[BWNewsView alloc] initWithFrame:(CGRectMake(0, y + 20, 259, 20))];
         _publishedLabel.centerX = self.width / 2;
         [_publishedLabel initSubViews];
         [self addSubview:_publishedLabel];
@@ -190,13 +204,15 @@
         [self.gameStarsView1.redView setNumbersSelected:NO];
         [self.gameStarsView1.yellowView setNumbersSelected:NO];
         [self.gameStarsView1.grayView setNumbersSelected:NO];
-        self.height = self.gameStarsView1.bottom + 5;
+        self.versionLabel.top = self.gameStarsView1.bottom;
+        self.height = self.versionLabel.bottom;
     }else{
         //3星特殊游戏
         self.gameStarsView1.hidden = YES;
         self.gameStarsView2.hidden = NO;
         [self.gameStarsView2 setNumbersSelected:NO];
-        self.height = self.gameStarsView2.bottom + 5;
+        self.versionLabel.top = self.gameStarsView2.bottom;
+        self.height = self.versionLabel.bottom;
     }
 //    self.mainBackImageView.height = self.height;
 }
@@ -212,6 +228,10 @@
             [self countdownFunc];
         }
     }
+}
+- (void)setVersion:(NSString *)version{
+    _version = version;
+    self.versionLabel.text = version;
 }
 - (void)setTheLotteryResults:(NSString *)theLotteryResults{
     if (_theLotteryResults != theLotteryResults) {

@@ -72,7 +72,7 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     BWBRTStarsLotteryRecordModel *model = self.rootModel.data[indexPath.row];
     cell.leftLabel.text = [NSString stringWithFormat:@"%07ld",[model.ID integerValue]];
-    cell.midLabel.text = [model.miningpubkey substringFromIndex:39];
+    cell.midLabel.text = [model.miningpubkey substringFromIndex:38];
     if (model.result.length == 5) {
         NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithString:model.result];
         [attString setAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"7ed321"]}

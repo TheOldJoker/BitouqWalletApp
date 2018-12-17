@@ -22,7 +22,7 @@
     [self.navigationController.navigationBar setHidden:YES];
     double y = 34;
     if (is_iPhoneX) {
-        y += 44;
+        y += 14;
     }
     UIButton *menuButton = [[UIButton alloc] initWithFrame:(CGRectMake(20, y, 30, 30))];
     [menuButton setImage:[UIImage imageNamed:@"nav_menu"] forState:(UIControlStateNormal)];

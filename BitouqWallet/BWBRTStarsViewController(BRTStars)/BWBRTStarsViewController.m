@@ -30,6 +30,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.mainTableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     self.title = @"BRTStars";
     [self initMenuNav];
     self.customNavTitleLabel.textColor = [UIColor whiteColor];
@@ -110,6 +111,8 @@
             [self.mainTableView reloadData];
             self.headView.theLotteryResults = self.lastResRootModel.data.result;
             self.headView.countdown = self.lastResRootModel.data.countdown;
+            NSInteger version = [self.lastResRootModel.data.ID integerValue];
+            self.headView.version = [NSString stringWithFormat:@"NO.%07ld",version + 1];
         }else{
             [self showNetErrorMessageWithStatus:self.lastResRootModel.status errorCode:self.lastResRootModel.errorCode errorMessage:self.lastResRootModel.errorMsg];
         }
@@ -152,7 +155,7 @@
         _mainTableView.backgroundColor = [UIColor clearColor];
         
         UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
-        refreshControl.tintColor = [UIColor whiteColor];
+        refreshControl.tintColor = [UIColor colorWithHexString:@"4d09d5"];
 //        refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"下拉刷新"];
         [refreshControl addTarget:self action:@selector(loadData) forControlEvents:UIControlEventValueChanged];
         self.mainTableView.refreshControl = refreshControl;
@@ -252,7 +255,7 @@
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 36;
+    return 0;
 }
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
