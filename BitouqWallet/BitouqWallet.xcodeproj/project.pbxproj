@@ -139,6 +139,7 @@
 		AFEBA7D121B4227F00F5ECEF /* YYKVStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBA7CD21B4227F00F5ECEF /* YYKVStorage.m */; };
 		AFEBA7D221B4227F00F5ECEF /* YYMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBA7CE21B4227F00F5ECEF /* YYMemoryCache.m */; };
 		AFF894E121C487690049461E /* BWGameArithmeticModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF894E021C487690049461E /* BWGameArithmeticModel.m */; };
+		AFF894E421C784500049461E /* BWDuplicateSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF894E321C784500049461E /* BWDuplicateSuccessViewController.m */; };
 		B3D35B7A0FD06B351857CB2B /* Pods_BitouqWallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7931BF157400160B43C18B4E /* Pods_BitouqWallet.framework */; };
 /* End PBXBuildFile section */
 
@@ -409,6 +410,8 @@
 		AFEBA7CE21B4227F00F5ECEF /* YYMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMemoryCache.m; sourceTree = "<group>"; };
 		AFF894DF21C487690049461E /* BWGameArithmeticModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWGameArithmeticModel.h; sourceTree = "<group>"; };
 		AFF894E021C487690049461E /* BWGameArithmeticModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWGameArithmeticModel.m; sourceTree = "<group>"; };
+		AFF894E221C784500049461E /* BWDuplicateSuccessViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWDuplicateSuccessViewController.h; sourceTree = "<group>"; };
+		AFF894E321C784500049461E /* BWDuplicateSuccessViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWDuplicateSuccessViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -671,6 +674,8 @@
 			children = (
 				AF09B77621AD79C500B9E1E4 /* BWDuplicateViewController.h */,
 				AF09B77721AD79C500B9E1E4 /* BWDuplicateViewController.m */,
+				AFF894E221C784500049461E /* BWDuplicateSuccessViewController.h */,
+				AFF894E321C784500049461E /* BWDuplicateSuccessViewController.m */,
 			);
 			path = "BWDuplicateViewController(备份)";
 			sourceTree = "<group>";
@@ -1227,6 +1232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF91BFA321BA6CDD003A423F /* BWRlueModel.m in Sources */,
+				AFF894E421C784500049461E /* BWDuplicateSuccessViewController.m in Sources */,
 				AF24A67521C2771F0064EDC9 /* BWBRTStarsNewsRootModel.m in Sources */,
 				AF09B76921AD795B00B9E1E4 /* BWWalletViewController.m in Sources */,
 				AFCECEFC21B6B9D80089E3AF /* BWWalletGetViewController.m in Sources */,

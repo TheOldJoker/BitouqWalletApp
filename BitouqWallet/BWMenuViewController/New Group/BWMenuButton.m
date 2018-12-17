@@ -23,7 +23,7 @@
 - (UILabel *)customTitleLabel{
     if (!_customTitleLabel) {
         _customTitleLabel = [[UILabel alloc] initWithFrame:(CGRectMake(60, 15, 120, 24))];
-        [_customTitleLabel configWithTextColor:[UIColor whiteColor] font:[UIFont systemFontOfSize:24.f] textAlignment:(NSTextAlignmentLeft) backgroundColor:nil];
+        [_customTitleLabel configWithTextColor:[UIColor whiteColor] font:[UIFont systemFontOfSize:20.f] textAlignment:(NSTextAlignmentLeft) backgroundColor:nil];
         [self addSubview:_customTitleLabel];
     }
     return _customTitleLabel;

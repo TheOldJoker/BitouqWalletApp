@@ -12,13 +12,14 @@
 #import "BWTabBarController.h"
 @interface BWDuplicateViewController ()<BWGesturesPasswordViewcontrollerDelegate,BWForgetPasswordViewControllerDelegate>
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *titleLabelTopValue;
-
+@property (nonatomic, assign) BOOL verification;//是否验证
 @end
 
 @implementation BWDuplicateViewController
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
+    self.verification = NO;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,12 +43,6 @@
     self.view.height = SCREEN_HEIGHT;
     
 }
-- (IBAction)duplicateAction:(UIButton *)sender {
-    BWGesturesPasswordViewcontroller *gestureVC = [[BWGesturesPasswordViewcontroller alloc] init];
-    gestureVC.gesturesPasswordType = BWGesturesPasswordTypeVerify;
-    gestureVC.delegate = self;
-    [self customPresentVC:gestureVC animation:(YHModaAnimationTypeAlpha) showBlackBackgroud:NO canTapDismiss:NO];
-}
 #pragma mark - BWGesturesPasswordViewcontrollerDelegate
 - (void)verifyPasswordSuccess{
     BWUser *user = [BWUserManager shareManager].user;
@@ -55,14 +50,7 @@
         [self showWeakAlertWithString:@"未獲取私钥"];
         return;
     }
-    UIPasteboard *pab = [UIPasteboard generalPasteboard];
-    [pab setString:user.privatekey];
-    if (pab == nil) {
-        [self showWeakAlertWithString:@"複製失敗"];
-    }else
-    {
-        [self showWeakAlertWithString:@"已複製"];
-    }
+    self.verification = YES;
 }
 //忘记密码
 - (void)forgetThePassword{
@@ -79,6 +67,21 @@
         vc.gesturesPasswordType = BWGesturesPasswordTypeCreate;
         [self customPresentVC:vc animation:(YHModaAnimationTypeAlpha) showBlackBackgroud:NO canTapDismiss:NO];
     });
+}
+
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(nullable id)sender
+{
+    //阻止跳转
+    if(self.verification == NO){
+        BWGesturesPasswordViewcontroller *gestureVC = [[BWGesturesPasswordViewcontroller alloc] init];
+        gestureVC.gesturesPasswordType = BWGesturesPasswordTypeVerify;
+        gestureVC.delegate = self;
+        [self customPresentVC:gestureVC animation:(YHModaAnimationTypeAlpha) showBlackBackgroud:NO canTapDismiss:NO];
+        return NO;
+    }
+    return YES;
+}
+-(IBAction)unwindSegue:(UIStoryboardSegue *)sender{
 }
 /*
 #pragma mark - Navigation

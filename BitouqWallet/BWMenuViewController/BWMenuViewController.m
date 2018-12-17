@@ -16,11 +16,22 @@
 @property (strong, nonatomic) IBOutlet BWMenuButton *recordButton;
 @property (strong, nonatomic) IBOutlet BWMenuButton *deuplicateButton;
 @property (strong, nonatomic) IBOutlet BWMenuButton *rlueButton;
+@property (nonatomic, strong) UILabel *bottomLabel;
 @property (strong, nonatomic) NSArray *buttonArray;
 @end
 
 @implementation BWMenuViewController
-
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    if (self.bottomLabel == nil) {
+        
+        self.bottomLabel = [[UILabel alloc] initWithFrame:(CGRectMake(60, SCREEN_HEIGHT- 100, 163, 40))];
+        [self.bottomLabel configWithTextColor:[UIColor whiteColor] font:[UIFont systemFontOfSize:11.f] textAlignment:(NSTextAlignmentLeft) backgroundColor:nil];
+        self.bottomLabel.text = @"Bitouq Republic Techology\nWallet oasis 1.0";
+        self.bottomLabel.numberOfLines = 2;
+        [self.view addSubview:self.bottomLabel];
+    }
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initSubViews];

@@ -71,21 +71,22 @@
             }
         }];
     }else{
-        [self showSystemAlertTitle:@"導入私鑰與當前私鑰不匹配" message:@"是否繼續" actionTitleArray:@[@"否",@"是"] colorTitle:nil withAction:^(NSInteger actionNumber) {
-            if (actionNumber == 1) {
-                [self verifyPrivatekeyCompletion:^{
-                    [self hiddenHUD];
-                    if (self.loginRootModel.errorCode == 0) {
-                        if ([self.delegate respondsToSelector:@selector(resetpassword)]) {
-                            [self.delegate resetpassword];
-                            [self dismissViewControllerAnimated:YES completion:nil];
-                        }
-                    }else{
-                        [self showWeakAlertWithString:@"無效的私鑰"];
-                    }
-                }];
-            }
-        } preferredStyle:(UIAlertControllerStyleAlert)];
+        [self showWeakAlertWithString:@"無效的私鑰"];
+//        [self showSystemAlertTitle:@"導入私鑰與當前私鑰不匹配" message:@"是否繼續" actionTitleArray:@[@"否",@"是"] colorTitle:nil withAction:^(NSInteger actionNumber) {
+//            if (actionNumber == 1) {
+//                [self verifyPrivatekeyCompletion:^{
+//                    [self hiddenHUD];
+//                    if (self.loginRootModel.errorCode == 0) {
+//                        if ([self.delegate respondsToSelector:@selector(resetpassword)]) {
+//                            [self.delegate resetpassword];
+//                            [self dismissViewControllerAnimated:YES completion:nil];
+//                        }
+//                    }else{
+//                        [self showWeakAlertWithString:@"無效的私鑰"];
+//                    }
+//                }];
+//            }
+//        } preferredStyle:(UIAlertControllerStyleAlert)];
     }
     
 }

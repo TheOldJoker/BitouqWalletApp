@@ -39,6 +39,7 @@
             BWUser *user = [BWUserManager shareManager].user;
             user.asset = self.userAssetRootModel.data;
             self.publickeyInfoView.money = [NSString stringWithFormat:@"%@ BRT",user.asset];
+            self.publickeyInfoView.publickey = user.publickey;
         }else{
             [self showNetErrorMessageWithStatus:self.userAssetRootModel.status errorCode:self.userAssetRootModel.errorCode errorMessage:self.userAssetRootModel.errorMsg];
         }
