@@ -62,6 +62,10 @@
     }];
 }
 - (IBAction)loginAction:(UIButton *)sender {
+    if ([self.privatekeyTextField.text isKey] == NO) {
+        [self showWeakAlertWithString:@"無效的私鑰"];
+        return;
+    }
     [self loginApp];
 }
 

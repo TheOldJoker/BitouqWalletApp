@@ -20,7 +20,9 @@
 @end
 
 @implementation BWWalletViewController
-
+- (void)viewWillAppear:(BOOL)animated{
+    [self loadData];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"錢包";
@@ -34,6 +36,10 @@
     [self addChildViewController:self.getViewController];
 }
 - (void)loadData{
+    //如果用户未登录z,不请求
+    if (stringIsEmpty([BWUserManager shareManager].user.privatekey)) {
+        return;
+    }
     switch (self.topSelectedView.selectedIndex) {
         case 0:
         {

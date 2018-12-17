@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BWWalletOverviewActivityView : UIView
+@interface BWWalletOverviewActivityView : UIButton
 @property (nonatomic, strong) UIColor *mainColor;
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *content;

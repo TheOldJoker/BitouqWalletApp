@@ -30,7 +30,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"BRStars";
+    self.title = @"BRTStars";
     [self initMenuNav];
     self.customNavTitleLabel.textColor = [UIColor whiteColor];
 }

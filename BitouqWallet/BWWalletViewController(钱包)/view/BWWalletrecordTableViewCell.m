@@ -25,7 +25,8 @@
     self.leftImageView.image = type == 1 ? [UIImage imageNamed:@"wallet_ record_send"] :[UIImage imageNamed:@"wallet_ record_get"];
     self.stateTitleLabel.text = type == 1 ? @"發送代幣" : @"接收代幣";
     self.moneyValueLabel.textColor = type == 1 ? [UIColor colorWithHexString:@"f42850"] : [UIColor colorWithHexString:@"7ed321"];
-    self.moneyValueLabel.text = model.amount;
+    NSString *symbol = type == 1 ? @"- " : @"+ ";
+    self.moneyValueLabel.text = [NSString stringWithFormat:@"%@%@",symbol,model.amount];
 //    self.publickeyLabel.text = [model.topubkey isEqualToString:[BWUserManager shareManager].user.publickey] ? model.fromprikey : model.topubkey;
     self.publickeyLabel.text = type == 1 ? model.topubkey : [BWUserManager shareManager].user.publickey;
 }

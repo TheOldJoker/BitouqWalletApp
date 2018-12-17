@@ -24,6 +24,9 @@
     // Do any additional setup after loading the view.
 }
 - (void)initSubviews{
+    if (self.mainTitleLabel == nil) {
+        return;
+    }
     if (self.mainScrollView != nil) {
         return;
     }

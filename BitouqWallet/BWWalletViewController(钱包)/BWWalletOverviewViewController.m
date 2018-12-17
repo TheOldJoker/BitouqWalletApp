@@ -54,13 +54,13 @@
         self.activityRootModel = [BWWalletActivityRootModel mj_objectWithKeyValues:response];
         if (self.activityRootModel.errorCode == 0) {
             //交易
-            self.activityView1.content = [NSString stringWithFormat:@"%.lf",[self.activityRootModel.data.transferSum doubleValue]];
+            self.activityView1.content = self.activityRootModel.data.transferSum;
             //BRTStrar
-            self.activityView2.content = [NSString stringWithFormat:@"%.lf",[self.activityRootModel.data.starSum doubleValue]];
+            self.activityView2.content = self.activityRootModel.data.starSum;
             //勝負手
-            self.activityView3.content = [NSString stringWithFormat:@"%.lf",[self.activityRootModel.data.diceSum doubleValue]];
+            self.activityView3.content = self.activityRootModel.data.diceSum;
             //挖礦
-            self.activityView4.content = [NSString stringWithFormat:@"%.lf",[self.activityRootModel.data.miningSum doubleValue]];
+            self.activityView4.content = self.activityRootModel.data.miningSum;
         }else{
             [self showNetErrorMessageWithStatus:self.activityRootModel.status errorCode:self.activityRootModel.errorCode errorMessage:self.activityRootModel.errorMsg];
         }
@@ -72,34 +72,15 @@
 }
 #pragma mark 初始化賦值
 - (void)loadData{
-    self.publickeyInfoView.publickey = [BWUserManager shareManager].user.publickey;
     //已經向服務器請求到正確數據
-    if (self.userAssetRootModel && self.userAssetRootModel.errorCode == 0) {
-        BWUser *user = [BWUserManager shareManager].user;
-        user.asset = self.userAssetRootModel.data;
-        self.publickeyInfoView.money = [NSString stringWithFormat:@"%@ BRT",user.asset];
-    }else{
-        //獲取個人信息數據
-        [self loadDataForUserPublickeyInfoCompletion:^{
-            
-        }];
-    }
+    //獲取個人信息數據
+    [self loadDataForUserPublickeyInfoCompletion:^{
+        
+    }];
     //獲取活動數據
-    if (self.activityRootModel) {
-        //交易
-        self.activityView1.content = self.activityRootModel.data.transferSum;
-        //BRTStrar
-        self.activityView2.content = self.activityRootModel.data.starSum;
-        //勝負手
-        self.activityView3.content = self.activityRootModel.data.diceSum;
-        //挖礦
-        self.activityView4.content = self.activityRootModel.data.miningSum;
-    }else{
-        [self showHUDWithAlert:LOADING_STRING];
-        [self loadActivityDataCompletion:^{
-            [self hiddenHUD];
-        }];
-    }
+    [self loadActivityDataCompletion:^{
+        [self hiddenHUD];
+    }];
 }
 #pragma mark - lazyload
 - (BWWalletOverviewActivityView *)activityView4{
@@ -111,6 +92,8 @@
         _activityView4.mainColor = [UIColor colorWithHexString:@"f6a93b"];
         _activityView4.title = @"挖礦";
         _activityView4.icon = @"wallet_mining";
+        _activityView4.tag = 3003;
+        [_activityView4 addTarget:self action:@selector(tabBarControllerTrans:) forControlEvents:(UIControlEventTouchUpInside)];
         self.mainScorllView.contentSize = CGSizeMake(self.view.width, _activityView4.bottom + 10);
         [self.mainScorllView addSubview:_activityView4];
     }
@@ -125,6 +108,8 @@
         _activityView3.mainColor = [UIColor colorWithHexString:@"7ed321"];
         _activityView3.title = @"勝負手";
         _activityView3.icon = @"wallet_winninghand";
+        _activityView3.tag = 3002;
+        [_activityView3 addTarget:self action:@selector(tabBarControllerTrans:) forControlEvents:(UIControlEventTouchUpInside)];
         [self.mainScorllView addSubview:_activityView3];
     }
     return _activityView3;
@@ -138,6 +123,8 @@
         _activityView2.mainColor = [UIColor colorWithHexString:@"f42850"];
         _activityView2.title = @"BRTStars";
         _activityView2.icon = @"wallet_star";
+        _activityView2.tag = 3001;
+        [_activityView2 addTarget:self action:@selector(tabBarControllerTrans:) forControlEvents:(UIControlEventTouchUpInside)];
         [self.mainScorllView addSubview:_activityView2];
     }
     return _activityView2;
@@ -151,6 +138,8 @@
         _activityView1.mainColor = [UIColor colorWithHexString:@"4a90e2"];
         _activityView1.title = @"交易";
         _activityView1.icon = @"wallet_deal";
+        _activityView1.tag = 3004;
+        [_activityView1 addTarget:self action:@selector(tabBarControllerTrans:) forControlEvents:(UIControlEventTouchUpInside)];
         [self.mainScorllView addSubview:_activityView1];
     }
     return _activityView1;
@@ -181,6 +170,10 @@
     return _mainScorllView;
 }
 #pragma mark - buttonAction
+- (void)tabBarControllerTrans:(BWWalletOverviewActivityView *)sender{
+    NSInteger index = sender.tag - 3000;
+    self.tabBarController.selectedIndex = index;
+}
 - (void)reloadDataAction:(UIButton *)sender{
     [self showHUDWithAlert:LOADING_STRING];
     [self loadDataForUserPublickeyInfoCompletion:^{

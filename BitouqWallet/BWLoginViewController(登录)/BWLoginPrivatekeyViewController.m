@@ -28,8 +28,8 @@
     user.privatekey = self.mainData.data.prikey;
     user.publickey = self.mainData.data.pubkey;
     
-//    user.privatekey = @"127Ktr61h2GtWS22MzJGApX8F73CRpAyjKp2yKh3weXo";
-//    user.publickey = @"8JWRqEGK84GxbF7jpn5TZoEnefjuzxDA39iBRrVYge2D";
+    user.privatekey = @"127Ktr61h2GtWS22MzJGApX8F73CRpAyjKp2yKh3weXo";
+    user.publickey = @"8JWRqEGK84GxbF7jpn5TZoEnefjuzxDA39iBRrVYge2D";
     
     [BWUserManager shareManager].user = user;
 }
@@ -49,9 +49,7 @@
         [self showServerError];
     }];
 }
-
-- (IBAction)longPressAction:(UILongPressGestureRecognizer *)sender {
-    
+- (IBAction)tapAction:(UITapGestureRecognizer *)sender {
     if (stringIsEmpty(self.privatekeyLabel.text)) {
         [self showWeakAlertWithString:@"未獲取私钥"];
         return;

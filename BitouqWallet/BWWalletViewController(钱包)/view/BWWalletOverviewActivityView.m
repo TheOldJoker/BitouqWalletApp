@@ -55,6 +55,7 @@
 - (UIImageView *)logoView{
     if (!_logoView) {
         _logoView = [[UIImageView alloc] initWithFrame:(CGRectMake(self.width - 45 - 17, 15, 45, 45))];
+        _logoView.contentMode = UIViewContentModeScaleAspectFit;
         [self.mainBackgroundImageView addSubview:_logoView];
     }
     return _logoView;
