@@ -398,6 +398,7 @@
 + (void)gameBetWithOnebase:(NSString *)onebase term:(NSString *)term multiple:(NSString *)multiple num1:(NSString *)num1 num2:(NSString *)num2 num3:(NSString *)num3 num4:(NSString *)num4 num5:(NSString *)num5 type:(NSInteger)type success:(void (^)(id response))success fail:(void (^)(NSError * error))failure{
     NSDictionary *params = nil;
     BWUser *user = [BWUserManager shareManager].user;
+    
     if (type > 5) {
         params = @{
                    @"pubkey":user.publickey,

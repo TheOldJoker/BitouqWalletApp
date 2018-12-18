@@ -28,7 +28,7 @@
     NSString *symbol = type == 1 ? @"- " : @"+ ";
     self.moneyValueLabel.text = [NSString stringWithFormat:@"%@%@",symbol,model.amount];
 //    self.publickeyLabel.text = [model.topubkey isEqualToString:[BWUserManager shareManager].user.publickey] ? model.fromprikey : model.topubkey;
-    self.publickeyLabel.text = type == 1 ? model.topubkey : [BWUserManager shareManager].user.publickey;
+    self.publickeyLabel.text = type == 1 ? model.topubkey : model.frompubkey;
 }
 - (void)awakeFromNib {
     [super awakeFromNib];

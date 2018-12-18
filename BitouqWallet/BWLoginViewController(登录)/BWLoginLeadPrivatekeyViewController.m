@@ -26,6 +26,10 @@
         [self showWeakAlertWithString:@"輸入私鑰明文"];
         return;
     }
+    if ([self.privatekeyTextField.text isKey] == NO) {
+        [self showWeakAlertWithString:@"無效的私鑰"];
+        return;
+    }
     //2.驗證私鑰
     [self showHUDWithAlert:@"正在驗證私鑰..."];
     [self verifyPrivatekeyCompletion:^{

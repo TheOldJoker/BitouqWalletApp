@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) BWGameArithmeticModel *gameArithmetic;
 @property (nonatomic, strong) UIButton *winNButton;//期望中奖注数
 - (void)initSubViews;
+- (void)setStakesValue:(NSString *)stakes total:(NSString *)total bonus:(NSString *)bonus;
 @end
 
 NS_ASSUME_NONNULL_END

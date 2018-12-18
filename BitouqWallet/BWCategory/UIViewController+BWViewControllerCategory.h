@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIViewController (BWViewControllerCategory)
 //弱提示
 - (void)showWeakAlertWithString:(NSString *)weakAlert;
+//長時間弱提示
+- (void)showLongTimeWeakAlertWithString:(NSString *)weakAlert;
 //等待提示
 - (void)showHUDWithAlert:(NSString *)alertString;
 //隱藏HUD

@@ -17,6 +17,13 @@
     hud.label.numberOfLines = 0;
     [hud hideAnimated:YES afterDelay:1];
 }
+- (void)showLongTimeWeakAlertWithString:(NSString *)weakAlert{
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeText;
+    hud.label.text = weakAlert;
+    hud.label.numberOfLines = 0;
+    [hud hideAnimated:YES afterDelay:2];
+}
 - (void)showHUDWithAlert:(NSString *)alertString {
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.label.text = alertString;

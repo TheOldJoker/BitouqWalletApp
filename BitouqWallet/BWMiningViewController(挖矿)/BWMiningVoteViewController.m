@@ -60,11 +60,8 @@
     [self.dataSource insertObject:self.myMiningOwner atIndex:0];
     [self.mainTableView reloadData];
 }
-- (void)loadData{
-    if (self.dataSource.count > 0) {
-        [self.mainTableView.refreshControl beginRefreshing];
-    }
-    //累計挖礦收益
+#pragma mark - 累計挖礦收益
+- (void)getMyMiningEarningsCompletion:(void (^ __nullable)(void))completion{
     [BWDataSource getMyMiningEarningsSuccess:^(id  _Nonnull response) {
         BWCommonRootModel *rootModel = [BWCommonRootModel mj_objectWithKeyValues:response];
         if (rootModel.errorCode == 0) {
@@ -72,10 +69,14 @@
         }else{
             [self showNetErrorMessageWithStatus:rootModel.status errorCode:rootModel.errorCode errorMessage:rootModel.errorMsg];
         }
+        completion();
     } fail:^(NSError * _Nonnull error) {
         [self showServerError];
+        completion();
     }];
-    //查詢我的幣齡
+}
+#pragma mark - 查詢我的幣齡
+- (void)getgetMyMiningAgeCompletion:(void (^ __nullable)(void))completion{
     [BWDataSource getMyMiningAgeSuccess:^(id  _Nonnull response) {
         BWMyMiningAgeRootModel *rootModel = [BWMyMiningAgeRootModel mj_objectWithKeyValues:response];
         if (rootModel.errorCode == 0) {
@@ -84,12 +85,15 @@
         }else{
             [self showNetErrorMessageWithStatus:rootModel.status errorCode:rootModel.errorCode errorMessage:rootModel.errorMsg];
         }
+        completion();
     } fail:^(NSError * _Nonnull error) {
         [self showServerError];
+        completion();
     }];
-    //查詢我的礦主
+}
+#pragma mark - 查詢我的礦主
+- (void)getMyMiningOwnerCompletion:(void (^ __nullable)(void))completion{
     [BWDataSource getMyMiningOwnerSuccess:^(id  _Nonnull response) {
-    
         BWCommonRootModel *rootModel = [BWCommonRootModel mj_objectWithKeyValues:response];
         if (rootModel.errorCode == 0) {
             if (rootModel.data == nil) {
@@ -104,15 +108,28 @@
         }else{
             [self showNetErrorMessageWithStatus:rootModel.status errorCode:rootModel.errorCode errorMessage:rootModel.errorMsg];
         }
+        completion();
     } fail:^(NSError * _Nonnull error) {
         [self showServerError];
+        completion();
     }];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        if ([self.mainTableView.refreshControl isRefreshing]) {
-            [self.mainTableView.refreshControl endRefreshing];
-        }
-    });
-    
+}
+- (void)loadData{
+    if (self.dataSource.count > 0) {
+        [self.mainTableView.refreshControl beginRefreshing];
+    }
+    //累計挖礦收益
+    [self getMyMiningEarningsCompletion:^{
+        //查詢我的幣齡
+        [self getgetMyMiningAgeCompletion:^{
+            //查詢我的礦主
+            [self getMyMiningOwnerCompletion:^{
+                if ([self.mainTableView.refreshControl isRefreshing]) {
+                    [self.mainTableView.refreshControl endRefreshing];
+                }
+            }];
+        }];
+    }];
 }
 #pragma mark - lazyload
 - (NSMutableArray *)dataSource{

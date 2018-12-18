@@ -10,7 +10,7 @@
 NSString *const accurateTime = @"yyyy-MM-dd-HH-mm-ss";
 @implementation NSString (BWStringCategory)
 - (BOOL)isKey{
-    if (self.length == 44) {
+    if (self.length >= 40) {
         return YES;
     }
     return NO;

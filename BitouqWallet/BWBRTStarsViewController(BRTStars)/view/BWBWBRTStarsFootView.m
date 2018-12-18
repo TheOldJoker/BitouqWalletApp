@@ -37,6 +37,11 @@
 }
 - (void)reloadData{
     [self setStakesValue:@"0" total:@"0" bonus:@"0"];
+    if (self.gameType > 5) {
+        self.winNButton.hidden = YES;
+    }else{
+        self.winNButton.hidden = NO;
+    }
     if (self.gameArithmetic == nil) {
         return;
     }
@@ -61,12 +66,6 @@
     self.winNButton.x = self.bonusLabel.right + 5;
     
     self.winNButton.tag = 9000 + n;
-    
-    if (self.gameType > 5) {
-        self.winNButton.hidden = YES;
-    }else{
-        self.winNButton.hidden = NO;
-    }
 }
 - (UIButton *)sendButton{
     if (!_sendButton) {
@@ -218,7 +217,7 @@
 }
 - (void)setGameType:(NSInteger)gameType{
     _gameType = gameType;
-    [self setStakesValue:@"0" total:@"0" bonus:@"0"];
+    [self reloadData];
 }
 - (void)setGameOdds:(NSDictionary *)gameOdds{
     _gameOdds = gameOdds;

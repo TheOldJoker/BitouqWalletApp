@@ -30,7 +30,7 @@
     if (self.mainScrollView != nil) {
         return;
     }
-    NSArray *contents = @[@"未來自治型金融體系代幣：BRT首次發佈版本oasis，它帶來代幣流動、娛樂、新型社區",@"幣齡即是生產力：提出更加環保的Probability-DPoS共識機制，集合幣齡挖礦，共享收益",@"一項區塊鏈遊戲挖礦運動：BRTStars將遊戲執行和仲裁權交給區塊，一項遊戲挖礦運動正在進行。"];
+    NSArray *contents = @[@"BRT首次發佈版本oasis，它帶來代幣流動、娛樂、新型社區",@"提出更加環保的Probability-DPoS共識機制，集合幣齡挖礦，共享收益",@"BRTStars將遊戲執行和仲裁權交給區塊，一項遊戲挖礦運動正在進行。"];
     self.mainScrollView = [[UIScrollView alloc] initWithFrame:(CGRectMake(0, self.mainTitleLabel.bottom + 16, 279, 49))];
     self.mainScrollView.centerX = SCREEN_WIDTH / 2;
     self.mainScrollView.delegate = self;
@@ -42,7 +42,7 @@
     
     self.page = [[UIPageControl alloc] initWithFrame:(CGRectMake(0, 0, 279, 20))];
     self.page.numberOfPages = contents.count;
-    self.page.top = self.mainScrollView.bottom + 32;
+    self.page.top = self.mainScrollView.bottom + 15;
     self.page.centerX = self.mainScrollView.centerX;
     [self.view addSubview:self.page];
     

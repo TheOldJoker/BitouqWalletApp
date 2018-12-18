@@ -68,7 +68,10 @@
         if ([self.tempPassword isEqualToString:password]) {
             [BWUserManager shareManager].user.password = password;
             [[BWUserManager shareManager] updateUser];
-            [self dismissViewControllerAnimated:YES completion:nil];
+            [self showWeakAlertWithString:@"密碼設置成功"];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self dismissViewControllerAnimated:YES completion:nil];
+            });
             return;
         }
         //驗證失敗
@@ -81,6 +84,7 @@
     if (self.gesturesPasswordType == BWGesturesPasswordTypeVerify) {
         if ([user.password isEqualToString:password]) {
             self.alertLabel.text = @"驗證成功";
+            
             if ([self.delegate respondsToSelector:@selector(verifyPasswordSuccess)]) {
                 [self.delegate verifyPasswordSuccess];
             }

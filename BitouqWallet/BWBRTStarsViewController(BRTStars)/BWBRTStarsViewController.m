@@ -36,6 +36,20 @@
     self.customNavTitleLabel.textColor = [UIColor whiteColor];
 }
 #pragma mark - func
+- (void)initSubViewValues{
+    self.footView.betValueTextField.text = @"";
+    self.footView.multipleTextField.text = @"1";
+    self.headView.gameType = 1;
+    self.footView.gameType = 1;
+    [self.footView setStakesValue:@"0" total:@"0" bonus:@"0"];
+    BWGameArithmeticModel *gameArithmetic = [[BWGameArithmeticModel alloc] init];
+    gameArithmetic.num1 = self.headView.gameStarsView1.greenView.resNumber;
+    gameArithmetic.num2 = self.headView.gameStarsView1.blueView.resNumber;
+    gameArithmetic.num3 = self.headView.gameStarsView1.redView.resNumber;
+    gameArithmetic.num4 = self.headView.gameStarsView1.yellowView.resNumber;
+    gameArithmetic.num5 = self.headView.gameStarsView1.grayView.resNumber;
+    self.footView.gameArithmetic = gameArithmetic;
+}
 - (void)loadData{
     [self.mainTableView reloadData];
     if (self.lastResRootModel) {
@@ -166,7 +180,7 @@
 }
 #pragma mark - buttonAction
 - (void)winNAction:(UIButton *)sender{
-    [self showWeakAlertWithString:[NSString stringWithFormat:@"最大中獎%ld次,此次投注可能多次中獎,此獎金為最大期望獎金",sender.tag - 9000]];
+    [self showLongTimeWeakAlertWithString:[NSString stringWithFormat:@"最大中獎%ld次,此类投注可能多次中獎，此獎金為最大期望獎金",sender.tag - 9000]];
 }
 - (void)guessAction:(UIButton *)sender{
     if (stringIsEmpty(self.footView.betValueTextField.text)) {
@@ -193,6 +207,7 @@
         [self hiddenHUD];
         BWCommonRootModel *root = [BWCommonRootModel mj_objectWithKeyValues:response];
         if (root.errorCode == 0) {
+            [self initSubViewValues];
             [self showWeakAlertWithString:@"參加競猜成功"];
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [self loadData];
