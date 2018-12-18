@@ -29,21 +29,22 @@
 #pragma mark - func
 #pragma mark 獲取數據
 - (void)loadData{
-    //判斷身份
-    [self JudgeMyIdentity];
-    if (self.miningOwner == nil) {
-        [self initSubviews];
-        return;
-    }
-    
-    if (self.miningInfoRootModel != nil) {
-        [self.mainScorllView.refreshControl beginRefreshing];
-    }
-    [self getMiningInfoCompletion:^{
-        if ([self.mainScorllView.refreshControl isRefreshing]) {
-            [self.mainScorllView.refreshControl endRefreshing];
+    [self loadMiningOwnerCompletion:^{
+        //判斷身份
+        [self JudgeMyIdentity];
+        if (self.miningOwner == nil) {
+            [self initSubviews];
+            return;
         }
-        [self initSubviews];
+        if (self.miningInfoRootModel != nil) {
+            [self.mainScorllView.refreshControl beginRefreshing];
+        }
+        [self getMiningInfoCompletion:^{
+            if ([self.mainScorllView.refreshControl isRefreshing]) {
+                [self.mainScorllView.refreshControl endRefreshing];
+            }
+            [self initSubviews];
+        }];
     }];
 }
 #pragma mark 獲取礦主挖礦信息
@@ -68,6 +69,18 @@
         completion();
     }];
 }
+#pragma mark 獲取所有礦主信息
+- (void)loadMiningOwnerCompletion:(void (^ __nullable)(void))completion{
+    [BWDataSource getAllTheMineOwnerSuccess:^(id  _Nonnull response) {
+        self.miningOwnerRootModel = [BWMiningOwnerRootModel mj_objectWithKeyValues:response];
+        if (self.miningOwnerRootModel.errorCode == 0) {
+            
+        }
+        completion();
+    } fail:^(NSError * _Nonnull error) {
+        completion();
+    }];
+}
 #pragma mark 判斷是否為礦主
 - (void)JudgeMyIdentity{
     self.miningOwner = nil;
@@ -82,7 +95,6 @@
 #pragma mark 加載頁面
 - (void)initSubviews{
     if (self.miningOwner) {
-        
         //是礦主
         //1.節點幣齡
         BWUser *user = [BWUserManager shareManager].user;

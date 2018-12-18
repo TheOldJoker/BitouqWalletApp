@@ -102,6 +102,7 @@
             [BWUserManager shareManager].user.miningOwner = rootModel.data;
             [self dealMyDataSource];
             if (stringIsEmpty([BWUserManager shareManager].user.miningOwner)) {
+                completion();
                 return;
             }
             self.headView.memberLabel.text = [rootModel.data substringWithRange:(NSMakeRange(rootModel.data.length - 6, 6))];
@@ -114,19 +115,34 @@
         completion();
     }];
 }
+#pragma mark 獲取所有礦主信息
+- (void)loadMiningOwnerCompletion:(void (^ __nullable)(void))completion{
+    [BWDataSource getAllTheMineOwnerSuccess:^(id  _Nonnull response) {
+        self.miningOwnerRootModel = [BWMiningOwnerRootModel mj_objectWithKeyValues:response];
+        if (self.miningOwnerRootModel.errorCode == 0) {
+            [self dealMyDataSource];
+        }
+        completion();
+    } fail:^(NSError * _Nonnull error) {
+        completion();
+    }];
+}
 - (void)loadData{
     if (self.dataSource.count > 0) {
         [self.mainTableView.refreshControl beginRefreshing];
     }
-    //累計挖礦收益
-    [self getMyMiningEarningsCompletion:^{
-        //查詢我的幣齡
-        [self getgetMyMiningAgeCompletion:^{
-            //查詢我的礦主
-            [self getMyMiningOwnerCompletion:^{
-                if ([self.mainTableView.refreshControl isRefreshing]) {
-                    [self.mainTableView.refreshControl endRefreshing];
-                }
+    //获取所有h矿主
+    [self loadMiningOwnerCompletion:^{
+        //累計挖礦收益
+        [self getMyMiningEarningsCompletion:^{
+            //查詢我的幣齡
+            [self getgetMyMiningAgeCompletion:^{
+                //查詢我的礦主
+                [self getMyMiningOwnerCompletion:^{
+                    if ([self.mainTableView.refreshControl isRefreshing]) {
+                        [self.mainTableView.refreshControl endRefreshing];
+                    }
+                }];
             }];
         }];
     }];

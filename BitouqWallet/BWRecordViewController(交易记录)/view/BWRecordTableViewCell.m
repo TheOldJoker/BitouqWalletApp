@@ -125,7 +125,7 @@
         {
             self.rightTopLabel.text = [NSString stringWithFormat:@"+ %@ BRT",model.amount];
             self.rightTopLabel.textColor = [UIColor colorWithHexString:@"7ed321"];
-            self.bottomContentLabel.text = @"获胜 BRTStars1星竞猜";
+            self.bottomContentLabel.text = @"獲勝 BRTStars1星競猜";
         }
             break;
             //获胜 BRTStars2星竞猜
@@ -133,7 +133,7 @@
         {
             self.rightTopLabel.text = [NSString stringWithFormat:@"+ %@ BRT",model.amount];
             self.rightTopLabel.textColor = [UIColor colorWithHexString:@"7ed321"];
-            self.bottomContentLabel.text = @"获胜 BRTStars2星竞猜";
+            self.bottomContentLabel.text = @"獲勝 BRTStars2星競猜";
         }
             break;
             //获胜 BRTStars3星竞猜
@@ -141,7 +141,7 @@
         {
             self.rightTopLabel.text = [NSString stringWithFormat:@"+ %@ BRT",model.amount];
             self.rightTopLabel.textColor = [UIColor colorWithHexString:@"7ed321"];
-            self.bottomContentLabel.text = @"获胜 BRTStars3星竞猜";
+            self.bottomContentLabel.text = @"獲勝 BRTStars3星競猜";
         }
             break;
             //获胜 BRTStars4星竞猜
@@ -149,7 +149,7 @@
         {
             self.rightTopLabel.text = [NSString stringWithFormat:@"+ %@ BRT",model.amount];
             self.rightTopLabel.textColor = [UIColor colorWithHexString:@"7ed321"];
-            self.bottomContentLabel.text = @"获胜 BRTStars4星竞猜";
+            self.bottomContentLabel.text = @"獲勝 BRTStars4星競猜";
         }
             break;
             //获胜 BRTStars5星竞猜
@@ -157,7 +157,7 @@
         {
             self.rightTopLabel.text = [NSString stringWithFormat:@"+ %@ BRT",model.amount];
             self.rightTopLabel.textColor = [UIColor colorWithHexString:@"7ed321"];
-            self.bottomContentLabel.text = @"获胜 BRTStars5星竞猜";
+            self.bottomContentLabel.text = @"獲勝 BRTStars5星竞猜";
         }
             break;
             //获胜 BRTStars前置3星任选
@@ -165,7 +165,7 @@
         {
             self.rightTopLabel.text = [NSString stringWithFormat:@"+ %@ BRT",model.amount];
             self.rightTopLabel.textColor = [UIColor colorWithHexString:@"7ed321"];
-            self.bottomContentLabel.text = @"获胜 BRTStars前置3星任选";
+            self.bottomContentLabel.text = @"獲勝 BRTStars前置3星任選";
         }
             break;
             //获胜 BRTStars前置3星双杀
@@ -173,7 +173,7 @@
         {
             self.rightTopLabel.text = [NSString stringWithFormat:@"+ %@ BRT",model.amount];
             self.rightTopLabel.textColor = [UIColor colorWithHexString:@"7ed321"];
-            self.bottomContentLabel.text = @"获胜 BRTStars前置3星双杀";
+            self.bottomContentLabel.text = @"獲勝 BRTStars前置3星雙殺";
         }
             break;
             //获胜 BRTStars前置3星豹子
@@ -181,7 +181,7 @@
         {
             self.rightTopLabel.text = [NSString stringWithFormat:@"+ %@ BRT",model.amount];
             self.rightTopLabel.textColor = [UIColor colorWithHexString:@"7ed321"];
-            self.bottomContentLabel.text = @"获胜 BRTStars前置3星豹子";
+            self.bottomContentLabel.text = @"獲勝 BRTStars前置3星豹子";
         }
             break;
             //挖矿+入金公钥
