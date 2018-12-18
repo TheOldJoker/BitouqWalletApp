@@ -31,6 +31,7 @@
         return;
     }
     NSArray *contents = @[@"BRT首次發佈版本oasis，它帶來代幣流動、娛樂、新型社區",@"提出更加環保的Probability-DPoS共識機制，集合幣齡挖礦，共享收益",@"BRTStars將遊戲執行和仲裁權交給區塊，一項遊戲挖礦運動正在進行。"];
+    self.mainTitleLabel.text = @"未來自治型\n金融體系代幣";
     self.mainScrollView = [[UIScrollView alloc] initWithFrame:(CGRectMake(0, self.mainTitleLabel.bottom + 16, 279, 49))];
     self.mainScrollView.centerX = SCREEN_WIDTH / 2;
     self.mainScrollView.delegate = self;
@@ -59,7 +60,10 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    NSArray *titles = @[@"未來自治型\n金融體系代幣",@"幣齡\n即是生產力",@"一項區塊鏈\n遊戲挖礦運動"];
+    
     self.page.currentPage = scrollView.contentOffset.x / scrollView.width;
+    self.mainTitleLabel.text = titles[self.page.currentPage];
 }
 /*
 #pragma mark - Navigation
