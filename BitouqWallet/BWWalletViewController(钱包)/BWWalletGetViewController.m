@@ -62,10 +62,13 @@
         _publickeyLabel.userInteractionEnabled = YES;
         [self.view addSubview:_publickeyLabel];
         
-        UIButton *copyButton = [[UIButton alloc] initWithFrame:(CGRectMake(200, 22, 18, 18))];
-        [copyButton setImage:[UIImage imageNamed:@"main_copy"] forState:(UIControlStateNormal)];
+        UIButton *copyButton = [[UIButton alloc] initWithFrame:(CGRectMake((self.view.width - 275) / 2, self.saveCodeButton.bottom + 27, 275, 42))];
         [copyButton addTarget:self action:@selector(copyPublickeyAction:) forControlEvents:(UIControlEventTouchUpInside)];
-        [_publickeyLabel addSubview:copyButton];
+        [self.view addSubview:copyButton];
+        
+        UIImageView *copyImageView = [[UIImageView alloc] initWithFrame:(CGRectMake(200, 22, 18, 18))];
+        copyImageView.image = [UIImage imageNamed:@"main_copy"];
+        [_publickeyLabel addSubview:copyImageView];
     }
     return _publickeyLabel;
 }

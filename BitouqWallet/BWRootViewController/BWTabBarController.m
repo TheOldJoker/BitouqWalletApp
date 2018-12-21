@@ -81,7 +81,7 @@
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
     UINavigationController * vc = [storyBoard instantiateViewControllerWithIdentifier:@"begin"];
     vc.hidesBottomBarWhenPushed = YES;
-    [self presentViewController:vc animated:YES completion:nil];
+    [self presentViewController:vc animated:NO completion:nil];
 }
 /*
 #pragma mark - Navigation

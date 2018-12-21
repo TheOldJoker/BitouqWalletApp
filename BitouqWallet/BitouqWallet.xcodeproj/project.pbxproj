@@ -10,11 +10,6 @@
 		AF06701021AE324D00F23D22 /* YHBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06700E21AE324C00F23D22 /* YHBaseNavigationController.m */; };
 		AF06701521AE37AD00F23D22 /* BWMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06701321AE37AD00F23D22 /* BWMenuViewController.m */; };
 		AF06701621AE37AD00F23D22 /* BWMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF06701421AE37AD00F23D22 /* BWMenuViewController.xib */; };
-		AF06704721AECF0E00F23D22 /* YHPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06704021AECF0E00F23D22 /* YHPresentationController.m */; };
-		AF06704821AECF0E00F23D22 /* YHCAAimationModalTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06704221AECF0E00F23D22 /* YHCAAimationModalTransition.m */; };
-		AF06704921AECF0E00F23D22 /* YHAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06704321AECF0E00F23D22 /* YHAnimationManager.m */; };
-		AF06704A21AECF0E00F23D22 /* UIViewController+YHModaTransitonHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06704521AECF0E00F23D22 /* UIViewController+YHModaTransitonHelper.m */; };
-		AF06704B21AECF0E00F23D22 /* YHModaAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06704621AECF0E00F23D22 /* YHModaAnimationManager.m */; };
 		AF09B72521AD6EAB00B9E1E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF09B72421AD6EAB00B9E1E4 /* AppDelegate.m */; };
 		AF09B72B21AD6EAB00B9E1E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF09B72921AD6EAB00B9E1E4 /* Main.storyboard */; };
 		AF09B72D21AD6EAB00B9E1E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF09B72C21AD6EAB00B9E1E4 /* Assets.xcassets */; };
@@ -96,6 +91,11 @@
 		AF474C1621C3B48E00982C88 /* BWGamePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF474C1521C3B48E00982C88 /* BWGamePickerViewController.m */; };
 		AF474C1921C3D07800982C88 /* BWBRTStarsGameGambleView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF474C1821C3D07800982C88 /* BWBRTStarsGameGambleView.m */; };
 		AF91BFA321BA6CDD003A423F /* BWRlueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF91BFA221BA6CDD003A423F /* BWRlueModel.m */; };
+		AFA705BA21CBA63C003F0FCE /* YHPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA705B321CBA63C003F0FCE /* YHPresentationController.m */; };
+		AFA705BB21CBA63D003F0FCE /* YHCAAimationModalTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA705B521CBA63C003F0FCE /* YHCAAimationModalTransition.m */; };
+		AFA705BC21CBA63D003F0FCE /* YHAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA705B621CBA63C003F0FCE /* YHAnimationManager.m */; };
+		AFA705BD21CBA63D003F0FCE /* UIViewController+YHModaTransitonHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA705B821CBA63C003F0FCE /* UIViewController+YHModaTransitonHelper.m */; };
+		AFA705BE21CBA63D003F0FCE /* YHModaAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA705B921CBA63C003F0FCE /* YHModaAnimationManager.m */; };
 		AFCECEF321B6B8220089E3AF /* BWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCECEF221B6B8220089E3AF /* BWBaseViewController.m */; };
 		AFCECEF621B6B9AB0089E3AF /* BWWalletOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCECEF521B6B9AB0089E3AF /* BWWalletOverviewViewController.m */; };
 		AFCECEF921B6B9C20089E3AF /* BWWalletSendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCECEF821B6B9C20089E3AF /* BWWalletSendViewController.m */; };
@@ -170,17 +170,6 @@
 		AF06701221AE37AD00F23D22 /* BWMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWMenuViewController.h; sourceTree = "<group>"; };
 		AF06701321AE37AD00F23D22 /* BWMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWMenuViewController.m; sourceTree = "<group>"; };
 		AF06701421AE37AD00F23D22 /* BWMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BWMenuViewController.xib; sourceTree = "<group>"; };
-		AF06703C21AECF0E00F23D22 /* YHAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHAnimationManager.h; sourceTree = "<group>"; };
-		AF06703D21AECF0E00F23D22 /* YHModaTransitionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHModaTransitionHelper.h; sourceTree = "<group>"; };
-		AF06703E21AECF0E00F23D22 /* YHCAAimationModalTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHCAAimationModalTransition.h; sourceTree = "<group>"; };
-		AF06703F21AECF0E00F23D22 /* UIViewController+YHModaTransitonHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+YHModaTransitonHelper.h"; sourceTree = "<group>"; };
-		AF06704021AECF0E00F23D22 /* YHPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPresentationController.m; sourceTree = "<group>"; };
-		AF06704121AECF0E00F23D22 /* YHModaAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHModaAnimationManager.h; sourceTree = "<group>"; };
-		AF06704221AECF0E00F23D22 /* YHCAAimationModalTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHCAAimationModalTransition.m; sourceTree = "<group>"; };
-		AF06704321AECF0E00F23D22 /* YHAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHAnimationManager.m; sourceTree = "<group>"; };
-		AF06704421AECF0E00F23D22 /* YHPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPresentationController.h; sourceTree = "<group>"; };
-		AF06704521AECF0E00F23D22 /* UIViewController+YHModaTransitonHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+YHModaTransitonHelper.m"; sourceTree = "<group>"; };
-		AF06704621AECF0E00F23D22 /* YHModaAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHModaAnimationManager.m; sourceTree = "<group>"; };
 		AF09B72021AD6EAB00B9E1E4 /* BitouqWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitouqWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF09B72321AD6EAB00B9E1E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AF09B72421AD6EAB00B9E1E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -328,6 +317,17 @@
 		AF474C1821C3D07800982C88 /* BWBRTStarsGameGambleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWBRTStarsGameGambleView.m; sourceTree = "<group>"; };
 		AF91BFA121BA6CDD003A423F /* BWRlueModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWRlueModel.h; sourceTree = "<group>"; };
 		AF91BFA221BA6CDD003A423F /* BWRlueModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWRlueModel.m; sourceTree = "<group>"; };
+		AFA705AF21CBA63C003F0FCE /* YHAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHAnimationManager.h; sourceTree = "<group>"; };
+		AFA705B021CBA63C003F0FCE /* YHModaTransitionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHModaTransitionHelper.h; sourceTree = "<group>"; };
+		AFA705B121CBA63C003F0FCE /* YHCAAimationModalTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHCAAimationModalTransition.h; sourceTree = "<group>"; };
+		AFA705B221CBA63C003F0FCE /* UIViewController+YHModaTransitonHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+YHModaTransitonHelper.h"; sourceTree = "<group>"; };
+		AFA705B321CBA63C003F0FCE /* YHPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPresentationController.m; sourceTree = "<group>"; };
+		AFA705B421CBA63C003F0FCE /* YHModaAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHModaAnimationManager.h; sourceTree = "<group>"; };
+		AFA705B521CBA63C003F0FCE /* YHCAAimationModalTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHCAAimationModalTransition.m; sourceTree = "<group>"; };
+		AFA705B621CBA63C003F0FCE /* YHAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHAnimationManager.m; sourceTree = "<group>"; };
+		AFA705B721CBA63C003F0FCE /* YHPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPresentationController.h; sourceTree = "<group>"; };
+		AFA705B821CBA63C003F0FCE /* UIViewController+YHModaTransitonHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+YHModaTransitonHelper.m"; sourceTree = "<group>"; };
+		AFA705B921CBA63C003F0FCE /* YHModaAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHModaAnimationManager.m; sourceTree = "<group>"; };
 		AFCECEF121B6B8220089E3AF /* BWBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWBaseViewController.h; sourceTree = "<group>"; };
 		AFCECEF221B6B8220089E3AF /* BWBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWBaseViewController.m; sourceTree = "<group>"; };
 		AFCECEF421B6B9AB0089E3AF /* BWWalletOverviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWWalletOverviewViewController.h; sourceTree = "<group>"; };
@@ -463,7 +463,6 @@
 		AF06700D21AE323B00F23D22 /* YHBase */ = {
 			isa = PBXGroup;
 			children = (
-				AF06703B21AECF0E00F23D22 /* YHModaTransitonHelper */,
 				AF06700F21AE324C00F23D22 /* YHBaseNavigationController.h */,
 				AF06700E21AE324C00F23D22 /* YHBaseNavigationController.m */,
 				AFCECEF121B6B8220089E3AF /* BWBaseViewController.h */,
@@ -481,24 +480,6 @@
 				AF06701421AE37AD00F23D22 /* BWMenuViewController.xib */,
 			);
 			path = BWMenuViewController;
-			sourceTree = "<group>";
-		};
-		AF06703B21AECF0E00F23D22 /* YHModaTransitonHelper */ = {
-			isa = PBXGroup;
-			children = (
-				AF06703C21AECF0E00F23D22 /* YHAnimationManager.h */,
-				AF06703D21AECF0E00F23D22 /* YHModaTransitionHelper.h */,
-				AF06703E21AECF0E00F23D22 /* YHCAAimationModalTransition.h */,
-				AF06703F21AECF0E00F23D22 /* UIViewController+YHModaTransitonHelper.h */,
-				AF06704521AECF0E00F23D22 /* UIViewController+YHModaTransitonHelper.m */,
-				AF06704021AECF0E00F23D22 /* YHPresentationController.m */,
-				AF06704121AECF0E00F23D22 /* YHModaAnimationManager.h */,
-				AF06704221AECF0E00F23D22 /* YHCAAimationModalTransition.m */,
-				AF06704321AECF0E00F23D22 /* YHAnimationManager.m */,
-				AF06704421AECF0E00F23D22 /* YHPresentationController.h */,
-				AF06704621AECF0E00F23D22 /* YHModaAnimationManager.m */,
-			);
-			path = YHModaTransitonHelper;
 			sourceTree = "<group>";
 		};
 		AF09B71721AD6EAB00B9E1E4 = {
@@ -892,6 +873,24 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		AFA705AE21CBA63C003F0FCE /* YHModaTransitonHelper */ = {
+			isa = PBXGroup;
+			children = (
+				AFA705AF21CBA63C003F0FCE /* YHAnimationManager.h */,
+				AFA705B021CBA63C003F0FCE /* YHModaTransitionHelper.h */,
+				AFA705B121CBA63C003F0FCE /* YHCAAimationModalTransition.h */,
+				AFA705B221CBA63C003F0FCE /* UIViewController+YHModaTransitonHelper.h */,
+				AFA705B321CBA63C003F0FCE /* YHPresentationController.m */,
+				AFA705B421CBA63C003F0FCE /* YHModaAnimationManager.h */,
+				AFA705B521CBA63C003F0FCE /* YHCAAimationModalTransition.m */,
+				AFA705B621CBA63C003F0FCE /* YHAnimationManager.m */,
+				AFA705B721CBA63C003F0FCE /* YHPresentationController.h */,
+				AFA705B821CBA63C003F0FCE /* UIViewController+YHModaTransitonHelper.m */,
+				AFA705B921CBA63C003F0FCE /* YHModaAnimationManager.m */,
+			);
+			path = YHModaTransitonHelper;
+			sourceTree = "<group>";
+		};
 		AFCECEFD21B6BB3C0089E3AF /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -996,6 +995,7 @@
 		AFEBA7BE21B41BA400F5ECEF /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				AFA705AE21CBA63C003F0FCE /* YHModaTransitonHelper */,
 				AFE2FA2C21BA42CD005F7A84 /* BWCodeHelper */,
 				AFE2FA1421B952F9005F7A84 /* BWDataSource */,
 				AFE2FA1021B951A6005F7A84 /* BWNetHelper */,
@@ -1251,7 +1251,6 @@
 				AFE2FA2F21BA42E9005F7A84 /* BWCodeHelper.m in Sources */,
 				AFCECEF921B6B9C20089E3AF /* BWWalletSendViewController.m in Sources */,
 				AFE2FA2121B95869005F7A84 /* BWLoginCreateKeyModel.m in Sources */,
-				AF06704A21AECF0E00F23D22 /* UIViewController+YHModaTransitonHelper.m in Sources */,
 				AF12739121BEC6D1002E55C2 /* BWMiningVoteHeadView.m in Sources */,
 				AFE2FA3821BA5008005F7A84 /* BWWalletrecordRootModel.m in Sources */,
 				AF474BF821C38F0A00982C88 /* BWBRTLotteryRecordCell.m in Sources */,
@@ -1278,7 +1277,6 @@
 				AF1273A421BFB281002E55C2 /* BWMyMiningInfoRootModel.m in Sources */,
 				AFE2FA2521B9847E005F7A84 /* BWUserAssetRootModel.m in Sources */,
 				AF12737721BE7837002E55C2 /* BWMiningTopSelectView.m in Sources */,
-				AF06704821AECF0E00F23D22 /* YHCAAimationModalTransition.m in Sources */,
 				AF12740621C1659E002E55C2 /* YHGesturePasswordView.m in Sources */,
 				AFE2FA1E21B957F3005F7A84 /* BWLoginCreateKeyRootModel.m in Sources */,
 				AFF894E121C487690049461E /* BWGameArithmeticModel.m in Sources */,
@@ -1286,6 +1284,7 @@
 				AFEBA7D221B4227F00F5ECEF /* YYMemoryCache.m in Sources */,
 				AF24A66821C24CE30064EDC9 /* BWBRTStarsHeadView.m in Sources */,
 				AFEBA7B721B40A7700F5ECEF /* BWLoginPrivatekeyViewController.m in Sources */,
+				AFA705BE21CBA63D003F0FCE /* YHModaAnimationManager.m in Sources */,
 				AF24A65921C1F8E50064EDC9 /* BWForgetPasswordViewController.m in Sources */,
 				AF24A66B21C24CF20064EDC9 /* BWBWBRTStarsFootView.m in Sources */,
 				AF1273AE21BFDB8B002E55C2 /* BWDicelastWinerModel.m in Sources */,
@@ -1302,9 +1301,11 @@
 				AFF894EA21C7C9050049461E /* BWBRTGameButton.m in Sources */,
 				AF1273A121BF8D63002E55C2 /* BWVoteCellButton.m in Sources */,
 				AFEBA7C521B41F7A00F5ECEF /* BWUser.m in Sources */,
+				AFA705BD21CBA63D003F0FCE /* UIViewController+YHModaTransitonHelper.m in Sources */,
 				AF1273B721C0A14A002E55C2 /* BWDiceBetView.m in Sources */,
 				AF24A67821C2772C0064EDC9 /* BWBRTStarsNewsModel.m in Sources */,
 				AF1273A721BFB290002E55C2 /* BWMyMiningInfoModel.m in Sources */,
+				AFA705BC21CBA63D003F0FCE /* YHAnimationManager.m in Sources */,
 				AF09B76C21AD797500B9E1E4 /* BWBRTStarsViewController.m in Sources */,
 				AFEBA7BA21B4139100F5ECEF /* BWLoginSuccessViewController.m in Sources */,
 				AF12738C21BEAB6E002E55C2 /* BWMiningErrorView.m in Sources */,
@@ -1319,17 +1320,15 @@
 				AF1273BC21C0E32D002E55C2 /* BWDiceOddsInfoView.m in Sources */,
 				AFE2FA4421BA5DCB005F7A84 /* YHMaskView.m in Sources */,
 				AFEBA7B421B3D2AA00F5ECEF /* BWLoginSugeViewController.m in Sources */,
+				AFA705BB21CBA63D003F0FCE /* YHCAAimationModalTransition.m in Sources */,
 				AFCECF0021B6BB6A0089E3AF /* BWWalletTopSelectedView.m in Sources */,
 				AF12738021BE8461002E55C2 /* BWMiningOwnerHeadView.m in Sources */,
 				AFE2FA1721B95312005F7A84 /* BWDataSource.m in Sources */,
-				AF06704B21AECF0E00F23D22 /* YHModaAnimationManager.m in Sources */,
-				AF06704921AECF0E00F23D22 /* YHAnimationManager.m in Sources */,
 				AFE2FA3B21BA5017005F7A84 /* BWWalletrecordModel.m in Sources */,
 				AFE2FA4121BA5B94005F7A84 /* BWCodeScanViewController.m in Sources */,
 				AF474C0221C396C200982C88 /* BWBRTRecordView.m in Sources */,
 				AF474C1621C3B48E00982C88 /* BWGamePickerViewController.m in Sources */,
 				AF474BEE21C38AC800982C88 /* BWBRTStarsLotteryRecordRootModel.m in Sources */,
-				AF06704721AECF0E00F23D22 /* YHPresentationController.m in Sources */,
 				AF09B76621AD790600B9E1E4 /* BWTabBarController.m in Sources */,
 				AF12739E21BF674B002E55C2 /* BWMyMiningAgeModel.m in Sources */,
 				AFEBA7D021B4227F00F5ECEF /* YYCache.m in Sources */,
@@ -1343,6 +1342,7 @@
 				AFCECF0F21B8132A0089E3AF /* UIView+BWViewCategory.m in Sources */,
 				AFEBA7CF21B4227F00F5ECEF /* YYDiskCache.m in Sources */,
 				AF12736921BE6801002E55C2 /* BWRecordRootModel.m in Sources */,
+				AFA705BA21CBA63C003F0FCE /* YHPresentationController.m in Sources */,
 				AF24A66F21C2526D0064EDC9 /* BWBRTStarsLastResRootModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
