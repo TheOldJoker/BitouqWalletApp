@@ -10,8 +10,8 @@
 #import "BWMenuViewController.h"
 #import "BWWalletViewController.h"
 #import "BWGesturesPasswordViewcontroller.h"
+#import "BWBRTStarsViewController.h"
 @interface BWTabBarController ()<BWMenuViewControllerDelegate>
-
 @end
 
 @implementation BWTabBarController
@@ -66,6 +66,17 @@
     UINavigationController *walletNav = self.viewControllers[0];
     BWWalletViewController *walletViewController = walletNav.viewControllers.firstObject;
     [walletViewController loadData];
+}
+- (void)refreshBRTStar{
+    UINavigationController *BRTStarsNav = self.viewControllers[1];
+    if (BRTStarsNav == nil) {
+        return;
+    }
+    BWBRTStarsViewController *BRTStarsController = BRTStarsNav.viewControllers.firstObject;
+    if (BRTStarsController == nil) {
+        return;
+    }
+    [BRTStarsController loadData];
 }
 - (void)showMenu {
     BWMenuViewController *menuVC = [[BWMenuViewController alloc] init];

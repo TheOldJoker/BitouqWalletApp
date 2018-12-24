@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BWTabBarController : UITabBarController
 - (void)showMenu;
+- (void)refreshBRTStar;
 @end
 
 NS_ASSUME_NONNULL_END
