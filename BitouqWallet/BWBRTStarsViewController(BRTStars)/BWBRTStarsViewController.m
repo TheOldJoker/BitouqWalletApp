@@ -201,6 +201,7 @@
         }
         num1 = self.headView.gameStarsView1.greenView.resNumber;
     }
+    
     NSInteger version = [self.lastResRootModel.data.ID integerValue];
     NSString *term = [NSString stringWithFormat:@"%ld",version + 1];
     [BWDataSource gameBetWithOnebase:self.footView.betValueTextField.text term:term multiple:self.footView.multipleTextField.text num1:num1 num2:self.headView.gameStarsView1.blueView.resNumber num3:self.headView.gameStarsView1.redView.resNumber num4:self.headView.gameStarsView1.yellowView.resNumber num5:self.headView.gameStarsView1.grayView.resNumber type:self.headView.gameType success:^(id  _Nonnull response) {
@@ -219,6 +220,7 @@
         [self hiddenHUD];
         [self showServerError];
     }];
+    [self initSubViewValues];
 }
 #pragma mark 选择游戏类型
 - (void)gameButtonAction:(UIButton *)sender{

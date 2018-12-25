@@ -145,6 +145,7 @@
         [self showServerError];
         completion();
     }];
+    self.diceBetView.betValueTextField.text = nil;
 }
 #pragma mark - lazyload
 - (UIScrollView *)mainScorllView{

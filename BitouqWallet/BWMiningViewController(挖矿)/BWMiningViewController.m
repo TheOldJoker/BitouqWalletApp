@@ -25,7 +25,7 @@
     [super viewDidAppear:animated];
     //獲取礦主信息
     [self loadMiningOwnerCompletion:^{
-        [self loadData];
+        [self initDataSource];
     }];
 }
 - (void)viewDidLoad {
@@ -52,6 +52,12 @@
     } fail:^(NSError * _Nonnull error) {
         completion();
     }];
+}
+- (void)initDataSource{
+    self.voteViewController.miningOwnerRootModel = self.miningOwnerRootModel;
+    self.productionViewController.miningOwnerRootModel = self.miningOwnerRootModel;
+    [self.voteViewController loadData];
+    [self.productionViewController loadData];
 }
 - (void)loadData{
     self.voteViewController.miningOwnerRootModel = self.miningOwnerRootModel;

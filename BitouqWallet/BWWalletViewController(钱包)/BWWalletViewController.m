@@ -21,7 +21,7 @@
 
 @implementation BWWalletViewController
 - (void)viewWillAppear:(BOOL)animated{
-    [self loadData];
+    [self initDataSource];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,6 +34,16 @@
     [self addChildViewController:self.overviewViewController];
     [self addChildViewController:self.sendViewController];
     [self addChildViewController:self.getViewController];
+}
+//首次加载数据
+- (void)initDataSource{
+    //如果用户未登录z,不请求
+    if (stringIsEmpty([BWUserManager shareManager].user.privatekey)) {
+        return;
+    }
+    [self.overviewViewController loadData];
+    [self.sendViewController loadData];
+    [self.getViewController loadData];
 }
 - (void)loadData{
     //如果用户未登录z,不请求
